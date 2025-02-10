@@ -1,0 +1,10 @@
+query GetCurrentUser {
+  userCollection {
+    edges {
+      node {
+        id
+        email
+      }
+    }
+  }
+}
