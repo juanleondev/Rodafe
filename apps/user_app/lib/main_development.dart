@@ -21,6 +21,7 @@ Future<void> main() async {
     email: 'jjleoncamilo@gmail.com',
     password: 'jjlc1997',
   );
+  final token = await _getAuthToken(supabase);
   final link = HttpLink(
     'http://127.0.0.1:54321/graphql/v1',
     defaultHeaders: {
