@@ -1,0 +1,26 @@
+# Cursor Rules for Rodafe Project
+
+## Package Creation
+
+When creating new Dart packages, use the very_good CLI:
+
+```bash
+very_good create dart_package my_dart_package --desc "My new Dart package"
+```
+
+This ensures consistent package structure and follows the very_good package template standards.
+I usually use for create repositories, data sources, services, etc.
+
+## Flutter Feature Creation
+
+When creating new Flutter features in the lib directory, use the mason brick command:
+
+```bash
+mason make flutter_bloc_feature --name your_feature_name --type bloc --style equatable
+```
+
+This ensures consistent feature structure with BLoC pattern.
+
+## Flutter Commands
+
+Always use fvm for Dart or Flutter commands as specified in the project requirements.

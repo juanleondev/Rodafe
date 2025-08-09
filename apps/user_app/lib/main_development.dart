@@ -8,27 +8,23 @@ import 'package:graphql_data_source/src/graphql/__generated__/schema.schema.gql.
 import 'package:supabase/supabase.dart';
 import 'package:user_app/app/app.dart';
 import 'package:user_app/bootstrap.dart';
+import 'package:user_app/config/env_config.dart';
 
 Future<void> main() async {
   final supabase = SupabaseClient(
-    'http://127.0.0.1:54321',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwi'
-        'cm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQ'
-        'wgnWNReilDMblYTn_I0',
+    EnvConfig.supabaseUrl,
+    EnvConfig.supabaseAnonKey,
   );
 
   await supabase.auth.signInWithPassword(
-    email: 'jjleoncamilo@gmail.com',
-    password: 'jjlc1997',
+    email: EnvConfig.testEmail,
+    password: EnvConfig.testPassword,
   );
   final token = await _getAuthToken(supabase);
   final link = HttpLink(
-    'http://127.0.0.1:54321/graphql/v1',
+    EnvConfig.graphqlEndpoint,
     defaultHeaders: {
-      'apiKey':
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwi'
-              'cm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQ'
-              'wgnWNReilDMblYTn_I0',
+      'apiKey': EnvConfig.supabaseAnonKey,
       'Authorization': 'Bearer ${await _getAuthToken(supabase)}',
     },
   );
@@ -44,9 +40,7 @@ Future<void> main() async {
   await bootstrap(() => const App());
 }
 
-Future<String?> _getAuthToken(
-  SupabaseClient supabase,
-) async {
+Future<String?> _getAuthToken(SupabaseClient supabase) async {
   final session = supabase.auth.currentSession;
   if (session == null) {
     return null;
