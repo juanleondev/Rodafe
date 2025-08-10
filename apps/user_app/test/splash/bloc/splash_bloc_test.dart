@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:authentication_provider/authentication_provider.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -7,27 +10,59 @@ import 'package:user_repository/user_repository.dart';
 
 class MockUserRepository extends Mock implements UserRepository {}
 
+class MockAuthProvider extends Mock implements AuthenticationProvider {}
+
 void main() {
   late MockUserRepository mockUserRepository;
-
+  late MockAuthProvider mockAuthProvider;
   setUp(() {
     mockUserRepository = MockUserRepository();
+    mockAuthProvider = MockAuthProvider();
     when(
       () => mockUserRepository.getCurrentUser(),
-    ).thenAnswer((_) async => null);
+    ).thenAnswer((_) => Stream.value(null));
+    when(
+      () => mockAuthProvider.userChanges,
+    ).thenAnswer((_) => Stream.value(null));
   });
 
   group('SplashBloc', () {
     test('initial state is Status.initial', () {
       expect(
-        SplashBloc(userRepository: mockUserRepository).state.status,
+        SplashBloc(
+          userRepository: mockUserRepository,
+          authProvider: mockAuthProvider,
+        ).state.status,
         equals(Status.initial),
       );
     });
 
     blocTest<SplashBloc, SplashState>(
-      'emits [Status.loading, Status.success] when SplashStarted is added',
-      build: () => SplashBloc(userRepository: mockUserRepository),
+      'emits [Status.loading, Status.error] when SplashStarted is added and '
+      'no user found',
+      build: () => SplashBloc(
+        userRepository: mockUserRepository,
+        authProvider: mockAuthProvider,
+      ),
+      act: (bloc) => bloc.add(SplashStarted()),
+      expect: () => [
+        const SplashState(status: Status.loading),
+        const SplashState(status: Status.error),
+      ],
+    );
+
+    blocTest<SplashBloc, SplashState>(
+      'emits [Status.loading, Status.success] when SplashStarted is added and'
+      ' user found',
+      build: () {
+        when(() => mockUserRepository.getCurrentUser()).thenAnswer(
+          (_) => Stream.value(const User(id: '1', email: 'test@example.com')),
+        );
+        return SplashBloc(
+          userRepository: mockUserRepository,
+          authProvider: mockAuthProvider,
+        );
+      },
       act: (bloc) => bloc.add(SplashStarted()),
       expect: () => [
         const SplashState(status: Status.loading),

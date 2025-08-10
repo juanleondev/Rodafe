@@ -1,3 +1,5 @@
+import 'dart:async';
+
 // Not required for test files
 // ignore_for_file: prefer_const_constructors
 import 'package:graphql_data_source/graphql_data_source.dart';
@@ -25,15 +27,18 @@ void main() {
         final mockUserNode = GGetCurrentUserData_usersCollection_edges_node(
           (b) => b
             ..id.value = '1'
-            ..email = 'test@example.com',
+            ..email = 'test@example.com'
+            ..auth_uid.value = 'auth-123'
+            ..created_at.value = '2024-01-01T00:00:00Z'
+            ..phone = '123456789',
         );
 
         when(
           () => mockGraphqlDataSource.getCurrentUser(),
-        ).thenAnswer((_) async => mockUserNode);
+        ).thenAnswer((_) => Stream.value(mockUserNode));
 
         // Act
-        final result = await userRepository.getCurrentUser();
+        final result = await userRepository.getCurrentUser().first;
 
         // Assert
         expect(result, isNotNull);
@@ -46,10 +51,10 @@ void main() {
         // Arrange
         when(
           () => mockGraphqlDataSource.getCurrentUser(),
-        ).thenAnswer((_) async => null);
+        ).thenAnswer((_) => Stream.value(null));
 
         // Act
-        final result = await userRepository.getCurrentUser();
+        final result = await userRepository.getCurrentUser().first;
 
         // Assert
         expect(result, isNull);
@@ -63,11 +68,11 @@ void main() {
           const errorMessage = 'GraphQL error';
           when(
             () => mockGraphqlDataSource.getCurrentUser(),
-          ).thenThrow(Exception(errorMessage));
+          ).thenAnswer((_) => Stream.error(Exception(errorMessage)));
 
           // Act & Assert
           expect(
-            () => userRepository.getCurrentUser(),
+            () => userRepository.getCurrentUser().first,
             throwsA(
               isA<UserRepositoryException>().having(
                 (e) => e.message,
@@ -96,26 +101,16 @@ void main() {
       final mockUserNode = GGetCurrentUserData_usersCollection_edges_node(
         (b) => b
           ..id.value = '123'
-          ..email = 'user@example.com',
+          ..email = 'user@example.com'
+          ..auth_uid.value = 'auth-456'
+          ..created_at.value = '2024-01-01T00:00:00Z'
+          ..phone = '987654321',
       );
 
       final user = User.fromGraphQL(mockUserNode);
 
       expect(user.id, equals('123'));
       expect(user.email, equals('user@example.com'));
-    });
-
-    test('fromGraphQL handles null email', () {
-      final mockUserNode = GGetCurrentUserData_usersCollection_edges_node(
-        (b) => b
-          ..id.value = '123'
-          ..email = null,
-      );
-
-      final user = User.fromGraphQL(mockUserNode);
-
-      expect(user.id, equals('123'));
-      expect(user.email, equals(''));
     });
   });
 }

@@ -8,6 +8,7 @@ import 'package:flutter/widgets.dart';
 import 'package:gql_http_link/gql_http_link.dart';
 import 'package:graphql_data_source/graphql_data_source.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:user_app/authentication/bloc/authentication_bloc.dart';
 import 'package:user_app/config/env_config.dart';
 import 'package:user_repository/user_repository.dart';
 
@@ -31,6 +32,7 @@ Future<void> bootstrap(
   FutureOr<Widget> Function(
     UserRepository userRepository,
     AuthenticationProvider authProvider,
+    AuthenticationBloc authenticationBloc,
   )
   builder,
 ) async {
@@ -66,10 +68,14 @@ Future<void> bootstrap(
   // Create UserRepository
   final userRepository = UserRepository(graphqlDataSource: graphqlDataSource);
   final authProvider = AuthenticationProvider(supabase.client.auth);
+  final authenticationBloc = AuthenticationBloc(
+    authProvider: authProvider,
+    userRepository: userRepository,
+  );
 
   // Add cross-flavor configuration here
 
-  runApp(await builder(userRepository, authProvider));
+  runApp(await builder(userRepository, authProvider, authenticationBloc));
 }
 
 Future<String?> _getAuthToken(SupabaseClient supabase) async {

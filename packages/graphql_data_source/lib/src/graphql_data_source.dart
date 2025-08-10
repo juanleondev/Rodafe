@@ -12,25 +12,24 @@ class GraphqlDataSource {
   final Client _client;
 
   /// Gets the current user from the GraphQL API
-  Future<GGetCurrentUserData_usersCollection_edges_node?>
-  getCurrentUser() async {
-    final response = await _client.request(GGetCurrentUserReq()).first;
+  Stream<GGetCurrentUserData_usersCollection_edges_node?> getCurrentUser() {
+    return _client.request(GGetCurrentUserReq()).map((response) {
+      if (response.hasErrors) {
+        throw Exception('GraphQL errors: ${response.linkException}');
+      }
 
-    if (response.hasErrors) {
-      throw Exception('GraphQL errors: ${response.linkException}');
-    }
+      final data = response.data;
+      if (data == null) {
+        return null;
+      }
 
-    final data = response.data;
-    if (data == null) {
-      return null;
-    }
+      final userCollection = data.usersCollection;
+      if (userCollection == null || userCollection.edges.isEmpty) {
+        return null;
+      }
 
-    final userCollection = data.usersCollection;
-    if (userCollection == null || userCollection.edges.isEmpty) {
-      return null;
-    }
-
-    // Return the first user from the collection
-    return userCollection.edges.first.node;
+      // Return the first user from the collection
+      return userCollection.edges.first.node;
+    });
   }
 }

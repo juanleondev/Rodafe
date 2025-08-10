@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_models/shared_models.dart';
 import 'package:user_app/app/router/app_router.dart';
+import 'package:user_app/authentication/bloc/authentication_bloc.dart';
 import 'package:user_app/splash/splash.dart';
 
 class SplashPage extends StatelessWidget {
@@ -11,8 +12,10 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) =>
-          SplashBloc(userRepository: context.read())..add(SplashStarted()),
+      create: (_) => SplashBloc(
+        userRepository: context.read(),
+        authProvider: context.read(),
+      )..add(SplashStarted()),
       child: const SplashView(),
     );
   }
@@ -25,6 +28,11 @@ class SplashView extends StatelessWidget {
     return BlocListener<SplashBloc, SplashState>(
       listenWhen: (previous, current) => previous.status != current.status,
       listener: (context, state) {
+        // Get the AuthenticationBloc from the app level
+        context.read<AuthenticationBloc>()
+          ..add(const AuthenticationUserListeningStarted())
+          ..add(const AuthenticationAuthUserListeningStarted());
+
         if (state.status == Status.success) {
           context.go(AppRouter.homeRoute);
         } else if (state.status == Status.error) {

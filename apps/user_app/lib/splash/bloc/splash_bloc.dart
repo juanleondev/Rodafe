@@ -1,3 +1,4 @@
+import 'package:authentication_provider/authentication_provider.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:shared_models/shared_models.dart';
@@ -7,10 +8,16 @@ part 'splash_event.dart';
 part 'splash_state.dart';
 
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
-  SplashBloc({required this.userRepository}) : super(const SplashState()) {
+  SplashBloc({
+    required AuthenticationProvider authProvider,
+    required UserRepository userRepository,
+  }) : _authProvider = authProvider,
+       _userRepository = userRepository,
+       super(const SplashState()) {
     on<SplashStarted>(_onSplashStarted);
   }
-  final UserRepository userRepository;
+  final UserRepository _userRepository;
+  final AuthenticationProvider _authProvider;
 
   Future<void> _onSplashStarted(
     SplashStarted event,
@@ -19,17 +26,10 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     emit(state.copyWith(status: Status.loading));
 
     try {
-      final user = await userRepository.getCurrentUser();
-
-      if (user != null) {
-        // User is authenticated, emit success to go to home
-        emit(state.copyWith(status: Status.success));
-      } else {
-        // No authenticated user, emit error to go to sign-in
-        emit(state.copyWith(status: Status.error));
-      }
+      await _authProvider.userChanges.first;
+      await _userRepository.getCurrentUser().first;
+      emit(state.copyWith(status: Status.success));
     } catch (error) {
-      // Error occurred, go to sign-in page
       emit(state.copyWith(status: Status.error));
     }
   }

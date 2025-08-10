@@ -13,21 +13,22 @@ class UserRepository {
   final GraphqlDataSource _graphqlDataSource;
 
   /// Gets the current user from the GraphQL data source
-  Future<User?> getCurrentUser() async {
-    try {
-      final userNode = await _graphqlDataSource.getCurrentUser();
+  Stream<User?> getCurrentUser() {
+    return _graphqlDataSource
+        .getCurrentUser()
+        .map((userNode) {
+          if (userNode == null) {
+            return null;
+          }
 
-      if (userNode == null) {
-        return null;
-      }
-
-      return User.fromGraphQL(userNode);
-    } catch (error) {
-      throw UserRepositoryException(
-        message: 'Failed to get current user',
-        originalError: error,
-      );
-    }
+          return User.fromGraphQL(userNode);
+        })
+        .handleError((Object error) {
+          throw UserRepositoryException(
+            message: 'Failed to get current user',
+            originalError: error,
+          );
+        });
   }
 }
 
