@@ -7,6 +7,8 @@ environment:
   sdk: ^3.8.1
 
 dependencies:
+  authentication_provider:
+    path: ../../packages/authentication_provider
   bloc: ^9.0.0
   equatable: ^2.0.5
   ferry: ^0.16.1+2
