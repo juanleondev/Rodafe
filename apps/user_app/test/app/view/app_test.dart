@@ -7,17 +7,21 @@ import 'package:user_repository/user_repository.dart';
 
 class MockGraphqlDataSource extends Mock implements GraphqlDataSource {}
 
+class MockUserRepository extends Mock implements UserRepository {}
+
 void main() {
   group('App', () {
     testWidgets('renders HomePage', (tester) async {
-      final mockGraphqlDataSource = MockGraphqlDataSource();
-      await tester.pumpWidget(
-        App(
-          userRepository: UserRepository(
-            graphqlDataSource: mockGraphqlDataSource,
-          ),
-        ),
-      );
+      final mockUserRepository = MockUserRepository();
+
+      // Mock the getCurrentUser method to return successfully
+      when(mockUserRepository.getCurrentUser).thenAnswer((_) async => null);
+
+      await tester.pumpWidget(App(userRepository: mockUserRepository));
+
+      // Wait for the splash flow to complete and navigation to happen
+      await tester.pumpAndSettle();
+
       expect(find.byType(HomePage), findsOneWidget);
     });
   });

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_models/shared_models.dart';
+import 'package:user_app/app/router/app_router.dart';
 import 'package:user_app/splash/splash.dart';
 
 class SplashPage extends StatelessWidget {
@@ -10,7 +11,8 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => SplashBloc()..add(SplashStarted()),
+      create: (_) =>
+          SplashBloc(userRepository: context.read())..add(SplashStarted()),
       child: const SplashView(),
     );
   }
@@ -24,7 +26,7 @@ class SplashView extends StatelessWidget {
       listenWhen: (previous, current) => previous.status != current.status,
       listener: (context, state) {
         if (state.status == Status.success) {
-          context.go('/home');
+          context.go(AppRouter.homeRoute);
         }
       },
       child: BlocBuilder<SplashBloc, SplashState>(
