@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:authentication_provider/authentication_provider.dart';
 import 'package:bloc/bloc.dart';
 import 'package:ferry/ferry.dart';
 import 'package:flutter/widgets.dart';
@@ -27,7 +28,11 @@ class AppBlocObserver extends BlocObserver {
 }
 
 Future<void> bootstrap(
-  FutureOr<Widget> Function(UserRepository userRepository) builder,
+  FutureOr<Widget> Function(
+    UserRepository userRepository,
+    AuthenticationProvider authProvider,
+  )
+  builder,
 ) async {
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
@@ -62,10 +67,11 @@ Future<void> bootstrap(
 
   // Create UserRepository
   final userRepository = UserRepository(graphqlDataSource: graphqlDataSource);
+  final authProvider = AuthenticationProvider(supabase.auth);
 
   // Add cross-flavor configuration here
 
-  runApp(await builder(userRepository));
+  runApp(await builder(userRepository, authProvider));
 }
 
 Future<String?> _getAuthToken(SupabaseClient supabase) async {
