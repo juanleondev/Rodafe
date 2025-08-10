@@ -27,6 +27,8 @@ class SplashView extends StatelessWidget {
       listener: (context, state) {
         if (state.status == Status.success) {
           context.go(AppRouter.homeRoute);
+        } else if (state.status == Status.error) {
+          context.go(AppRouter.signInRoute);
         }
       },
       child: BlocBuilder<SplashBloc, SplashState>(

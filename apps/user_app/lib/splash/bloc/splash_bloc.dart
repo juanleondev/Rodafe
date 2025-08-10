@@ -18,8 +18,19 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
   ) async {
     emit(state.copyWith(status: Status.loading));
 
-    await userRepository.getCurrentUser();
+    try {
+      final user = await userRepository.getCurrentUser();
 
-    emit(state.copyWith(status: Status.success));
+      if (user != null) {
+        // User is authenticated, emit success to go to home
+        emit(state.copyWith(status: Status.success));
+      } else {
+        // No authenticated user, emit error to go to sign-in
+        emit(state.copyWith(status: Status.error));
+      }
+    } catch (error) {
+      // Error occurred, go to sign-in page
+      emit(state.copyWith(status: Status.error));
+    }
   }
 }
