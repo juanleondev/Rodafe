@@ -53,13 +53,13 @@ Future<void> bootstrap(
   await supabase.client.auth.signOut();
 
   // Setup GraphQL client
-  final link = HttpLink(
-    EnvConfig.graphqlEndpoint,
-    defaultHeaders: {
-      'apiKey': EnvConfig.supabaseAnonKey,
-      'Authorization': 'Bearer ${await _getAuthToken(supabase.client)}',
-    },
-  );
+  final link =
+      HttpAuthLink(getToken: () async => _getAuthToken(supabase.client)).concat(
+        HttpLink(
+          EnvConfig.graphqlEndpoint,
+          defaultHeaders: {'apiKey': EnvConfig.supabaseAnonKey},
+        ),
+      );
 
   final cache = Cache();
   final client = Client(link: link, cache: cache);
@@ -78,10 +78,10 @@ Future<void> bootstrap(
   runApp(await builder(userRepository, authProvider, authenticationBloc));
 }
 
-Future<String?> _getAuthToken(SupabaseClient supabase) async {
+Future<String> _getAuthToken(SupabaseClient supabase) async {
   final session = supabase.auth.currentSession;
   if (session == null) {
-    return null;
+    return '';
   }
   return session.accessToken;
 }

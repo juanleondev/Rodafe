@@ -12,6 +12,16 @@ class UserRepository {
 
   final GraphqlDataSource _graphqlDataSource;
 
+  /// Gets the current user from cache (no network request)
+  User? get currentUser {
+    final userNode = _graphqlDataSource.currentUser;
+    if (userNode == null) {
+      return null;
+    }
+
+    return User.fromGraphQL(userNode);
+  }
+
   /// Gets the current user from the GraphQL data source
   Stream<User?> getCurrentUser() {
     return _graphqlDataSource

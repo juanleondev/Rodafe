@@ -30,6 +30,7 @@ class SplashView extends StatelessWidget {
       listener: (context, state) {
         // Get the AuthenticationBloc from the app level
         context.read<AuthenticationBloc>()
+          ..add(const AuthenticationStarted())
           ..add(const AuthenticationUserListeningStarted())
           ..add(const AuthenticationAuthUserListeningStarted());
 

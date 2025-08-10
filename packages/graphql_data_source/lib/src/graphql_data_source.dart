@@ -11,6 +11,21 @@ class GraphqlDataSource {
 
   final Client _client;
 
+  /// Gets the current user from cache (no network request)
+  GGetCurrentUserData_usersCollection_edges_node? get currentUser {
+    final request = GGetCurrentUserReq();
+    final cachedData = _client.cache.readQuery(request);
+
+    if (cachedData != null) {
+      final userCollection = cachedData.usersCollection;
+      if (userCollection != null && userCollection.edges.isNotEmpty) {
+        return userCollection.edges.first.node;
+      }
+    }
+
+    return null;
+  }
+
   /// Gets the current user from the GraphQL API
   Stream<GGetCurrentUserData_usersCollection_edges_node?> getCurrentUser() {
     return _client.request(GGetCurrentUserReq()).map((response) {

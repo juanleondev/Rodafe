@@ -20,6 +20,7 @@ class AuthenticationBloc
     on<AuthenticationAuthUserListeningStarted>(
       _onAuthenticationAuthUserListeningStarted,
     );
+    on<AuthenticationStarted>(_onAuthenticationStarted);
   }
 
   final AuthenticationProvider _authProvider;
@@ -59,5 +60,21 @@ class AuthenticationBloc
         return const AuthenticationAuthenticated();
       },
     );
+  }
+
+  Future<void> _onAuthenticationStarted(
+    AuthenticationStarted event,
+    Emitter<AuthenticationState> emit,
+  ) async {
+    final user = _userRepository.currentUser;
+    if (user == null) {
+      if (_authProvider.isAuthenticated) {
+        emit(const AuthenticationAuthenticated());
+      } else {
+        emit(const AuthenticationUnauthenticated());
+      }
+    } else {
+      emit(const AuthenticationRegistered());
+    }
   }
 }

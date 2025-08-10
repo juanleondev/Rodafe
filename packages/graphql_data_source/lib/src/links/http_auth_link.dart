@@ -9,9 +9,7 @@ import 'package:gql_link/gql_link.dart';
 import 'package:gql_transform_link/gql_transform_link.dart';
 
 class HttpAuthLink extends Link {
-  HttpAuthLink({
-    required this.getToken,
-  }) {
+  HttpAuthLink({required this.getToken}) {
     _link = Link.concat(
       ErrorLink(onException: handleException),
       TransformLink(requestTransformer: transformRequest),
@@ -68,17 +66,13 @@ class HttpAuthLink extends Link {
   Request transformRequest(Request request) {
     var updatedRequest = request.updateContextEntry<HttpLinkHeaders>(
       (headers) => HttpLinkHeaders(
-        headers: <String, String>{
-          ...headers?.headers ?? <String, String>{},
-        },
+        headers: <String, String>{...headers?.headers ?? <String, String>{}},
       ),
     );
-    if (_token != null) {
+    if (_token != null && _token!.isNotEmpty) {
       updatedRequest = request.updateContextEntry<HttpLinkHeaders>(
         (headers) => HttpLinkHeaders(
-          headers: <String, String>{
-            'Authorization': _token!,
-          },
+          headers: <String, String>{'Authorization': 'Bearer $_token'},
         ),
       );
     }

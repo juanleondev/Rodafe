@@ -27,16 +27,18 @@ class App extends StatelessWidget {
       ],
       child: BlocProvider.value(
         value: authenticationBloc,
-        child: MaterialApp.router(
-          theme: ThemeData(
-            appBarTheme: AppBarTheme(
-              backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        child: Builder(
+          builder: (context) => MaterialApp.router(
+            theme: ThemeData(
+              appBarTheme: AppBarTheme(
+                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+              ),
+              useMaterial3: true,
             ),
-            useMaterial3: true,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
+            routerConfig: AppRouter.getRouter(context),
           ),
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          routerConfig: AppRouter.getRouter(context),
         ),
       ),
     );
