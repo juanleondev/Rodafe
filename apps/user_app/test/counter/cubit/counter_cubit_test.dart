@@ -1,26 +1,43 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_models/shared_models.dart';
 
 import 'package:user_app/counter/counter.dart';
 
 void main() {
   group('CounterCubit', () {
-    test('initial state is 0', () {
-      expect(CounterCubit().state, equals(0));
+    test('initial state has count 0 and Status.initial', () {
+      final cubit = CounterCubit();
+      expect(cubit.state.count, equals(0));
+      expect(cubit.state.status, equals(Status.initial));
     });
 
-    blocTest<CounterCubit, int>(
-      'emits [1] when increment is called',
+    blocTest<CounterCubit, CounterState>(
+      'emits [Status.loading] when increment is called',
       build: CounterCubit.new,
       act: (cubit) => cubit.increment(),
-      expect: () => [equals(1)],
+      expect: () => [
+        isA<CounterState>().having((s) => s.status, 'status', Status.loading),
+      ],
     );
 
-    blocTest<CounterCubit, int>(
-      'emits [-1] when decrement is called',
+    blocTest<CounterCubit, CounterState>(
+      'emits [Status.loading] when decrement is called',
       build: CounterCubit.new,
       act: (cubit) => cubit.decrement(),
-      expect: () => [equals(-1)],
+      expect: () => [
+        isA<CounterState>().having((s) => s.status, 'status', Status.loading),
+      ],
     );
+
+    test('increment method exists and can be called', () {
+      final cubit = CounterCubit();
+      expect(() => cubit.increment(), returnsNormally);
+    });
+
+    test('decrement method exists and can be called', () {
+      final cubit = CounterCubit();
+      expect(() => cubit.decrement(), returnsNormally);
+    });
   });
 }

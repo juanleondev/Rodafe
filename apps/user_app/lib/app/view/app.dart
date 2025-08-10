@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:user_app/counter/counter.dart';
+import 'package:user_app/app/router/app_router.dart';
 import 'package:user_app/l10n/l10n.dart';
 import 'package:user_repository/user_repository.dart';
 
@@ -13,7 +13,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return RepositoryProvider.value(
       value: userRepository,
-      child: MaterialApp(
+      child: MaterialApp.router(
         theme: ThemeData(
           appBarTheme: AppBarTheme(
             backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -22,7 +22,7 @@ class App extends StatelessWidget {
         ),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: const CounterPage(),
+        routerConfig: AppRouter.getRouter(),
       ),
     );
   }

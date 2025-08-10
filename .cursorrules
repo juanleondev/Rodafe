@@ -21,6 +21,10 @@ mason make flutter_bloc_feature --name your_feature_name --type bloc --style equ
 
 This ensures consistent feature structure with BLoC pattern.
 
+## Flutter widget creation
+
+Don't use methods to get widtget, always use stateless widget if possible and if it will be used in the same file it should be private
+
 ## Flutter Commands
 
 Always use fvm for Dart or Flutter commands as specified in the project requirements.
