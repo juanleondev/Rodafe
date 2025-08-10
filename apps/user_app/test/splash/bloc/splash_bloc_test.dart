@@ -11,22 +11,19 @@ void main() {
 
     blocTest<SplashBloc, SplashState>(
       'emits [Status.loading] when SplashStarted is added',
-      build: () => SplashBloc(),
+      build: SplashBloc.new,
       act: (bloc) => bloc.add(SplashStarted()),
       expect: () => [const SplashState(status: Status.loading)],
     );
 
-    test('transitions to success status after delay', () async {
-      final bloc = SplashBloc();
-      bloc.add(SplashStarted());
-
-      // Wait for initial loading state
-      await bloc.stream.firstWhere((state) => state.status == Status.loading);
-
-      // Wait for success state
-      await bloc.stream.firstWhere((state) => state.status == Status.success);
-
-      expect(bloc.state.status, equals(Status.success));
-    });
+    blocTest<SplashBloc, SplashState>(
+      'transitions to success status after delay',
+      build: SplashBloc.new,
+      act: (bloc) => bloc.add(SplashStarted()),
+      expect: () => [
+        const SplashState(status: Status.loading),
+        const SplashState(status: Status.success),
+      ],
+    );
   });
 }

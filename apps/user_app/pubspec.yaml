@@ -20,11 +20,11 @@ dependencies:
   graphql_data_source:
     path: ../../packages/graphql_data_source
   intl: ^0.20.2
+  shared_models:
+    path: ../../packages/shared_models
   supabase: ^2.8.0
   user_repository:
     path: ../../packages/user_repository
-  shared_models:
-    path: ../../packages/shared_models
 
 dev_dependencies:
   bloc_test: ^10.0.0

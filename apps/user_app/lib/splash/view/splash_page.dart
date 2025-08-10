@@ -24,7 +24,7 @@ class SplashView extends StatelessWidget {
       listenWhen: (previous, current) => previous.status != current.status,
       listener: (context, state) {
         if (state.status == Status.success) {
-          context.go('/counter');
+          context.go('/home');
         }
       },
       child: BlocBuilder<SplashBloc, SplashState>(

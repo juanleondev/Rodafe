@@ -1,10 +1,10 @@
 import 'package:go_router/go_router.dart';
-import 'package:user_app/counter/counter.dart';
+import 'package:user_app/home/home.dart';
 import 'package:user_app/splash/splash.dart';
 
 class AppRouter {
   static const String splashRoute = '/';
-  static const String counterRoute = '/counter';
+  static const String homeRoute = '/home';
 
   static GoRouter getRouter() {
     return GoRouter(
@@ -14,10 +14,7 @@ class AppRouter {
           path: splashRoute,
           builder: (context, state) => const SplashPage(),
         ),
-        GoRoute(
-          path: counterRoute,
-          builder: (context, state) => const CounterPage(),
-        ),
+        GoRoute(path: homeRoute, builder: (context, state) => const HomePage()),
       ],
     );
   }
