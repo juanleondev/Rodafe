@@ -41,7 +41,6 @@ Middleware authMiddleware(SupabaseClient supabaseClient) => (handler) {
               );
             }
             final user = SupabaseUser.fromJson(userJson);
-            print(user);
             return handler(
               context.provide(() => user),
             );
