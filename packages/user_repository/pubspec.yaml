@@ -1,0 +1,17 @@
+name: user_repository
+description: User repository that connects to graphql data source
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  equatable: ^2.0.5
+  graphql_data_source:
+    path: ../graphql_data_source
+
+dev_dependencies:
+  mocktail: ^1.0.4
+  test: ^1.26.2
+  very_good_analysis: ^9.0.0

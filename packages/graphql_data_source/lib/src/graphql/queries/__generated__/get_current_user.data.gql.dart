@@ -25,7 +25,7 @@ abstract class GGetCurrentUserData
 
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  GGetCurrentUserData_userCollection? get userCollection;
+  GGetCurrentUserData_usersCollection? get usersCollection;
   static Serializer<GGetCurrentUserData> get serializer =>
       _$gGetCurrentUserDataSerializer;
 
@@ -41,101 +41,105 @@ abstract class GGetCurrentUserData
       );
 }
 
-abstract class GGetCurrentUserData_userCollection
+abstract class GGetCurrentUserData_usersCollection
     implements
-        Built<GGetCurrentUserData_userCollection,
-            GGetCurrentUserData_userCollectionBuilder> {
-  GGetCurrentUserData_userCollection._();
+        Built<GGetCurrentUserData_usersCollection,
+            GGetCurrentUserData_usersCollectionBuilder> {
+  GGetCurrentUserData_usersCollection._();
 
-  factory GGetCurrentUserData_userCollection(
-      [void Function(GGetCurrentUserData_userCollectionBuilder b)
-          updates]) = _$GGetCurrentUserData_userCollection;
+  factory GGetCurrentUserData_usersCollection(
+      [void Function(GGetCurrentUserData_usersCollectionBuilder b)
+          updates]) = _$GGetCurrentUserData_usersCollection;
 
-  static void _initializeBuilder(GGetCurrentUserData_userCollectionBuilder b) =>
-      b..G__typename = 'userConnection';
+  static void _initializeBuilder(
+          GGetCurrentUserData_usersCollectionBuilder b) =>
+      b..G__typename = 'usersConnection';
 
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  BuiltList<GGetCurrentUserData_userCollection_edges> get edges;
-  static Serializer<GGetCurrentUserData_userCollection> get serializer =>
-      _$gGetCurrentUserDataUserCollectionSerializer;
+  BuiltList<GGetCurrentUserData_usersCollection_edges> get edges;
+  static Serializer<GGetCurrentUserData_usersCollection> get serializer =>
+      _$gGetCurrentUserDataUsersCollectionSerializer;
 
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GGetCurrentUserData_userCollection.serializer,
+        GGetCurrentUserData_usersCollection.serializer,
         this,
       ) as Map<String, dynamic>);
 
-  static GGetCurrentUserData_userCollection? fromJson(
+  static GGetCurrentUserData_usersCollection? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-        GGetCurrentUserData_userCollection.serializer,
+        GGetCurrentUserData_usersCollection.serializer,
         json,
       );
 }
 
-abstract class GGetCurrentUserData_userCollection_edges
+abstract class GGetCurrentUserData_usersCollection_edges
     implements
-        Built<GGetCurrentUserData_userCollection_edges,
-            GGetCurrentUserData_userCollection_edgesBuilder> {
-  GGetCurrentUserData_userCollection_edges._();
+        Built<GGetCurrentUserData_usersCollection_edges,
+            GGetCurrentUserData_usersCollection_edgesBuilder> {
+  GGetCurrentUserData_usersCollection_edges._();
 
-  factory GGetCurrentUserData_userCollection_edges(
-      [void Function(GGetCurrentUserData_userCollection_edgesBuilder b)
-          updates]) = _$GGetCurrentUserData_userCollection_edges;
+  factory GGetCurrentUserData_usersCollection_edges(
+      [void Function(GGetCurrentUserData_usersCollection_edgesBuilder b)
+          updates]) = _$GGetCurrentUserData_usersCollection_edges;
 
   static void _initializeBuilder(
-          GGetCurrentUserData_userCollection_edgesBuilder b) =>
-      b..G__typename = 'userEdge';
+          GGetCurrentUserData_usersCollection_edgesBuilder b) =>
+      b..G__typename = 'usersEdge';
 
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  GGetCurrentUserData_userCollection_edges_node get node;
-  static Serializer<GGetCurrentUserData_userCollection_edges> get serializer =>
-      _$gGetCurrentUserDataUserCollectionEdgesSerializer;
+  GGetCurrentUserData_usersCollection_edges_node get node;
+  static Serializer<GGetCurrentUserData_usersCollection_edges> get serializer =>
+      _$gGetCurrentUserDataUsersCollectionEdgesSerializer;
 
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GGetCurrentUserData_userCollection_edges.serializer,
+        GGetCurrentUserData_usersCollection_edges.serializer,
         this,
       ) as Map<String, dynamic>);
 
-  static GGetCurrentUserData_userCollection_edges? fromJson(
+  static GGetCurrentUserData_usersCollection_edges? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-        GGetCurrentUserData_userCollection_edges.serializer,
+        GGetCurrentUserData_usersCollection_edges.serializer,
         json,
       );
 }
 
-abstract class GGetCurrentUserData_userCollection_edges_node
+abstract class GGetCurrentUserData_usersCollection_edges_node
     implements
-        Built<GGetCurrentUserData_userCollection_edges_node,
-            GGetCurrentUserData_userCollection_edges_nodeBuilder> {
-  GGetCurrentUserData_userCollection_edges_node._();
+        Built<GGetCurrentUserData_usersCollection_edges_node,
+            GGetCurrentUserData_usersCollection_edges_nodeBuilder> {
+  GGetCurrentUserData_usersCollection_edges_node._();
 
-  factory GGetCurrentUserData_userCollection_edges_node(
-      [void Function(GGetCurrentUserData_userCollection_edges_nodeBuilder b)
-          updates]) = _$GGetCurrentUserData_userCollection_edges_node;
+  factory GGetCurrentUserData_usersCollection_edges_node(
+      [void Function(GGetCurrentUserData_usersCollection_edges_nodeBuilder b)
+          updates]) = _$GGetCurrentUserData_usersCollection_edges_node;
 
   static void _initializeBuilder(
-          GGetCurrentUserData_userCollection_edges_nodeBuilder b) =>
-      b..G__typename = 'user';
+          GGetCurrentUserData_usersCollection_edges_nodeBuilder b) =>
+      b..G__typename = 'users';
 
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  _i2.GBigInt get id;
-  String? get email;
-  static Serializer<GGetCurrentUserData_userCollection_edges_node>
-      get serializer => _$gGetCurrentUserDataUserCollectionEdgesNodeSerializer;
+  _i2.GUUID get id;
+  String get email;
+  String? get phone;
+  _i2.GUUID get auth_uid;
+  _i2.GDatetime get created_at;
+  static Serializer<GGetCurrentUserData_usersCollection_edges_node>
+      get serializer => _$gGetCurrentUserDataUsersCollectionEdgesNodeSerializer;
 
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GGetCurrentUserData_userCollection_edges_node.serializer,
+        GGetCurrentUserData_usersCollection_edges_node.serializer,
         this,
       ) as Map<String, dynamic>);
 
-  static GGetCurrentUserData_userCollection_edges_node? fromJson(
+  static GGetCurrentUserData_usersCollection_edges_node? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-        GGetCurrentUserData_userCollection_edges_node.serializer,
+        GGetCurrentUserData_usersCollection_edges_node.serializer,
         json,
       );
 }

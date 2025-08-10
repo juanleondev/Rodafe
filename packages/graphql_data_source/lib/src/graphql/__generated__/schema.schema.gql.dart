@@ -728,105 +728,6 @@ abstract class GTimeListFilter
       );
 }
 
-abstract class GuserFilter implements Built<GuserFilter, GuserFilterBuilder> {
-  GuserFilter._();
-
-  factory GuserFilter([void Function(GuserFilterBuilder b) updates]) =
-      _$GuserFilter;
-
-  GBigIntFilter? get id;
-  GDatetimeFilter? get created_at;
-  GStringFilter? get email;
-  GIDFilter? get nodeId;
-  BuiltList<GuserFilter>? get and;
-  BuiltList<GuserFilter>? get or;
-  GuserFilter? get not;
-  static Serializer<GuserFilter> get serializer => _$guserFilterSerializer;
-
-  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
-        GuserFilter.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GuserFilter? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(
-        GuserFilter.serializer,
-        json,
-      );
-}
-
-abstract class GuserInsertInput
-    implements Built<GuserInsertInput, GuserInsertInputBuilder> {
-  GuserInsertInput._();
-
-  factory GuserInsertInput([void Function(GuserInsertInputBuilder b) updates]) =
-      _$GuserInsertInput;
-
-  GDatetime? get created_at;
-  String? get email;
-  static Serializer<GuserInsertInput> get serializer =>
-      _$guserInsertInputSerializer;
-
-  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
-        GuserInsertInput.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GuserInsertInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(
-        GuserInsertInput.serializer,
-        json,
-      );
-}
-
-abstract class GuserOrderBy
-    implements Built<GuserOrderBy, GuserOrderByBuilder> {
-  GuserOrderBy._();
-
-  factory GuserOrderBy([void Function(GuserOrderByBuilder b) updates]) =
-      _$GuserOrderBy;
-
-  GOrderByDirection? get id;
-  GOrderByDirection? get created_at;
-  GOrderByDirection? get email;
-  static Serializer<GuserOrderBy> get serializer => _$guserOrderBySerializer;
-
-  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
-        GuserOrderBy.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GuserOrderBy? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(
-        GuserOrderBy.serializer,
-        json,
-      );
-}
-
-abstract class GuserUpdateInput
-    implements Built<GuserUpdateInput, GuserUpdateInputBuilder> {
-  GuserUpdateInput._();
-
-  factory GuserUpdateInput([void Function(GuserUpdateInputBuilder b) updates]) =
-      _$GuserUpdateInput;
-
-  GDatetime? get created_at;
-  String? get email;
-  static Serializer<GuserUpdateInput> get serializer =>
-      _$guserUpdateInputSerializer;
-
-  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
-        GuserUpdateInput.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GuserUpdateInput? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(
-        GuserUpdateInput.serializer,
-        json,
-      );
-}
-
 abstract class GUUID implements Built<GUUID, GUUIDBuilder> {
   GUUID._();
 
@@ -893,6 +794,521 @@ abstract class GUUIDListFilter
       );
 }
 
+abstract class Gchat_messagesFilter
+    implements Built<Gchat_messagesFilter, Gchat_messagesFilterBuilder> {
+  Gchat_messagesFilter._();
+
+  factory Gchat_messagesFilter(
+          [void Function(Gchat_messagesFilterBuilder b) updates]) =
+      _$Gchat_messagesFilter;
+
+  GUUIDFilter? get id;
+  GDatetimeFilter? get created_at;
+  GUUIDFilter? get session_id;
+  GStringFilter? get message;
+  Gchat_sender_typeFilter? get sender_type;
+  GIDFilter? get nodeId;
+  BuiltList<Gchat_messagesFilter>? get and;
+  BuiltList<Gchat_messagesFilter>? get or;
+  Gchat_messagesFilter? get not;
+  static Serializer<Gchat_messagesFilter> get serializer =>
+      _$gchatMessagesFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gchat_messagesFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gchat_messagesFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gchat_messagesFilter.serializer,
+        json,
+      );
+}
+
+abstract class Gchat_messagesInsertInput
+    implements
+        Built<Gchat_messagesInsertInput, Gchat_messagesInsertInputBuilder> {
+  Gchat_messagesInsertInput._();
+
+  factory Gchat_messagesInsertInput(
+          [void Function(Gchat_messagesInsertInputBuilder b) updates]) =
+      _$Gchat_messagesInsertInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GUUID? get session_id;
+  String? get message;
+  Gchat_sender_type? get sender_type;
+  static Serializer<Gchat_messagesInsertInput> get serializer =>
+      _$gchatMessagesInsertInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gchat_messagesInsertInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gchat_messagesInsertInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gchat_messagesInsertInput.serializer,
+        json,
+      );
+}
+
+abstract class Gchat_messagesOrderBy
+    implements Built<Gchat_messagesOrderBy, Gchat_messagesOrderByBuilder> {
+  Gchat_messagesOrderBy._();
+
+  factory Gchat_messagesOrderBy(
+          [void Function(Gchat_messagesOrderByBuilder b) updates]) =
+      _$Gchat_messagesOrderBy;
+
+  GOrderByDirection? get id;
+  GOrderByDirection? get created_at;
+  GOrderByDirection? get session_id;
+  GOrderByDirection? get message;
+  GOrderByDirection? get sender_type;
+  static Serializer<Gchat_messagesOrderBy> get serializer =>
+      _$gchatMessagesOrderBySerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gchat_messagesOrderBy.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gchat_messagesOrderBy? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gchat_messagesOrderBy.serializer,
+        json,
+      );
+}
+
+abstract class Gchat_messagesUpdateInput
+    implements
+        Built<Gchat_messagesUpdateInput, Gchat_messagesUpdateInputBuilder> {
+  Gchat_messagesUpdateInput._();
+
+  factory Gchat_messagesUpdateInput(
+          [void Function(Gchat_messagesUpdateInputBuilder b) updates]) =
+      _$Gchat_messagesUpdateInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GUUID? get session_id;
+  String? get message;
+  Gchat_sender_type? get sender_type;
+  static Serializer<Gchat_messagesUpdateInput> get serializer =>
+      _$gchatMessagesUpdateInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gchat_messagesUpdateInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gchat_messagesUpdateInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gchat_messagesUpdateInput.serializer,
+        json,
+      );
+}
+
+class Gchat_sender_type extends EnumClass {
+  const Gchat_sender_type._(String name) : super(name);
+
+  static const Gchat_sender_type user = _$gchatSenderTypeuser;
+
+  static const Gchat_sender_type bot = _$gchatSenderTypebot;
+
+  static Serializer<Gchat_sender_type> get serializer =>
+      _$gchatSenderTypeSerializer;
+
+  static BuiltSet<Gchat_sender_type> get values => _$gchatSenderTypeValues;
+
+  static Gchat_sender_type valueOf(String name) =>
+      _$gchatSenderTypeValueOf(name);
+}
+
+abstract class Gchat_sender_typeFilter
+    implements Built<Gchat_sender_typeFilter, Gchat_sender_typeFilterBuilder> {
+  Gchat_sender_typeFilter._();
+
+  factory Gchat_sender_typeFilter(
+          [void Function(Gchat_sender_typeFilterBuilder b) updates]) =
+      _$Gchat_sender_typeFilter;
+
+  Gchat_sender_type? get eq;
+  @BuiltValueField(wireName: 'in')
+  BuiltList<Gchat_sender_type>? get Gin;
+  @BuiltValueField(wireName: 'is')
+  GFilterIs? get Gis;
+  Gchat_sender_type? get neq;
+  static Serializer<Gchat_sender_typeFilter> get serializer =>
+      _$gchatSenderTypeFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gchat_sender_typeFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gchat_sender_typeFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gchat_sender_typeFilter.serializer,
+        json,
+      );
+}
+
+abstract class Gchat_sessionsFilter
+    implements Built<Gchat_sessionsFilter, Gchat_sessionsFilterBuilder> {
+  Gchat_sessionsFilter._();
+
+  factory Gchat_sessionsFilter(
+          [void Function(Gchat_sessionsFilterBuilder b) updates]) =
+      _$Gchat_sessionsFilter;
+
+  GUUIDFilter? get id;
+  GDatetimeFilter? get created_at;
+  GDatetimeFilter? get updated_at;
+  GUUIDFilter? get user_id;
+  GIDFilter? get nodeId;
+  BuiltList<Gchat_sessionsFilter>? get and;
+  BuiltList<Gchat_sessionsFilter>? get or;
+  Gchat_sessionsFilter? get not;
+  static Serializer<Gchat_sessionsFilter> get serializer =>
+      _$gchatSessionsFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gchat_sessionsFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gchat_sessionsFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gchat_sessionsFilter.serializer,
+        json,
+      );
+}
+
+abstract class Gchat_sessionsInsertInput
+    implements
+        Built<Gchat_sessionsInsertInput, Gchat_sessionsInsertInputBuilder> {
+  Gchat_sessionsInsertInput._();
+
+  factory Gchat_sessionsInsertInput(
+          [void Function(Gchat_sessionsInsertInputBuilder b) updates]) =
+      _$Gchat_sessionsInsertInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GDatetime? get updated_at;
+  GUUID? get user_id;
+  GJSON? get bearing_data;
+  static Serializer<Gchat_sessionsInsertInput> get serializer =>
+      _$gchatSessionsInsertInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gchat_sessionsInsertInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gchat_sessionsInsertInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gchat_sessionsInsertInput.serializer,
+        json,
+      );
+}
+
+abstract class Gchat_sessionsOrderBy
+    implements Built<Gchat_sessionsOrderBy, Gchat_sessionsOrderByBuilder> {
+  Gchat_sessionsOrderBy._();
+
+  factory Gchat_sessionsOrderBy(
+          [void Function(Gchat_sessionsOrderByBuilder b) updates]) =
+      _$Gchat_sessionsOrderBy;
+
+  GOrderByDirection? get id;
+  GOrderByDirection? get created_at;
+  GOrderByDirection? get updated_at;
+  GOrderByDirection? get user_id;
+  static Serializer<Gchat_sessionsOrderBy> get serializer =>
+      _$gchatSessionsOrderBySerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gchat_sessionsOrderBy.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gchat_sessionsOrderBy? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gchat_sessionsOrderBy.serializer,
+        json,
+      );
+}
+
+abstract class Gchat_sessionsUpdateInput
+    implements
+        Built<Gchat_sessionsUpdateInput, Gchat_sessionsUpdateInputBuilder> {
+  Gchat_sessionsUpdateInput._();
+
+  factory Gchat_sessionsUpdateInput(
+          [void Function(Gchat_sessionsUpdateInputBuilder b) updates]) =
+      _$Gchat_sessionsUpdateInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GDatetime? get updated_at;
+  GUUID? get user_id;
+  GJSON? get bearing_data;
+  static Serializer<Gchat_sessionsUpdateInput> get serializer =>
+      _$gchatSessionsUpdateInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gchat_sessionsUpdateInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gchat_sessionsUpdateInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gchat_sessionsUpdateInput.serializer,
+        json,
+      );
+}
+
+abstract class GcompaniesFilter
+    implements Built<GcompaniesFilter, GcompaniesFilterBuilder> {
+  GcompaniesFilter._();
+
+  factory GcompaniesFilter([void Function(GcompaniesFilterBuilder b) updates]) =
+      _$GcompaniesFilter;
+
+  GUUIDFilter? get id;
+  GDatetimeFilter? get created_at;
+  GStringFilter? get email;
+  GStringFilter? get name;
+  GStringFilter? get phone;
+  GStringFilter? get address;
+  GIDFilter? get nodeId;
+  BuiltList<GcompaniesFilter>? get and;
+  BuiltList<GcompaniesFilter>? get or;
+  GcompaniesFilter? get not;
+  static Serializer<GcompaniesFilter> get serializer =>
+      _$gcompaniesFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GcompaniesFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GcompaniesFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GcompaniesFilter.serializer,
+        json,
+      );
+}
+
+abstract class GcompaniesInsertInput
+    implements Built<GcompaniesInsertInput, GcompaniesInsertInputBuilder> {
+  GcompaniesInsertInput._();
+
+  factory GcompaniesInsertInput(
+          [void Function(GcompaniesInsertInputBuilder b) updates]) =
+      _$GcompaniesInsertInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  String? get email;
+  String? get name;
+  String? get phone;
+  String? get address;
+  static Serializer<GcompaniesInsertInput> get serializer =>
+      _$gcompaniesInsertInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GcompaniesInsertInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GcompaniesInsertInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GcompaniesInsertInput.serializer,
+        json,
+      );
+}
+
+abstract class GcompaniesOrderBy
+    implements Built<GcompaniesOrderBy, GcompaniesOrderByBuilder> {
+  GcompaniesOrderBy._();
+
+  factory GcompaniesOrderBy(
+          [void Function(GcompaniesOrderByBuilder b) updates]) =
+      _$GcompaniesOrderBy;
+
+  GOrderByDirection? get id;
+  GOrderByDirection? get created_at;
+  GOrderByDirection? get email;
+  GOrderByDirection? get name;
+  GOrderByDirection? get phone;
+  GOrderByDirection? get address;
+  static Serializer<GcompaniesOrderBy> get serializer =>
+      _$gcompaniesOrderBySerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GcompaniesOrderBy.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GcompaniesOrderBy? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GcompaniesOrderBy.serializer,
+        json,
+      );
+}
+
+abstract class GcompaniesUpdateInput
+    implements Built<GcompaniesUpdateInput, GcompaniesUpdateInputBuilder> {
+  GcompaniesUpdateInput._();
+
+  factory GcompaniesUpdateInput(
+          [void Function(GcompaniesUpdateInputBuilder b) updates]) =
+      _$GcompaniesUpdateInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  String? get email;
+  String? get name;
+  String? get phone;
+  String? get address;
+  static Serializer<GcompaniesUpdateInput> get serializer =>
+      _$gcompaniesUpdateInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GcompaniesUpdateInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GcompaniesUpdateInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GcompaniesUpdateInput.serializer,
+        json,
+      );
+}
+
+abstract class GusersFilter
+    implements Built<GusersFilter, GusersFilterBuilder> {
+  GusersFilter._();
+
+  factory GusersFilter([void Function(GusersFilterBuilder b) updates]) =
+      _$GusersFilter;
+
+  GUUIDFilter? get id;
+  GDatetimeFilter? get created_at;
+  GStringFilter? get email;
+  GStringFilter? get phone;
+  GUUIDFilter? get auth_uid;
+  GIDFilter? get nodeId;
+  BuiltList<GusersFilter>? get and;
+  BuiltList<GusersFilter>? get or;
+  GusersFilter? get not;
+  static Serializer<GusersFilter> get serializer => _$gusersFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GusersFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GusersFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GusersFilter.serializer,
+        json,
+      );
+}
+
+abstract class GusersInsertInput
+    implements Built<GusersInsertInput, GusersInsertInputBuilder> {
+  GusersInsertInput._();
+
+  factory GusersInsertInput(
+          [void Function(GusersInsertInputBuilder b) updates]) =
+      _$GusersInsertInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  String? get email;
+  String? get phone;
+  GUUID? get auth_uid;
+  static Serializer<GusersInsertInput> get serializer =>
+      _$gusersInsertInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GusersInsertInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GusersInsertInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GusersInsertInput.serializer,
+        json,
+      );
+}
+
+abstract class GusersOrderBy
+    implements Built<GusersOrderBy, GusersOrderByBuilder> {
+  GusersOrderBy._();
+
+  factory GusersOrderBy([void Function(GusersOrderByBuilder b) updates]) =
+      _$GusersOrderBy;
+
+  GOrderByDirection? get id;
+  GOrderByDirection? get created_at;
+  GOrderByDirection? get email;
+  GOrderByDirection? get phone;
+  GOrderByDirection? get auth_uid;
+  static Serializer<GusersOrderBy> get serializer => _$gusersOrderBySerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GusersOrderBy.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GusersOrderBy? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GusersOrderBy.serializer,
+        json,
+      );
+}
+
+abstract class GusersUpdateInput
+    implements Built<GusersUpdateInput, GusersUpdateInputBuilder> {
+  GusersUpdateInput._();
+
+  factory GusersUpdateInput(
+          [void Function(GusersUpdateInputBuilder b) updates]) =
+      _$GusersUpdateInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  String? get email;
+  String? get phone;
+  GUUID? get auth_uid;
+  static Serializer<GusersUpdateInput> get serializer =>
+      _$gusersUpdateInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GusersUpdateInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GusersUpdateInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GusersUpdateInput.serializer,
+        json,
+      );
+}
+
 const Map<String, Set<String>> possibleTypesMap = {
-  'Node': {'user'}
+  'Node': {
+    'chat_messages',
+    'chat_sessions',
+    'companies',
+    'users',
+  }
 };

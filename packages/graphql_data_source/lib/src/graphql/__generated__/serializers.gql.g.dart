@@ -27,9 +27,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GFloatFilter.serializer)
       ..add(GFloatListFilter.serializer)
       ..add(GGetCurrentUserData.serializer)
-      ..add(GGetCurrentUserData_userCollection.serializer)
-      ..add(GGetCurrentUserData_userCollection_edges.serializer)
-      ..add(GGetCurrentUserData_userCollection_edges_node.serializer)
+      ..add(GGetCurrentUserData_usersCollection.serializer)
+      ..add(GGetCurrentUserData_usersCollection_edges.serializer)
+      ..add(GGetCurrentUserData_usersCollection_edges_node.serializer)
       ..add(GGetCurrentUserReq.serializer)
       ..add(GGetCurrentUserVars.serializer)
       ..add(GIDFilter.serializer)
@@ -47,10 +47,24 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GUUID.serializer)
       ..add(GUUIDFilter.serializer)
       ..add(GUUIDListFilter.serializer)
-      ..add(GuserFilter.serializer)
-      ..add(GuserInsertInput.serializer)
-      ..add(GuserOrderBy.serializer)
-      ..add(GuserUpdateInput.serializer)
+      ..add(Gchat_messagesFilter.serializer)
+      ..add(Gchat_messagesInsertInput.serializer)
+      ..add(Gchat_messagesOrderBy.serializer)
+      ..add(Gchat_messagesUpdateInput.serializer)
+      ..add(Gchat_sender_type.serializer)
+      ..add(Gchat_sender_typeFilter.serializer)
+      ..add(Gchat_sessionsFilter.serializer)
+      ..add(Gchat_sessionsInsertInput.serializer)
+      ..add(Gchat_sessionsOrderBy.serializer)
+      ..add(Gchat_sessionsUpdateInput.serializer)
+      ..add(GcompaniesFilter.serializer)
+      ..add(GcompaniesInsertInput.serializer)
+      ..add(GcompaniesOrderBy.serializer)
+      ..add(GcompaniesUpdateInput.serializer)
+      ..add(GusersFilter.serializer)
+      ..add(GusersInsertInput.serializer)
+      ..add(GusersOrderBy.serializer)
+      ..add(GusersUpdateInput.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GBigFloat)]),
           () => new ListBuilder<GBigFloat>())
@@ -112,9 +126,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(GDatetime)]),
           () => new ListBuilder<GDatetime>())
       ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GGetCurrentUserData_userCollection_edges)]),
-          () => new ListBuilder<GGetCurrentUserData_userCollection_edges>())
+          const FullType(BuiltList, const [
+            const FullType(GGetCurrentUserData_usersCollection_edges)
+          ]),
+          () => new ListBuilder<GGetCurrentUserData_usersCollection_edges>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GTime)]),
           () => new ListBuilder<GTime>())
@@ -146,11 +161,36 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(GUUID)]),
           () => new ListBuilder<GUUID>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(GuserFilter)]),
-          () => new ListBuilder<GuserFilter>())
+          const FullType(
+              BuiltList, const [const FullType(Gchat_messagesFilter)]),
+          () => new ListBuilder<Gchat_messagesFilter>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(GuserFilter)]),
-          () => new ListBuilder<GuserFilter>())
+          const FullType(
+              BuiltList, const [const FullType(Gchat_messagesFilter)]),
+          () => new ListBuilder<Gchat_messagesFilter>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Gchat_sender_type)]),
+          () => new ListBuilder<Gchat_sender_type>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(Gchat_sessionsFilter)]),
+          () => new ListBuilder<Gchat_sessionsFilter>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(Gchat_sessionsFilter)]),
+          () => new ListBuilder<Gchat_sessionsFilter>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(GcompaniesFilter)]),
+          () => new ListBuilder<GcompaniesFilter>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(GcompaniesFilter)]),
+          () => new ListBuilder<GcompaniesFilter>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(GusersFilter)]),
+          () => new ListBuilder<GusersFilter>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(GusersFilter)]),
+          () => new ListBuilder<GusersFilter>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())

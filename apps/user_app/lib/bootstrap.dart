@@ -2,7 +2,13 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
+import 'package:ferry/ferry.dart';
 import 'package:flutter/widgets.dart';
+import 'package:gql_http_link/gql_http_link.dart';
+import 'package:graphql_data_source/graphql_data_source.dart';
+import 'package:supabase/supabase.dart';
+import 'package:user_app/config/env_config.dart';
+import 'package:user_repository/user_repository.dart';
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();
@@ -20,14 +26,52 @@ class AppBlocObserver extends BlocObserver {
   }
 }
 
-Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
+Future<void> bootstrap(
+  FutureOr<Widget> Function(UserRepository userRepository) builder,
+) async {
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
 
   Bloc.observer = const AppBlocObserver();
 
+  // Initialize Supabase client
+  final supabase = SupabaseClient(
+    EnvConfig.supabaseUrl,
+    EnvConfig.supabaseAnonKey,
+  );
+
+  // Sign in with test credentials
+  await supabase.auth.signInWithPassword(
+    email: EnvConfig.testEmail,
+    password: EnvConfig.testPassword,
+  );
+
+  // Setup GraphQL client
+  final link = HttpLink(
+    EnvConfig.graphqlEndpoint,
+    defaultHeaders: {
+      'apiKey': EnvConfig.supabaseAnonKey,
+      'Authorization': 'Bearer ${await _getAuthToken(supabase)}',
+    },
+  );
+
+  final cache = Cache();
+  final client = Client(link: link, cache: cache);
+  final graphqlDataSource = GraphqlDataSource(client: client);
+
+  // Create UserRepository
+  final userRepository = UserRepository(graphqlDataSource: graphqlDataSource);
+
   // Add cross-flavor configuration here
 
-  runApp(await builder());
+  runApp(await builder(userRepository));
+}
+
+Future<String?> _getAuthToken(SupabaseClient supabase) async {
+  final session = supabase.auth.currentSession;
+  if (session == null) {
+    return null;
+  }
+  return session.accessToken;
 }

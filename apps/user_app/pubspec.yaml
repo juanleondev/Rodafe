@@ -19,6 +19,8 @@ dependencies:
     path: ../../packages/graphql_data_source
   intl: ^0.20.2
   supabase: ^2.8.0
+  user_repository:
+    path: ../../packages/user_repository
 
 dev_dependencies:
   bloc_test: ^10.0.0

@@ -201,35 +201,125 @@ scalar JSON
 
 """The root type for creating and mutating data"""
 type Mutation {
-  """Deletes zero or more records from the `user` collection"""
-  deleteFromuserCollection(
+  """Deletes zero or more records from the `chat_messages` collection"""
+  deleteFromchat_messagesCollection(
     """Restricts the mutation's impact to records matching the criteria"""
-    filter: userFilter
+    filter: chat_messagesFilter
 
     """
     The maximum number of records in the collection permitted to be affected
     """
     atMost: Int! = 1
-  ): userDeleteResponse!
+  ): chat_messagesDeleteResponse!
 
-  """Adds one or more `user` records to the collection"""
-  insertIntouserCollection(objects: [userInsertInput!]!): userInsertResponse
+  """Deletes zero or more records from the `chat_sessions` collection"""
+  deleteFromchat_sessionsCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: chat_sessionsFilter
 
-  """Updates zero or more records in the `user` collection"""
-  updateuserCollection(
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): chat_sessionsDeleteResponse!
+
+  """Deletes zero or more records from the `companies` collection"""
+  deleteFromcompaniesCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: companiesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): companiesDeleteResponse!
+
+  """Deletes zero or more records from the `users` collection"""
+  deleteFromusersCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: usersFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): usersDeleteResponse!
+
+  """Adds one or more `chat_messages` records to the collection"""
+  insertIntochat_messagesCollection(objects: [chat_messagesInsertInput!]!): chat_messagesInsertResponse
+
+  """Adds one or more `chat_sessions` records to the collection"""
+  insertIntochat_sessionsCollection(objects: [chat_sessionsInsertInput!]!): chat_sessionsInsertResponse
+
+  """Adds one or more `companies` records to the collection"""
+  insertIntocompaniesCollection(objects: [companiesInsertInput!]!): companiesInsertResponse
+
+  """Adds one or more `users` records to the collection"""
+  insertIntousersCollection(objects: [usersInsertInput!]!): usersInsertResponse
+
+  """Updates zero or more records in the `chat_messages` collection"""
+  updatechat_messagesCollection(
     """
     Fields that are set will be updated for all records matching the `filter`
     """
-    set: userUpdateInput!
+    set: chat_messagesUpdateInput!
 
     """Restricts the mutation's impact to records matching the criteria"""
-    filter: userFilter
+    filter: chat_messagesFilter
 
     """
     The maximum number of records in the collection permitted to be affected
     """
     atMost: Int! = 1
-  ): userUpdateResponse!
+  ): chat_messagesUpdateResponse!
+
+  """Updates zero or more records in the `chat_sessions` collection"""
+  updatechat_sessionsCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: chat_sessionsUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: chat_sessionsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): chat_sessionsUpdateResponse!
+
+  """Updates zero or more records in the `companies` collection"""
+  updatecompaniesCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: companiesUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: companiesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): companiesUpdateResponse!
+
+  """Updates zero or more records in the `users` collection"""
+  updateusersCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: usersUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: usersFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): usersUpdateResponse!
 }
 
 interface Node {
@@ -272,14 +362,8 @@ type PageInfo {
 
 """The root type for querying data"""
 type Query {
-  """Retrieve a record by its `ID`"""
-  node(
-    """The record's `ID`"""
-    nodeId: ID!
-  ): Node
-
-  """A pagable collection of type `user`"""
-  userCollection(
+  """A pagable collection of type `chat_messages`"""
+  chat_messagesCollection(
     """Query the first `n` records in the collection"""
     first: Int
 
@@ -298,11 +382,95 @@ type Query {
     offset: Int
 
     """Filters to apply to the results set when querying from the collection"""
-    filter: userFilter
+    filter: chat_messagesFilter
 
     """Sort order to apply to the collection"""
-    orderBy: [userOrderBy!]
-  ): userConnection
+    orderBy: [chat_messagesOrderBy!]
+  ): chat_messagesConnection
+
+  """A pagable collection of type `chat_sessions`"""
+  chat_sessionsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: chat_sessionsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [chat_sessionsOrderBy!]
+  ): chat_sessionsConnection
+
+  """A pagable collection of type `companies`"""
+  companiesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: companiesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [companiesOrderBy!]
+  ): companiesConnection
+
+  """Retrieve a record by its `ID`"""
+  node(
+    """The record's `ID`"""
+    nodeId: ID!
+  ): Node
+
+  """A pagable collection of type `users`"""
+  usersCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: usersFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [usersOrderBy!]
+  ): usersConnection
 }
 
 """
@@ -363,84 +531,6 @@ input TimeListFilter {
   overlaps: [Time!]
 }
 
-type user implements Node {
-  """Globally Unique Record Identifier"""
-  nodeId: ID!
-  id: BigInt!
-  created_at: Datetime!
-  email: String
-}
-
-type userConnection {
-  edges: [userEdge!]!
-  pageInfo: PageInfo!
-}
-
-type userDeleteResponse {
-  """Count of the records impacted by the mutation"""
-  affectedCount: Int!
-
-  """Array of records impacted by the mutation"""
-  records: [user!]!
-}
-
-type userEdge {
-  cursor: String!
-  node: user!
-}
-
-input userFilter {
-  id: BigIntFilter
-  created_at: DatetimeFilter
-  email: StringFilter
-  nodeId: IDFilter
-
-  """
-  Returns true only if all its inner filters are true, otherwise returns false
-  """
-  and: [userFilter!]
-
-  """
-  Returns true if at least one of its inner filters is true, otherwise returns false
-  """
-  or: [userFilter!]
-
-  """Negates a filter"""
-  not: userFilter
-}
-
-input userInsertInput {
-  created_at: Datetime
-  email: String
-}
-
-type userInsertResponse {
-  """Count of the records impacted by the mutation"""
-  affectedCount: Int!
-
-  """Array of records impacted by the mutation"""
-  records: [user!]!
-}
-
-input userOrderBy {
-  id: OrderByDirection
-  created_at: OrderByDirection
-  email: OrderByDirection
-}
-
-input userUpdateInput {
-  created_at: Datetime
-  email: String
-}
-
-type userUpdateResponse {
-  """Count of the records impacted by the mutation"""
-  affectedCount: Int!
-
-  """Array of records impacted by the mutation"""
-  records: [user!]!
-}
-
 """A universally unique identifier"""
 scalar UUID
 
@@ -463,5 +553,433 @@ input UUIDListFilter {
   eq: [UUID!]
   is: FilterIs
   overlaps: [UUID!]
+}
+
+type chat_messages implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  session_id: UUID!
+  message: String!
+  sender_type: chat_sender_type!
+  chat_sessions: chat_sessions!
+}
+
+type chat_messagesConnection {
+  edges: [chat_messagesEdge!]!
+  pageInfo: PageInfo!
+}
+
+type chat_messagesDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [chat_messages!]!
+}
+
+type chat_messagesEdge {
+  cursor: String!
+  node: chat_messages!
+}
+
+input chat_messagesFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  session_id: UUIDFilter
+  message: StringFilter
+  sender_type: chat_sender_typeFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [chat_messagesFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [chat_messagesFilter!]
+
+  """Negates a filter"""
+  not: chat_messagesFilter
+}
+
+input chat_messagesInsertInput {
+  id: UUID
+  created_at: Datetime
+  session_id: UUID
+  message: String
+  sender_type: chat_sender_type
+}
+
+type chat_messagesInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [chat_messages!]!
+}
+
+input chat_messagesOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  session_id: OrderByDirection
+  message: OrderByDirection
+  sender_type: OrderByDirection
+}
+
+input chat_messagesUpdateInput {
+  id: UUID
+  created_at: Datetime
+  session_id: UUID
+  message: String
+  sender_type: chat_sender_type
+}
+
+type chat_messagesUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [chat_messages!]!
+}
+
+enum chat_sender_type {
+  user
+  bot
+}
+
+"""
+Boolean expression comparing fields on type "chat_sender_type"
+"""
+input chat_sender_typeFilter {
+  eq: chat_sender_type
+  in: [chat_sender_type!]
+  is: FilterIs
+  neq: chat_sender_type
+}
+
+type chat_sessions implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  updated_at: Datetime!
+  user_id: UUID!
+  bearing_data: JSON
+  users: users
+  chat_messagesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: chat_messagesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [chat_messagesOrderBy!]
+  ): chat_messagesConnection
+}
+
+type chat_sessionsConnection {
+  edges: [chat_sessionsEdge!]!
+  pageInfo: PageInfo!
+}
+
+type chat_sessionsDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [chat_sessions!]!
+}
+
+type chat_sessionsEdge {
+  cursor: String!
+  node: chat_sessions!
+}
+
+input chat_sessionsFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  updated_at: DatetimeFilter
+  user_id: UUIDFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [chat_sessionsFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [chat_sessionsFilter!]
+
+  """Negates a filter"""
+  not: chat_sessionsFilter
+}
+
+input chat_sessionsInsertInput {
+  id: UUID
+  created_at: Datetime
+  updated_at: Datetime
+  user_id: UUID
+  bearing_data: JSON
+}
+
+type chat_sessionsInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [chat_sessions!]!
+}
+
+input chat_sessionsOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  updated_at: OrderByDirection
+  user_id: OrderByDirection
+}
+
+input chat_sessionsUpdateInput {
+  id: UUID
+  created_at: Datetime
+  updated_at: Datetime
+  user_id: UUID
+  bearing_data: JSON
+}
+
+type chat_sessionsUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [chat_sessions!]!
+}
+
+type companies implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  email: String!
+  name: String!
+  phone: String
+  address: String
+}
+
+type companiesConnection {
+  edges: [companiesEdge!]!
+  pageInfo: PageInfo!
+}
+
+type companiesDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [companies!]!
+}
+
+type companiesEdge {
+  cursor: String!
+  node: companies!
+}
+
+input companiesFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  email: StringFilter
+  name: StringFilter
+  phone: StringFilter
+  address: StringFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [companiesFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [companiesFilter!]
+
+  """Negates a filter"""
+  not: companiesFilter
+}
+
+input companiesInsertInput {
+  id: UUID
+  created_at: Datetime
+  email: String
+  name: String
+  phone: String
+  address: String
+}
+
+type companiesInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [companies!]!
+}
+
+input companiesOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  email: OrderByDirection
+  name: OrderByDirection
+  phone: OrderByDirection
+  address: OrderByDirection
+}
+
+input companiesUpdateInput {
+  id: UUID
+  created_at: Datetime
+  email: String
+  name: String
+  phone: String
+  address: String
+}
+
+type companiesUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [companies!]!
+}
+
+type users implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  email: String!
+  phone: String
+  auth_uid: UUID!
+  chat_sessionsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: chat_sessionsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [chat_sessionsOrderBy!]
+  ): chat_sessionsConnection
+}
+
+type usersConnection {
+  edges: [usersEdge!]!
+  pageInfo: PageInfo!
+}
+
+type usersDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [users!]!
+}
+
+type usersEdge {
+  cursor: String!
+  node: users!
+}
+
+input usersFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  email: StringFilter
+  phone: StringFilter
+  auth_uid: UUIDFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [usersFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [usersFilter!]
+
+  """Negates a filter"""
+  not: usersFilter
+}
+
+input usersInsertInput {
+  id: UUID
+  created_at: Datetime
+  email: String
+  phone: String
+  auth_uid: UUID
+}
+
+type usersInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [users!]!
+}
+
+input usersOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  email: OrderByDirection
+  phone: OrderByDirection
+  auth_uid: OrderByDirection
+}
+
+input usersUpdateInput {
+  id: UUID
+  created_at: Datetime
+  email: String
+  phone: String
+  auth_uid: UUID
+}
+
+type usersUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [users!]!
 }
 

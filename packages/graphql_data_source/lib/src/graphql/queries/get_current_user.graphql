@@ -1,9 +1,12 @@
 query GetCurrentUser {
-  userCollection {
+  usersCollection {
     edges {
       node {
         id
         email
+        phone
+        auth_uid
+        created_at
       }
     }
   }
