@@ -15,6 +15,6 @@
     }
   ],
   "useGitignore": true,
-  "exclude": ["features_spec_es.md"],
+  "ignorePaths": ["features_spec_es.md"],
   "words": ["shared_models"]
 }
