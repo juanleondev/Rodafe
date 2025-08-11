@@ -28,23 +28,33 @@ class GraphqlDataSource {
 
   /// Gets the current user from the GraphQL API
   Stream<GGetCurrentUserData_usersCollection_edges_node?> getCurrentUser() {
-    return _client.request(GGetCurrentUserReq()).map((response) {
-      if (response.hasErrors) {
-        throw Exception('GraphQL errors: ${response.linkException}');
-      }
+    return _client
+        .request(
+          GGetCurrentUserReq((b) => b..fetchPolicy = FetchPolicy.NetworkOnly),
+        )
+        .map((response) {
+          if (response.hasErrors) {
+            throw Exception('GraphQL errors: ${response.linkException}');
+          }
 
-      final data = response.data;
-      if (data == null) {
-        return null;
-      }
+          final data = response.data;
+          if (data == null) {
+            return null;
+          }
 
-      final userCollection = data.usersCollection;
-      if (userCollection == null || userCollection.edges.isEmpty) {
-        return null;
-      }
+          final userCollection = data.usersCollection;
+          if (userCollection == null || userCollection.edges.isEmpty) {
+            return null;
+          }
 
-      // Return the first user from the collection
-      return userCollection.edges.first.node;
-    });
+          // Return the first user from the collection
+          return userCollection.edges.first.node;
+        });
+  }
+
+  /// Clears all cached data from the GraphQL client
+  /// Useful for sign out operations
+  void clearCache() {
+    _client.cache.clear();
   }
 }

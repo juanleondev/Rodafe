@@ -21,6 +21,7 @@ class AuthenticationBloc
       _onAuthenticationAuthUserListeningStarted,
     );
     on<AuthenticationStarted>(_onAuthenticationStarted);
+    on<AuthenticationLogoutRequested>(_onAuthenticationLogoutRequested);
   }
 
   final AuthenticationProvider _authProvider;
@@ -76,5 +77,13 @@ class AuthenticationBloc
     } else {
       emit(const AuthenticationRegistered());
     }
+  }
+
+  Future<void> _onAuthenticationLogoutRequested(
+    AuthenticationLogoutRequested event,
+    Emitter<AuthenticationState> emit,
+  ) async {
+    _userRepository.clearCache();
+    await _authProvider.signOut();
   }
 }

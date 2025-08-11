@@ -21,9 +21,10 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Iniciar sesión')),
       body: SupaEmailAuth(
         onSignInComplete: (response) {
-          context.go(AppRouter.homeRoute);
+          context.go(AppRouter.splashRoute);
         },
         onSignUpComplete: (response) {
           context.go(AppRouter.homeRoute);
@@ -31,6 +32,15 @@ class SignInView extends StatelessWidget {
         onError: (error) {
           // Handle error
         },
+        localization: const SupaEmailAuthLocalization(
+          enterEmail: 'Correo electrónico',
+          enterPassword: 'Contraseña',
+          signIn: 'Iniciar sesión',
+          signUp: 'Registrarse',
+          forgotPassword: '¿Olvidaste tu contraseña?',
+          dontHaveAccount: '¿No tienes una cuenta? Registrate',
+          haveAccount: '¿Ya tienes una cuenta? Inicia sesión',
+        ),
       ),
     );
   }

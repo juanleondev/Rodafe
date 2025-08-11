@@ -40,6 +40,12 @@ class UserRepository {
           );
         });
   }
+
+  /// Clears all cached data from the GraphQL client
+  /// Useful for sign out operations
+  void clearCache() {
+    _graphqlDataSource.clearCache();
+  }
 }
 
 /// {@template user_repository_exception}

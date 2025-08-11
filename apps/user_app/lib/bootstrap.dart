@@ -5,9 +5,11 @@ import 'package:authentication_provider/authentication_provider.dart';
 import 'package:bloc/bloc.dart';
 import 'package:ferry/ferry.dart';
 import 'package:flutter/widgets.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gql_http_link/gql_http_link.dart';
 import 'package:graphql_data_source/graphql_data_source.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:user_app/app/router/app_router.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
 import 'package:user_app/config/env_config.dart';
 import 'package:user_repository/user_repository.dart';
@@ -33,6 +35,7 @@ Future<void> bootstrap(
     UserRepository userRepository,
     AuthenticationProvider authProvider,
     AuthenticationBloc authenticationBloc,
+    GoRouter router,
   )
   builder,
 ) async {
@@ -53,13 +56,12 @@ Future<void> bootstrap(
   await supabase.client.auth.signOut();
 
   // Setup GraphQL client
-  final link =
-      HttpAuthLink(getToken: () async => _getAuthToken(supabase.client)).concat(
-        HttpLink(
-          EnvConfig.graphqlEndpoint,
-          defaultHeaders: {'apiKey': EnvConfig.supabaseAnonKey},
-        ),
-      );
+  final link = HttpAuthLink(() async => _getAuthToken(supabase.client)).concat(
+    HttpLink(
+      EnvConfig.graphqlEndpoint,
+      defaultHeaders: {'apiKey': EnvConfig.supabaseAnonKey},
+    ),
+  );
 
   final cache = Cache();
   final client = Client(link: link, cache: cache);
@@ -73,9 +75,14 @@ Future<void> bootstrap(
     userRepository: userRepository,
   );
 
+  // Create router
+  final router = AppRouter.getRouter(authProvider, userRepository);
+
   // Add cross-flavor configuration here
 
-  runApp(await builder(userRepository, authProvider, authenticationBloc));
+  runApp(
+    await builder(userRepository, authProvider, authenticationBloc, router),
+  );
 }
 
 Future<String> _getAuthToken(SupabaseClient supabase) async {

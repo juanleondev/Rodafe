@@ -1,43 +1,44 @@
 import 'dart:async';
 
+import 'package:authentication_provider/authentication_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
 import 'package:user_app/home/home.dart';
+import 'package:user_app/register/register.dart';
 import 'package:user_app/sign_in/sign_in.dart';
 import 'package:user_app/splash/splash.dart';
+import 'package:user_repository/user_repository.dart';
 
 class AppRouter {
   static const String splashRoute = '/';
   static const String homeRoute = '/home';
   static const String signInRoute = '/sign-in';
+  static const String registerRoute = '/register';
 
-  static GoRouter getRouter(BuildContext context) {
+  static GoRouter getRouter(
+    AuthenticationProvider authProvider,
+    UserRepository userRepository,
+  ) {
     return GoRouter(
       initialLocation: splashRoute,
       redirect: (context, state) {
-        final authBloc = context.read<AuthenticationBloc>();
-        final authState = authBloc.state;
+        final currentUser = userRepository.currentUser;
+        final isAuthenticated = authProvider.isAuthenticated;
 
         // If we're on splash, let it handle the flow
         if (state.matchedLocation == splashRoute) {
           return null;
         }
-
-        switch (authState) {
-          case AuthenticationInitial():
-            return null;
-          case AuthenticationUnauthenticated():
-            return signInRoute;
-          case AuthenticationAuthenticated():
-            if (state.matchedLocation == signInRoute) {
-              return homeRoute;
-            }
-            return null;
-          case AuthenticationRegistered():
-            return homeRoute;
+        if (currentUser != null) {
+          return homeRoute;
         }
+
+        if (isAuthenticated) {
+          return registerRoute;
+        }
+
+        return signInRoute;
       },
       routes: [
         GoRoute(
@@ -48,11 +49,12 @@ class AppRouter {
           path: signInRoute,
           builder: (context, state) => const SignInPage(),
         ),
+        GoRoute(
+          path: registerRoute,
+          builder: (context, state) => const RegisterPage(),
+        ),
         GoRoute(path: homeRoute, builder: (context, state) => const HomePage()),
       ],
-      refreshListenable: GoRouterRefreshStream(
-        context.read<AuthenticationBloc>().stream,
-      ),
     );
   }
 }

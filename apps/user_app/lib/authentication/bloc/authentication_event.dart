@@ -18,3 +18,7 @@ final class AuthenticationAuthUserListeningStarted extends AuthenticationEvent {
 final class AuthenticationStarted extends AuthenticationEvent {
   const AuthenticationStarted();
 }
+
+final class AuthenticationLogoutRequested extends AuthenticationEvent {
+  const AuthenticationLogoutRequested();
+}

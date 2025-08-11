@@ -1,25 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
-import 'package:user_app/home/home.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+import 'package:user_app/register/register.dart';
+
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(create: (_) => HomeBloc(), child: const HomeView());
+    return BlocProvider(
+      create: (_) => RegisterBloc(),
+      child: const RegisterView(),
+    );
   }
 }
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class RegisterView extends StatelessWidget {
+  const RegisterView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('Registro'),
         actions: [
           IconButton(
             onPressed: () {
@@ -31,7 +35,7 @@ class HomeView extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(child: Text('Home')),
+      body: const Center(child: Text('Register')),
     );
   }
 }
