@@ -1,4 +1,7 @@
 import 'package:ferry/ferry.dart';
+import 'package:graphql_data_source/src/graphql/__generated__/schema.schema.gql.dart';
+import 'package:graphql_data_source/src/graphql/mutations/__generated__/register_user.data.gql.dart';
+import 'package:graphql_data_source/src/graphql/mutations/__generated__/register_user.req.gql.dart';
 import 'package:graphql_data_source/src/graphql/queries/__generated__/get_current_user.data.gql.dart';
 import 'package:graphql_data_source/src/graphql/queries/__generated__/get_current_user.req.gql.dart';
 
@@ -56,5 +59,32 @@ class GraphqlDataSource {
   /// Useful for sign out operations
   void clearCache() {
     _client.cache.clear();
+  }
+
+  /// Registers a new user
+  Stream<GRegisterUserData_insertIntousersCollection?> registerUser({
+    required String email,
+    required String authUid,
+    String? phone,
+  }) {
+    final request = GRegisterUserReq(
+      (b) => b
+        ..vars.email = email
+        ..vars.phone = phone
+        ..vars.authUid = (GUUIDBuilder()..value = authUid),
+    );
+
+    return _client.request(request).map((response) {
+      if (response.hasErrors) {
+        throw Exception('GraphQL errors: ${response.linkException}');
+      }
+
+      final data = response.data;
+      if (data == null) {
+        return null;
+      }
+
+      return data.insertIntousersCollection;
+    });
   }
 }

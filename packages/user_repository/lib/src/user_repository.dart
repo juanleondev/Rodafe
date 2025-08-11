@@ -46,6 +46,40 @@ class UserRepository {
   void clearCache() {
     _graphqlDataSource.clearCache();
   }
+
+  /// Registers a new user
+  Stream<User?> registerUser({
+    required String email,
+    required String authUid,
+    String? phone,
+  }) {
+    return _graphqlDataSource
+        .registerUser(
+          email: email,
+          phone: phone,
+          authUid: authUid,
+        )
+        .map((response) {
+          if (response == null || response.records.isEmpty) {
+            return null;
+          }
+
+          // For now, we'll create a simple user from the response
+          // In a real app, you might want to create a proper User model
+          // that matches the GraphQL response structure
+          final record = response.records.first;
+          return User(
+            id: record.id.value,
+            email: record.email,
+          );
+        })
+        .handleError((Object error) {
+          throw UserRepositoryException(
+            message: 'Failed to register user',
+            originalError: error,
+          );
+        });
+  }
 }
 
 /// {@template user_repository_exception}

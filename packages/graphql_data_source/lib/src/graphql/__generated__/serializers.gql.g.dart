@@ -39,6 +39,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GOpaque.serializer)
       ..add(GOpaqueFilter.serializer)
       ..add(GOrderByDirection.serializer)
+      ..add(GRegisterUserData.serializer)
+      ..add(GRegisterUserData_insertIntousersCollection.serializer)
+      ..add(GRegisterUserData_insertIntousersCollection_records.serializer)
+      ..add(GRegisterUserReq.serializer)
+      ..add(GRegisterUserVars.serializer)
       ..add(GStringFilter.serializer)
       ..add(GStringListFilter.serializer)
       ..add(GTime.serializer)
@@ -130,6 +135,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
             const FullType(GGetCurrentUserData_usersCollection_edges)
           ]),
           () => new ListBuilder<GGetCurrentUserData_usersCollection_edges>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GRegisterUserData_insertIntousersCollection_records)
+          ]),
+          () => new ListBuilder<
+              GRegisterUserData_insertIntousersCollection_records>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GTime)]),
           () => new ListBuilder<GTime>())

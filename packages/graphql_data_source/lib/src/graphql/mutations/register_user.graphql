@@ -1,0 +1,14 @@
+mutation RegisterUser($email: String!, $phone: String, $authUid: UUID!) {
+  insertIntousersCollection(
+    objects: [{ email: $email, phone: $phone, auth_uid: $authUid }]
+  ) {
+    affectedCount
+    records {
+      id
+      email
+      phone
+      auth_uid
+      created_at
+    }
+  }
+}

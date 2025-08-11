@@ -1,8 +1,9 @@
+import 'package:authentication_provider/authentication_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
-
 import 'package:user_app/register/register.dart';
+import 'package:user_repository/user_repository.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -10,7 +11,10 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => RegisterBloc(),
+      create: (context) => RegisterBloc(
+        userRepository: context.read<UserRepository>(),
+        authProvider: context.read<AuthenticationProvider>(),
+      ),
       child: const RegisterView(),
     );
   }
@@ -35,7 +39,10 @@ class RegisterView extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(child: Text('Register')),
+      body: const Padding(
+        padding: EdgeInsets.all(16),
+        child: RegisterFormWidget(),
+      ),
     );
   }
 }

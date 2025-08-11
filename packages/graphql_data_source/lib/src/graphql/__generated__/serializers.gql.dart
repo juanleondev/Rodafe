@@ -60,6 +60,15 @@ import 'package:graphql_data_source/src/graphql/__generated__/schema.schema.gql.
         GusersInsertInput,
         GusersOrderBy,
         GusersUpdateInput;
+import 'package:graphql_data_source/src/graphql/mutations/__generated__/register_user.data.gql.dart'
+    show
+        GRegisterUserData,
+        GRegisterUserData_insertIntousersCollection,
+        GRegisterUserData_insertIntousersCollection_records;
+import 'package:graphql_data_source/src/graphql/mutations/__generated__/register_user.req.gql.dart'
+    show GRegisterUserReq;
+import 'package:graphql_data_source/src/graphql/mutations/__generated__/register_user.var.gql.dart'
+    show GRegisterUserVars;
 import 'package:graphql_data_source/src/graphql/queries/__generated__/get_current_user.data.gql.dart'
     show
         GGetCurrentUserData,
@@ -108,6 +117,11 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GOpaque,
   GOpaqueFilter,
   GOrderByDirection,
+  GRegisterUserData,
+  GRegisterUserData_insertIntousersCollection,
+  GRegisterUserData_insertIntousersCollection_records,
+  GRegisterUserReq,
+  GRegisterUserVars,
   GStringFilter,
   GStringListFilter,
   GTime,
