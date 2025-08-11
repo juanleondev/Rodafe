@@ -38,7 +38,7 @@ void main() {
     });
 
     blocTest<SplashBloc, SplashState>(
-      'emits [Status.loading, Status.error] when SplashStarted is added and '
+      'emits [Status.loading, Status.success] when SplashStarted is added and '
       'no user found',
       build: () => SplashBloc(
         userRepository: mockUserRepository,
@@ -47,7 +47,7 @@ void main() {
       act: (bloc) => bloc.add(SplashStarted()),
       expect: () => [
         const SplashState(status: Status.loading),
-        const SplashState(status: Status.error),
+        const SplashState(status: Status.success),
       ],
     );
 
@@ -67,6 +67,25 @@ void main() {
       expect: () => [
         const SplashState(status: Status.loading),
         const SplashState(status: Status.success),
+      ],
+    );
+
+    blocTest<SplashBloc, SplashState>(
+      'emits [Status.loading, Status.error] when SplashStarted is added and '
+      'an error occurs',
+      build: () {
+        when(
+          () => mockUserRepository.getCurrentUser(),
+        ).thenAnswer((_) => Stream.error(Exception('Network error')));
+        return SplashBloc(
+          userRepository: mockUserRepository,
+          authProvider: mockAuthProvider,
+        );
+      },
+      act: (bloc) => bloc.add(SplashStarted()),
+      expect: () => [
+        const SplashState(status: Status.loading),
+        const SplashState(status: Status.error),
       ],
     );
   });

@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:graphql_data_source/graphql_data_source.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:user_app/app/app.dart';
+import 'package:user_app/app/router/app_router.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
 import 'package:user_app/sign_in/sign_in.dart';
 import 'package:user_repository/user_repository.dart';
@@ -28,11 +29,32 @@ void main() {
         mockUserRepository.getCurrentUser,
       ).thenAnswer((_) => Stream.value(null));
 
+      // Mock the userRepository.currentUser property
+      when(() => mockUserRepository.currentUser).thenReturn(null);
+
+      // Mock the authentication provider properties
+      when(() => mockAuthProvider.isAuthenticated).thenReturn(false);
+      when(
+        () => mockAuthProvider.userChanges,
+      ).thenAnswer((_) => Stream.value(null));
+
+      // Mock the authentication bloc state and stream
+      when(
+        () => mockAuthenticationBloc.state,
+      ).thenReturn(const AuthenticationUnauthenticated());
+      when(
+        () => mockAuthenticationBloc.stream,
+      ).thenAnswer((_) => Stream.value(const AuthenticationUnauthenticated()));
+
+      // Create a router for testing
+      final router = AppRouter.getRouter(mockAuthProvider, mockUserRepository);
+
       await tester.pumpWidget(
         App(
           userRepository: mockUserRepository,
           authProvider: mockAuthProvider,
           authenticationBloc: mockAuthenticationBloc,
+          router: router,
         ),
       );
 
