@@ -59,11 +59,15 @@ class RegisterFormWidget extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               BlocBuilder<RegisterBloc, RegisterState>(
+                buildWhen: (previous, current) =>
+                    previous.status != current.status,
                 builder: (context, state) {
                   return ElevatedButton(
                     onPressed: state.status == Status.loading
                         ? null
-                        : () => _onSubmit(context, form),
+                        : () => context.read<RegisterBloc>().add(
+                            const RegisterSubmitted(),
+                          ),
                     child: state.status == Status.loading
                         ? const SizedBox(
                             height: 20,
@@ -79,20 +83,5 @@ class RegisterFormWidget extends StatelessWidget {
         },
       ),
     );
-  }
-
-  void _onSubmit(BuildContext context, FormGroup form) {
-    if (form.valid) {
-      // For now, we'll use a dummy authUid
-      // In a real app, this would come from the authentication system
-      const authUid = 'dummy-auth-uid';
-
-      final email = form.control(RegisterForm.emailControl).value as String;
-      final phone = form.control(RegisterForm.phoneControl).value as String?;
-
-      context.read<RegisterBloc>().add(
-        RegisterSubmitted(email: email, phone: phone, authUid: authUid),
-      );
-    }
   }
 }

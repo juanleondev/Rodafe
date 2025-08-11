@@ -2,6 +2,7 @@ import 'package:authentication_provider/authentication_provider.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:shared_models/shared_models.dart';
+import 'package:user_app/register/forms/register_form.dart';
 import 'package:user_repository/user_repository.dart';
 
 part 'register_event.dart';
@@ -24,6 +25,10 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     RegisterSubmitted event,
     Emitter<RegisterState> emit,
   ) async {
+    if (!state.form.valid) {
+      return;
+    }
+
     emit(state.copyWith(status: Status.loading));
 
     try {
@@ -34,8 +39,8 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
 
       final user = await _userRepository
           .registerUser(
-            email: event.email,
-            phone: event.phone,
+            email: state.form.email,
+            phone: state.form.phone,
             authUid: authUid,
           )
           .first;

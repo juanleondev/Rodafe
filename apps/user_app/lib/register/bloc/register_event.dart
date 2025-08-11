@@ -8,16 +8,8 @@ sealed class RegisterEvent extends Equatable {
 }
 
 class RegisterSubmitted extends RegisterEvent {
-  const RegisterSubmitted({
-    required this.email,
-    this.phone,
-    required this.authUid,
-  });
-
-  final String email;
-  final String? phone;
-  final String authUid;
+  const RegisterSubmitted();
 
   @override
-  List<Object> get props => [email, phone ?? '', authUid];
+  List<Object> get props => [];
 }
