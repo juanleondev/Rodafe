@@ -16,10 +16,6 @@
   ],
   "useGitignore": true,
   "words": [
-    "Contador",
-    "localizable",
-    "mostrado",
-    "página",
-    "Texto"
+    "shared_models"
   ]
 }

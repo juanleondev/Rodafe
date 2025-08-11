@@ -8,9 +8,15 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "apps/user_app/**"
+      - ".github/workflows/user_app.yaml"
   pull_request:
     branches:
       - main
+    paths:
+      - "apps/user_app/**"
+      - ".github/workflows/user_app.yaml"
 
 jobs:
   semantic-pull-request:
