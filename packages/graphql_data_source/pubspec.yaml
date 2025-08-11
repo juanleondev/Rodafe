@@ -13,6 +13,7 @@ dev_dependencies:
   test: ^1.26.3
   very_good_analysis: ^9.0.0
 dependencies:
+  built_collection: ^5.1.1
   ferry: ^0.16.1+2
   gql_code_builder_serializers: ^0.1.0
   gql_error_link: ^1.0.0+1

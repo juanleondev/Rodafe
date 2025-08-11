@@ -10,6 +10,7 @@ dependencies:
   authentication_provider:
     path: ../../packages/authentication_provider
   bloc: ^9.0.0
+  built_collection: ^5.1.1
   equatable: ^2.0.5
   ferry: ^0.16.1+2
   flutter:

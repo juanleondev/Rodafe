@@ -9,6 +9,7 @@ import 'package:go_router/go_router.dart';
 import 'package:gql_http_link/gql_http_link.dart';
 import 'package:graphql_data_source/graphql_data_source.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+
 import 'package:user_app/app/router/app_router.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
 import 'package:user_app/config/env_config.dart';
@@ -64,7 +65,19 @@ Future<void> bootstrap(
   );
 
   final cache = Cache();
-  final client = Client(link: link, cache: cache);
+
+  // Create cache update handlers
+  final updateCacheHandlers = <String, Function>{
+    CacheHandlerKeys.registerUser: registerUserHandler,
+  };
+
+  // Create the client with the update cache handlers
+  final client = Client(
+    link: link,
+    cache: cache,
+    updateCacheHandlers: updateCacheHandlers,
+  );
+
   final graphqlDataSource = GraphqlDataSource(client: client);
 
   // Create UserRepository

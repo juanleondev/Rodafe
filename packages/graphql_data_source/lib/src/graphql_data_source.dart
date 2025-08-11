@@ -5,6 +5,14 @@ import 'package:graphql_data_source/src/graphql/mutations/__generated__/register
 import 'package:graphql_data_source/src/graphql/queries/__generated__/get_current_user.data.gql.dart';
 import 'package:graphql_data_source/src/graphql/queries/__generated__/get_current_user.req.gql.dart';
 
+/// Cache handler keys for GraphQL operations
+class CacheHandlerKeys {
+  const CacheHandlerKeys._();
+
+  /// Cache handler key for user registration
+  static const String registerUser = 'registerUser';
+}
+
 /// {@template graphql_data_source}
 /// Graphql Data Source
 /// {@endtemplate}
@@ -71,7 +79,8 @@ class GraphqlDataSource {
       (b) => b
         ..vars.email = email
         ..vars.phone = phone
-        ..vars.authUid = (GUUIDBuilder()..value = authUid),
+        ..vars.authUid = (GUUIDBuilder()..value = authUid)
+        ..updateCacheHandlerKey = CacheHandlerKeys.registerUser,
     );
 
     return _client.request(request).map((response) {
