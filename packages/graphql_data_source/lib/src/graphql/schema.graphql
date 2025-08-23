@@ -234,6 +234,19 @@ type Mutation {
     atMost: Int! = 1
   ): companiesDeleteResponse!
 
+  """
+  Deletes zero or more records from the `product_requeriments` collection
+  """
+  deleteFromproduct_requerimentsCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: product_requerimentsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): product_requerimentsDeleteResponse!
+
   """Deletes zero or more records from the `users` collection"""
   deleteFromusersCollection(
     """Restricts the mutation's impact to records matching the criteria"""
@@ -253,6 +266,9 @@ type Mutation {
 
   """Adds one or more `companies` records to the collection"""
   insertIntocompaniesCollection(objects: [companiesInsertInput!]!): companiesInsertResponse
+
+  """Adds one or more `product_requeriments` records to the collection"""
+  insertIntoproduct_requerimentsCollection(objects: [product_requerimentsInsertInput!]!): product_requerimentsInsertResponse
 
   """Adds one or more `users` records to the collection"""
   insertIntousersCollection(objects: [usersInsertInput!]!): usersInsertResponse
@@ -304,6 +320,22 @@ type Mutation {
     """
     atMost: Int! = 1
   ): companiesUpdateResponse!
+
+  """Updates zero or more records in the `product_requeriments` collection"""
+  updateproduct_requerimentsCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: product_requerimentsUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: product_requerimentsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): product_requerimentsUpdateResponse!
 
   """Updates zero or more records in the `users` collection"""
   updateusersCollection(
@@ -445,6 +477,32 @@ type Query {
     """The record's `ID`"""
     nodeId: ID!
   ): Node
+
+  """A pagable collection of type `product_requeriments`"""
+  product_requerimentsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: product_requerimentsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [product_requerimentsOrderBy!]
+  ): product_requerimentsConnection
 
   """A pagable collection of type `users`"""
   usersCollection(
@@ -869,6 +927,138 @@ type companiesUpdateResponse {
   records: [companies!]!
 }
 
+enum product_category {
+  bearing
+  belt
+  other
+}
+
+"""
+Boolean expression comparing fields on type "product_category"
+"""
+input product_categoryFilter {
+  eq: product_category
+  in: [product_category!]
+  is: FilterIs
+  neq: product_category
+}
+
+type product_requeriments implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  updated_at: Datetime!
+  user_id: UUID!
+  text: String
+  audio_path: String
+  audio_transcription: String
+  video_path: String
+  image_path: String
+  category: product_category!
+  users: users
+}
+
+type product_requerimentsConnection {
+  edges: [product_requerimentsEdge!]!
+  pageInfo: PageInfo!
+}
+
+type product_requerimentsDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [product_requeriments!]!
+}
+
+type product_requerimentsEdge {
+  cursor: String!
+  node: product_requeriments!
+}
+
+input product_requerimentsFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  updated_at: DatetimeFilter
+  user_id: UUIDFilter
+  text: StringFilter
+  audio_path: StringFilter
+  audio_transcription: StringFilter
+  video_path: StringFilter
+  image_path: StringFilter
+  category: product_categoryFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [product_requerimentsFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [product_requerimentsFilter!]
+
+  """Negates a filter"""
+  not: product_requerimentsFilter
+}
+
+input product_requerimentsInsertInput {
+  id: UUID
+  created_at: Datetime
+  updated_at: Datetime
+  user_id: UUID
+  text: String
+  audio_path: String
+  audio_transcription: String
+  video_path: String
+  image_path: String
+  category: product_category
+}
+
+type product_requerimentsInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [product_requeriments!]!
+}
+
+input product_requerimentsOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  updated_at: OrderByDirection
+  user_id: OrderByDirection
+  text: OrderByDirection
+  audio_path: OrderByDirection
+  audio_transcription: OrderByDirection
+  video_path: OrderByDirection
+  image_path: OrderByDirection
+  category: OrderByDirection
+}
+
+input product_requerimentsUpdateInput {
+  id: UUID
+  created_at: Datetime
+  updated_at: Datetime
+  user_id: UUID
+  text: String
+  audio_path: String
+  audio_transcription: String
+  video_path: String
+  image_path: String
+  category: product_category
+}
+
+type product_requerimentsUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [product_requeriments!]!
+}
+
 type users implements Node {
   """Globally Unique Record Identifier"""
   nodeId: ID!
@@ -901,6 +1091,30 @@ type users implements Node {
     """Sort order to apply to the collection"""
     orderBy: [chat_sessionsOrderBy!]
   ): chat_sessionsConnection
+  product_requerimentsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: product_requerimentsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [product_requerimentsOrderBy!]
+  ): product_requerimentsConnection
 }
 
 type usersConnection {
