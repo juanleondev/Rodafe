@@ -56,10 +56,25 @@ import 'package:graphql_data_source/src/graphql/__generated__/schema.schema.gql.
         GcompaniesInsertInput,
         GcompaniesOrderBy,
         GcompaniesUpdateInput,
+        Gproduct_category,
+        Gproduct_categoryFilter,
+        Gproduct_requerimentsFilter,
+        Gproduct_requerimentsInsertInput,
+        Gproduct_requerimentsOrderBy,
+        Gproduct_requerimentsUpdateInput,
         GusersFilter,
         GusersInsertInput,
         GusersOrderBy,
         GusersUpdateInput;
+import 'package:graphql_data_source/src/graphql/mutations/__generated__/create_product_requeriment.data.gql.dart'
+    show
+        GCreateProductRequerimentData,
+        GCreateProductRequerimentData_insertIntoproduct_requerimentsCollection,
+        GCreateProductRequerimentData_insertIntoproduct_requerimentsCollection_records;
+import 'package:graphql_data_source/src/graphql/mutations/__generated__/create_product_requeriment.req.gql.dart'
+    show GCreateProductRequerimentReq;
+import 'package:graphql_data_source/src/graphql/mutations/__generated__/create_product_requeriment.var.gql.dart'
+    show GCreateProductRequerimentVars;
 import 'package:graphql_data_source/src/graphql/mutations/__generated__/register_user.data.gql.dart'
     show
         GRegisterUserData,
@@ -94,6 +109,11 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GBigIntListFilter,
   GBooleanFilter,
   GBooleanListFilter,
+  GCreateProductRequerimentData,
+  GCreateProductRequerimentData_insertIntoproduct_requerimentsCollection,
+  GCreateProductRequerimentData_insertIntoproduct_requerimentsCollection_records,
+  GCreateProductRequerimentReq,
+  GCreateProductRequerimentVars,
   GCursor,
   GDate,
   GDateFilter,
@@ -144,6 +164,12 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GcompaniesInsertInput,
   GcompaniesOrderBy,
   GcompaniesUpdateInput,
+  Gproduct_category,
+  Gproduct_categoryFilter,
+  Gproduct_requerimentsFilter,
+  Gproduct_requerimentsInsertInput,
+  Gproduct_requerimentsOrderBy,
+  Gproduct_requerimentsUpdateInput,
   GusersFilter,
   GusersInsertInput,
   GusersOrderBy,

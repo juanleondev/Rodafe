@@ -79,6 +79,33 @@ final BuiltSet<Gchat_sender_type> _$gchatSenderTypeValues =
   _$gchatSenderTypebot,
 ]);
 
+const Gproduct_category _$gproductCategorybearing =
+    const Gproduct_category._('bearing');
+const Gproduct_category _$gproductCategorybelt =
+    const Gproduct_category._('belt');
+const Gproduct_category _$gproductCategoryother =
+    const Gproduct_category._('other');
+
+Gproduct_category _$gproductCategoryValueOf(String name) {
+  switch (name) {
+    case 'bearing':
+      return _$gproductCategorybearing;
+    case 'belt':
+      return _$gproductCategorybelt;
+    case 'other':
+      return _$gproductCategoryother;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<Gproduct_category> _$gproductCategoryValues =
+    new BuiltSet<Gproduct_category>(const <Gproduct_category>[
+  _$gproductCategorybearing,
+  _$gproductCategorybelt,
+  _$gproductCategoryother,
+]);
+
 Serializer<GBigFloatFilter> _$gBigFloatFilterSerializer =
     new _$GBigFloatFilterSerializer();
 Serializer<GBigFloatListFilter> _$gBigFloatListFilterSerializer =
@@ -149,6 +176,21 @@ Serializer<GcompaniesOrderBy> _$gcompaniesOrderBySerializer =
     new _$GcompaniesOrderBySerializer();
 Serializer<GcompaniesUpdateInput> _$gcompaniesUpdateInputSerializer =
     new _$GcompaniesUpdateInputSerializer();
+Serializer<Gproduct_category> _$gproductCategorySerializer =
+    new _$Gproduct_categorySerializer();
+Serializer<Gproduct_categoryFilter> _$gproductCategoryFilterSerializer =
+    new _$Gproduct_categoryFilterSerializer();
+Serializer<Gproduct_requerimentsFilter> _$gproductRequerimentsFilterSerializer =
+    new _$Gproduct_requerimentsFilterSerializer();
+Serializer<Gproduct_requerimentsInsertInput>
+    _$gproductRequerimentsInsertInputSerializer =
+    new _$Gproduct_requerimentsInsertInputSerializer();
+Serializer<Gproduct_requerimentsOrderBy>
+    _$gproductRequerimentsOrderBySerializer =
+    new _$Gproduct_requerimentsOrderBySerializer();
+Serializer<Gproduct_requerimentsUpdateInput>
+    _$gproductRequerimentsUpdateInputSerializer =
+    new _$Gproduct_requerimentsUpdateInputSerializer();
 Serializer<GusersFilter> _$gusersFilterSerializer =
     new _$GusersFilterSerializer();
 Serializer<GusersInsertInput> _$gusersInsertInputSerializer =
@@ -3887,6 +3929,769 @@ class _$GcompaniesUpdateInputSerializer
         case 'address':
           result.address = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$Gproduct_categorySerializer
+    implements PrimitiveSerializer<Gproduct_category> {
+  @override
+  final Iterable<Type> types = const <Type>[Gproduct_category];
+  @override
+  final String wireName = 'Gproduct_category';
+
+  @override
+  Object serialize(Serializers serializers, Gproduct_category object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  Gproduct_category deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      Gproduct_category.valueOf(serialized as String);
+}
+
+class _$Gproduct_categoryFilterSerializer
+    implements StructuredSerializer<Gproduct_categoryFilter> {
+  @override
+  final Iterable<Type> types = const [
+    Gproduct_categoryFilter,
+    _$Gproduct_categoryFilter
+  ];
+  @override
+  final String wireName = 'Gproduct_categoryFilter';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, Gproduct_categoryFilter object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.eq;
+    if (value != null) {
+      result
+        ..add('eq')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(Gproduct_category)));
+    }
+    value = object.Gin;
+    if (value != null) {
+      result
+        ..add('in')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(Gproduct_category)])));
+    }
+    value = object.Gis;
+    if (value != null) {
+      result
+        ..add('is')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GFilterIs)));
+    }
+    value = object.neq;
+    if (value != null) {
+      result
+        ..add('neq')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(Gproduct_category)));
+    }
+    return result;
+  }
+
+  @override
+  Gproduct_categoryFilter deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new Gproduct_categoryFilterBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'eq':
+          result.eq = serializers.deserialize(value,
+                  specifiedType: const FullType(Gproduct_category))
+              as Gproduct_category?;
+          break;
+        case 'in':
+          result.Gin.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(Gproduct_category)]))!
+              as BuiltList<Object?>);
+          break;
+        case 'is':
+          result.Gis = serializers.deserialize(value,
+              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          break;
+        case 'neq':
+          result.neq = serializers.deserialize(value,
+                  specifiedType: const FullType(Gproduct_category))
+              as Gproduct_category?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$Gproduct_requerimentsFilterSerializer
+    implements StructuredSerializer<Gproduct_requerimentsFilter> {
+  @override
+  final Iterable<Type> types = const [
+    Gproduct_requerimentsFilter,
+    _$Gproduct_requerimentsFilter
+  ];
+  @override
+  final String wireName = 'Gproduct_requerimentsFilter';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, Gproduct_requerimentsFilter object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GUUIDFilter)));
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GDatetimeFilter)));
+    }
+    value = object.updated_at;
+    if (value != null) {
+      result
+        ..add('updated_at')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GDatetimeFilter)));
+    }
+    value = object.user_id;
+    if (value != null) {
+      result
+        ..add('user_id')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GUUIDFilter)));
+    }
+    value = object.text;
+    if (value != null) {
+      result
+        ..add('text')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GStringFilter)));
+    }
+    value = object.audio_path;
+    if (value != null) {
+      result
+        ..add('audio_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GStringFilter)));
+    }
+    value = object.audio_transcription;
+    if (value != null) {
+      result
+        ..add('audio_transcription')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GStringFilter)));
+    }
+    value = object.video_path;
+    if (value != null) {
+      result
+        ..add('video_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GStringFilter)));
+    }
+    value = object.image_path;
+    if (value != null) {
+      result
+        ..add('image_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GStringFilter)));
+    }
+    value = object.category;
+    if (value != null) {
+      result
+        ..add('category')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(Gproduct_categoryFilter)));
+    }
+    value = object.nodeId;
+    if (value != null) {
+      result
+        ..add('nodeId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GIDFilter)));
+    }
+    value = object.and;
+    if (value != null) {
+      result
+        ..add('and')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(BuiltList,
+                const [const FullType(Gproduct_requerimentsFilter)])));
+    }
+    value = object.or;
+    if (value != null) {
+      result
+        ..add('or')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(BuiltList,
+                const [const FullType(Gproduct_requerimentsFilter)])));
+    }
+    value = object.not;
+    if (value != null) {
+      result
+        ..add('not')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(Gproduct_requerimentsFilter)));
+    }
+    return result;
+  }
+
+  @override
+  Gproduct_requerimentsFilter deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new Gproduct_requerimentsFilterBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          break;
+        case 'created_at':
+          result.created_at.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(GDatetimeFilter))!
+              as GDatetimeFilter);
+          break;
+        case 'updated_at':
+          result.updated_at.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(GDatetimeFilter))!
+              as GDatetimeFilter);
+          break;
+        case 'user_id':
+          result.user_id.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          break;
+        case 'text':
+          result.text.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          break;
+        case 'audio_path':
+          result.audio_path.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          break;
+        case 'audio_transcription':
+          result.audio_transcription.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          break;
+        case 'video_path':
+          result.video_path.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          break;
+        case 'image_path':
+          result.image_path.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          break;
+        case 'category':
+          result.category.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(Gproduct_categoryFilter))!
+              as Gproduct_categoryFilter);
+          break;
+        case 'nodeId':
+          result.nodeId.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GIDFilter))! as GIDFilter);
+          break;
+        case 'and':
+          result.and.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(Gproduct_requerimentsFilter)
+              ]))! as BuiltList<Object?>);
+          break;
+        case 'or':
+          result.or.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(Gproduct_requerimentsFilter)
+              ]))! as BuiltList<Object?>);
+          break;
+        case 'not':
+          result.not.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(Gproduct_requerimentsFilter))!
+              as Gproduct_requerimentsFilter);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$Gproduct_requerimentsInsertInputSerializer
+    implements StructuredSerializer<Gproduct_requerimentsInsertInput> {
+  @override
+  final Iterable<Type> types = const [
+    Gproduct_requerimentsInsertInput,
+    _$Gproduct_requerimentsInsertInput
+  ];
+  @override
+  final String wireName = 'Gproduct_requerimentsInsertInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, Gproduct_requerimentsInsertInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GDatetime)));
+    }
+    value = object.updated_at;
+    if (value != null) {
+      result
+        ..add('updated_at')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GDatetime)));
+    }
+    value = object.user_id;
+    if (value != null) {
+      result
+        ..add('user_id')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+    }
+    value = object.text;
+    if (value != null) {
+      result
+        ..add('text')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.audio_path;
+    if (value != null) {
+      result
+        ..add('audio_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.audio_transcription;
+    if (value != null) {
+      result
+        ..add('audio_transcription')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.video_path;
+    if (value != null) {
+      result
+        ..add('video_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.image_path;
+    if (value != null) {
+      result
+        ..add('image_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.category;
+    if (value != null) {
+      result
+        ..add('category')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(Gproduct_category)));
+    }
+    return result;
+  }
+
+  @override
+  Gproduct_requerimentsInsertInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new Gproduct_requerimentsInsertInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GUUID))! as GUUID);
+          break;
+        case 'created_at':
+          result.created_at.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GDatetime))! as GDatetime);
+          break;
+        case 'updated_at':
+          result.updated_at.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GDatetime))! as GDatetime);
+          break;
+        case 'user_id':
+          result.user_id.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GUUID))! as GUUID);
+          break;
+        case 'text':
+          result.text = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'audio_path':
+          result.audio_path = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'audio_transcription':
+          result.audio_transcription = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'video_path':
+          result.video_path = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'image_path':
+          result.image_path = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'category':
+          result.category = serializers.deserialize(value,
+                  specifiedType: const FullType(Gproduct_category))
+              as Gproduct_category?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$Gproduct_requerimentsOrderBySerializer
+    implements StructuredSerializer<Gproduct_requerimentsOrderBy> {
+  @override
+  final Iterable<Type> types = const [
+    Gproduct_requerimentsOrderBy,
+    _$Gproduct_requerimentsOrderBy
+  ];
+  @override
+  final String wireName = 'Gproduct_requerimentsOrderBy';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, Gproduct_requerimentsOrderBy object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOrderByDirection)));
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOrderByDirection)));
+    }
+    value = object.updated_at;
+    if (value != null) {
+      result
+        ..add('updated_at')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOrderByDirection)));
+    }
+    value = object.user_id;
+    if (value != null) {
+      result
+        ..add('user_id')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOrderByDirection)));
+    }
+    value = object.text;
+    if (value != null) {
+      result
+        ..add('text')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOrderByDirection)));
+    }
+    value = object.audio_path;
+    if (value != null) {
+      result
+        ..add('audio_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOrderByDirection)));
+    }
+    value = object.audio_transcription;
+    if (value != null) {
+      result
+        ..add('audio_transcription')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOrderByDirection)));
+    }
+    value = object.video_path;
+    if (value != null) {
+      result
+        ..add('video_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOrderByDirection)));
+    }
+    value = object.image_path;
+    if (value != null) {
+      result
+        ..add('image_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOrderByDirection)));
+    }
+    value = object.category;
+    if (value != null) {
+      result
+        ..add('category')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GOrderByDirection)));
+    }
+    return result;
+  }
+
+  @override
+  Gproduct_requerimentsOrderBy deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new Gproduct_requerimentsOrderByBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderByDirection))
+              as GOrderByDirection?;
+          break;
+        case 'created_at':
+          result.created_at = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderByDirection))
+              as GOrderByDirection?;
+          break;
+        case 'updated_at':
+          result.updated_at = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderByDirection))
+              as GOrderByDirection?;
+          break;
+        case 'user_id':
+          result.user_id = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderByDirection))
+              as GOrderByDirection?;
+          break;
+        case 'text':
+          result.text = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderByDirection))
+              as GOrderByDirection?;
+          break;
+        case 'audio_path':
+          result.audio_path = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderByDirection))
+              as GOrderByDirection?;
+          break;
+        case 'audio_transcription':
+          result.audio_transcription = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderByDirection))
+              as GOrderByDirection?;
+          break;
+        case 'video_path':
+          result.video_path = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderByDirection))
+              as GOrderByDirection?;
+          break;
+        case 'image_path':
+          result.image_path = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderByDirection))
+              as GOrderByDirection?;
+          break;
+        case 'category':
+          result.category = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderByDirection))
+              as GOrderByDirection?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$Gproduct_requerimentsUpdateInputSerializer
+    implements StructuredSerializer<Gproduct_requerimentsUpdateInput> {
+  @override
+  final Iterable<Type> types = const [
+    Gproduct_requerimentsUpdateInput,
+    _$Gproduct_requerimentsUpdateInput
+  ];
+  @override
+  final String wireName = 'Gproduct_requerimentsUpdateInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, Gproduct_requerimentsUpdateInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GDatetime)));
+    }
+    value = object.updated_at;
+    if (value != null) {
+      result
+        ..add('updated_at')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GDatetime)));
+    }
+    value = object.user_id;
+    if (value != null) {
+      result
+        ..add('user_id')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+    }
+    value = object.text;
+    if (value != null) {
+      result
+        ..add('text')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.audio_path;
+    if (value != null) {
+      result
+        ..add('audio_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.audio_transcription;
+    if (value != null) {
+      result
+        ..add('audio_transcription')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.video_path;
+    if (value != null) {
+      result
+        ..add('video_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.image_path;
+    if (value != null) {
+      result
+        ..add('image_path')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.category;
+    if (value != null) {
+      result
+        ..add('category')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(Gproduct_category)));
+    }
+    return result;
+  }
+
+  @override
+  Gproduct_requerimentsUpdateInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new Gproduct_requerimentsUpdateInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GUUID))! as GUUID);
+          break;
+        case 'created_at':
+          result.created_at.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GDatetime))! as GDatetime);
+          break;
+        case 'updated_at':
+          result.updated_at.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GDatetime))! as GDatetime);
+          break;
+        case 'user_id':
+          result.user_id.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GUUID))! as GUUID);
+          break;
+        case 'text':
+          result.text = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'audio_path':
+          result.audio_path = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'audio_transcription':
+          result.audio_transcription = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'video_path':
+          result.video_path = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'image_path':
+          result.image_path = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'category':
+          result.category = serializers.deserialize(value,
+                  specifiedType: const FullType(Gproduct_category))
+              as Gproduct_category?;
           break;
       }
     }
@@ -10719,6 +11524,1089 @@ class GcompaniesUpdateInputBuilder
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'GcompaniesUpdateInput', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$Gproduct_categoryFilter extends Gproduct_categoryFilter {
+  @override
+  final Gproduct_category? eq;
+  @override
+  final BuiltList<Gproduct_category>? Gin;
+  @override
+  final GFilterIs? Gis;
+  @override
+  final Gproduct_category? neq;
+
+  factory _$Gproduct_categoryFilter(
+          [void Function(Gproduct_categoryFilterBuilder)? updates]) =>
+      (new Gproduct_categoryFilterBuilder()..update(updates))._build();
+
+  _$Gproduct_categoryFilter._({this.eq, this.Gin, this.Gis, this.neq})
+      : super._();
+
+  @override
+  Gproduct_categoryFilter rebuild(
+          void Function(Gproduct_categoryFilterBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  Gproduct_categoryFilterBuilder toBuilder() =>
+      new Gproduct_categoryFilterBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is Gproduct_categoryFilter &&
+        eq == other.eq &&
+        Gin == other.Gin &&
+        Gis == other.Gis &&
+        neq == other.neq;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, eq.hashCode);
+    _$hash = $jc(_$hash, Gin.hashCode);
+    _$hash = $jc(_$hash, Gis.hashCode);
+    _$hash = $jc(_$hash, neq.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'Gproduct_categoryFilter')
+          ..add('eq', eq)
+          ..add('Gin', Gin)
+          ..add('Gis', Gis)
+          ..add('neq', neq))
+        .toString();
+  }
+}
+
+class Gproduct_categoryFilterBuilder
+    implements
+        Builder<Gproduct_categoryFilter, Gproduct_categoryFilterBuilder> {
+  _$Gproduct_categoryFilter? _$v;
+
+  Gproduct_category? _eq;
+  Gproduct_category? get eq => _$this._eq;
+  set eq(Gproduct_category? eq) => _$this._eq = eq;
+
+  ListBuilder<Gproduct_category>? _Gin;
+  ListBuilder<Gproduct_category> get Gin =>
+      _$this._Gin ??= new ListBuilder<Gproduct_category>();
+  set Gin(ListBuilder<Gproduct_category>? Gin) => _$this._Gin = Gin;
+
+  GFilterIs? _Gis;
+  GFilterIs? get Gis => _$this._Gis;
+  set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
+
+  Gproduct_category? _neq;
+  Gproduct_category? get neq => _$this._neq;
+  set neq(Gproduct_category? neq) => _$this._neq = neq;
+
+  Gproduct_categoryFilterBuilder();
+
+  Gproduct_categoryFilterBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _eq = $v.eq;
+      _Gin = $v.Gin?.toBuilder();
+      _Gis = $v.Gis;
+      _neq = $v.neq;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(Gproduct_categoryFilter other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$Gproduct_categoryFilter;
+  }
+
+  @override
+  void update(void Function(Gproduct_categoryFilterBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  Gproduct_categoryFilter build() => _build();
+
+  _$Gproduct_categoryFilter _build() {
+    _$Gproduct_categoryFilter _$result;
+    try {
+      _$result = _$v ??
+          new _$Gproduct_categoryFilter._(
+            eq: eq,
+            Gin: _Gin?.build(),
+            Gis: Gis,
+            neq: neq,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'Gin';
+        _Gin?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'Gproduct_categoryFilter', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$Gproduct_requerimentsFilter extends Gproduct_requerimentsFilter {
+  @override
+  final GUUIDFilter? id;
+  @override
+  final GDatetimeFilter? created_at;
+  @override
+  final GDatetimeFilter? updated_at;
+  @override
+  final GUUIDFilter? user_id;
+  @override
+  final GStringFilter? text;
+  @override
+  final GStringFilter? audio_path;
+  @override
+  final GStringFilter? audio_transcription;
+  @override
+  final GStringFilter? video_path;
+  @override
+  final GStringFilter? image_path;
+  @override
+  final Gproduct_categoryFilter? category;
+  @override
+  final GIDFilter? nodeId;
+  @override
+  final BuiltList<Gproduct_requerimentsFilter>? and;
+  @override
+  final BuiltList<Gproduct_requerimentsFilter>? or;
+  @override
+  final Gproduct_requerimentsFilter? not;
+
+  factory _$Gproduct_requerimentsFilter(
+          [void Function(Gproduct_requerimentsFilterBuilder)? updates]) =>
+      (new Gproduct_requerimentsFilterBuilder()..update(updates))._build();
+
+  _$Gproduct_requerimentsFilter._(
+      {this.id,
+      this.created_at,
+      this.updated_at,
+      this.user_id,
+      this.text,
+      this.audio_path,
+      this.audio_transcription,
+      this.video_path,
+      this.image_path,
+      this.category,
+      this.nodeId,
+      this.and,
+      this.or,
+      this.not})
+      : super._();
+
+  @override
+  Gproduct_requerimentsFilter rebuild(
+          void Function(Gproduct_requerimentsFilterBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  Gproduct_requerimentsFilterBuilder toBuilder() =>
+      new Gproduct_requerimentsFilterBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is Gproduct_requerimentsFilter &&
+        id == other.id &&
+        created_at == other.created_at &&
+        updated_at == other.updated_at &&
+        user_id == other.user_id &&
+        text == other.text &&
+        audio_path == other.audio_path &&
+        audio_transcription == other.audio_transcription &&
+        video_path == other.video_path &&
+        image_path == other.image_path &&
+        category == other.category &&
+        nodeId == other.nodeId &&
+        and == other.and &&
+        or == other.or &&
+        not == other.not;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, updated_at.hashCode);
+    _$hash = $jc(_$hash, user_id.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jc(_$hash, audio_path.hashCode);
+    _$hash = $jc(_$hash, audio_transcription.hashCode);
+    _$hash = $jc(_$hash, video_path.hashCode);
+    _$hash = $jc(_$hash, image_path.hashCode);
+    _$hash = $jc(_$hash, category.hashCode);
+    _$hash = $jc(_$hash, nodeId.hashCode);
+    _$hash = $jc(_$hash, and.hashCode);
+    _$hash = $jc(_$hash, or.hashCode);
+    _$hash = $jc(_$hash, not.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'Gproduct_requerimentsFilter')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('updated_at', updated_at)
+          ..add('user_id', user_id)
+          ..add('text', text)
+          ..add('audio_path', audio_path)
+          ..add('audio_transcription', audio_transcription)
+          ..add('video_path', video_path)
+          ..add('image_path', image_path)
+          ..add('category', category)
+          ..add('nodeId', nodeId)
+          ..add('and', and)
+          ..add('or', or)
+          ..add('not', not))
+        .toString();
+  }
+}
+
+class Gproduct_requerimentsFilterBuilder
+    implements
+        Builder<Gproduct_requerimentsFilter,
+            Gproduct_requerimentsFilterBuilder> {
+  _$Gproduct_requerimentsFilter? _$v;
+
+  GUUIDFilterBuilder? _id;
+  GUUIDFilterBuilder get id => _$this._id ??= new GUUIDFilterBuilder();
+  set id(GUUIDFilterBuilder? id) => _$this._id = id;
+
+  GDatetimeFilterBuilder? _created_at;
+  GDatetimeFilterBuilder get created_at =>
+      _$this._created_at ??= new GDatetimeFilterBuilder();
+  set created_at(GDatetimeFilterBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GDatetimeFilterBuilder? _updated_at;
+  GDatetimeFilterBuilder get updated_at =>
+      _$this._updated_at ??= new GDatetimeFilterBuilder();
+  set updated_at(GDatetimeFilterBuilder? updated_at) =>
+      _$this._updated_at = updated_at;
+
+  GUUIDFilterBuilder? _user_id;
+  GUUIDFilterBuilder get user_id =>
+      _$this._user_id ??= new GUUIDFilterBuilder();
+  set user_id(GUUIDFilterBuilder? user_id) => _$this._user_id = user_id;
+
+  GStringFilterBuilder? _text;
+  GStringFilterBuilder get text => _$this._text ??= new GStringFilterBuilder();
+  set text(GStringFilterBuilder? text) => _$this._text = text;
+
+  GStringFilterBuilder? _audio_path;
+  GStringFilterBuilder get audio_path =>
+      _$this._audio_path ??= new GStringFilterBuilder();
+  set audio_path(GStringFilterBuilder? audio_path) =>
+      _$this._audio_path = audio_path;
+
+  GStringFilterBuilder? _audio_transcription;
+  GStringFilterBuilder get audio_transcription =>
+      _$this._audio_transcription ??= new GStringFilterBuilder();
+  set audio_transcription(GStringFilterBuilder? audio_transcription) =>
+      _$this._audio_transcription = audio_transcription;
+
+  GStringFilterBuilder? _video_path;
+  GStringFilterBuilder get video_path =>
+      _$this._video_path ??= new GStringFilterBuilder();
+  set video_path(GStringFilterBuilder? video_path) =>
+      _$this._video_path = video_path;
+
+  GStringFilterBuilder? _image_path;
+  GStringFilterBuilder get image_path =>
+      _$this._image_path ??= new GStringFilterBuilder();
+  set image_path(GStringFilterBuilder? image_path) =>
+      _$this._image_path = image_path;
+
+  Gproduct_categoryFilterBuilder? _category;
+  Gproduct_categoryFilterBuilder get category =>
+      _$this._category ??= new Gproduct_categoryFilterBuilder();
+  set category(Gproduct_categoryFilterBuilder? category) =>
+      _$this._category = category;
+
+  GIDFilterBuilder? _nodeId;
+  GIDFilterBuilder get nodeId => _$this._nodeId ??= new GIDFilterBuilder();
+  set nodeId(GIDFilterBuilder? nodeId) => _$this._nodeId = nodeId;
+
+  ListBuilder<Gproduct_requerimentsFilter>? _and;
+  ListBuilder<Gproduct_requerimentsFilter> get and =>
+      _$this._and ??= new ListBuilder<Gproduct_requerimentsFilter>();
+  set and(ListBuilder<Gproduct_requerimentsFilter>? and) => _$this._and = and;
+
+  ListBuilder<Gproduct_requerimentsFilter>? _or;
+  ListBuilder<Gproduct_requerimentsFilter> get or =>
+      _$this._or ??= new ListBuilder<Gproduct_requerimentsFilter>();
+  set or(ListBuilder<Gproduct_requerimentsFilter>? or) => _$this._or = or;
+
+  Gproduct_requerimentsFilterBuilder? _not;
+  Gproduct_requerimentsFilterBuilder get not =>
+      _$this._not ??= new Gproduct_requerimentsFilterBuilder();
+  set not(Gproduct_requerimentsFilterBuilder? not) => _$this._not = not;
+
+  Gproduct_requerimentsFilterBuilder();
+
+  Gproduct_requerimentsFilterBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _updated_at = $v.updated_at?.toBuilder();
+      _user_id = $v.user_id?.toBuilder();
+      _text = $v.text?.toBuilder();
+      _audio_path = $v.audio_path?.toBuilder();
+      _audio_transcription = $v.audio_transcription?.toBuilder();
+      _video_path = $v.video_path?.toBuilder();
+      _image_path = $v.image_path?.toBuilder();
+      _category = $v.category?.toBuilder();
+      _nodeId = $v.nodeId?.toBuilder();
+      _and = $v.and?.toBuilder();
+      _or = $v.or?.toBuilder();
+      _not = $v.not?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(Gproduct_requerimentsFilter other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$Gproduct_requerimentsFilter;
+  }
+
+  @override
+  void update(void Function(Gproduct_requerimentsFilterBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  Gproduct_requerimentsFilter build() => _build();
+
+  _$Gproduct_requerimentsFilter _build() {
+    _$Gproduct_requerimentsFilter _$result;
+    try {
+      _$result = _$v ??
+          new _$Gproduct_requerimentsFilter._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            updated_at: _updated_at?.build(),
+            user_id: _user_id?.build(),
+            text: _text?.build(),
+            audio_path: _audio_path?.build(),
+            audio_transcription: _audio_transcription?.build(),
+            video_path: _video_path?.build(),
+            image_path: _image_path?.build(),
+            category: _category?.build(),
+            nodeId: _nodeId?.build(),
+            and: _and?.build(),
+            or: _or?.build(),
+            not: _not?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'updated_at';
+        _updated_at?.build();
+        _$failedField = 'user_id';
+        _user_id?.build();
+        _$failedField = 'text';
+        _text?.build();
+        _$failedField = 'audio_path';
+        _audio_path?.build();
+        _$failedField = 'audio_transcription';
+        _audio_transcription?.build();
+        _$failedField = 'video_path';
+        _video_path?.build();
+        _$failedField = 'image_path';
+        _image_path?.build();
+        _$failedField = 'category';
+        _category?.build();
+        _$failedField = 'nodeId';
+        _nodeId?.build();
+        _$failedField = 'and';
+        _and?.build();
+        _$failedField = 'or';
+        _or?.build();
+        _$failedField = 'not';
+        _not?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'Gproduct_requerimentsFilter', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$Gproduct_requerimentsInsertInput
+    extends Gproduct_requerimentsInsertInput {
+  @override
+  final GUUID? id;
+  @override
+  final GDatetime? created_at;
+  @override
+  final GDatetime? updated_at;
+  @override
+  final GUUID? user_id;
+  @override
+  final String? text;
+  @override
+  final String? audio_path;
+  @override
+  final String? audio_transcription;
+  @override
+  final String? video_path;
+  @override
+  final String? image_path;
+  @override
+  final Gproduct_category? category;
+
+  factory _$Gproduct_requerimentsInsertInput(
+          [void Function(Gproduct_requerimentsInsertInputBuilder)? updates]) =>
+      (new Gproduct_requerimentsInsertInputBuilder()..update(updates))._build();
+
+  _$Gproduct_requerimentsInsertInput._(
+      {this.id,
+      this.created_at,
+      this.updated_at,
+      this.user_id,
+      this.text,
+      this.audio_path,
+      this.audio_transcription,
+      this.video_path,
+      this.image_path,
+      this.category})
+      : super._();
+
+  @override
+  Gproduct_requerimentsInsertInput rebuild(
+          void Function(Gproduct_requerimentsInsertInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  Gproduct_requerimentsInsertInputBuilder toBuilder() =>
+      new Gproduct_requerimentsInsertInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is Gproduct_requerimentsInsertInput &&
+        id == other.id &&
+        created_at == other.created_at &&
+        updated_at == other.updated_at &&
+        user_id == other.user_id &&
+        text == other.text &&
+        audio_path == other.audio_path &&
+        audio_transcription == other.audio_transcription &&
+        video_path == other.video_path &&
+        image_path == other.image_path &&
+        category == other.category;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, updated_at.hashCode);
+    _$hash = $jc(_$hash, user_id.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jc(_$hash, audio_path.hashCode);
+    _$hash = $jc(_$hash, audio_transcription.hashCode);
+    _$hash = $jc(_$hash, video_path.hashCode);
+    _$hash = $jc(_$hash, image_path.hashCode);
+    _$hash = $jc(_$hash, category.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'Gproduct_requerimentsInsertInput')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('updated_at', updated_at)
+          ..add('user_id', user_id)
+          ..add('text', text)
+          ..add('audio_path', audio_path)
+          ..add('audio_transcription', audio_transcription)
+          ..add('video_path', video_path)
+          ..add('image_path', image_path)
+          ..add('category', category))
+        .toString();
+  }
+}
+
+class Gproduct_requerimentsInsertInputBuilder
+    implements
+        Builder<Gproduct_requerimentsInsertInput,
+            Gproduct_requerimentsInsertInputBuilder> {
+  _$Gproduct_requerimentsInsertInput? _$v;
+
+  GUUIDBuilder? _id;
+  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  set id(GUUIDBuilder? id) => _$this._id = id;
+
+  GDatetimeBuilder? _created_at;
+  GDatetimeBuilder get created_at =>
+      _$this._created_at ??= new GDatetimeBuilder();
+  set created_at(GDatetimeBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GDatetimeBuilder? _updated_at;
+  GDatetimeBuilder get updated_at =>
+      _$this._updated_at ??= new GDatetimeBuilder();
+  set updated_at(GDatetimeBuilder? updated_at) =>
+      _$this._updated_at = updated_at;
+
+  GUUIDBuilder? _user_id;
+  GUUIDBuilder get user_id => _$this._user_id ??= new GUUIDBuilder();
+  set user_id(GUUIDBuilder? user_id) => _$this._user_id = user_id;
+
+  String? _text;
+  String? get text => _$this._text;
+  set text(String? text) => _$this._text = text;
+
+  String? _audio_path;
+  String? get audio_path => _$this._audio_path;
+  set audio_path(String? audio_path) => _$this._audio_path = audio_path;
+
+  String? _audio_transcription;
+  String? get audio_transcription => _$this._audio_transcription;
+  set audio_transcription(String? audio_transcription) =>
+      _$this._audio_transcription = audio_transcription;
+
+  String? _video_path;
+  String? get video_path => _$this._video_path;
+  set video_path(String? video_path) => _$this._video_path = video_path;
+
+  String? _image_path;
+  String? get image_path => _$this._image_path;
+  set image_path(String? image_path) => _$this._image_path = image_path;
+
+  Gproduct_category? _category;
+  Gproduct_category? get category => _$this._category;
+  set category(Gproduct_category? category) => _$this._category = category;
+
+  Gproduct_requerimentsInsertInputBuilder();
+
+  Gproduct_requerimentsInsertInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _updated_at = $v.updated_at?.toBuilder();
+      _user_id = $v.user_id?.toBuilder();
+      _text = $v.text;
+      _audio_path = $v.audio_path;
+      _audio_transcription = $v.audio_transcription;
+      _video_path = $v.video_path;
+      _image_path = $v.image_path;
+      _category = $v.category;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(Gproduct_requerimentsInsertInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$Gproduct_requerimentsInsertInput;
+  }
+
+  @override
+  void update(void Function(Gproduct_requerimentsInsertInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  Gproduct_requerimentsInsertInput build() => _build();
+
+  _$Gproduct_requerimentsInsertInput _build() {
+    _$Gproduct_requerimentsInsertInput _$result;
+    try {
+      _$result = _$v ??
+          new _$Gproduct_requerimentsInsertInput._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            updated_at: _updated_at?.build(),
+            user_id: _user_id?.build(),
+            text: text,
+            audio_path: audio_path,
+            audio_transcription: audio_transcription,
+            video_path: video_path,
+            image_path: image_path,
+            category: category,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'updated_at';
+        _updated_at?.build();
+        _$failedField = 'user_id';
+        _user_id?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'Gproduct_requerimentsInsertInput', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$Gproduct_requerimentsOrderBy extends Gproduct_requerimentsOrderBy {
+  @override
+  final GOrderByDirection? id;
+  @override
+  final GOrderByDirection? created_at;
+  @override
+  final GOrderByDirection? updated_at;
+  @override
+  final GOrderByDirection? user_id;
+  @override
+  final GOrderByDirection? text;
+  @override
+  final GOrderByDirection? audio_path;
+  @override
+  final GOrderByDirection? audio_transcription;
+  @override
+  final GOrderByDirection? video_path;
+  @override
+  final GOrderByDirection? image_path;
+  @override
+  final GOrderByDirection? category;
+
+  factory _$Gproduct_requerimentsOrderBy(
+          [void Function(Gproduct_requerimentsOrderByBuilder)? updates]) =>
+      (new Gproduct_requerimentsOrderByBuilder()..update(updates))._build();
+
+  _$Gproduct_requerimentsOrderBy._(
+      {this.id,
+      this.created_at,
+      this.updated_at,
+      this.user_id,
+      this.text,
+      this.audio_path,
+      this.audio_transcription,
+      this.video_path,
+      this.image_path,
+      this.category})
+      : super._();
+
+  @override
+  Gproduct_requerimentsOrderBy rebuild(
+          void Function(Gproduct_requerimentsOrderByBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  Gproduct_requerimentsOrderByBuilder toBuilder() =>
+      new Gproduct_requerimentsOrderByBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is Gproduct_requerimentsOrderBy &&
+        id == other.id &&
+        created_at == other.created_at &&
+        updated_at == other.updated_at &&
+        user_id == other.user_id &&
+        text == other.text &&
+        audio_path == other.audio_path &&
+        audio_transcription == other.audio_transcription &&
+        video_path == other.video_path &&
+        image_path == other.image_path &&
+        category == other.category;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, updated_at.hashCode);
+    _$hash = $jc(_$hash, user_id.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jc(_$hash, audio_path.hashCode);
+    _$hash = $jc(_$hash, audio_transcription.hashCode);
+    _$hash = $jc(_$hash, video_path.hashCode);
+    _$hash = $jc(_$hash, image_path.hashCode);
+    _$hash = $jc(_$hash, category.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'Gproduct_requerimentsOrderBy')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('updated_at', updated_at)
+          ..add('user_id', user_id)
+          ..add('text', text)
+          ..add('audio_path', audio_path)
+          ..add('audio_transcription', audio_transcription)
+          ..add('video_path', video_path)
+          ..add('image_path', image_path)
+          ..add('category', category))
+        .toString();
+  }
+}
+
+class Gproduct_requerimentsOrderByBuilder
+    implements
+        Builder<Gproduct_requerimentsOrderBy,
+            Gproduct_requerimentsOrderByBuilder> {
+  _$Gproduct_requerimentsOrderBy? _$v;
+
+  GOrderByDirection? _id;
+  GOrderByDirection? get id => _$this._id;
+  set id(GOrderByDirection? id) => _$this._id = id;
+
+  GOrderByDirection? _created_at;
+  GOrderByDirection? get created_at => _$this._created_at;
+  set created_at(GOrderByDirection? created_at) =>
+      _$this._created_at = created_at;
+
+  GOrderByDirection? _updated_at;
+  GOrderByDirection? get updated_at => _$this._updated_at;
+  set updated_at(GOrderByDirection? updated_at) =>
+      _$this._updated_at = updated_at;
+
+  GOrderByDirection? _user_id;
+  GOrderByDirection? get user_id => _$this._user_id;
+  set user_id(GOrderByDirection? user_id) => _$this._user_id = user_id;
+
+  GOrderByDirection? _text;
+  GOrderByDirection? get text => _$this._text;
+  set text(GOrderByDirection? text) => _$this._text = text;
+
+  GOrderByDirection? _audio_path;
+  GOrderByDirection? get audio_path => _$this._audio_path;
+  set audio_path(GOrderByDirection? audio_path) =>
+      _$this._audio_path = audio_path;
+
+  GOrderByDirection? _audio_transcription;
+  GOrderByDirection? get audio_transcription => _$this._audio_transcription;
+  set audio_transcription(GOrderByDirection? audio_transcription) =>
+      _$this._audio_transcription = audio_transcription;
+
+  GOrderByDirection? _video_path;
+  GOrderByDirection? get video_path => _$this._video_path;
+  set video_path(GOrderByDirection? video_path) =>
+      _$this._video_path = video_path;
+
+  GOrderByDirection? _image_path;
+  GOrderByDirection? get image_path => _$this._image_path;
+  set image_path(GOrderByDirection? image_path) =>
+      _$this._image_path = image_path;
+
+  GOrderByDirection? _category;
+  GOrderByDirection? get category => _$this._category;
+  set category(GOrderByDirection? category) => _$this._category = category;
+
+  Gproduct_requerimentsOrderByBuilder();
+
+  Gproduct_requerimentsOrderByBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _created_at = $v.created_at;
+      _updated_at = $v.updated_at;
+      _user_id = $v.user_id;
+      _text = $v.text;
+      _audio_path = $v.audio_path;
+      _audio_transcription = $v.audio_transcription;
+      _video_path = $v.video_path;
+      _image_path = $v.image_path;
+      _category = $v.category;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(Gproduct_requerimentsOrderBy other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$Gproduct_requerimentsOrderBy;
+  }
+
+  @override
+  void update(void Function(Gproduct_requerimentsOrderByBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  Gproduct_requerimentsOrderBy build() => _build();
+
+  _$Gproduct_requerimentsOrderBy _build() {
+    final _$result = _$v ??
+        new _$Gproduct_requerimentsOrderBy._(
+          id: id,
+          created_at: created_at,
+          updated_at: updated_at,
+          user_id: user_id,
+          text: text,
+          audio_path: audio_path,
+          audio_transcription: audio_transcription,
+          video_path: video_path,
+          image_path: image_path,
+          category: category,
+        );
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$Gproduct_requerimentsUpdateInput
+    extends Gproduct_requerimentsUpdateInput {
+  @override
+  final GUUID? id;
+  @override
+  final GDatetime? created_at;
+  @override
+  final GDatetime? updated_at;
+  @override
+  final GUUID? user_id;
+  @override
+  final String? text;
+  @override
+  final String? audio_path;
+  @override
+  final String? audio_transcription;
+  @override
+  final String? video_path;
+  @override
+  final String? image_path;
+  @override
+  final Gproduct_category? category;
+
+  factory _$Gproduct_requerimentsUpdateInput(
+          [void Function(Gproduct_requerimentsUpdateInputBuilder)? updates]) =>
+      (new Gproduct_requerimentsUpdateInputBuilder()..update(updates))._build();
+
+  _$Gproduct_requerimentsUpdateInput._(
+      {this.id,
+      this.created_at,
+      this.updated_at,
+      this.user_id,
+      this.text,
+      this.audio_path,
+      this.audio_transcription,
+      this.video_path,
+      this.image_path,
+      this.category})
+      : super._();
+
+  @override
+  Gproduct_requerimentsUpdateInput rebuild(
+          void Function(Gproduct_requerimentsUpdateInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  Gproduct_requerimentsUpdateInputBuilder toBuilder() =>
+      new Gproduct_requerimentsUpdateInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is Gproduct_requerimentsUpdateInput &&
+        id == other.id &&
+        created_at == other.created_at &&
+        updated_at == other.updated_at &&
+        user_id == other.user_id &&
+        text == other.text &&
+        audio_path == other.audio_path &&
+        audio_transcription == other.audio_transcription &&
+        video_path == other.video_path &&
+        image_path == other.image_path &&
+        category == other.category;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, updated_at.hashCode);
+    _$hash = $jc(_$hash, user_id.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jc(_$hash, audio_path.hashCode);
+    _$hash = $jc(_$hash, audio_transcription.hashCode);
+    _$hash = $jc(_$hash, video_path.hashCode);
+    _$hash = $jc(_$hash, image_path.hashCode);
+    _$hash = $jc(_$hash, category.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'Gproduct_requerimentsUpdateInput')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('updated_at', updated_at)
+          ..add('user_id', user_id)
+          ..add('text', text)
+          ..add('audio_path', audio_path)
+          ..add('audio_transcription', audio_transcription)
+          ..add('video_path', video_path)
+          ..add('image_path', image_path)
+          ..add('category', category))
+        .toString();
+  }
+}
+
+class Gproduct_requerimentsUpdateInputBuilder
+    implements
+        Builder<Gproduct_requerimentsUpdateInput,
+            Gproduct_requerimentsUpdateInputBuilder> {
+  _$Gproduct_requerimentsUpdateInput? _$v;
+
+  GUUIDBuilder? _id;
+  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  set id(GUUIDBuilder? id) => _$this._id = id;
+
+  GDatetimeBuilder? _created_at;
+  GDatetimeBuilder get created_at =>
+      _$this._created_at ??= new GDatetimeBuilder();
+  set created_at(GDatetimeBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GDatetimeBuilder? _updated_at;
+  GDatetimeBuilder get updated_at =>
+      _$this._updated_at ??= new GDatetimeBuilder();
+  set updated_at(GDatetimeBuilder? updated_at) =>
+      _$this._updated_at = updated_at;
+
+  GUUIDBuilder? _user_id;
+  GUUIDBuilder get user_id => _$this._user_id ??= new GUUIDBuilder();
+  set user_id(GUUIDBuilder? user_id) => _$this._user_id = user_id;
+
+  String? _text;
+  String? get text => _$this._text;
+  set text(String? text) => _$this._text = text;
+
+  String? _audio_path;
+  String? get audio_path => _$this._audio_path;
+  set audio_path(String? audio_path) => _$this._audio_path = audio_path;
+
+  String? _audio_transcription;
+  String? get audio_transcription => _$this._audio_transcription;
+  set audio_transcription(String? audio_transcription) =>
+      _$this._audio_transcription = audio_transcription;
+
+  String? _video_path;
+  String? get video_path => _$this._video_path;
+  set video_path(String? video_path) => _$this._video_path = video_path;
+
+  String? _image_path;
+  String? get image_path => _$this._image_path;
+  set image_path(String? image_path) => _$this._image_path = image_path;
+
+  Gproduct_category? _category;
+  Gproduct_category? get category => _$this._category;
+  set category(Gproduct_category? category) => _$this._category = category;
+
+  Gproduct_requerimentsUpdateInputBuilder();
+
+  Gproduct_requerimentsUpdateInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _updated_at = $v.updated_at?.toBuilder();
+      _user_id = $v.user_id?.toBuilder();
+      _text = $v.text;
+      _audio_path = $v.audio_path;
+      _audio_transcription = $v.audio_transcription;
+      _video_path = $v.video_path;
+      _image_path = $v.image_path;
+      _category = $v.category;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(Gproduct_requerimentsUpdateInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$Gproduct_requerimentsUpdateInput;
+  }
+
+  @override
+  void update(void Function(Gproduct_requerimentsUpdateInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  Gproduct_requerimentsUpdateInput build() => _build();
+
+  _$Gproduct_requerimentsUpdateInput _build() {
+    _$Gproduct_requerimentsUpdateInput _$result;
+    try {
+      _$result = _$v ??
+          new _$Gproduct_requerimentsUpdateInput._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            updated_at: _updated_at?.build(),
+            user_id: _user_id?.build(),
+            text: text,
+            audio_path: audio_path,
+            audio_transcription: audio_transcription,
+            video_path: video_path,
+            image_path: image_path,
+            category: category,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'updated_at';
+        _updated_at?.build();
+        _$failedField = 'user_id';
+        _user_id?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'Gproduct_requerimentsUpdateInput', _$failedField, e.toString());
       }
       rethrow;
     }

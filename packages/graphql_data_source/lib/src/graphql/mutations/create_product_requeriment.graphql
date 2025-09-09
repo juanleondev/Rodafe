@@ -1,0 +1,37 @@
+mutation CreateProductRequeriment(
+  $userId: UUID!
+  $category: product_category!
+  $text: String
+  $audioPath: String
+  $audioTranscription: String
+  $videoPath: String
+  $imagePath: String
+) {
+  insertIntoproduct_requerimentsCollection(
+    objects: [
+      {
+        user_id: $userId
+        category: $category
+        text: $text
+        audio_path: $audioPath
+        audio_transcription: $audioTranscription
+        video_path: $videoPath
+        image_path: $imagePath
+      }
+    ]
+  ) {
+    affectedCount
+    records {
+      id
+      user_id
+      category
+      text
+      audio_path
+      audio_transcription
+      video_path
+      image_path
+      created_at
+      updated_at
+    }
+  }
+}

@@ -16,6 +16,15 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GBigIntListFilter.serializer)
       ..add(GBooleanFilter.serializer)
       ..add(GBooleanListFilter.serializer)
+      ..add(GCreateProductRequerimentData.serializer)
+      ..add(
+          GCreateProductRequerimentData_insertIntoproduct_requerimentsCollection
+              .serializer)
+      ..add(
+          GCreateProductRequerimentData_insertIntoproduct_requerimentsCollection_records
+              .serializer)
+      ..add(GCreateProductRequerimentReq.serializer)
+      ..add(GCreateProductRequerimentVars.serializer)
       ..add(GCursor.serializer)
       ..add(GDate.serializer)
       ..add(GDateFilter.serializer)
@@ -66,6 +75,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GcompaniesInsertInput.serializer)
       ..add(GcompaniesOrderBy.serializer)
       ..add(GcompaniesUpdateInput.serializer)
+      ..add(Gproduct_category.serializer)
+      ..add(Gproduct_categoryFilter.serializer)
+      ..add(Gproduct_requerimentsFilter.serializer)
+      ..add(Gproduct_requerimentsInsertInput.serializer)
+      ..add(Gproduct_requerimentsOrderBy.serializer)
+      ..add(Gproduct_requerimentsUpdateInput.serializer)
       ..add(GusersFilter.serializer)
       ..add(GusersInsertInput.serializer)
       ..add(GusersOrderBy.serializer)
@@ -100,6 +115,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GBigInt)]),
           () => new ListBuilder<GBigInt>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GCreateProductRequerimentData_insertIntoproduct_requerimentsCollection_records)
+          ]),
+          () => new ListBuilder<
+              GCreateProductRequerimentData_insertIntoproduct_requerimentsCollection_records>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GDate)]),
           () => new ListBuilder<GDate>())
@@ -196,6 +218,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GcompaniesFilter)]),
           () => new ListBuilder<GcompaniesFilter>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Gproduct_category)]),
+          () => new ListBuilder<Gproduct_category>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(Gproduct_requerimentsFilter)]),
+          () => new ListBuilder<Gproduct_requerimentsFilter>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(Gproduct_requerimentsFilter)]),
+          () => new ListBuilder<Gproduct_requerimentsFilter>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GusersFilter)]),
           () => new ListBuilder<GusersFilter>())

@@ -1192,6 +1192,198 @@ abstract class GcompaniesUpdateInput
       );
 }
 
+class Gproduct_category extends EnumClass {
+  const Gproduct_category._(String name) : super(name);
+
+  static const Gproduct_category bearing = _$gproductCategorybearing;
+
+  static const Gproduct_category belt = _$gproductCategorybelt;
+
+  static const Gproduct_category other = _$gproductCategoryother;
+
+  static Serializer<Gproduct_category> get serializer =>
+      _$gproductCategorySerializer;
+
+  static BuiltSet<Gproduct_category> get values => _$gproductCategoryValues;
+
+  static Gproduct_category valueOf(String name) =>
+      _$gproductCategoryValueOf(name);
+}
+
+abstract class Gproduct_categoryFilter
+    implements Built<Gproduct_categoryFilter, Gproduct_categoryFilterBuilder> {
+  Gproduct_categoryFilter._();
+
+  factory Gproduct_categoryFilter(
+          [void Function(Gproduct_categoryFilterBuilder b) updates]) =
+      _$Gproduct_categoryFilter;
+
+  Gproduct_category? get eq;
+  @BuiltValueField(wireName: 'in')
+  BuiltList<Gproduct_category>? get Gin;
+  @BuiltValueField(wireName: 'is')
+  GFilterIs? get Gis;
+  Gproduct_category? get neq;
+  static Serializer<Gproduct_categoryFilter> get serializer =>
+      _$gproductCategoryFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gproduct_categoryFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gproduct_categoryFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gproduct_categoryFilter.serializer,
+        json,
+      );
+}
+
+abstract class Gproduct_requerimentsFilter
+    implements
+        Built<Gproduct_requerimentsFilter, Gproduct_requerimentsFilterBuilder> {
+  Gproduct_requerimentsFilter._();
+
+  factory Gproduct_requerimentsFilter(
+          [void Function(Gproduct_requerimentsFilterBuilder b) updates]) =
+      _$Gproduct_requerimentsFilter;
+
+  GUUIDFilter? get id;
+  GDatetimeFilter? get created_at;
+  GDatetimeFilter? get updated_at;
+  GUUIDFilter? get user_id;
+  GStringFilter? get text;
+  GStringFilter? get audio_path;
+  GStringFilter? get audio_transcription;
+  GStringFilter? get video_path;
+  GStringFilter? get image_path;
+  Gproduct_categoryFilter? get category;
+  GIDFilter? get nodeId;
+  BuiltList<Gproduct_requerimentsFilter>? get and;
+  BuiltList<Gproduct_requerimentsFilter>? get or;
+  Gproduct_requerimentsFilter? get not;
+  static Serializer<Gproduct_requerimentsFilter> get serializer =>
+      _$gproductRequerimentsFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gproduct_requerimentsFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gproduct_requerimentsFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gproduct_requerimentsFilter.serializer,
+        json,
+      );
+}
+
+abstract class Gproduct_requerimentsInsertInput
+    implements
+        Built<Gproduct_requerimentsInsertInput,
+            Gproduct_requerimentsInsertInputBuilder> {
+  Gproduct_requerimentsInsertInput._();
+
+  factory Gproduct_requerimentsInsertInput(
+          [void Function(Gproduct_requerimentsInsertInputBuilder b) updates]) =
+      _$Gproduct_requerimentsInsertInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GDatetime? get updated_at;
+  GUUID? get user_id;
+  String? get text;
+  String? get audio_path;
+  String? get audio_transcription;
+  String? get video_path;
+  String? get image_path;
+  Gproduct_category? get category;
+  static Serializer<Gproduct_requerimentsInsertInput> get serializer =>
+      _$gproductRequerimentsInsertInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gproduct_requerimentsInsertInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gproduct_requerimentsInsertInput? fromJson(
+          Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gproduct_requerimentsInsertInput.serializer,
+        json,
+      );
+}
+
+abstract class Gproduct_requerimentsOrderBy
+    implements
+        Built<Gproduct_requerimentsOrderBy,
+            Gproduct_requerimentsOrderByBuilder> {
+  Gproduct_requerimentsOrderBy._();
+
+  factory Gproduct_requerimentsOrderBy(
+          [void Function(Gproduct_requerimentsOrderByBuilder b) updates]) =
+      _$Gproduct_requerimentsOrderBy;
+
+  GOrderByDirection? get id;
+  GOrderByDirection? get created_at;
+  GOrderByDirection? get updated_at;
+  GOrderByDirection? get user_id;
+  GOrderByDirection? get text;
+  GOrderByDirection? get audio_path;
+  GOrderByDirection? get audio_transcription;
+  GOrderByDirection? get video_path;
+  GOrderByDirection? get image_path;
+  GOrderByDirection? get category;
+  static Serializer<Gproduct_requerimentsOrderBy> get serializer =>
+      _$gproductRequerimentsOrderBySerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gproduct_requerimentsOrderBy.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gproduct_requerimentsOrderBy? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gproduct_requerimentsOrderBy.serializer,
+        json,
+      );
+}
+
+abstract class Gproduct_requerimentsUpdateInput
+    implements
+        Built<Gproduct_requerimentsUpdateInput,
+            Gproduct_requerimentsUpdateInputBuilder> {
+  Gproduct_requerimentsUpdateInput._();
+
+  factory Gproduct_requerimentsUpdateInput(
+          [void Function(Gproduct_requerimentsUpdateInputBuilder b) updates]) =
+      _$Gproduct_requerimentsUpdateInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GDatetime? get updated_at;
+  GUUID? get user_id;
+  String? get text;
+  String? get audio_path;
+  String? get audio_transcription;
+  String? get video_path;
+  String? get image_path;
+  Gproduct_category? get category;
+  static Serializer<Gproduct_requerimentsUpdateInput> get serializer =>
+      _$gproductRequerimentsUpdateInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Gproduct_requerimentsUpdateInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Gproduct_requerimentsUpdateInput? fromJson(
+          Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Gproduct_requerimentsUpdateInput.serializer,
+        json,
+      );
+}
+
 abstract class GusersFilter
     implements Built<GusersFilter, GusersFilterBuilder> {
   GusersFilter._();
@@ -1309,6 +1501,7 @@ const Map<String, Set<String>> possibleTypesMap = {
     'chat_messages',
     'chat_sessions',
     'companies',
+    'product_requeriments',
     'users',
   }
 };
