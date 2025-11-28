@@ -8,8 +8,6 @@ class CreateProductRequerimentBloc
     extends Bloc<CreateProductRequerimentEvent, CreateProductRequerimentState> {
   CreateProductRequerimentBloc()
     : super(const CreateProductRequerimentState()) {
-    on<CreateProductRequerimentEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+    on<CreateProductRequerimentEvent>((event, emit) {});
   }
 }

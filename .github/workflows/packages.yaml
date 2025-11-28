@@ -1,0 +1,83 @@
+name: packages
+
+concurrency:
+  group: $-$
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/**"
+      - ".github/workflows/packages.yaml"
+      - "pubspec.yaml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "packages/**"
+      - ".github/workflows/packages.yaml"
+      - "pubspec.yaml"
+
+jobs:
+  semantic-pull-request:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
+
+  test:
+    name: Test Packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Dart SDK
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      
+      - name: Install Melos
+        run: dart pub global activate melos
+      
+      - name: Bootstrap workspace
+        run: melos bootstrap
+      
+      - name: Run Dart package tests
+        run: melos test-dart
+      
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: stable
+          channel: stable
+      
+      - name: Run Flutter package tests
+        run: melos test-flutter
+        continue-on-error: true
+
+  analyze:
+    name: Analyze Packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Dart SDK
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      
+      - name: Install Melos
+        run: dart pub global activate melos
+      
+      - name: Bootstrap workspace
+        run: melos bootstrap
+      
+      - name: Analyze packages
+        run: melos analyze
+
+  spell-check:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1
+    with:
+      includes: |
+        **/*.md
+      modified_files_only: false
+

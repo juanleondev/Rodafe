@@ -1,0 +1,61 @@
+name: rodafe
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+
+workspace:
+  - packages/authentication_provider
+  - packages/graphql_data_source
+  - packages/product_requeriment_repository
+  - packages/shared_models
+  - packages/user_repository
+  - apps/user_app
+  - server/rodafe_api
+
+dev_dependencies:
+  melos: ^7.3.0
+
+melos:
+  scripts:
+    get:
+      description: Run `pub get` in all packages
+      run: |
+        melos exec -- "dart pub get || flutter pub get"
+    
+    clean:
+      description: Run `flutter clean` or `dart clean` in all packages
+      run: |
+        melos exec -- "flutter clean || dart clean"
+    
+    test-flutter:
+      description: Run tests in all packages
+      run: |
+        melos exec -- "flutter test"
+      concurrency: 5
+      packageFilters:
+        flutter: true
+    
+    test-dart:
+      description: Run tests in all packages
+      run: |
+        melos exec -- "dart test"
+      concurrency: 5
+      packageFilters:
+        flutter: false
+
+    test:
+      description: Run tests in all packages
+      run: |
+        melos test-dart && melos test-flutter
+    
+    analyze:
+      description: Run `dart analyze` in all packages
+      run: |
+        melos exec -- "dart analyze"
+    
+    format:
+      description: Format all Dart code
+      run: |
+        melos exec -- "dart format ."
+
