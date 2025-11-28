@@ -6,10 +6,11 @@ publish_to: none
 environment:
   sdk: ^3.8.0
 
+resolution: workspace
+
 dependencies:
   equatable: ^2.0.5
   graphql_data_source:
-    path: ../graphql_data_source
 
 dev_dependencies:
   mocktail: ^1.0.4

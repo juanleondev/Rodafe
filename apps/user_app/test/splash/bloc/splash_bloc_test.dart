@@ -27,7 +27,7 @@ void main() {
   });
 
   group('SplashBloc', () {
-    test('initial state is Status.initial', () {
+    test('initial state is Status.initialx', () {
       expect(
         SplashBloc(
           userRepository: mockUserRepository,

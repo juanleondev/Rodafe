@@ -6,9 +6,10 @@ publish_to: none
 environment:
   sdk: ^3.8.1
 
+resolution: workspace
+
 dependencies:
   authentication_provider:
-    path: ../../packages/authentication_provider
   bloc: ^9.0.0
   built_collection: ^5.1.1
   equatable: ^2.0.5
@@ -21,16 +22,13 @@ dependencies:
   go_router: ^14.6.2
   gql_http_link: ^1.1.0
   graphql_data_source:
-    path: ../../packages/graphql_data_source
   intl: ^0.20.2
   reactive_forms: ^18.1.1
   shared_models:
-    path: ../../packages/shared_models
   supabase: ^2.8.0
   supabase_auth_ui: ^0.5.5
   supabase_flutter: ^2.9.1
   user_repository:
-    path: ../../packages/user_repository
 
 dev_dependencies:
   bloc_test: ^10.0.0

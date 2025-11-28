@@ -1,0 +1,53 @@
+name: packages
+
+concurrency:
+  group: $-$
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  semantic-pull-request:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
+
+  build:
+    name: Build Packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.35.6
+          cache: true
+          cache-key: flutter-:os:-:channel:-:version:-:arch:-:hash:-${{ hashFiles('**/pubspec.lock') }}
+      
+      - name: 📦 Install Melos
+        run: dart pub global activate melos
+      
+      - name: 📦 Bootstrap workspace
+        run: melos bootstrap
+
+      # TODO: Implement this when this issue is resolved
+      # https://github.com/dart-lang/dart_style/issues/864      
+      # - name: ✨ Check Formatting
+      #   run: melos exec -- "dart format --set-exit-if-changed ."
+      
+      - name: 🕵️ Analyze
+        run: melos analyze
+      
+      - name: 🧪 Run Tests
+        run: melos test
+
+

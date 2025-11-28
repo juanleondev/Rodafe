@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:user_app/create_product_requeriment/create_product_requeriment.dart';
 
 class CreateProductRequerimentPage extends StatelessWidget {
@@ -25,7 +24,6 @@ class CreateProductRequerimentView extends StatelessWidget {
       CreateProductRequerimentState
     >(
       builder: (context, state) {
-        // TODO: return correct widget based on the state.
         return const SizedBox();
       },
     );
