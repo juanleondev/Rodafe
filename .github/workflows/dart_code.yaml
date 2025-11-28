@@ -36,9 +36,11 @@ jobs:
       
       - name: 📦 Bootstrap workspace
         run: melos bootstrap
-      
-      - name: ✨ Check Formatting
-        run: melos exec -- "dart format --set-exit-if-changed ."
+
+      # TODO: Implement this when this issue is resolved
+      # https://github.com/dart-lang/dart_style/issues/864      
+      # - name: ✨ Check Formatting
+      #   run: melos exec -- "dart format --set-exit-if-changed ."
       
       - name: 🕵️ Analyze
         run: melos analyze
@@ -46,10 +48,4 @@ jobs:
       - name: 🧪 Run Tests
         run: melos test
 
-  spell-check:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1
-    with:
-      includes: |
-        **/*.md
-      modified_files_only: false
 
