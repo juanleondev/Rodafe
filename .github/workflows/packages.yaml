@@ -8,71 +8,44 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "packages/**"
-      - ".github/workflows/packages.yaml"
-      - "pubspec.yaml"
+
   pull_request:
     branches:
       - main
-    paths:
-      - "packages/**"
-      - ".github/workflows/packages.yaml"
-      - "pubspec.yaml"
 
 jobs:
   semantic-pull-request:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
 
-  test:
-    name: Test Packages
+  build:
+    name: Build Packages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v4
       
-      - name: Setup Dart SDK
-        uses: dart-lang/setup-dart@v1
-        with:
-          sdk: stable
-      
-      - name: Install Melos
-        run: dart pub global activate melos
-      
-      - name: Bootstrap workspace
-        run: melos bootstrap
-      
-      - name: Run Dart package tests
-        run: melos test-dart
-      
-      - name: Setup Flutter SDK
+      - name: 🐦 Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: stable
           channel: stable
+          cache: true
+          cache-key: flutter-:os:-:channel:-:version:-:arch:-:hash:-${{ hashFiles('**/pubspec.lock') }}
       
-      - name: Run Flutter package tests
-        run: melos test-flutter
-        continue-on-error: true
-
-  analyze:
-    name: Analyze Packages
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Setup Dart SDK
-        uses: dart-lang/setup-dart@v1
-        with:
-          sdk: stable
-      
-      - name: Install Melos
+      - name: 📦 Install Melos
         run: dart pub global activate melos
       
-      - name: Bootstrap workspace
+      - name: 📦 Bootstrap workspace
         run: melos bootstrap
       
-      - name: Analyze packages
+      - name: ✨ Check Formatting
+        run: melos exec -- "dart format --set-exit-if-changed ."
+      
+      - name: 🕵️ Analyze
         run: melos analyze
+      
+      - name: 🧪 Run Tests
+        run: melos test
 
   spell-check:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1

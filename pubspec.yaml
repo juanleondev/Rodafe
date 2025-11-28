@@ -48,6 +48,8 @@ melos:
       description: Run tests in all packages
       run: |
         melos test-dart && melos test-flutter
+      packageFilters:
+        diff: "origin/main...HEAD"
     
     analyze:
       description: Run `dart analyze` in all packages
