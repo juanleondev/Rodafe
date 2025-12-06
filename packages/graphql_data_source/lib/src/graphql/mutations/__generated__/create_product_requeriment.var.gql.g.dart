@@ -7,75 +7,88 @@ part of 'create_product_requeriment.var.gql.dart';
 // **************************************************************************
 
 Serializer<GCreateProductRequerimentVars>
-    _$gCreateProductRequerimentVarsSerializer =
-    new _$GCreateProductRequerimentVarsSerializer();
+_$gCreateProductRequerimentVarsSerializer =
+    _$GCreateProductRequerimentVarsSerializer();
 
 class _$GCreateProductRequerimentVarsSerializer
     implements StructuredSerializer<GCreateProductRequerimentVars> {
   @override
   final Iterable<Type> types = const [
     GCreateProductRequerimentVars,
-    _$GCreateProductRequerimentVars
+    _$GCreateProductRequerimentVars,
   ];
   @override
   final String wireName = 'GCreateProductRequerimentVars';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GCreateProductRequerimentVars object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    GCreateProductRequerimentVars object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[
       'userId',
-      serializers.serialize(object.userId,
-          specifiedType: const FullType(_i1.GUUID)),
+      serializers.serialize(
+        object.userId,
+        specifiedType: const FullType(_i1.GUUID),
+      ),
       'category',
-      serializers.serialize(object.category,
-          specifiedType: const FullType(_i1.Gproduct_category)),
+      serializers.serialize(
+        object.category,
+        specifiedType: const FullType(_i1.Gproduct_category),
+      ),
     ];
     Object? value;
     value = object.text;
     if (value != null) {
       result
         ..add('text')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.audioPath;
     if (value != null) {
       result
         ..add('audioPath')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.audioTranscription;
     if (value != null) {
       result
         ..add('audioTranscription')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.videoPath;
     if (value != null) {
       result
         ..add('videoPath')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.imagePath;
     if (value != null) {
       result
         ..add('imagePath')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     return result;
   }
 
   @override
   GCreateProductRequerimentVars deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GCreateProductRequerimentVarsBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GCreateProductRequerimentVarsBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -84,33 +97,61 @@ class _$GCreateProductRequerimentVarsSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'userId':
-          result.userId.replace(serializers.deserialize(value,
-              specifiedType: const FullType(_i1.GUUID))! as _i1.GUUID);
+          result.userId.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(_i1.GUUID),
+                )!
+                as _i1.GUUID,
+          );
           break;
         case 'category':
-          result.category = serializers.deserialize(value,
-                  specifiedType: const FullType(_i1.Gproduct_category))!
-              as _i1.Gproduct_category;
+          result.category =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(_i1.Gproduct_category),
+                  )!
+                  as _i1.Gproduct_category;
           break;
         case 'text':
-          result.text = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.text =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'audioPath':
-          result.audioPath = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.audioPath =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'audioTranscription':
-          result.audioTranscription = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.audioTranscription =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'videoPath':
-          result.videoPath = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.videoPath =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'imagePath':
-          result.imagePath = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.imagePath =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
       }
     }
@@ -135,33 +176,27 @@ class _$GCreateProductRequerimentVars extends GCreateProductRequerimentVars {
   @override
   final String? imagePath;
 
-  factory _$GCreateProductRequerimentVars(
-          [void Function(GCreateProductRequerimentVarsBuilder)? updates]) =>
-      (new GCreateProductRequerimentVarsBuilder()..update(updates))._build();
+  factory _$GCreateProductRequerimentVars([
+    void Function(GCreateProductRequerimentVarsBuilder)? updates,
+  ]) => (GCreateProductRequerimentVarsBuilder()..update(updates))._build();
 
-  _$GCreateProductRequerimentVars._(
-      {required this.userId,
-      required this.category,
-      this.text,
-      this.audioPath,
-      this.audioTranscription,
-      this.videoPath,
-      this.imagePath})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        userId, r'GCreateProductRequerimentVars', 'userId');
-    BuiltValueNullFieldError.checkNotNull(
-        category, r'GCreateProductRequerimentVars', 'category');
-  }
-
+  _$GCreateProductRequerimentVars._({
+    required this.userId,
+    required this.category,
+    this.text,
+    this.audioPath,
+    this.audioTranscription,
+    this.videoPath,
+    this.imagePath,
+  }) : super._();
   @override
   GCreateProductRequerimentVars rebuild(
-          void Function(GCreateProductRequerimentVarsBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GCreateProductRequerimentVarsBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GCreateProductRequerimentVarsBuilder toBuilder() =>
-      new GCreateProductRequerimentVarsBuilder()..replace(this);
+      GCreateProductRequerimentVarsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -206,12 +241,14 @@ class _$GCreateProductRequerimentVars extends GCreateProductRequerimentVars {
 
 class GCreateProductRequerimentVarsBuilder
     implements
-        Builder<GCreateProductRequerimentVars,
-            GCreateProductRequerimentVarsBuilder> {
+        Builder<
+          GCreateProductRequerimentVars,
+          GCreateProductRequerimentVarsBuilder
+        > {
   _$GCreateProductRequerimentVars? _$v;
 
   _i1.GUUIDBuilder? _userId;
-  _i1.GUUIDBuilder get userId => _$this._userId ??= new _i1.GUUIDBuilder();
+  _i1.GUUIDBuilder get userId => _$this._userId ??= _i1.GUUIDBuilder();
   set userId(_i1.GUUIDBuilder? userId) => _$this._userId = userId;
 
   _i1.Gproduct_category? _category;
@@ -258,7 +295,6 @@ class GCreateProductRequerimentVarsBuilder
 
   @override
   void replace(GCreateProductRequerimentVars other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GCreateProductRequerimentVars;
   }
 
@@ -273,11 +309,15 @@ class GCreateProductRequerimentVarsBuilder
   _$GCreateProductRequerimentVars _build() {
     _$GCreateProductRequerimentVars _$result;
     try {
-      _$result = _$v ??
-          new _$GCreateProductRequerimentVars._(
+      _$result =
+          _$v ??
+          _$GCreateProductRequerimentVars._(
             userId: userId.build(),
             category: BuiltValueNullFieldError.checkNotNull(
-                category, r'GCreateProductRequerimentVars', 'category'),
+              category,
+              r'GCreateProductRequerimentVars',
+              'category',
+            ),
             text: text,
             audioPath: audioPath,
             audioTranscription: audioTranscription,
@@ -290,8 +330,11 @@ class GCreateProductRequerimentVarsBuilder
         _$failedField = 'userId';
         userId.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GCreateProductRequerimentVars', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GCreateProductRequerimentVars',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }

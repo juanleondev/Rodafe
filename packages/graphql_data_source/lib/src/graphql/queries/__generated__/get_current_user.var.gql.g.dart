@@ -7,48 +7,51 @@ part of 'get_current_user.var.gql.dart';
 // **************************************************************************
 
 Serializer<GGetCurrentUserVars> _$gGetCurrentUserVarsSerializer =
-    new _$GGetCurrentUserVarsSerializer();
+    _$GGetCurrentUserVarsSerializer();
 
 class _$GGetCurrentUserVarsSerializer
     implements StructuredSerializer<GGetCurrentUserVars> {
   @override
   final Iterable<Type> types = const [
     GGetCurrentUserVars,
-    _$GGetCurrentUserVars
+    _$GGetCurrentUserVars,
   ];
   @override
   final String wireName = 'GGetCurrentUserVars';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GGetCurrentUserVars object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    GGetCurrentUserVars object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     return <Object?>[];
   }
 
   @override
   GGetCurrentUserVars deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    return new GGetCurrentUserVarsBuilder().build();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return GGetCurrentUserVarsBuilder().build();
   }
 }
 
 class _$GGetCurrentUserVars extends GGetCurrentUserVars {
-  factory _$GGetCurrentUserVars(
-          [void Function(GGetCurrentUserVarsBuilder)? updates]) =>
-      (new GGetCurrentUserVarsBuilder()..update(updates))._build();
+  factory _$GGetCurrentUserVars([
+    void Function(GGetCurrentUserVarsBuilder)? updates,
+  ]) => (GGetCurrentUserVarsBuilder()..update(updates))._build();
 
   _$GGetCurrentUserVars._() : super._();
-
   @override
   GGetCurrentUserVars rebuild(
-          void Function(GGetCurrentUserVarsBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GGetCurrentUserVarsBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GGetCurrentUserVarsBuilder toBuilder() =>
-      new GGetCurrentUserVarsBuilder()..replace(this);
+      GGetCurrentUserVarsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -75,7 +78,6 @@ class GGetCurrentUserVarsBuilder
 
   @override
   void replace(GGetCurrentUserVars other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GGetCurrentUserVars;
   }
 
@@ -88,7 +90,7 @@ class GGetCurrentUserVarsBuilder
   GGetCurrentUserVars build() => _build();
 
   _$GGetCurrentUserVars _build() {
-    final _$result = _$v ?? new _$GGetCurrentUserVars._();
+    final _$result = _$v ?? _$GGetCurrentUserVars._();
     replace(_$result);
     return _$result;
   }

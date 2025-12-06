@@ -1,5 +1,7 @@
 import 'package:ferry/ferry.dart';
 import 'package:graphql_data_source/src/graphql/__generated__/schema.schema.gql.dart';
+import 'package:graphql_data_source/src/graphql/mutations/__generated__/create_car.data.gql.dart';
+import 'package:graphql_data_source/src/graphql/mutations/__generated__/create_car.req.gql.dart';
 import 'package:graphql_data_source/src/graphql/mutations/__generated__/register_user.data.gql.dart';
 import 'package:graphql_data_source/src/graphql/mutations/__generated__/register_user.req.gql.dart';
 import 'package:graphql_data_source/src/graphql/queries/__generated__/get_current_user.data.gql.dart';
@@ -94,6 +96,45 @@ class GraphqlDataSource {
       }
 
       return data.insertIntousersCollection;
+    });
+  }
+
+  /// Creates a new car
+  Stream<GCreateCarData_insertIntocarsCollection?> createCar({
+    required String modelId,
+    required int year,
+    String? generation,
+    String? bodyType,
+    String? engineType,
+    String? transmissionType,
+    String? drivetrain,
+    String? trim,
+    String? description,
+  }) {
+    final request = GCreateCarReq(
+      (b) => b
+        ..vars.modelId = (GUUIDBuilder()..value = modelId)
+        ..vars.year = year
+        ..vars.generation = generation
+        ..vars.bodyType = bodyType
+        ..vars.engineType = engineType
+        ..vars.transmissionType = transmissionType
+        ..vars.drivetrain = drivetrain
+        ..vars.trim = trim
+        ..vars.description = description,
+    );
+
+    return _client.request(request).map((response) {
+      if (response.hasErrors) {
+        throw Exception('GraphQL errors: ${response.linkException}');
+      }
+
+      final data = response.data;
+      if (data == null) {
+        return null;
+      }
+
+      return data.insertIntocarsCollection;
     });
   }
 }

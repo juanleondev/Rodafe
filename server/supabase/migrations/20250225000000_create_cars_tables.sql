@@ -161,9 +161,9 @@ CREATE POLICY "Service role can manage models" ON "public"."models"
 CREATE POLICY "Anyone can view cars" ON "public"."cars"
     FOR SELECT USING (true);
 
--- Only service_role can insert/update/delete cars (catalog management)
-CREATE POLICY "Service role can manage cars" ON "public"."cars"
-    FOR ALL USING (auth.role() = 'service_role');
+-- All authenticated users can insert/update/delete cars
+CREATE POLICY "Authenticated users can manage cars" ON "public"."cars"
+    FOR ALL USING (auth.uid() IS NOT NULL);
 
 -- RLS policies for user_cars table
 -- Users can only view their own non-deleted cars

@@ -5,8 +5,10 @@ import 'package:user_app/bootstrap.dart';
 
 Future<void> main() async {
   await bootstrap(
-    (userRepository, authProvider, authenticationBloc, router) => App(
+    (userRepository, carRepository, authProvider, authenticationBloc, router) =>
+        App(
       userRepository: userRepository,
+      carRepository: carRepository,
       authProvider: authProvider,
       authenticationBloc: authenticationBloc,
       router: router,

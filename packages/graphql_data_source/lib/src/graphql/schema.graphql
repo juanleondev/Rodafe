@@ -201,6 +201,28 @@ scalar JSON
 
 """The root type for creating and mutating data"""
 type Mutation {
+  """Deletes zero or more records from the `brands` collection"""
+  deleteFrombrandsCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: brandsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): brandsDeleteResponse!
+
+  """Deletes zero or more records from the `cars` collection"""
+  deleteFromcarsCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: carsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): carsDeleteResponse!
+
   """Deletes zero or more records from the `chat_messages` collection"""
   deleteFromchat_messagesCollection(
     """Restricts the mutation's impact to records matching the criteria"""
@@ -234,6 +256,17 @@ type Mutation {
     atMost: Int! = 1
   ): companiesDeleteResponse!
 
+  """Deletes zero or more records from the `models` collection"""
+  deleteFrommodelsCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: modelsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): modelsDeleteResponse!
+
   """
   Deletes zero or more records from the `product_requeriments` collection
   """
@@ -247,6 +280,17 @@ type Mutation {
     atMost: Int! = 1
   ): product_requerimentsDeleteResponse!
 
+  """Deletes zero or more records from the `user_cars` collection"""
+  deleteFromuser_carsCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: user_carsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): user_carsDeleteResponse!
+
   """Deletes zero or more records from the `users` collection"""
   deleteFromusersCollection(
     """Restricts the mutation's impact to records matching the criteria"""
@@ -258,6 +302,12 @@ type Mutation {
     atMost: Int! = 1
   ): usersDeleteResponse!
 
+  """Adds one or more `brands` records to the collection"""
+  insertIntobrandsCollection(objects: [brandsInsertInput!]!): brandsInsertResponse
+
+  """Adds one or more `cars` records to the collection"""
+  insertIntocarsCollection(objects: [carsInsertInput!]!): carsInsertResponse
+
   """Adds one or more `chat_messages` records to the collection"""
   insertIntochat_messagesCollection(objects: [chat_messagesInsertInput!]!): chat_messagesInsertResponse
 
@@ -267,11 +317,49 @@ type Mutation {
   """Adds one or more `companies` records to the collection"""
   insertIntocompaniesCollection(objects: [companiesInsertInput!]!): companiesInsertResponse
 
+  """Adds one or more `models` records to the collection"""
+  insertIntomodelsCollection(objects: [modelsInsertInput!]!): modelsInsertResponse
+
   """Adds one or more `product_requeriments` records to the collection"""
   insertIntoproduct_requerimentsCollection(objects: [product_requerimentsInsertInput!]!): product_requerimentsInsertResponse
 
+  """Adds one or more `user_cars` records to the collection"""
+  insertIntouser_carsCollection(objects: [user_carsInsertInput!]!): user_carsInsertResponse
+
   """Adds one or more `users` records to the collection"""
   insertIntousersCollection(objects: [usersInsertInput!]!): usersInsertResponse
+
+  """Updates zero or more records in the `brands` collection"""
+  updatebrandsCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: brandsUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: brandsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): brandsUpdateResponse!
+
+  """Updates zero or more records in the `cars` collection"""
+  updatecarsCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: carsUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: carsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): carsUpdateResponse!
 
   """Updates zero or more records in the `chat_messages` collection"""
   updatechat_messagesCollection(
@@ -321,6 +409,22 @@ type Mutation {
     atMost: Int! = 1
   ): companiesUpdateResponse!
 
+  """Updates zero or more records in the `models` collection"""
+  updatemodelsCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: modelsUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: modelsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): modelsUpdateResponse!
+
   """Updates zero or more records in the `product_requeriments` collection"""
   updateproduct_requerimentsCollection(
     """
@@ -336,6 +440,22 @@ type Mutation {
     """
     atMost: Int! = 1
   ): product_requerimentsUpdateResponse!
+
+  """Updates zero or more records in the `user_cars` collection"""
+  updateuser_carsCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: user_carsUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: user_carsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): user_carsUpdateResponse!
 
   """Updates zero or more records in the `users` collection"""
   updateusersCollection(
@@ -394,6 +514,58 @@ type PageInfo {
 
 """The root type for querying data"""
 type Query {
+  """A pagable collection of type `brands`"""
+  brandsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: brandsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [brandsOrderBy!]
+  ): brandsConnection
+
+  """A pagable collection of type `cars`"""
+  carsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: carsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [carsOrderBy!]
+  ): carsConnection
+
   """A pagable collection of type `chat_messages`"""
   chat_messagesCollection(
     """Query the first `n` records in the collection"""
@@ -472,6 +644,32 @@ type Query {
     orderBy: [companiesOrderBy!]
   ): companiesConnection
 
+  """A pagable collection of type `models`"""
+  modelsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: modelsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [modelsOrderBy!]
+  ): modelsConnection
+
   """Retrieve a record by its `ID`"""
   node(
     """The record's `ID`"""
@@ -503,6 +701,32 @@ type Query {
     """Sort order to apply to the collection"""
     orderBy: [product_requerimentsOrderBy!]
   ): product_requerimentsConnection
+
+  """A pagable collection of type `user_cars`"""
+  user_carsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: user_carsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [user_carsOrderBy!]
+  ): user_carsConnection
 
   """A pagable collection of type `users`"""
   usersCollection(
@@ -611,6 +835,247 @@ input UUIDListFilter {
   eq: [UUID!]
   is: FilterIs
   overlaps: [UUID!]
+}
+
+type brands implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  name: String!
+  slug: String!
+  description: String
+  is_active: Boolean
+  models: models
+}
+
+type brandsConnection {
+  edges: [brandsEdge!]!
+  pageInfo: PageInfo!
+}
+
+type brandsDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [brands!]!
+}
+
+type brandsEdge {
+  cursor: String!
+  node: brands!
+}
+
+input brandsFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  name: StringFilter
+  slug: StringFilter
+  description: StringFilter
+  is_active: BooleanFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [brandsFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [brandsFilter!]
+
+  """Negates a filter"""
+  not: brandsFilter
+}
+
+input brandsInsertInput {
+  id: UUID
+  created_at: Datetime
+  name: String
+  slug: String
+  description: String
+  is_active: Boolean
+}
+
+type brandsInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [brands!]!
+}
+
+input brandsOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  name: OrderByDirection
+  slug: OrderByDirection
+  description: OrderByDirection
+  is_active: OrderByDirection
+}
+
+input brandsUpdateInput {
+  id: UUID
+  created_at: Datetime
+  name: String
+  slug: String
+  description: String
+  is_active: Boolean
+}
+
+type brandsUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [brands!]!
+}
+
+type cars implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  model_id: UUID!
+  year: Int!
+  generation: String
+  body_type: String
+  engine_type: String
+  transmission_type: String
+  drivetrain: String
+  trim: String
+  description: String
+  models: models
+  user_carsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: user_carsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [user_carsOrderBy!]
+  ): user_carsConnection
+}
+
+type carsConnection {
+  edges: [carsEdge!]!
+  pageInfo: PageInfo!
+}
+
+type carsDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [cars!]!
+}
+
+type carsEdge {
+  cursor: String!
+  node: cars!
+}
+
+input carsFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  model_id: UUIDFilter
+  year: IntFilter
+  generation: StringFilter
+  body_type: StringFilter
+  engine_type: StringFilter
+  transmission_type: StringFilter
+  drivetrain: StringFilter
+  trim: StringFilter
+  description: StringFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [carsFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [carsFilter!]
+
+  """Negates a filter"""
+  not: carsFilter
+}
+
+input carsInsertInput {
+  id: UUID
+  created_at: Datetime
+  model_id: UUID
+  year: Int
+  generation: String
+  body_type: String
+  engine_type: String
+  transmission_type: String
+  drivetrain: String
+  trim: String
+  description: String
+}
+
+type carsInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [cars!]!
+}
+
+input carsOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  model_id: OrderByDirection
+  year: OrderByDirection
+  generation: OrderByDirection
+  body_type: OrderByDirection
+  engine_type: OrderByDirection
+  transmission_type: OrderByDirection
+  drivetrain: OrderByDirection
+  trim: OrderByDirection
+  description: OrderByDirection
+}
+
+input carsUpdateInput {
+  id: UUID
+  created_at: Datetime
+  model_id: UUID
+  year: Int
+  generation: String
+  body_type: String
+  engine_type: String
+  transmission_type: String
+  drivetrain: String
+  trim: String
+  description: String
+}
+
+type carsUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [cars!]!
 }
 
 type chat_messages implements Node {
@@ -927,6 +1392,131 @@ type companiesUpdateResponse {
   records: [companies!]!
 }
 
+type models implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  brand_id: UUID!
+  name: String!
+  slug: String!
+  description: String
+  is_active: Boolean
+  brands: brands
+  carsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: carsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [carsOrderBy!]
+  ): carsConnection
+}
+
+type modelsConnection {
+  edges: [modelsEdge!]!
+  pageInfo: PageInfo!
+}
+
+type modelsDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [models!]!
+}
+
+type modelsEdge {
+  cursor: String!
+  node: models!
+}
+
+input modelsFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  brand_id: UUIDFilter
+  name: StringFilter
+  slug: StringFilter
+  description: StringFilter
+  is_active: BooleanFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [modelsFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [modelsFilter!]
+
+  """Negates a filter"""
+  not: modelsFilter
+}
+
+input modelsInsertInput {
+  id: UUID
+  created_at: Datetime
+  brand_id: UUID
+  name: String
+  slug: String
+  description: String
+  is_active: Boolean
+}
+
+type modelsInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [models!]!
+}
+
+input modelsOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  brand_id: OrderByDirection
+  name: OrderByDirection
+  slug: OrderByDirection
+  description: OrderByDirection
+  is_active: OrderByDirection
+}
+
+input modelsUpdateInput {
+  id: UUID
+  created_at: Datetime
+  brand_id: UUID
+  name: String
+  slug: String
+  description: String
+  is_active: Boolean
+}
+
+type modelsUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [models!]!
+}
+
 enum product_category {
   bearing
   belt
@@ -1059,6 +1649,138 @@ type product_requerimentsUpdateResponse {
   records: [product_requeriments!]!
 }
 
+type user_cars implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  updated_at: Datetime!
+  user_id: UUID!
+  car_id: UUID!
+  vin: String
+  license_plate: String
+  color: String
+  mileage: Int
+  purchase_date: Date
+  notes: String
+  is_primary: Boolean
+  deleted_at: Datetime
+  users: users
+  cars: cars
+}
+
+type user_carsConnection {
+  edges: [user_carsEdge!]!
+  pageInfo: PageInfo!
+}
+
+type user_carsDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [user_cars!]!
+}
+
+type user_carsEdge {
+  cursor: String!
+  node: user_cars!
+}
+
+input user_carsFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  updated_at: DatetimeFilter
+  user_id: UUIDFilter
+  car_id: UUIDFilter
+  vin: StringFilter
+  license_plate: StringFilter
+  color: StringFilter
+  mileage: IntFilter
+  purchase_date: DateFilter
+  notes: StringFilter
+  is_primary: BooleanFilter
+  deleted_at: DatetimeFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [user_carsFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [user_carsFilter!]
+
+  """Negates a filter"""
+  not: user_carsFilter
+}
+
+input user_carsInsertInput {
+  id: UUID
+  created_at: Datetime
+  updated_at: Datetime
+  user_id: UUID
+  car_id: UUID
+  vin: String
+  license_plate: String
+  color: String
+  mileage: Int
+  purchase_date: Date
+  notes: String
+  is_primary: Boolean
+  deleted_at: Datetime
+}
+
+type user_carsInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [user_cars!]!
+}
+
+input user_carsOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  updated_at: OrderByDirection
+  user_id: OrderByDirection
+  car_id: OrderByDirection
+  vin: OrderByDirection
+  license_plate: OrderByDirection
+  color: OrderByDirection
+  mileage: OrderByDirection
+  purchase_date: OrderByDirection
+  notes: OrderByDirection
+  is_primary: OrderByDirection
+  deleted_at: OrderByDirection
+}
+
+input user_carsUpdateInput {
+  id: UUID
+  created_at: Datetime
+  updated_at: Datetime
+  user_id: UUID
+  car_id: UUID
+  vin: String
+  license_plate: String
+  color: String
+  mileage: Int
+  purchase_date: Date
+  notes: String
+  is_primary: Boolean
+  deleted_at: Datetime
+}
+
+type user_carsUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [user_cars!]!
+}
+
 type users implements Node {
   """Globally Unique Record Identifier"""
   nodeId: ID!
@@ -1115,6 +1837,30 @@ type users implements Node {
     """Sort order to apply to the collection"""
     orderBy: [product_requerimentsOrderBy!]
   ): product_requerimentsConnection
+  user_carsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: user_carsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [user_carsOrderBy!]
+  ): user_carsConnection
 }
 
 type usersConnection {

@@ -794,6 +794,256 @@ abstract class GUUIDListFilter
       );
 }
 
+abstract class GbrandsFilter
+    implements Built<GbrandsFilter, GbrandsFilterBuilder> {
+  GbrandsFilter._();
+
+  factory GbrandsFilter([void Function(GbrandsFilterBuilder b) updates]) =
+      _$GbrandsFilter;
+
+  GUUIDFilter? get id;
+  GDatetimeFilter? get created_at;
+  GStringFilter? get name;
+  GStringFilter? get slug;
+  GStringFilter? get description;
+  GBooleanFilter? get is_active;
+  GIDFilter? get nodeId;
+  BuiltList<GbrandsFilter>? get and;
+  BuiltList<GbrandsFilter>? get or;
+  GbrandsFilter? get not;
+  static Serializer<GbrandsFilter> get serializer => _$gbrandsFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GbrandsFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GbrandsFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GbrandsFilter.serializer,
+        json,
+      );
+}
+
+abstract class GbrandsInsertInput
+    implements Built<GbrandsInsertInput, GbrandsInsertInputBuilder> {
+  GbrandsInsertInput._();
+
+  factory GbrandsInsertInput(
+          [void Function(GbrandsInsertInputBuilder b) updates]) =
+      _$GbrandsInsertInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  String? get name;
+  String? get slug;
+  String? get description;
+  bool? get is_active;
+  static Serializer<GbrandsInsertInput> get serializer =>
+      _$gbrandsInsertInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GbrandsInsertInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GbrandsInsertInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GbrandsInsertInput.serializer,
+        json,
+      );
+}
+
+abstract class GbrandsOrderBy
+    implements Built<GbrandsOrderBy, GbrandsOrderByBuilder> {
+  GbrandsOrderBy._();
+
+  factory GbrandsOrderBy([void Function(GbrandsOrderByBuilder b) updates]) =
+      _$GbrandsOrderBy;
+
+  GOrderByDirection? get id;
+  GOrderByDirection? get created_at;
+  GOrderByDirection? get name;
+  GOrderByDirection? get slug;
+  GOrderByDirection? get description;
+  GOrderByDirection? get is_active;
+  static Serializer<GbrandsOrderBy> get serializer =>
+      _$gbrandsOrderBySerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GbrandsOrderBy.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GbrandsOrderBy? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GbrandsOrderBy.serializer,
+        json,
+      );
+}
+
+abstract class GbrandsUpdateInput
+    implements Built<GbrandsUpdateInput, GbrandsUpdateInputBuilder> {
+  GbrandsUpdateInput._();
+
+  factory GbrandsUpdateInput(
+          [void Function(GbrandsUpdateInputBuilder b) updates]) =
+      _$GbrandsUpdateInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  String? get name;
+  String? get slug;
+  String? get description;
+  bool? get is_active;
+  static Serializer<GbrandsUpdateInput> get serializer =>
+      _$gbrandsUpdateInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GbrandsUpdateInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GbrandsUpdateInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GbrandsUpdateInput.serializer,
+        json,
+      );
+}
+
+abstract class GcarsFilter implements Built<GcarsFilter, GcarsFilterBuilder> {
+  GcarsFilter._();
+
+  factory GcarsFilter([void Function(GcarsFilterBuilder b) updates]) =
+      _$GcarsFilter;
+
+  GUUIDFilter? get id;
+  GDatetimeFilter? get created_at;
+  GUUIDFilter? get model_id;
+  GIntFilter? get year;
+  GStringFilter? get generation;
+  GStringFilter? get body_type;
+  GStringFilter? get engine_type;
+  GStringFilter? get transmission_type;
+  GStringFilter? get drivetrain;
+  GStringFilter? get trim;
+  GStringFilter? get description;
+  GIDFilter? get nodeId;
+  BuiltList<GcarsFilter>? get and;
+  BuiltList<GcarsFilter>? get or;
+  GcarsFilter? get not;
+  static Serializer<GcarsFilter> get serializer => _$gcarsFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GcarsFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GcarsFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GcarsFilter.serializer,
+        json,
+      );
+}
+
+abstract class GcarsInsertInput
+    implements Built<GcarsInsertInput, GcarsInsertInputBuilder> {
+  GcarsInsertInput._();
+
+  factory GcarsInsertInput([void Function(GcarsInsertInputBuilder b) updates]) =
+      _$GcarsInsertInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GUUID? get model_id;
+  int? get year;
+  String? get generation;
+  String? get body_type;
+  String? get engine_type;
+  String? get transmission_type;
+  String? get drivetrain;
+  String? get trim;
+  String? get description;
+  static Serializer<GcarsInsertInput> get serializer =>
+      _$gcarsInsertInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GcarsInsertInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GcarsInsertInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GcarsInsertInput.serializer,
+        json,
+      );
+}
+
+abstract class GcarsOrderBy
+    implements Built<GcarsOrderBy, GcarsOrderByBuilder> {
+  GcarsOrderBy._();
+
+  factory GcarsOrderBy([void Function(GcarsOrderByBuilder b) updates]) =
+      _$GcarsOrderBy;
+
+  GOrderByDirection? get id;
+  GOrderByDirection? get created_at;
+  GOrderByDirection? get model_id;
+  GOrderByDirection? get year;
+  GOrderByDirection? get generation;
+  GOrderByDirection? get body_type;
+  GOrderByDirection? get engine_type;
+  GOrderByDirection? get transmission_type;
+  GOrderByDirection? get drivetrain;
+  GOrderByDirection? get trim;
+  GOrderByDirection? get description;
+  static Serializer<GcarsOrderBy> get serializer => _$gcarsOrderBySerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GcarsOrderBy.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GcarsOrderBy? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GcarsOrderBy.serializer,
+        json,
+      );
+}
+
+abstract class GcarsUpdateInput
+    implements Built<GcarsUpdateInput, GcarsUpdateInputBuilder> {
+  GcarsUpdateInput._();
+
+  factory GcarsUpdateInput([void Function(GcarsUpdateInputBuilder b) updates]) =
+      _$GcarsUpdateInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GUUID? get model_id;
+  int? get year;
+  String? get generation;
+  String? get body_type;
+  String? get engine_type;
+  String? get transmission_type;
+  String? get drivetrain;
+  String? get trim;
+  String? get description;
+  static Serializer<GcarsUpdateInput> get serializer =>
+      _$gcarsUpdateInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GcarsUpdateInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GcarsUpdateInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GcarsUpdateInput.serializer,
+        json,
+      );
+}
+
 abstract class Gchat_messagesFilter
     implements Built<Gchat_messagesFilter, Gchat_messagesFilterBuilder> {
   Gchat_messagesFilter._();
@@ -1192,6 +1442,127 @@ abstract class GcompaniesUpdateInput
       );
 }
 
+abstract class GmodelsFilter
+    implements Built<GmodelsFilter, GmodelsFilterBuilder> {
+  GmodelsFilter._();
+
+  factory GmodelsFilter([void Function(GmodelsFilterBuilder b) updates]) =
+      _$GmodelsFilter;
+
+  GUUIDFilter? get id;
+  GDatetimeFilter? get created_at;
+  GUUIDFilter? get brand_id;
+  GStringFilter? get name;
+  GStringFilter? get slug;
+  GStringFilter? get description;
+  GBooleanFilter? get is_active;
+  GIDFilter? get nodeId;
+  BuiltList<GmodelsFilter>? get and;
+  BuiltList<GmodelsFilter>? get or;
+  GmodelsFilter? get not;
+  static Serializer<GmodelsFilter> get serializer => _$gmodelsFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GmodelsFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GmodelsFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GmodelsFilter.serializer,
+        json,
+      );
+}
+
+abstract class GmodelsInsertInput
+    implements Built<GmodelsInsertInput, GmodelsInsertInputBuilder> {
+  GmodelsInsertInput._();
+
+  factory GmodelsInsertInput(
+          [void Function(GmodelsInsertInputBuilder b) updates]) =
+      _$GmodelsInsertInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GUUID? get brand_id;
+  String? get name;
+  String? get slug;
+  String? get description;
+  bool? get is_active;
+  static Serializer<GmodelsInsertInput> get serializer =>
+      _$gmodelsInsertInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GmodelsInsertInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GmodelsInsertInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GmodelsInsertInput.serializer,
+        json,
+      );
+}
+
+abstract class GmodelsOrderBy
+    implements Built<GmodelsOrderBy, GmodelsOrderByBuilder> {
+  GmodelsOrderBy._();
+
+  factory GmodelsOrderBy([void Function(GmodelsOrderByBuilder b) updates]) =
+      _$GmodelsOrderBy;
+
+  GOrderByDirection? get id;
+  GOrderByDirection? get created_at;
+  GOrderByDirection? get brand_id;
+  GOrderByDirection? get name;
+  GOrderByDirection? get slug;
+  GOrderByDirection? get description;
+  GOrderByDirection? get is_active;
+  static Serializer<GmodelsOrderBy> get serializer =>
+      _$gmodelsOrderBySerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GmodelsOrderBy.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GmodelsOrderBy? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GmodelsOrderBy.serializer,
+        json,
+      );
+}
+
+abstract class GmodelsUpdateInput
+    implements Built<GmodelsUpdateInput, GmodelsUpdateInputBuilder> {
+  GmodelsUpdateInput._();
+
+  factory GmodelsUpdateInput(
+          [void Function(GmodelsUpdateInputBuilder b) updates]) =
+      _$GmodelsUpdateInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GUUID? get brand_id;
+  String? get name;
+  String? get slug;
+  String? get description;
+  bool? get is_active;
+  static Serializer<GmodelsUpdateInput> get serializer =>
+      _$gmodelsUpdateInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        GmodelsUpdateInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GmodelsUpdateInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        GmodelsUpdateInput.serializer,
+        json,
+      );
+}
+
 class Gproduct_category extends EnumClass {
   const Gproduct_category._(String name) : super(name);
 
@@ -1384,6 +1755,153 @@ abstract class Gproduct_requerimentsUpdateInput
       );
 }
 
+abstract class Guser_carsFilter
+    implements Built<Guser_carsFilter, Guser_carsFilterBuilder> {
+  Guser_carsFilter._();
+
+  factory Guser_carsFilter([void Function(Guser_carsFilterBuilder b) updates]) =
+      _$Guser_carsFilter;
+
+  GUUIDFilter? get id;
+  GDatetimeFilter? get created_at;
+  GDatetimeFilter? get updated_at;
+  GUUIDFilter? get user_id;
+  GUUIDFilter? get car_id;
+  GStringFilter? get vin;
+  GStringFilter? get license_plate;
+  GStringFilter? get color;
+  GIntFilter? get mileage;
+  GDateFilter? get purchase_date;
+  GStringFilter? get notes;
+  GBooleanFilter? get is_primary;
+  GDatetimeFilter? get deleted_at;
+  GIDFilter? get nodeId;
+  BuiltList<Guser_carsFilter>? get and;
+  BuiltList<Guser_carsFilter>? get or;
+  Guser_carsFilter? get not;
+  static Serializer<Guser_carsFilter> get serializer =>
+      _$guserCarsFilterSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Guser_carsFilter.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Guser_carsFilter? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Guser_carsFilter.serializer,
+        json,
+      );
+}
+
+abstract class Guser_carsInsertInput
+    implements Built<Guser_carsInsertInput, Guser_carsInsertInputBuilder> {
+  Guser_carsInsertInput._();
+
+  factory Guser_carsInsertInput(
+          [void Function(Guser_carsInsertInputBuilder b) updates]) =
+      _$Guser_carsInsertInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GDatetime? get updated_at;
+  GUUID? get user_id;
+  GUUID? get car_id;
+  String? get vin;
+  String? get license_plate;
+  String? get color;
+  int? get mileage;
+  GDate? get purchase_date;
+  String? get notes;
+  bool? get is_primary;
+  GDatetime? get deleted_at;
+  static Serializer<Guser_carsInsertInput> get serializer =>
+      _$guserCarsInsertInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Guser_carsInsertInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Guser_carsInsertInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Guser_carsInsertInput.serializer,
+        json,
+      );
+}
+
+abstract class Guser_carsOrderBy
+    implements Built<Guser_carsOrderBy, Guser_carsOrderByBuilder> {
+  Guser_carsOrderBy._();
+
+  factory Guser_carsOrderBy(
+          [void Function(Guser_carsOrderByBuilder b) updates]) =
+      _$Guser_carsOrderBy;
+
+  GOrderByDirection? get id;
+  GOrderByDirection? get created_at;
+  GOrderByDirection? get updated_at;
+  GOrderByDirection? get user_id;
+  GOrderByDirection? get car_id;
+  GOrderByDirection? get vin;
+  GOrderByDirection? get license_plate;
+  GOrderByDirection? get color;
+  GOrderByDirection? get mileage;
+  GOrderByDirection? get purchase_date;
+  GOrderByDirection? get notes;
+  GOrderByDirection? get is_primary;
+  GOrderByDirection? get deleted_at;
+  static Serializer<Guser_carsOrderBy> get serializer =>
+      _$guserCarsOrderBySerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Guser_carsOrderBy.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Guser_carsOrderBy? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Guser_carsOrderBy.serializer,
+        json,
+      );
+}
+
+abstract class Guser_carsUpdateInput
+    implements Built<Guser_carsUpdateInput, Guser_carsUpdateInputBuilder> {
+  Guser_carsUpdateInput._();
+
+  factory Guser_carsUpdateInput(
+          [void Function(Guser_carsUpdateInputBuilder b) updates]) =
+      _$Guser_carsUpdateInput;
+
+  GUUID? get id;
+  GDatetime? get created_at;
+  GDatetime? get updated_at;
+  GUUID? get user_id;
+  GUUID? get car_id;
+  String? get vin;
+  String? get license_plate;
+  String? get color;
+  int? get mileage;
+  GDate? get purchase_date;
+  String? get notes;
+  bool? get is_primary;
+  GDatetime? get deleted_at;
+  static Serializer<Guser_carsUpdateInput> get serializer =>
+      _$guserCarsUpdateInputSerializer;
+
+  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
+        Guser_carsUpdateInput.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static Guser_carsUpdateInput? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(
+        Guser_carsUpdateInput.serializer,
+        json,
+      );
+}
+
 abstract class GusersFilter
     implements Built<GusersFilter, GusersFilterBuilder> {
   GusersFilter._();
@@ -1498,10 +2016,14 @@ abstract class GusersUpdateInput
 
 const Map<String, Set<String>> possibleTypesMap = {
   'Node': {
+    'brands',
+    'cars',
     'chat_messages',
     'chat_sessions',
     'companies',
+    'models',
     'product_requeriments',
+    'user_cars',
     'users',
   }
 };

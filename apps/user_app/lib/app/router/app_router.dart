@@ -4,7 +4,7 @@ import 'package:authentication_provider/authentication_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
-import 'package:user_app/home/home.dart';
+import 'package:user_app/cars_creation/cars_creation.dart';
 import 'package:user_app/register/register.dart';
 import 'package:user_app/sign_in/sign_in.dart';
 import 'package:user_app/splash/splash.dart';
@@ -53,7 +53,10 @@ class AppRouter {
           path: registerRoute,
           builder: (context, state) => const RegisterPage(),
         ),
-        GoRoute(path: homeRoute, builder: (context, state) => const HomePage()),
+        GoRoute(
+          path: homeRoute,
+          builder: (context, state) => const CarsCreationPage(),
+        ),
       ],
     );
   }

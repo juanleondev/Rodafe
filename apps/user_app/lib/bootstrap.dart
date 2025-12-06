@@ -3,13 +3,13 @@ import 'dart:developer';
 
 import 'package:authentication_provider/authentication_provider.dart';
 import 'package:bloc/bloc.dart';
+import 'package:car_repository/car_repository.dart';
 import 'package:ferry/ferry.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:gql_http_link/gql_http_link.dart';
 import 'package:graphql_data_source/graphql_data_source.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-
 import 'package:user_app/app/router/app_router.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
 import 'package:user_app/config/env_config.dart';
@@ -34,6 +34,7 @@ class AppBlocObserver extends BlocObserver {
 Future<void> bootstrap(
   FutureOr<Widget> Function(
     UserRepository userRepository,
+    CarRepository carRepository,
     AuthenticationProvider authProvider,
     AuthenticationBloc authenticationBloc,
     GoRouter router,
@@ -80,8 +81,9 @@ Future<void> bootstrap(
 
   final graphqlDataSource = GraphqlDataSource(client: client);
 
-  // Create UserRepository
+  // Create repositories
   final userRepository = UserRepository(graphqlDataSource: graphqlDataSource);
+  final carRepository = CarRepository(graphqlDataSource: graphqlDataSource);
   final authProvider = AuthenticationProvider(supabase.client.auth);
   final authenticationBloc = AuthenticationBloc(
     authProvider: authProvider,
@@ -94,7 +96,13 @@ Future<void> bootstrap(
   // Add cross-flavor configuration here
 
   runApp(
-    await builder(userRepository, authProvider, authenticationBloc, router),
+    await builder(
+      userRepository,
+      carRepository,
+      authProvider,
+      authenticationBloc,
+      router,
+    ),
   );
 }
 

@@ -16,15 +16,13 @@ GFilterIs _$gFilterIsValueOf(String name) {
     case 'NOT_NULL':
       return _$gFilterIsNOT_NULL;
     default:
-      throw new ArgumentError(name);
+      throw ArgumentError(name);
   }
 }
 
-final BuiltSet<GFilterIs> _$gFilterIsValues =
-    new BuiltSet<GFilterIs>(const <GFilterIs>[
-  _$gFilterIsNULL,
-  _$gFilterIsNOT_NULL,
-]);
+final BuiltSet<GFilterIs> _$gFilterIsValues = BuiltSet<GFilterIs>(
+  const <GFilterIs>[_$gFilterIsNULL, _$gFilterIsNOT_NULL],
+);
 
 const GOrderByDirection _$gOrderByDirectionAscNullsFirst =
     const GOrderByDirection._('AscNullsFirst');
@@ -46,20 +44,21 @@ GOrderByDirection _$gOrderByDirectionValueOf(String name) {
     case 'DescNullsLast':
       return _$gOrderByDirectionDescNullsLast;
     default:
-      throw new ArgumentError(name);
+      throw ArgumentError(name);
   }
 }
 
 final BuiltSet<GOrderByDirection> _$gOrderByDirectionValues =
-    new BuiltSet<GOrderByDirection>(const <GOrderByDirection>[
-  _$gOrderByDirectionAscNullsFirst,
-  _$gOrderByDirectionAscNullsLast,
-  _$gOrderByDirectionDescNullsFirst,
-  _$gOrderByDirectionDescNullsLast,
-]);
+    BuiltSet<GOrderByDirection>(const <GOrderByDirection>[
+      _$gOrderByDirectionAscNullsFirst,
+      _$gOrderByDirectionAscNullsLast,
+      _$gOrderByDirectionDescNullsFirst,
+      _$gOrderByDirectionDescNullsLast,
+    ]);
 
-const Gchat_sender_type _$gchatSenderTypeuser =
-    const Gchat_sender_type._('user');
+const Gchat_sender_type _$gchatSenderTypeuser = const Gchat_sender_type._(
+  'user',
+);
 const Gchat_sender_type _$gchatSenderTypebot = const Gchat_sender_type._('bot');
 
 Gchat_sender_type _$gchatSenderTypeValueOf(String name) {
@@ -69,22 +68,25 @@ Gchat_sender_type _$gchatSenderTypeValueOf(String name) {
     case 'bot':
       return _$gchatSenderTypebot;
     default:
-      throw new ArgumentError(name);
+      throw ArgumentError(name);
   }
 }
 
 final BuiltSet<Gchat_sender_type> _$gchatSenderTypeValues =
-    new BuiltSet<Gchat_sender_type>(const <Gchat_sender_type>[
-  _$gchatSenderTypeuser,
-  _$gchatSenderTypebot,
-]);
+    BuiltSet<Gchat_sender_type>(const <Gchat_sender_type>[
+      _$gchatSenderTypeuser,
+      _$gchatSenderTypebot,
+    ]);
 
-const Gproduct_category _$gproductCategorybearing =
-    const Gproduct_category._('bearing');
-const Gproduct_category _$gproductCategorybelt =
-    const Gproduct_category._('belt');
-const Gproduct_category _$gproductCategoryother =
-    const Gproduct_category._('other');
+const Gproduct_category _$gproductCategorybearing = const Gproduct_category._(
+  'bearing',
+);
+const Gproduct_category _$gproductCategorybelt = const Gproduct_category._(
+  'belt',
+);
+const Gproduct_category _$gproductCategoryother = const Gproduct_category._(
+  'other',
+);
 
 Gproduct_category _$gproductCategoryValueOf(String name) {
   switch (name) {
@@ -95,110 +97,138 @@ Gproduct_category _$gproductCategoryValueOf(String name) {
     case 'other':
       return _$gproductCategoryother;
     default:
-      throw new ArgumentError(name);
+      throw ArgumentError(name);
   }
 }
 
 final BuiltSet<Gproduct_category> _$gproductCategoryValues =
-    new BuiltSet<Gproduct_category>(const <Gproduct_category>[
-  _$gproductCategorybearing,
-  _$gproductCategorybelt,
-  _$gproductCategoryother,
-]);
+    BuiltSet<Gproduct_category>(const <Gproduct_category>[
+      _$gproductCategorybearing,
+      _$gproductCategorybelt,
+      _$gproductCategoryother,
+    ]);
 
 Serializer<GBigFloatFilter> _$gBigFloatFilterSerializer =
-    new _$GBigFloatFilterSerializer();
+    _$GBigFloatFilterSerializer();
 Serializer<GBigFloatListFilter> _$gBigFloatListFilterSerializer =
-    new _$GBigFloatListFilterSerializer();
+    _$GBigFloatListFilterSerializer();
 Serializer<GBigIntFilter> _$gBigIntFilterSerializer =
-    new _$GBigIntFilterSerializer();
+    _$GBigIntFilterSerializer();
 Serializer<GBigIntListFilter> _$gBigIntListFilterSerializer =
-    new _$GBigIntListFilterSerializer();
+    _$GBigIntListFilterSerializer();
 Serializer<GBooleanFilter> _$gBooleanFilterSerializer =
-    new _$GBooleanFilterSerializer();
+    _$GBooleanFilterSerializer();
 Serializer<GBooleanListFilter> _$gBooleanListFilterSerializer =
-    new _$GBooleanListFilterSerializer();
-Serializer<GDateFilter> _$gDateFilterSerializer = new _$GDateFilterSerializer();
+    _$GBooleanListFilterSerializer();
+Serializer<GDateFilter> _$gDateFilterSerializer = _$GDateFilterSerializer();
 Serializer<GDateListFilter> _$gDateListFilterSerializer =
-    new _$GDateListFilterSerializer();
+    _$GDateListFilterSerializer();
 Serializer<GDatetimeFilter> _$gDatetimeFilterSerializer =
-    new _$GDatetimeFilterSerializer();
+    _$GDatetimeFilterSerializer();
 Serializer<GDatetimeListFilter> _$gDatetimeListFilterSerializer =
-    new _$GDatetimeListFilterSerializer();
-Serializer<GFilterIs> _$gFilterIsSerializer = new _$GFilterIsSerializer();
-Serializer<GFloatFilter> _$gFloatFilterSerializer =
-    new _$GFloatFilterSerializer();
+    _$GDatetimeListFilterSerializer();
+Serializer<GFilterIs> _$gFilterIsSerializer = _$GFilterIsSerializer();
+Serializer<GFloatFilter> _$gFloatFilterSerializer = _$GFloatFilterSerializer();
 Serializer<GFloatListFilter> _$gFloatListFilterSerializer =
-    new _$GFloatListFilterSerializer();
-Serializer<GIDFilter> _$gIDFilterSerializer = new _$GIDFilterSerializer();
-Serializer<GIntFilter> _$gIntFilterSerializer = new _$GIntFilterSerializer();
+    _$GFloatListFilterSerializer();
+Serializer<GIDFilter> _$gIDFilterSerializer = _$GIDFilterSerializer();
+Serializer<GIntFilter> _$gIntFilterSerializer = _$GIntFilterSerializer();
 Serializer<GIntListFilter> _$gIntListFilterSerializer =
-    new _$GIntListFilterSerializer();
+    _$GIntListFilterSerializer();
 Serializer<GOpaqueFilter> _$gOpaqueFilterSerializer =
-    new _$GOpaqueFilterSerializer();
+    _$GOpaqueFilterSerializer();
 Serializer<GOrderByDirection> _$gOrderByDirectionSerializer =
-    new _$GOrderByDirectionSerializer();
+    _$GOrderByDirectionSerializer();
 Serializer<GStringFilter> _$gStringFilterSerializer =
-    new _$GStringFilterSerializer();
+    _$GStringFilterSerializer();
 Serializer<GStringListFilter> _$gStringListFilterSerializer =
-    new _$GStringListFilterSerializer();
-Serializer<GTimeFilter> _$gTimeFilterSerializer = new _$GTimeFilterSerializer();
+    _$GStringListFilterSerializer();
+Serializer<GTimeFilter> _$gTimeFilterSerializer = _$GTimeFilterSerializer();
 Serializer<GTimeListFilter> _$gTimeListFilterSerializer =
-    new _$GTimeListFilterSerializer();
-Serializer<GUUIDFilter> _$gUUIDFilterSerializer = new _$GUUIDFilterSerializer();
+    _$GTimeListFilterSerializer();
+Serializer<GUUIDFilter> _$gUUIDFilterSerializer = _$GUUIDFilterSerializer();
 Serializer<GUUIDListFilter> _$gUUIDListFilterSerializer =
-    new _$GUUIDListFilterSerializer();
+    _$GUUIDListFilterSerializer();
+Serializer<GbrandsFilter> _$gbrandsFilterSerializer =
+    _$GbrandsFilterSerializer();
+Serializer<GbrandsInsertInput> _$gbrandsInsertInputSerializer =
+    _$GbrandsInsertInputSerializer();
+Serializer<GbrandsOrderBy> _$gbrandsOrderBySerializer =
+    _$GbrandsOrderBySerializer();
+Serializer<GbrandsUpdateInput> _$gbrandsUpdateInputSerializer =
+    _$GbrandsUpdateInputSerializer();
+Serializer<GcarsFilter> _$gcarsFilterSerializer = _$GcarsFilterSerializer();
+Serializer<GcarsInsertInput> _$gcarsInsertInputSerializer =
+    _$GcarsInsertInputSerializer();
+Serializer<GcarsOrderBy> _$gcarsOrderBySerializer = _$GcarsOrderBySerializer();
+Serializer<GcarsUpdateInput> _$gcarsUpdateInputSerializer =
+    _$GcarsUpdateInputSerializer();
 Serializer<Gchat_messagesFilter> _$gchatMessagesFilterSerializer =
-    new _$Gchat_messagesFilterSerializer();
+    _$Gchat_messagesFilterSerializer();
 Serializer<Gchat_messagesInsertInput> _$gchatMessagesInsertInputSerializer =
-    new _$Gchat_messagesInsertInputSerializer();
+    _$Gchat_messagesInsertInputSerializer();
 Serializer<Gchat_messagesOrderBy> _$gchatMessagesOrderBySerializer =
-    new _$Gchat_messagesOrderBySerializer();
+    _$Gchat_messagesOrderBySerializer();
 Serializer<Gchat_messagesUpdateInput> _$gchatMessagesUpdateInputSerializer =
-    new _$Gchat_messagesUpdateInputSerializer();
+    _$Gchat_messagesUpdateInputSerializer();
 Serializer<Gchat_sender_type> _$gchatSenderTypeSerializer =
-    new _$Gchat_sender_typeSerializer();
+    _$Gchat_sender_typeSerializer();
 Serializer<Gchat_sender_typeFilter> _$gchatSenderTypeFilterSerializer =
-    new _$Gchat_sender_typeFilterSerializer();
+    _$Gchat_sender_typeFilterSerializer();
 Serializer<Gchat_sessionsFilter> _$gchatSessionsFilterSerializer =
-    new _$Gchat_sessionsFilterSerializer();
+    _$Gchat_sessionsFilterSerializer();
 Serializer<Gchat_sessionsInsertInput> _$gchatSessionsInsertInputSerializer =
-    new _$Gchat_sessionsInsertInputSerializer();
+    _$Gchat_sessionsInsertInputSerializer();
 Serializer<Gchat_sessionsOrderBy> _$gchatSessionsOrderBySerializer =
-    new _$Gchat_sessionsOrderBySerializer();
+    _$Gchat_sessionsOrderBySerializer();
 Serializer<Gchat_sessionsUpdateInput> _$gchatSessionsUpdateInputSerializer =
-    new _$Gchat_sessionsUpdateInputSerializer();
+    _$Gchat_sessionsUpdateInputSerializer();
 Serializer<GcompaniesFilter> _$gcompaniesFilterSerializer =
-    new _$GcompaniesFilterSerializer();
+    _$GcompaniesFilterSerializer();
 Serializer<GcompaniesInsertInput> _$gcompaniesInsertInputSerializer =
-    new _$GcompaniesInsertInputSerializer();
+    _$GcompaniesInsertInputSerializer();
 Serializer<GcompaniesOrderBy> _$gcompaniesOrderBySerializer =
-    new _$GcompaniesOrderBySerializer();
+    _$GcompaniesOrderBySerializer();
 Serializer<GcompaniesUpdateInput> _$gcompaniesUpdateInputSerializer =
-    new _$GcompaniesUpdateInputSerializer();
+    _$GcompaniesUpdateInputSerializer();
+Serializer<GmodelsFilter> _$gmodelsFilterSerializer =
+    _$GmodelsFilterSerializer();
+Serializer<GmodelsInsertInput> _$gmodelsInsertInputSerializer =
+    _$GmodelsInsertInputSerializer();
+Serializer<GmodelsOrderBy> _$gmodelsOrderBySerializer =
+    _$GmodelsOrderBySerializer();
+Serializer<GmodelsUpdateInput> _$gmodelsUpdateInputSerializer =
+    _$GmodelsUpdateInputSerializer();
 Serializer<Gproduct_category> _$gproductCategorySerializer =
-    new _$Gproduct_categorySerializer();
+    _$Gproduct_categorySerializer();
 Serializer<Gproduct_categoryFilter> _$gproductCategoryFilterSerializer =
-    new _$Gproduct_categoryFilterSerializer();
+    _$Gproduct_categoryFilterSerializer();
 Serializer<Gproduct_requerimentsFilter> _$gproductRequerimentsFilterSerializer =
-    new _$Gproduct_requerimentsFilterSerializer();
+    _$Gproduct_requerimentsFilterSerializer();
 Serializer<Gproduct_requerimentsInsertInput>
-    _$gproductRequerimentsInsertInputSerializer =
-    new _$Gproduct_requerimentsInsertInputSerializer();
+_$gproductRequerimentsInsertInputSerializer =
+    _$Gproduct_requerimentsInsertInputSerializer();
 Serializer<Gproduct_requerimentsOrderBy>
-    _$gproductRequerimentsOrderBySerializer =
-    new _$Gproduct_requerimentsOrderBySerializer();
+_$gproductRequerimentsOrderBySerializer =
+    _$Gproduct_requerimentsOrderBySerializer();
 Serializer<Gproduct_requerimentsUpdateInput>
-    _$gproductRequerimentsUpdateInputSerializer =
-    new _$Gproduct_requerimentsUpdateInputSerializer();
-Serializer<GusersFilter> _$gusersFilterSerializer =
-    new _$GusersFilterSerializer();
+_$gproductRequerimentsUpdateInputSerializer =
+    _$Gproduct_requerimentsUpdateInputSerializer();
+Serializer<Guser_carsFilter> _$guserCarsFilterSerializer =
+    _$Guser_carsFilterSerializer();
+Serializer<Guser_carsInsertInput> _$guserCarsInsertInputSerializer =
+    _$Guser_carsInsertInputSerializer();
+Serializer<Guser_carsOrderBy> _$guserCarsOrderBySerializer =
+    _$Guser_carsOrderBySerializer();
+Serializer<Guser_carsUpdateInput> _$guserCarsUpdateInputSerializer =
+    _$Guser_carsUpdateInputSerializer();
+Serializer<GusersFilter> _$gusersFilterSerializer = _$GusersFilterSerializer();
 Serializer<GusersInsertInput> _$gusersInsertInputSerializer =
-    new _$GusersInsertInputSerializer();
+    _$GusersInsertInputSerializer();
 Serializer<GusersOrderBy> _$gusersOrderBySerializer =
-    new _$GusersOrderBySerializer();
+    _$GusersOrderBySerializer();
 Serializer<GusersUpdateInput> _$gusersUpdateInputSerializer =
-    new _$GusersUpdateInputSerializer();
+    _$GusersUpdateInputSerializer();
 
 class _$GBigFloatFilterSerializer
     implements StructuredSerializer<GBigFloatFilter> {
@@ -208,75 +238,113 @@ class _$GBigFloatFilterSerializer
   final String wireName = 'GBigFloatFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GBigFloatFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GBigFloatFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigFloat)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GBigFloat),
+          ),
+        );
     }
     value = object.gt;
     if (value != null) {
       result
         ..add('gt')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigFloat)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GBigFloat),
+          ),
+        );
     }
     value = object.gte;
     if (value != null) {
       result
         ..add('gte')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigFloat)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GBigFloat),
+          ),
+        );
     }
     value = object.Gin;
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GBigFloat)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GBigFloat),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.lt;
     if (value != null) {
       result
         ..add('lt')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigFloat)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GBigFloat),
+          ),
+        );
     }
     value = object.lte;
     if (value != null) {
       result
         ..add('lte')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigFloat)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GBigFloat),
+          ),
+        );
     }
     value = object.neq;
     if (value != null) {
       result
         ..add('neq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigFloat)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GBigFloat),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GBigFloatFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GBigFloatFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GBigFloatFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -285,38 +353,77 @@ class _$GBigFloatFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigFloat))! as GBigFloat);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigFloat),
+                )!
+                as GBigFloat,
+          );
           break;
         case 'gt':
-          result.gt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigFloat))! as GBigFloat);
+          result.gt.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigFloat),
+                )!
+                as GBigFloat,
+          );
           break;
         case 'gte':
-          result.gte.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigFloat))! as GBigFloat);
+          result.gte.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigFloat),
+                )!
+                as GBigFloat,
+          );
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GBigFloat)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GBigFloat),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'lt':
-          result.lt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigFloat))! as GBigFloat);
+          result.lt.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigFloat),
+                )!
+                as GBigFloat,
+          );
           break;
         case 'lte':
-          result.lte.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigFloat))! as GBigFloat);
+          result.lte.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigFloat),
+                )!
+                as GBigFloat,
+          );
           break;
         case 'neq':
-          result.neq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigFloat))! as GBigFloat);
+          result.neq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigFloat),
+                )!
+                as GBigFloat,
+          );
           break;
       }
     }
@@ -330,64 +437,92 @@ class _$GBigFloatListFilterSerializer
   @override
   final Iterable<Type> types = const [
     GBigFloatListFilter,
-    _$GBigFloatListFilter
+    _$GBigFloatListFilter,
   ];
   @override
   final String wireName = 'GBigFloatListFilter';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GBigFloatListFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    GBigFloatListFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.containedBy;
     if (value != null) {
       result
         ..add('containedBy')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GBigFloat)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GBigFloat),
+            ]),
+          ),
+        );
     }
     value = object.contains;
     if (value != null) {
       result
         ..add('contains')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GBigFloat)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GBigFloat),
+            ]),
+          ),
+        );
     }
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GBigFloat)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GBigFloat),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.overlaps;
     if (value != null) {
       result
         ..add('overlaps')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GBigFloat)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GBigFloat),
+            ]),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GBigFloatListFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GBigFloatListFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GBigFloatListFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -396,32 +531,56 @@ class _$GBigFloatListFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'containedBy':
-          result.containedBy.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GBigFloat)]))!
-              as BuiltList<Object?>);
+          result.containedBy.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GBigFloat),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'contains':
-          result.contains.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GBigFloat)]))!
-              as BuiltList<Object?>);
+          result.contains.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GBigFloat),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GBigFloat)]))!
-              as BuiltList<Object?>);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GBigFloat),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'overlaps':
-          result.overlaps.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GBigFloat)]))!
-              as BuiltList<Object?>);
+          result.overlaps.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GBigFloat),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -437,75 +596,95 @@ class _$GBigIntFilterSerializer implements StructuredSerializer<GBigIntFilter> {
   final String wireName = 'GBigIntFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GBigIntFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GBigIntFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigInt)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GBigInt)),
+        );
     }
     value = object.gt;
     if (value != null) {
       result
         ..add('gt')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigInt)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GBigInt)),
+        );
     }
     value = object.gte;
     if (value != null) {
       result
         ..add('gte')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigInt)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GBigInt)),
+        );
     }
     value = object.Gin;
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GBigInt)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GBigInt),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.lt;
     if (value != null) {
       result
         ..add('lt')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigInt)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GBigInt)),
+        );
     }
     value = object.lte;
     if (value != null) {
       result
         ..add('lte')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigInt)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GBigInt)),
+        );
     }
     value = object.neq;
     if (value != null) {
       result
         ..add('neq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GBigInt)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GBigInt)),
+        );
     }
     return result;
   }
 
   @override
   GBigIntFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GBigIntFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GBigIntFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -514,38 +693,77 @@ class _$GBigIntFilterSerializer implements StructuredSerializer<GBigIntFilter> {
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigInt))! as GBigInt);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigInt),
+                )!
+                as GBigInt,
+          );
           break;
         case 'gt':
-          result.gt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigInt))! as GBigInt);
+          result.gt.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigInt),
+                )!
+                as GBigInt,
+          );
           break;
         case 'gte':
-          result.gte.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigInt))! as GBigInt);
+          result.gte.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigInt),
+                )!
+                as GBigInt,
+          );
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GBigInt)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GBigInt),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'lt':
-          result.lt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigInt))! as GBigInt);
+          result.lt.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigInt),
+                )!
+                as GBigInt,
+          );
           break;
         case 'lte':
-          result.lte.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigInt))! as GBigInt);
+          result.lte.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigInt),
+                )!
+                as GBigInt,
+          );
           break;
         case 'neq':
-          result.neq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GBigInt))! as GBigInt);
+          result.neq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBigInt),
+                )!
+                as GBigInt,
+          );
           break;
       }
     }
@@ -562,57 +780,86 @@ class _$GBigIntListFilterSerializer
   final String wireName = 'GBigIntListFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GBigIntListFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GBigIntListFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.containedBy;
     if (value != null) {
       result
         ..add('containedBy')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GBigInt)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GBigInt),
+            ]),
+          ),
+        );
     }
     value = object.contains;
     if (value != null) {
       result
         ..add('contains')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GBigInt)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GBigInt),
+            ]),
+          ),
+        );
     }
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GBigInt)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GBigInt),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.overlaps;
     if (value != null) {
       result
         ..add('overlaps')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GBigInt)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GBigInt),
+            ]),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GBigIntListFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GBigIntListFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GBigIntListFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -621,32 +868,56 @@ class _$GBigIntListFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'containedBy':
-          result.containedBy.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GBigInt)]))!
-              as BuiltList<Object?>);
+          result.containedBy.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GBigInt),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'contains':
-          result.contains.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GBigInt)]))!
-              as BuiltList<Object?>);
+          result.contains.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GBigInt),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GBigInt)]))!
-              as BuiltList<Object?>);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GBigInt),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'overlaps':
-          result.overlaps.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GBigInt)]))!
-              as BuiltList<Object?>);
+          result.overlaps.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GBigInt),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -663,8 +934,11 @@ class _$GBooleanFilterSerializer
   final String wireName = 'GBooleanFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GBooleanFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GBooleanFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
@@ -672,23 +946,30 @@ class _$GBooleanFilterSerializer
       result
         ..add('eq')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(bool)));
+          serializers.serialize(value, specifiedType: const FullType(bool)),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GBooleanFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GBooleanFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GBooleanFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -697,12 +978,20 @@ class _$GBooleanFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool?;
+          result.eq =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(bool),
+                  )
+                  as bool?;
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
       }
     }
@@ -720,57 +1009,85 @@ class _$GBooleanListFilterSerializer
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GBooleanListFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    GBooleanListFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.containedBy;
     if (value != null) {
       result
         ..add('containedBy')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(bool)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(bool),
+            ]),
+          ),
+        );
     }
     value = object.contains;
     if (value != null) {
       result
         ..add('contains')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(bool)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(bool),
+            ]),
+          ),
+        );
     }
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(bool)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(bool),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.overlaps;
     if (value != null) {
       result
         ..add('overlaps')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(bool)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(bool),
+            ]),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GBooleanListFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GBooleanListFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GBooleanListFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -779,32 +1096,56 @@ class _$GBooleanListFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'containedBy':
-          result.containedBy.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(bool)]))!
-              as BuiltList<Object?>);
+          result.containedBy.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(bool),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'contains':
-          result.contains.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(bool)]))!
-              as BuiltList<Object?>);
+          result.contains.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(bool),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(bool)]))!
-              as BuiltList<Object?>);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(bool),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'overlaps':
-          result.overlaps.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(bool)]))!
-              as BuiltList<Object?>);
+          result.overlaps.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(bool),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -820,8 +1161,11 @@ class _$GDateFilterSerializer implements StructuredSerializer<GDateFilter> {
   final String wireName = 'GDateFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GDateFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GDateFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
@@ -829,65 +1173,83 @@ class _$GDateFilterSerializer implements StructuredSerializer<GDateFilter> {
       result
         ..add('eq')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GDate)));
+          serializers.serialize(value, specifiedType: const FullType(GDate)),
+        );
     }
     value = object.gt;
     if (value != null) {
       result
         ..add('gt')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GDate)));
+          serializers.serialize(value, specifiedType: const FullType(GDate)),
+        );
     }
     value = object.gte;
     if (value != null) {
       result
         ..add('gte')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GDate)));
+          serializers.serialize(value, specifiedType: const FullType(GDate)),
+        );
     }
     value = object.Gin;
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GDate)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GDate),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.lt;
     if (value != null) {
       result
         ..add('lt')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GDate)));
+          serializers.serialize(value, specifiedType: const FullType(GDate)),
+        );
     }
     value = object.lte;
     if (value != null) {
       result
         ..add('lte')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GDate)));
+          serializers.serialize(value, specifiedType: const FullType(GDate)),
+        );
     }
     value = object.neq;
     if (value != null) {
       result
         ..add('neq')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GDate)));
+          serializers.serialize(value, specifiedType: const FullType(GDate)),
+        );
     }
     return result;
   }
 
   @override
-  GDateFilter deserialize(Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GDateFilterBuilder();
+  GDateFilter deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GDateFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -896,38 +1258,77 @@ class _$GDateFilterSerializer implements StructuredSerializer<GDateFilter> {
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDate))! as GDate);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDate),
+                )!
+                as GDate,
+          );
           break;
         case 'gt':
-          result.gt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDate))! as GDate);
+          result.gt.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDate),
+                )!
+                as GDate,
+          );
           break;
         case 'gte':
-          result.gte.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDate))! as GDate);
+          result.gte.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDate),
+                )!
+                as GDate,
+          );
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GDate)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GDate),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'lt':
-          result.lt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDate))! as GDate);
+          result.lt.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDate),
+                )!
+                as GDate,
+          );
           break;
         case 'lte':
-          result.lte.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDate))! as GDate);
+          result.lte.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDate),
+                )!
+                as GDate,
+          );
           break;
         case 'neq':
-          result.neq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDate))! as GDate);
+          result.neq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDate),
+                )!
+                as GDate,
+          );
           break;
       }
     }
@@ -944,57 +1345,86 @@ class _$GDateListFilterSerializer
   final String wireName = 'GDateListFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GDateListFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GDateListFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.containedBy;
     if (value != null) {
       result
         ..add('containedBy')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GDate)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GDate),
+            ]),
+          ),
+        );
     }
     value = object.contains;
     if (value != null) {
       result
         ..add('contains')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GDate)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GDate),
+            ]),
+          ),
+        );
     }
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GDate)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GDate),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.overlaps;
     if (value != null) {
       result
         ..add('overlaps')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GDate)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GDate),
+            ]),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GDateListFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GDateListFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GDateListFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -1003,32 +1433,56 @@ class _$GDateListFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'containedBy':
-          result.containedBy.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GDate)]))!
-              as BuiltList<Object?>);
+          result.containedBy.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GDate),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'contains':
-          result.contains.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GDate)]))!
-              as BuiltList<Object?>);
+          result.contains.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GDate),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GDate)]))!
-              as BuiltList<Object?>);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GDate),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'overlaps':
-          result.overlaps.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GDate)]))!
-              as BuiltList<Object?>);
+          result.overlaps.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GDate),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -1045,75 +1499,113 @@ class _$GDatetimeFilterSerializer
   final String wireName = 'GDatetimeFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GDatetimeFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GDatetimeFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.gt;
     if (value != null) {
       result
         ..add('gt')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.gte;
     if (value != null) {
       result
         ..add('gte')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.Gin;
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GDatetime)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GDatetime),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.lt;
     if (value != null) {
       result
         ..add('lt')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.lte;
     if (value != null) {
       result
         ..add('lte')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.neq;
     if (value != null) {
       result
         ..add('neq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GDatetimeFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GDatetimeFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GDatetimeFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -1122,38 +1614,77 @@ class _$GDatetimeFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'gt':
-          result.gt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.gt.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'gte':
-          result.gte.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.gte.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GDatetime)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GDatetime),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'lt':
-          result.lt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.lt.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'lte':
-          result.lte.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.lte.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'neq':
-          result.neq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.neq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
       }
     }
@@ -1167,64 +1698,92 @@ class _$GDatetimeListFilterSerializer
   @override
   final Iterable<Type> types = const [
     GDatetimeListFilter,
-    _$GDatetimeListFilter
+    _$GDatetimeListFilter,
   ];
   @override
   final String wireName = 'GDatetimeListFilter';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GDatetimeListFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    GDatetimeListFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.containedBy;
     if (value != null) {
       result
         ..add('containedBy')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GDatetime)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GDatetime),
+            ]),
+          ),
+        );
     }
     value = object.contains;
     if (value != null) {
       result
         ..add('contains')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GDatetime)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GDatetime),
+            ]),
+          ),
+        );
     }
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GDatetime)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GDatetime),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.overlaps;
     if (value != null) {
       result
         ..add('overlaps')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GDatetime)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GDatetime),
+            ]),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GDatetimeListFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GDatetimeListFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GDatetimeListFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -1233,32 +1792,56 @@ class _$GDatetimeListFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'containedBy':
-          result.containedBy.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GDatetime)]))!
-              as BuiltList<Object?>);
+          result.containedBy.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GDatetime),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'contains':
-          result.contains.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GDatetime)]))!
-              as BuiltList<Object?>);
+          result.contains.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GDatetime),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GDatetime)]))!
-              as BuiltList<Object?>);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GDatetime),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'overlaps':
-          result.overlaps.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GDatetime)]))!
-              as BuiltList<Object?>);
+          result.overlaps.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GDatetime),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -1274,14 +1857,18 @@ class _$GFilterIsSerializer implements PrimitiveSerializer<GFilterIs> {
   final String wireName = 'GFilterIs';
 
   @override
-  Object serialize(Serializers serializers, GFilterIs object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
+  Object serialize(
+    Serializers serializers,
+    GFilterIs object, {
+    FullType specifiedType = FullType.unspecified,
+  }) => object.name;
 
   @override
-  GFilterIs deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GFilterIs.valueOf(serialized as String);
+  GFilterIs deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) => GFilterIs.valueOf(serialized as String);
 }
 
 class _$GFloatFilterSerializer implements StructuredSerializer<GFloatFilter> {
@@ -1291,75 +1878,95 @@ class _$GFloatFilterSerializer implements StructuredSerializer<GFloatFilter> {
   final String wireName = 'GFloatFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GFloatFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GFloatFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(double)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(double)),
+        );
     }
     value = object.gt;
     if (value != null) {
       result
         ..add('gt')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(double)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(double)),
+        );
     }
     value = object.gte;
     if (value != null) {
       result
         ..add('gte')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(double)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(double)),
+        );
     }
     value = object.Gin;
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(double)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(double),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.lt;
     if (value != null) {
       result
         ..add('lt')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(double)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(double)),
+        );
     }
     value = object.lte;
     if (value != null) {
       result
         ..add('lte')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(double)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(double)),
+        );
     }
     value = object.neq;
     if (value != null) {
       result
         ..add('neq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(double)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(double)),
+        );
     }
     return result;
   }
 
   @override
   GFloatFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GFloatFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GFloatFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -1368,38 +1975,71 @@ class _$GFloatFilterSerializer implements StructuredSerializer<GFloatFilter> {
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double?;
+          result.eq =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(double),
+                  )
+                  as double?;
           break;
         case 'gt':
-          result.gt = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double?;
+          result.gt =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(double),
+                  )
+                  as double?;
           break;
         case 'gte':
-          result.gte = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double?;
+          result.gte =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(double),
+                  )
+                  as double?;
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(double)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(double),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'lt':
-          result.lt = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double?;
+          result.lt =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(double),
+                  )
+                  as double?;
           break;
         case 'lte':
-          result.lte = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double?;
+          result.lte =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(double),
+                  )
+                  as double?;
           break;
         case 'neq':
-          result.neq = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double?;
+          result.neq =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(double),
+                  )
+                  as double?;
           break;
       }
     }
@@ -1416,57 +2056,86 @@ class _$GFloatListFilterSerializer
   final String wireName = 'GFloatListFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GFloatListFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GFloatListFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.containedBy;
     if (value != null) {
       result
         ..add('containedBy')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(double)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(double),
+            ]),
+          ),
+        );
     }
     value = object.contains;
     if (value != null) {
       result
         ..add('contains')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(double)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(double),
+            ]),
+          ),
+        );
     }
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(double)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(double),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.overlaps;
     if (value != null) {
       result
         ..add('overlaps')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(double)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(double),
+            ]),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GFloatListFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GFloatListFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GFloatListFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -1475,32 +2144,56 @@ class _$GFloatListFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'containedBy':
-          result.containedBy.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(double)]))!
-              as BuiltList<Object?>);
+          result.containedBy.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(double),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'contains':
-          result.contains.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(double)]))!
-              as BuiltList<Object?>);
+          result.contains.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(double),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(double)]))!
-              as BuiltList<Object?>);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(double),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'overlaps':
-          result.overlaps.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(double)]))!
-              as BuiltList<Object?>);
+          result.overlaps.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(double),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -1516,24 +2209,31 @@ class _$GIDFilterSerializer implements StructuredSerializer<GIDFilter> {
   final String wireName = 'GIDFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GIDFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GIDFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     return result;
   }
 
   @override
-  GIDFilter deserialize(Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GIDFilterBuilder();
+  GIDFilter deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GIDFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -1542,8 +2242,12 @@ class _$GIDFilterSerializer implements StructuredSerializer<GIDFilter> {
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.eq =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
       }
     }
@@ -1559,8 +2263,11 @@ class _$GIntFilterSerializer implements StructuredSerializer<GIntFilter> {
   final String wireName = 'GIntFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GIntFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GIntFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
@@ -1585,16 +2292,25 @@ class _$GIntFilterSerializer implements StructuredSerializer<GIntFilter> {
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(int)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(int),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.lt;
     if (value != null) {
@@ -1618,9 +2334,12 @@ class _$GIntFilterSerializer implements StructuredSerializer<GIntFilter> {
   }
 
   @override
-  GIntFilter deserialize(Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GIntFilterBuilder();
+  GIntFilter deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GIntFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -1629,38 +2348,53 @@ class _$GIntFilterSerializer implements StructuredSerializer<GIntFilter> {
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
+          result.eq =
+              serializers.deserialize(value, specifiedType: const FullType(int))
+                  as int?;
           break;
         case 'gt':
-          result.gt = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
+          result.gt =
+              serializers.deserialize(value, specifiedType: const FullType(int))
+                  as int?;
           break;
         case 'gte':
-          result.gte = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
+          result.gte =
+              serializers.deserialize(value, specifiedType: const FullType(int))
+                  as int?;
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(int)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(int),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'lt':
-          result.lt = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
+          result.lt =
+              serializers.deserialize(value, specifiedType: const FullType(int))
+                  as int?;
           break;
         case 'lte':
-          result.lte = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
+          result.lte =
+              serializers.deserialize(value, specifiedType: const FullType(int))
+                  as int?;
           break;
         case 'neq':
-          result.neq = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int?;
+          result.neq =
+              serializers.deserialize(value, specifiedType: const FullType(int))
+                  as int?;
           break;
       }
     }
@@ -1677,57 +2411,86 @@ class _$GIntListFilterSerializer
   final String wireName = 'GIntListFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GIntListFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GIntListFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.containedBy;
     if (value != null) {
       result
         ..add('containedBy')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(int)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(int),
+            ]),
+          ),
+        );
     }
     value = object.contains;
     if (value != null) {
       result
         ..add('contains')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(int)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(int),
+            ]),
+          ),
+        );
     }
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(int)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(int),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.overlaps;
     if (value != null) {
       result
         ..add('overlaps')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(int)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(int),
+            ]),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GIntListFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GIntListFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GIntListFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -1736,32 +2499,56 @@ class _$GIntListFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'containedBy':
-          result.containedBy.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(int)]))!
-              as BuiltList<Object?>);
+          result.containedBy.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(int),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'contains':
-          result.contains.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(int)]))!
-              as BuiltList<Object?>);
+          result.contains.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(int),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(int)]))!
-              as BuiltList<Object?>);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(int),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'overlaps':
-          result.overlaps.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(int)]))!
-              as BuiltList<Object?>);
+          result.overlaps.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(int),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -1777,32 +2564,42 @@ class _$GOpaqueFilterSerializer implements StructuredSerializer<GOpaqueFilter> {
   final String wireName = 'GOpaqueFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GOpaqueFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GOpaqueFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOpaque)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GOpaque)),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GOpaqueFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GOpaqueFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GOpaqueFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -1811,12 +2608,21 @@ class _$GOpaqueFilterSerializer implements StructuredSerializer<GOpaqueFilter> {
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GOpaque))! as GOpaque);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GOpaque),
+                )!
+                as GOpaque,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
       }
     }
@@ -1833,14 +2639,18 @@ class _$GOrderByDirectionSerializer
   final String wireName = 'GOrderByDirection';
 
   @override
-  Object serialize(Serializers serializers, GOrderByDirection object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
+  Object serialize(
+    Serializers serializers,
+    GOrderByDirection object, {
+    FullType specifiedType = FullType.unspecified,
+  }) => object.name;
 
   @override
-  GOrderByDirection deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      GOrderByDirection.valueOf(serialized as String);
+  GOrderByDirection deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) => GOrderByDirection.valueOf(serialized as String);
 }
 
 class _$GStringFilterSerializer implements StructuredSerializer<GStringFilter> {
@@ -1850,110 +2660,135 @@ class _$GStringFilterSerializer implements StructuredSerializer<GStringFilter> {
   final String wireName = 'GStringFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GStringFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GStringFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.gt;
     if (value != null) {
       result
         ..add('gt')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.gte;
     if (value != null) {
       result
         ..add('gte')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.ilike;
     if (value != null) {
       result
         ..add('ilike')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.Gin;
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(String),
+            ]),
+          ),
+        );
     }
     value = object.iregex;
     if (value != null) {
       result
         ..add('iregex')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.like;
     if (value != null) {
       result
         ..add('like')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.lt;
     if (value != null) {
       result
         ..add('lt')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.lte;
     if (value != null) {
       result
         ..add('lte')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.neq;
     if (value != null) {
       result
         ..add('neq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.regex;
     if (value != null) {
       result
         ..add('regex')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.startsWith;
     if (value != null) {
       result
         ..add('startsWith')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     return result;
   }
 
   @override
   GStringFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GStringFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GStringFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -1962,58 +2797,111 @@ class _$GStringFilterSerializer implements StructuredSerializer<GStringFilter> {
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.eq =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'gt':
-          result.gt = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.gt =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'gte':
-          result.gte = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.gte =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'ilike':
-          result.ilike = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.ilike =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(String),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'iregex':
-          result.iregex = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.iregex =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'like':
-          result.like = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.like =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'lt':
-          result.lt = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.lt =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'lte':
-          result.lte = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.lte =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'neq':
-          result.neq = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.neq =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'regex':
-          result.regex = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.regex =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'startsWith':
-          result.startsWith = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.startsWith =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
       }
     }
@@ -2030,57 +2918,86 @@ class _$GStringListFilterSerializer
   final String wireName = 'GStringListFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GStringListFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GStringListFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.containedBy;
     if (value != null) {
       result
         ..add('containedBy')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(String),
+            ]),
+          ),
+        );
     }
     value = object.contains;
     if (value != null) {
       result
         ..add('contains')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(String),
+            ]),
+          ),
+        );
     }
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(String),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.overlaps;
     if (value != null) {
       result
         ..add('overlaps')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(String),
+            ]),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GStringListFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GStringListFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GStringListFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2089,32 +3006,56 @@ class _$GStringListFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'containedBy':
-          result.containedBy.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object?>);
+          result.containedBy.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(String),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'contains':
-          result.contains.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object?>);
+          result.contains.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(String),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object?>);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(String),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'overlaps':
-          result.overlaps.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object?>);
+          result.overlaps.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(String),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -2130,8 +3071,11 @@ class _$GTimeFilterSerializer implements StructuredSerializer<GTimeFilter> {
   final String wireName = 'GTimeFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GTimeFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GTimeFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
@@ -2139,65 +3083,83 @@ class _$GTimeFilterSerializer implements StructuredSerializer<GTimeFilter> {
       result
         ..add('eq')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GTime)));
+          serializers.serialize(value, specifiedType: const FullType(GTime)),
+        );
     }
     value = object.gt;
     if (value != null) {
       result
         ..add('gt')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GTime)));
+          serializers.serialize(value, specifiedType: const FullType(GTime)),
+        );
     }
     value = object.gte;
     if (value != null) {
       result
         ..add('gte')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GTime)));
+          serializers.serialize(value, specifiedType: const FullType(GTime)),
+        );
     }
     value = object.Gin;
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GTime)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GTime),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.lt;
     if (value != null) {
       result
         ..add('lt')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GTime)));
+          serializers.serialize(value, specifiedType: const FullType(GTime)),
+        );
     }
     value = object.lte;
     if (value != null) {
       result
         ..add('lte')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GTime)));
+          serializers.serialize(value, specifiedType: const FullType(GTime)),
+        );
     }
     value = object.neq;
     if (value != null) {
       result
         ..add('neq')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GTime)));
+          serializers.serialize(value, specifiedType: const FullType(GTime)),
+        );
     }
     return result;
   }
 
   @override
-  GTimeFilter deserialize(Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GTimeFilterBuilder();
+  GTimeFilter deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GTimeFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2206,38 +3168,77 @@ class _$GTimeFilterSerializer implements StructuredSerializer<GTimeFilter> {
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GTime))! as GTime);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GTime),
+                )!
+                as GTime,
+          );
           break;
         case 'gt':
-          result.gt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GTime))! as GTime);
+          result.gt.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GTime),
+                )!
+                as GTime,
+          );
           break;
         case 'gte':
-          result.gte.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GTime))! as GTime);
+          result.gte.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GTime),
+                )!
+                as GTime,
+          );
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GTime)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GTime),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'lt':
-          result.lt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GTime))! as GTime);
+          result.lt.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GTime),
+                )!
+                as GTime,
+          );
           break;
         case 'lte':
-          result.lte.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GTime))! as GTime);
+          result.lte.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GTime),
+                )!
+                as GTime,
+          );
           break;
         case 'neq':
-          result.neq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GTime))! as GTime);
+          result.neq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GTime),
+                )!
+                as GTime,
+          );
           break;
       }
     }
@@ -2254,57 +3255,86 @@ class _$GTimeListFilterSerializer
   final String wireName = 'GTimeListFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GTimeListFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GTimeListFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.containedBy;
     if (value != null) {
       result
         ..add('containedBy')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GTime)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GTime),
+            ]),
+          ),
+        );
     }
     value = object.contains;
     if (value != null) {
       result
         ..add('contains')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GTime)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GTime),
+            ]),
+          ),
+        );
     }
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GTime)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GTime),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.overlaps;
     if (value != null) {
       result
         ..add('overlaps')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GTime)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GTime),
+            ]),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GTimeListFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GTimeListFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GTimeListFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2313,32 +3343,56 @@ class _$GTimeListFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'containedBy':
-          result.containedBy.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GTime)]))!
-              as BuiltList<Object?>);
+          result.containedBy.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GTime),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'contains':
-          result.contains.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GTime)]))!
-              as BuiltList<Object?>);
+          result.contains.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GTime),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GTime)]))!
-              as BuiltList<Object?>);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GTime),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'overlaps':
-          result.overlaps.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GTime)]))!
-              as BuiltList<Object?>);
+          result.overlaps.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GTime),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -2354,8 +3408,11 @@ class _$GUUIDFilterSerializer implements StructuredSerializer<GUUIDFilter> {
   final String wireName = 'GUUIDFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GUUIDFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GUUIDFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
@@ -2363,37 +3420,51 @@ class _$GUUIDFilterSerializer implements StructuredSerializer<GUUIDFilter> {
       result
         ..add('eq')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.Gin;
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GUUID)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GUUID),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.neq;
     if (value != null) {
       result
         ..add('neq')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     return result;
   }
 
   @override
-  GUUIDFilter deserialize(Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GUUIDFilterBuilder();
+  GUUIDFilter deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GUUIDFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2402,22 +3473,41 @@ class _$GUUIDFilterSerializer implements StructuredSerializer<GUUIDFilter> {
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GUUID)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GUUID),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'neq':
-          result.neq.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.neq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
       }
     }
@@ -2434,57 +3524,86 @@ class _$GUUIDListFilterSerializer
   final String wireName = 'GUUIDListFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GUUIDListFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GUUIDListFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.containedBy;
     if (value != null) {
       result
         ..add('containedBy')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GUUID)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GUUID),
+            ]),
+          ),
+        );
     }
     value = object.contains;
     if (value != null) {
       result
         ..add('contains')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GUUID)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GUUID),
+            ]),
+          ),
+        );
     }
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GUUID)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GUUID),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.overlaps;
     if (value != null) {
       result
         ..add('overlaps')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(GUUID)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GUUID),
+            ]),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GUUIDListFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GUUIDListFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GUUIDListFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2493,32 +3612,1760 @@ class _$GUUIDListFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'containedBy':
-          result.containedBy.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GUUID)]))!
-              as BuiltList<Object?>);
+          result.containedBy.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GUUID),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'contains':
-          result.contains.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GUUID)]))!
-              as BuiltList<Object?>);
+          result.contains.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GUUID),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'eq':
-          result.eq.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GUUID)]))!
-              as BuiltList<Object?>);
+          result.eq.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GUUID),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'overlaps':
-          result.overlaps.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(GUUID)]))!
-              as BuiltList<Object?>);
+          result.overlaps.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GUUID),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GbrandsFilterSerializer implements StructuredSerializer<GbrandsFilter> {
+  @override
+  final Iterable<Type> types = const [GbrandsFilter, _$GbrandsFilter];
+  @override
+  final String wireName = 'GbrandsFilter';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GbrandsFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.slug;
+    if (value != null) {
+      result
+        ..add('slug')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.is_active;
+    if (value != null) {
+      result
+        ..add('is_active')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GBooleanFilter),
+          ),
+        );
+    }
+    value = object.nodeId;
+    if (value != null) {
+      result
+        ..add('nodeId')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIDFilter),
+          ),
+        );
+    }
+    value = object.and;
+    if (value != null) {
+      result
+        ..add('and')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GbrandsFilter),
+            ]),
+          ),
+        );
+    }
+    value = object.or;
+    if (value != null) {
+      result
+        ..add('or')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GbrandsFilter),
+            ]),
+          ),
+        );
+    }
+    value = object.not;
+    if (value != null) {
+      result
+        ..add('not')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GbrandsFilter),
+          ),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GbrandsFilter deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GbrandsFilterBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
+          break;
+        case 'name':
+          result.name.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'slug':
+          result.slug.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'description':
+          result.description.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'is_active':
+          result.is_active.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBooleanFilter),
+                )!
+                as GBooleanFilter,
+          );
+          break;
+        case 'nodeId':
+          result.nodeId.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIDFilter),
+                )!
+                as GIDFilter,
+          );
+          break;
+        case 'and':
+          result.and.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GbrandsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
+          break;
+        case 'or':
+          result.or.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GbrandsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
+          break;
+        case 'not':
+          result.not.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GbrandsFilter),
+                )!
+                as GbrandsFilter,
+          );
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GbrandsInsertInputSerializer
+    implements StructuredSerializer<GbrandsInsertInput> {
+  @override
+  final Iterable<Type> types = const [GbrandsInsertInput, _$GbrandsInsertInput];
+  @override
+  final String wireName = 'GbrandsInsertInput';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GbrandsInsertInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.slug;
+    if (value != null) {
+      result
+        ..add('slug')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.is_active;
+    if (value != null) {
+      result
+        ..add('is_active')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(bool)),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GbrandsInsertInput deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GbrandsInsertInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+        case 'name':
+          result.name =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'slug':
+          result.slug =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'description':
+          result.description =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'is_active':
+          result.is_active =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(bool),
+                  )
+                  as bool?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GbrandsOrderBySerializer
+    implements StructuredSerializer<GbrandsOrderBy> {
+  @override
+  final Iterable<Type> types = const [GbrandsOrderBy, _$GbrandsOrderBy];
+  @override
+  final String wireName = 'GbrandsOrderBy';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GbrandsOrderBy object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.slug;
+    if (value != null) {
+      result
+        ..add('slug')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.is_active;
+    if (value != null) {
+      result
+        ..add('is_active')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GbrandsOrderBy deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GbrandsOrderByBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'created_at':
+          result.created_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'name':
+          result.name =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'slug':
+          result.slug =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'description':
+          result.description =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'is_active':
+          result.is_active =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GbrandsUpdateInputSerializer
+    implements StructuredSerializer<GbrandsUpdateInput> {
+  @override
+  final Iterable<Type> types = const [GbrandsUpdateInput, _$GbrandsUpdateInput];
+  @override
+  final String wireName = 'GbrandsUpdateInput';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GbrandsUpdateInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.slug;
+    if (value != null) {
+      result
+        ..add('slug')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.is_active;
+    if (value != null) {
+      result
+        ..add('is_active')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(bool)),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GbrandsUpdateInput deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GbrandsUpdateInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+        case 'name':
+          result.name =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'slug':
+          result.slug =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'description':
+          result.description =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'is_active':
+          result.is_active =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(bool),
+                  )
+                  as bool?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GcarsFilterSerializer implements StructuredSerializer<GcarsFilter> {
+  @override
+  final Iterable<Type> types = const [GcarsFilter, _$GcarsFilter];
+  @override
+  final String wireName = 'GcarsFilter';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GcarsFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
+    }
+    value = object.model_id;
+    if (value != null) {
+      result
+        ..add('model_id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
+    }
+    value = object.year;
+    if (value != null) {
+      result
+        ..add('year')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIntFilter),
+          ),
+        );
+    }
+    value = object.generation;
+    if (value != null) {
+      result
+        ..add('generation')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.body_type;
+    if (value != null) {
+      result
+        ..add('body_type')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.engine_type;
+    if (value != null) {
+      result
+        ..add('engine_type')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.transmission_type;
+    if (value != null) {
+      result
+        ..add('transmission_type')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.drivetrain;
+    if (value != null) {
+      result
+        ..add('drivetrain')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.trim;
+    if (value != null) {
+      result
+        ..add('trim')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.nodeId;
+    if (value != null) {
+      result
+        ..add('nodeId')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIDFilter),
+          ),
+        );
+    }
+    value = object.and;
+    if (value != null) {
+      result
+        ..add('and')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GcarsFilter),
+            ]),
+          ),
+        );
+    }
+    value = object.or;
+    if (value != null) {
+      result
+        ..add('or')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GcarsFilter),
+            ]),
+          ),
+        );
+    }
+    value = object.not;
+    if (value != null) {
+      result
+        ..add('not')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GcarsFilter),
+          ),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GcarsFilter deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GcarsFilterBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
+          break;
+        case 'model_id':
+          result.model_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
+          break;
+        case 'year':
+          result.year.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIntFilter),
+                )!
+                as GIntFilter,
+          );
+          break;
+        case 'generation':
+          result.generation.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'body_type':
+          result.body_type.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'engine_type':
+          result.engine_type.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'transmission_type':
+          result.transmission_type.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'drivetrain':
+          result.drivetrain.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'trim':
+          result.trim.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'description':
+          result.description.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'nodeId':
+          result.nodeId.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIDFilter),
+                )!
+                as GIDFilter,
+          );
+          break;
+        case 'and':
+          result.and.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GcarsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
+          break;
+        case 'or':
+          result.or.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GcarsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
+          break;
+        case 'not':
+          result.not.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GcarsFilter),
+                )!
+                as GcarsFilter,
+          );
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GcarsInsertInputSerializer
+    implements StructuredSerializer<GcarsInsertInput> {
+  @override
+  final Iterable<Type> types = const [GcarsInsertInput, _$GcarsInsertInput];
+  @override
+  final String wireName = 'GcarsInsertInput';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GcarsInsertInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    value = object.model_id;
+    if (value != null) {
+      result
+        ..add('model_id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.year;
+    if (value != null) {
+      result
+        ..add('year')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.generation;
+    if (value != null) {
+      result
+        ..add('generation')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.body_type;
+    if (value != null) {
+      result
+        ..add('body_type')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.engine_type;
+    if (value != null) {
+      result
+        ..add('engine_type')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.transmission_type;
+    if (value != null) {
+      result
+        ..add('transmission_type')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.drivetrain;
+    if (value != null) {
+      result
+        ..add('drivetrain')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.trim;
+    if (value != null) {
+      result
+        ..add('trim')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GcarsInsertInput deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GcarsInsertInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+        case 'model_id':
+          result.model_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'year':
+          result.year =
+              serializers.deserialize(value, specifiedType: const FullType(int))
+                  as int?;
+          break;
+        case 'generation':
+          result.generation =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'body_type':
+          result.body_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'engine_type':
+          result.engine_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'transmission_type':
+          result.transmission_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'drivetrain':
+          result.drivetrain =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'trim':
+          result.trim =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'description':
+          result.description =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GcarsOrderBySerializer implements StructuredSerializer<GcarsOrderBy> {
+  @override
+  final Iterable<Type> types = const [GcarsOrderBy, _$GcarsOrderBy];
+  @override
+  final String wireName = 'GcarsOrderBy';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GcarsOrderBy object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.model_id;
+    if (value != null) {
+      result
+        ..add('model_id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.year;
+    if (value != null) {
+      result
+        ..add('year')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.generation;
+    if (value != null) {
+      result
+        ..add('generation')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.body_type;
+    if (value != null) {
+      result
+        ..add('body_type')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.engine_type;
+    if (value != null) {
+      result
+        ..add('engine_type')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.transmission_type;
+    if (value != null) {
+      result
+        ..add('transmission_type')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.drivetrain;
+    if (value != null) {
+      result
+        ..add('drivetrain')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.trim;
+    if (value != null) {
+      result
+        ..add('trim')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GcarsOrderBy deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GcarsOrderByBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'created_at':
+          result.created_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'model_id':
+          result.model_id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'year':
+          result.year =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'generation':
+          result.generation =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'body_type':
+          result.body_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'engine_type':
+          result.engine_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'transmission_type':
+          result.transmission_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'drivetrain':
+          result.drivetrain =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'trim':
+          result.trim =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'description':
+          result.description =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GcarsUpdateInputSerializer
+    implements StructuredSerializer<GcarsUpdateInput> {
+  @override
+  final Iterable<Type> types = const [GcarsUpdateInput, _$GcarsUpdateInput];
+  @override
+  final String wireName = 'GcarsUpdateInput';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GcarsUpdateInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    value = object.model_id;
+    if (value != null) {
+      result
+        ..add('model_id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.year;
+    if (value != null) {
+      result
+        ..add('year')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.generation;
+    if (value != null) {
+      result
+        ..add('generation')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.body_type;
+    if (value != null) {
+      result
+        ..add('body_type')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.engine_type;
+    if (value != null) {
+      result
+        ..add('engine_type')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.transmission_type;
+    if (value != null) {
+      result
+        ..add('transmission_type')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.drivetrain;
+    if (value != null) {
+      result
+        ..add('drivetrain')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.trim;
+    if (value != null) {
+      result
+        ..add('trim')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GcarsUpdateInput deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GcarsUpdateInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+        case 'model_id':
+          result.model_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'year':
+          result.year =
+              serializers.deserialize(value, specifiedType: const FullType(int))
+                  as int?;
+          break;
+        case 'generation':
+          result.generation =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'body_type':
+          result.body_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'engine_type':
+          result.engine_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'transmission_type':
+          result.transmission_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'drivetrain':
+          result.drivetrain =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'trim':
+          result.trim =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'description':
+          result.description =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
       }
     }
@@ -2532,90 +5379,132 @@ class _$Gchat_messagesFilterSerializer
   @override
   final Iterable<Type> types = const [
     Gchat_messagesFilter,
-    _$Gchat_messagesFilter
+    _$Gchat_messagesFilter,
   ];
   @override
   final String wireName = 'Gchat_messagesFilter';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gchat_messagesFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gchat_messagesFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
     if (value != null) {
       result
         ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GUUIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetimeFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
     }
     value = object.session_id;
     if (value != null) {
       result
         ..add('session_id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GUUIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
     }
     value = object.message;
     if (value != null) {
       result
         ..add('message')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.sender_type;
     if (value != null) {
       result
         ..add('sender_type')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gchat_sender_typeFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gchat_sender_typeFilter),
+          ),
+        );
     }
     value = object.nodeId;
     if (value != null) {
       result
         ..add('nodeId')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIDFilter),
+          ),
+        );
     }
     value = object.and;
     if (value != null) {
       result
         ..add('and')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(Gchat_messagesFilter)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Gchat_messagesFilter),
+            ]),
+          ),
+        );
     }
     value = object.or;
     if (value != null) {
       result
         ..add('or')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(Gchat_messagesFilter)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Gchat_messagesFilter),
+            ]),
+          ),
+        );
     }
     value = object.not;
     if (value != null) {
       result
         ..add('not')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gchat_messagesFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gchat_messagesFilter),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gchat_messagesFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gchat_messagesFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gchat_messagesFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2624,47 +5513,89 @@ class _$Gchat_messagesFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GDatetimeFilter))!
-              as GDatetimeFilter);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
           break;
         case 'session_id':
-          result.session_id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          result.session_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
           break;
         case 'message':
-          result.message.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.message.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'sender_type':
-          result.sender_type.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(Gchat_sender_typeFilter))!
-              as Gchat_sender_typeFilter);
+          result.sender_type.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(Gchat_sender_typeFilter),
+                )!
+                as Gchat_sender_typeFilter,
+          );
           break;
         case 'nodeId':
-          result.nodeId.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GIDFilter))! as GIDFilter);
+          result.nodeId.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIDFilter),
+                )!
+                as GIDFilter,
+          );
           break;
         case 'and':
-          result.and.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(Gchat_messagesFilter)]))!
-              as BuiltList<Object?>);
+          result.and.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(Gchat_messagesFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'or':
-          result.or.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(Gchat_messagesFilter)]))!
-              as BuiltList<Object?>);
+          result.or.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(Gchat_messagesFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'not':
-          result.not.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(Gchat_messagesFilter))!
-              as Gchat_messagesFilter);
+          result.not.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(Gchat_messagesFilter),
+                )!
+                as Gchat_messagesFilter,
+          );
           break;
       }
     }
@@ -2678,15 +5609,17 @@ class _$Gchat_messagesInsertInputSerializer
   @override
   final Iterable<Type> types = const [
     Gchat_messagesInsertInput,
-    _$Gchat_messagesInsertInput
+    _$Gchat_messagesInsertInput,
   ];
   @override
   final String wireName = 'Gchat_messagesInsertInput';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gchat_messagesInsertInput object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gchat_messagesInsertInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
@@ -2694,44 +5627,57 @@ class _$Gchat_messagesInsertInputSerializer
       result
         ..add('id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.session_id;
     if (value != null) {
       result
         ..add('session_id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.message;
     if (value != null) {
       result
         ..add('message')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.sender_type;
     if (value != null) {
       result
         ..add('sender_type')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gchat_sender_type)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gchat_sender_type),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gchat_messagesInsertInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gchat_messagesInsertInputBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gchat_messagesInsertInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2740,25 +5686,47 @@ class _$Gchat_messagesInsertInputSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'session_id':
-          result.session_id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.session_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'message':
-          result.message = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.message =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'sender_type':
-          result.sender_type = serializers.deserialize(value,
-                  specifiedType: const FullType(Gchat_sender_type))
-              as Gchat_sender_type?;
+          result.sender_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(Gchat_sender_type),
+                  )
+                  as Gchat_sender_type?;
           break;
       }
     }
@@ -2772,60 +5740,84 @@ class _$Gchat_messagesOrderBySerializer
   @override
   final Iterable<Type> types = const [
     Gchat_messagesOrderBy,
-    _$Gchat_messagesOrderBy
+    _$Gchat_messagesOrderBy,
   ];
   @override
   final String wireName = 'Gchat_messagesOrderBy';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gchat_messagesOrderBy object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gchat_messagesOrderBy object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
     if (value != null) {
       result
         ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.session_id;
     if (value != null) {
       result
         ..add('session_id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.message;
     if (value != null) {
       result
         ..add('message')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.sender_type;
     if (value != null) {
       result
         ..add('sender_type')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gchat_messagesOrderBy deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gchat_messagesOrderByBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gchat_messagesOrderByBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2834,29 +5826,44 @@ class _$Gchat_messagesOrderBySerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'created_at':
-          result.created_at = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.created_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'session_id':
-          result.session_id = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.session_id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'message':
-          result.message = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.message =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'sender_type':
-          result.sender_type = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.sender_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
       }
     }
@@ -2870,15 +5877,17 @@ class _$Gchat_messagesUpdateInputSerializer
   @override
   final Iterable<Type> types = const [
     Gchat_messagesUpdateInput,
-    _$Gchat_messagesUpdateInput
+    _$Gchat_messagesUpdateInput,
   ];
   @override
   final String wireName = 'Gchat_messagesUpdateInput';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gchat_messagesUpdateInput object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gchat_messagesUpdateInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
@@ -2886,44 +5895,57 @@ class _$Gchat_messagesUpdateInputSerializer
       result
         ..add('id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.session_id;
     if (value != null) {
       result
         ..add('session_id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.message;
     if (value != null) {
       result
         ..add('message')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.sender_type;
     if (value != null) {
       result
         ..add('sender_type')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gchat_sender_type)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gchat_sender_type),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gchat_messagesUpdateInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gchat_messagesUpdateInputBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gchat_messagesUpdateInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -2932,25 +5954,47 @@ class _$Gchat_messagesUpdateInputSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'session_id':
-          result.session_id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.session_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'message':
-          result.message = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.message =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'sender_type':
-          result.sender_type = serializers.deserialize(value,
-                  specifiedType: const FullType(Gchat_sender_type))
-              as Gchat_sender_type?;
+          result.sender_type =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(Gchat_sender_type),
+                  )
+                  as Gchat_sender_type?;
           break;
       }
     }
@@ -2967,14 +6011,18 @@ class _$Gchat_sender_typeSerializer
   final String wireName = 'Gchat_sender_type';
 
   @override
-  Object serialize(Serializers serializers, Gchat_sender_type object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
+  Object serialize(
+    Serializers serializers,
+    Gchat_sender_type object, {
+    FullType specifiedType = FullType.unspecified,
+  }) => object.name;
 
   @override
-  Gchat_sender_type deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      Gchat_sender_type.valueOf(serialized as String);
+  Gchat_sender_type deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) => Gchat_sender_type.valueOf(serialized as String);
 }
 
 class _$Gchat_sender_typeFilterSerializer
@@ -2982,54 +6030,75 @@ class _$Gchat_sender_typeFilterSerializer
   @override
   final Iterable<Type> types = const [
     Gchat_sender_typeFilter,
-    _$Gchat_sender_typeFilter
+    _$Gchat_sender_typeFilter,
   ];
   @override
   final String wireName = 'Gchat_sender_typeFilter';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gchat_sender_typeFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gchat_sender_typeFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gchat_sender_type)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gchat_sender_type),
+          ),
+        );
     }
     value = object.Gin;
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(Gchat_sender_type)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Gchat_sender_type),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.neq;
     if (value != null) {
       result
         ..add('neq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gchat_sender_type)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gchat_sender_type),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gchat_sender_typeFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gchat_sender_typeFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gchat_sender_typeFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3038,24 +6107,39 @@ class _$Gchat_sender_typeFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq = serializers.deserialize(value,
-                  specifiedType: const FullType(Gchat_sender_type))
-              as Gchat_sender_type?;
+          result.eq =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(Gchat_sender_type),
+                  )
+                  as Gchat_sender_type?;
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(Gchat_sender_type)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(Gchat_sender_type),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'neq':
-          result.neq = serializers.deserialize(value,
-                  specifiedType: const FullType(Gchat_sender_type))
-              as Gchat_sender_type?;
+          result.neq =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(Gchat_sender_type),
+                  )
+                  as Gchat_sender_type?;
           break;
       }
     }
@@ -3069,83 +6153,121 @@ class _$Gchat_sessionsFilterSerializer
   @override
   final Iterable<Type> types = const [
     Gchat_sessionsFilter,
-    _$Gchat_sessionsFilter
+    _$Gchat_sessionsFilter,
   ];
   @override
   final String wireName = 'Gchat_sessionsFilter';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gchat_sessionsFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gchat_sessionsFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
     if (value != null) {
       result
         ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GUUIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetimeFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
     }
     value = object.updated_at;
     if (value != null) {
       result
         ..add('updated_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetimeFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
     }
     value = object.user_id;
     if (value != null) {
       result
         ..add('user_id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GUUIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
     }
     value = object.nodeId;
     if (value != null) {
       result
         ..add('nodeId')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIDFilter),
+          ),
+        );
     }
     value = object.and;
     if (value != null) {
       result
         ..add('and')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(Gchat_sessionsFilter)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Gchat_sessionsFilter),
+            ]),
+          ),
+        );
     }
     value = object.or;
     if (value != null) {
       result
         ..add('or')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(Gchat_sessionsFilter)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Gchat_sessionsFilter),
+            ]),
+          ),
+        );
     }
     value = object.not;
     if (value != null) {
       result
         ..add('not')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gchat_sessionsFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gchat_sessionsFilter),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gchat_sessionsFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gchat_sessionsFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gchat_sessionsFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3154,43 +6276,80 @@ class _$Gchat_sessionsFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GDatetimeFilter))!
-              as GDatetimeFilter);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
           break;
         case 'updated_at':
-          result.updated_at.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GDatetimeFilter))!
-              as GDatetimeFilter);
+          result.updated_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
           break;
         case 'user_id':
-          result.user_id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          result.user_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
           break;
         case 'nodeId':
-          result.nodeId.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GIDFilter))! as GIDFilter);
+          result.nodeId.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIDFilter),
+                )!
+                as GIDFilter,
+          );
           break;
         case 'and':
-          result.and.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(Gchat_sessionsFilter)]))!
-              as BuiltList<Object?>);
+          result.and.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(Gchat_sessionsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'or':
-          result.or.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(Gchat_sessionsFilter)]))!
-              as BuiltList<Object?>);
+          result.or.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(Gchat_sessionsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'not':
-          result.not.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(Gchat_sessionsFilter))!
-              as Gchat_sessionsFilter);
+          result.not.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(Gchat_sessionsFilter),
+                )!
+                as Gchat_sessionsFilter,
+          );
           break;
       }
     }
@@ -3204,15 +6363,17 @@ class _$Gchat_sessionsInsertInputSerializer
   @override
   final Iterable<Type> types = const [
     Gchat_sessionsInsertInput,
-    _$Gchat_sessionsInsertInput
+    _$Gchat_sessionsInsertInput,
   ];
   @override
   final String wireName = 'Gchat_sessionsInsertInput';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gchat_sessionsInsertInput object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gchat_sessionsInsertInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
@@ -3220,44 +6381,57 @@ class _$Gchat_sessionsInsertInputSerializer
       result
         ..add('id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.updated_at;
     if (value != null) {
       result
         ..add('updated_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.user_id;
     if (value != null) {
       result
         ..add('user_id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.bearing_data;
     if (value != null) {
       result
         ..add('bearing_data')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GJSON)));
+          serializers.serialize(value, specifiedType: const FullType(GJSON)),
+        );
     }
     return result;
   }
 
   @override
   Gchat_sessionsInsertInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gchat_sessionsInsertInputBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gchat_sessionsInsertInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3266,24 +6440,49 @@ class _$Gchat_sessionsInsertInputSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'updated_at':
-          result.updated_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.updated_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'user_id':
-          result.user_id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.user_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'bearing_data':
-          result.bearing_data.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GJSON))! as GJSON);
+          result.bearing_data.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GJSON),
+                )!
+                as GJSON,
+          );
           break;
       }
     }
@@ -3297,53 +6496,73 @@ class _$Gchat_sessionsOrderBySerializer
   @override
   final Iterable<Type> types = const [
     Gchat_sessionsOrderBy,
-    _$Gchat_sessionsOrderBy
+    _$Gchat_sessionsOrderBy,
   ];
   @override
   final String wireName = 'Gchat_sessionsOrderBy';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gchat_sessionsOrderBy object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gchat_sessionsOrderBy object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
     if (value != null) {
       result
         ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.updated_at;
     if (value != null) {
       result
         ..add('updated_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.user_id;
     if (value != null) {
       result
         ..add('user_id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gchat_sessionsOrderBy deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gchat_sessionsOrderByBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gchat_sessionsOrderByBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3352,24 +6571,36 @@ class _$Gchat_sessionsOrderBySerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'created_at':
-          result.created_at = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.created_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'updated_at':
-          result.updated_at = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.updated_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'user_id':
-          result.user_id = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.user_id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
       }
     }
@@ -3383,15 +6614,17 @@ class _$Gchat_sessionsUpdateInputSerializer
   @override
   final Iterable<Type> types = const [
     Gchat_sessionsUpdateInput,
-    _$Gchat_sessionsUpdateInput
+    _$Gchat_sessionsUpdateInput,
   ];
   @override
   final String wireName = 'Gchat_sessionsUpdateInput';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gchat_sessionsUpdateInput object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gchat_sessionsUpdateInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
@@ -3399,44 +6632,57 @@ class _$Gchat_sessionsUpdateInputSerializer
       result
         ..add('id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.updated_at;
     if (value != null) {
       result
         ..add('updated_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.user_id;
     if (value != null) {
       result
         ..add('user_id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.bearing_data;
     if (value != null) {
       result
         ..add('bearing_data')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GJSON)));
+          serializers.serialize(value, specifiedType: const FullType(GJSON)),
+        );
     }
     return result;
   }
 
   @override
   Gchat_sessionsUpdateInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gchat_sessionsUpdateInputBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gchat_sessionsUpdateInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3445,24 +6691,49 @@ class _$Gchat_sessionsUpdateInputSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'updated_at':
-          result.updated_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.updated_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'user_id':
-          result.user_id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.user_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'bearing_data':
-          result.bearing_data.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GJSON))! as GJSON);
+          result.bearing_data.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GJSON),
+                )!
+                as GJSON,
+          );
           break;
       }
     }
@@ -3479,90 +6750,137 @@ class _$GcompaniesFilterSerializer
   final String wireName = 'GcompaniesFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GcompaniesFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GcompaniesFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
     if (value != null) {
       result
         ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GUUIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetimeFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
     }
     value = object.email;
     if (value != null) {
       result
         ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.name;
     if (value != null) {
       result
         ..add('name')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.address;
     if (value != null) {
       result
         ..add('address')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.nodeId;
     if (value != null) {
       result
         ..add('nodeId')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIDFilter),
+          ),
+        );
     }
     value = object.and;
     if (value != null) {
       result
         ..add('and')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(GcompaniesFilter)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GcompaniesFilter),
+            ]),
+          ),
+        );
     }
     value = object.or;
     if (value != null) {
       result
         ..add('or')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(GcompaniesFilter)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GcompaniesFilter),
+            ]),
+          ),
+        );
     }
     value = object.not;
     if (value != null) {
       result
         ..add('not')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GcompaniesFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GcompaniesFilter),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GcompaniesFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GcompaniesFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GcompaniesFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3571,50 +6889,98 @@ class _$GcompaniesFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GDatetimeFilter))!
-              as GDatetimeFilter);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
           break;
         case 'email':
-          result.email.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.email.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'name':
-          result.name.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.name.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'phone':
-          result.phone.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.phone.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'address':
-          result.address.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.address.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'nodeId':
-          result.nodeId.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GIDFilter))! as GIDFilter);
+          result.nodeId.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIDFilter),
+                )!
+                as GIDFilter,
+          );
           break;
         case 'and':
-          result.and.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GcompaniesFilter)]))!
-              as BuiltList<Object?>);
+          result.and.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GcompaniesFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'or':
-          result.or.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GcompaniesFilter)]))!
-              as BuiltList<Object?>);
+          result.or.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GcompaniesFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'not':
-          result.not.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GcompaniesFilter))!
-              as GcompaniesFilter);
+          result.not.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GcompaniesFilter),
+                )!
+                as GcompaniesFilter,
+          );
           break;
       }
     }
@@ -3628,15 +6994,17 @@ class _$GcompaniesInsertInputSerializer
   @override
   final Iterable<Type> types = const [
     GcompaniesInsertInput,
-    _$GcompaniesInsertInput
+    _$GcompaniesInsertInput,
   ];
   @override
   final String wireName = 'GcompaniesInsertInput';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GcompaniesInsertInput object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    GcompaniesInsertInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
@@ -3644,51 +7012,62 @@ class _$GcompaniesInsertInputSerializer
       result
         ..add('id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.email;
     if (value != null) {
       result
         ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.name;
     if (value != null) {
       result
         ..add('name')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.address;
     if (value != null) {
       result
         ..add('address')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     return result;
   }
 
   @override
   GcompaniesInsertInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GcompaniesInsertInputBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GcompaniesInsertInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3697,28 +7076,54 @@ class _$GcompaniesInsertInputSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.email =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.name =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.phone =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'address':
-          result.address = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.address =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
       }
     }
@@ -3735,60 +7140,89 @@ class _$GcompaniesOrderBySerializer
   final String wireName = 'GcompaniesOrderBy';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GcompaniesOrderBy object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GcompaniesOrderBy object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
     if (value != null) {
       result
         ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.email;
     if (value != null) {
       result
         ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.name;
     if (value != null) {
       result
         ..add('name')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.address;
     if (value != null) {
       result
         ..add('address')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GcompaniesOrderBy deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GcompaniesOrderByBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GcompaniesOrderByBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3797,34 +7231,52 @@ class _$GcompaniesOrderBySerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'created_at':
-          result.created_at = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.created_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'email':
-          result.email = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.email =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'name':
-          result.name = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.name =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'phone':
-          result.phone = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.phone =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'address':
-          result.address = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.address =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
       }
     }
@@ -3838,15 +7290,17 @@ class _$GcompaniesUpdateInputSerializer
   @override
   final Iterable<Type> types = const [
     GcompaniesUpdateInput,
-    _$GcompaniesUpdateInput
+    _$GcompaniesUpdateInput,
   ];
   @override
   final String wireName = 'GcompaniesUpdateInput';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GcompaniesUpdateInput object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    GcompaniesUpdateInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
@@ -3854,51 +7308,62 @@ class _$GcompaniesUpdateInputSerializer
       result
         ..add('id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.email;
     if (value != null) {
       result
         ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.name;
     if (value != null) {
       result
         ..add('name')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.address;
     if (value != null) {
       result
         ..add('address')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     return result;
   }
 
   @override
   GcompaniesUpdateInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GcompaniesUpdateInputBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GcompaniesUpdateInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -3907,28 +7372,806 @@ class _$GcompaniesUpdateInputSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.email =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.name =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.phone =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'address':
-          result.address = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.address =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GmodelsFilterSerializer implements StructuredSerializer<GmodelsFilter> {
+  @override
+  final Iterable<Type> types = const [GmodelsFilter, _$GmodelsFilter];
+  @override
+  final String wireName = 'GmodelsFilter';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GmodelsFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
+    }
+    value = object.brand_id;
+    if (value != null) {
+      result
+        ..add('brand_id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.slug;
+    if (value != null) {
+      result
+        ..add('slug')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.is_active;
+    if (value != null) {
+      result
+        ..add('is_active')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GBooleanFilter),
+          ),
+        );
+    }
+    value = object.nodeId;
+    if (value != null) {
+      result
+        ..add('nodeId')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIDFilter),
+          ),
+        );
+    }
+    value = object.and;
+    if (value != null) {
+      result
+        ..add('and')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GmodelsFilter),
+            ]),
+          ),
+        );
+    }
+    value = object.or;
+    if (value != null) {
+      result
+        ..add('or')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GmodelsFilter),
+            ]),
+          ),
+        );
+    }
+    value = object.not;
+    if (value != null) {
+      result
+        ..add('not')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GmodelsFilter),
+          ),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GmodelsFilter deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GmodelsFilterBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
+          break;
+        case 'brand_id':
+          result.brand_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
+          break;
+        case 'name':
+          result.name.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'slug':
+          result.slug.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'description':
+          result.description.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'is_active':
+          result.is_active.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBooleanFilter),
+                )!
+                as GBooleanFilter,
+          );
+          break;
+        case 'nodeId':
+          result.nodeId.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIDFilter),
+                )!
+                as GIDFilter,
+          );
+          break;
+        case 'and':
+          result.and.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GmodelsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
+          break;
+        case 'or':
+          result.or.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GmodelsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
+          break;
+        case 'not':
+          result.not.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GmodelsFilter),
+                )!
+                as GmodelsFilter,
+          );
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GmodelsInsertInputSerializer
+    implements StructuredSerializer<GmodelsInsertInput> {
+  @override
+  final Iterable<Type> types = const [GmodelsInsertInput, _$GmodelsInsertInput];
+  @override
+  final String wireName = 'GmodelsInsertInput';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GmodelsInsertInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    value = object.brand_id;
+    if (value != null) {
+      result
+        ..add('brand_id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.slug;
+    if (value != null) {
+      result
+        ..add('slug')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.is_active;
+    if (value != null) {
+      result
+        ..add('is_active')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(bool)),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GmodelsInsertInput deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GmodelsInsertInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+        case 'brand_id':
+          result.brand_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'name':
+          result.name =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'slug':
+          result.slug =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'description':
+          result.description =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'is_active':
+          result.is_active =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(bool),
+                  )
+                  as bool?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GmodelsOrderBySerializer
+    implements StructuredSerializer<GmodelsOrderBy> {
+  @override
+  final Iterable<Type> types = const [GmodelsOrderBy, _$GmodelsOrderBy];
+  @override
+  final String wireName = 'GmodelsOrderBy';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GmodelsOrderBy object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.brand_id;
+    if (value != null) {
+      result
+        ..add('brand_id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.slug;
+    if (value != null) {
+      result
+        ..add('slug')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.is_active;
+    if (value != null) {
+      result
+        ..add('is_active')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GmodelsOrderBy deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GmodelsOrderByBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'created_at':
+          result.created_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'brand_id':
+          result.brand_id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'name':
+          result.name =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'slug':
+          result.slug =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'description':
+          result.description =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'is_active':
+          result.is_active =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GmodelsUpdateInputSerializer
+    implements StructuredSerializer<GmodelsUpdateInput> {
+  @override
+  final Iterable<Type> types = const [GmodelsUpdateInput, _$GmodelsUpdateInput];
+  @override
+  final String wireName = 'GmodelsUpdateInput';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GmodelsUpdateInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    value = object.brand_id;
+    if (value != null) {
+      result
+        ..add('brand_id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.name;
+    if (value != null) {
+      result
+        ..add('name')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.slug;
+    if (value != null) {
+      result
+        ..add('slug')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.is_active;
+    if (value != null) {
+      result
+        ..add('is_active')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(bool)),
+        );
+    }
+    return result;
+  }
+
+  @override
+  GmodelsUpdateInput deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GmodelsUpdateInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+        case 'brand_id':
+          result.brand_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'name':
+          result.name =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'slug':
+          result.slug =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'description':
+          result.description =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'is_active':
+          result.is_active =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(bool),
+                  )
+                  as bool?;
           break;
       }
     }
@@ -3945,14 +8188,18 @@ class _$Gproduct_categorySerializer
   final String wireName = 'Gproduct_category';
 
   @override
-  Object serialize(Serializers serializers, Gproduct_category object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      object.name;
+  Object serialize(
+    Serializers serializers,
+    Gproduct_category object, {
+    FullType specifiedType = FullType.unspecified,
+  }) => object.name;
 
   @override
-  Gproduct_category deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      Gproduct_category.valueOf(serialized as String);
+  Gproduct_category deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) => Gproduct_category.valueOf(serialized as String);
 }
 
 class _$Gproduct_categoryFilterSerializer
@@ -3960,54 +8207,75 @@ class _$Gproduct_categoryFilterSerializer
   @override
   final Iterable<Type> types = const [
     Gproduct_categoryFilter,
-    _$Gproduct_categoryFilter
+    _$Gproduct_categoryFilter,
   ];
   @override
   final String wireName = 'Gproduct_categoryFilter';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gproduct_categoryFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gproduct_categoryFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.eq;
     if (value != null) {
       result
         ..add('eq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gproduct_category)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gproduct_category),
+          ),
+        );
     }
     value = object.Gin;
     if (value != null) {
       result
         ..add('in')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(Gproduct_category)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Gproduct_category),
+            ]),
+          ),
+        );
     }
     value = object.Gis;
     if (value != null) {
       result
         ..add('is')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GFilterIs)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GFilterIs),
+          ),
+        );
     }
     value = object.neq;
     if (value != null) {
       result
         ..add('neq')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gproduct_category)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gproduct_category),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gproduct_categoryFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gproduct_categoryFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gproduct_categoryFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -4016,24 +8284,39 @@ class _$Gproduct_categoryFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'eq':
-          result.eq = serializers.deserialize(value,
-                  specifiedType: const FullType(Gproduct_category))
-              as Gproduct_category?;
+          result.eq =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(Gproduct_category),
+                  )
+                  as Gproduct_category?;
           break;
         case 'in':
-          result.Gin.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(Gproduct_category)]))!
-              as BuiltList<Object?>);
+          result.Gin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(Gproduct_category),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'is':
-          result.Gis = serializers.deserialize(value,
-              specifiedType: const FullType(GFilterIs)) as GFilterIs?;
+          result.Gis =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GFilterIs),
+                  )
+                  as GFilterIs?;
           break;
         case 'neq':
-          result.neq = serializers.deserialize(value,
-                  specifiedType: const FullType(Gproduct_category))
-              as Gproduct_category?;
+          result.neq =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(Gproduct_category),
+                  )
+                  as Gproduct_category?;
           break;
       }
     }
@@ -4047,125 +8330,187 @@ class _$Gproduct_requerimentsFilterSerializer
   @override
   final Iterable<Type> types = const [
     Gproduct_requerimentsFilter,
-    _$Gproduct_requerimentsFilter
+    _$Gproduct_requerimentsFilter,
   ];
   @override
   final String wireName = 'Gproduct_requerimentsFilter';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gproduct_requerimentsFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gproduct_requerimentsFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
     if (value != null) {
       result
         ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GUUIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetimeFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
     }
     value = object.updated_at;
     if (value != null) {
       result
         ..add('updated_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetimeFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
     }
     value = object.user_id;
     if (value != null) {
       result
         ..add('user_id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GUUIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
     }
     value = object.text;
     if (value != null) {
       result
         ..add('text')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.audio_path;
     if (value != null) {
       result
         ..add('audio_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.audio_transcription;
     if (value != null) {
       result
         ..add('audio_transcription')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.video_path;
     if (value != null) {
       result
         ..add('video_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.image_path;
     if (value != null) {
       result
         ..add('image_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.category;
     if (value != null) {
       result
         ..add('category')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gproduct_categoryFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gproduct_categoryFilter),
+          ),
+        );
     }
     value = object.nodeId;
     if (value != null) {
       result
         ..add('nodeId')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIDFilter),
+          ),
+        );
     }
     value = object.and;
     if (value != null) {
       result
         ..add('and')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(Gproduct_requerimentsFilter)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Gproduct_requerimentsFilter),
+            ]),
+          ),
+        );
     }
     value = object.or;
     if (value != null) {
       result
         ..add('or')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(Gproduct_requerimentsFilter)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Gproduct_requerimentsFilter),
+            ]),
+          ),
+        );
     }
     value = object.not;
     if (value != null) {
       result
         ..add('not')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gproduct_requerimentsFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gproduct_requerimentsFilter),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gproduct_requerimentsFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gproduct_requerimentsFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gproduct_requerimentsFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -4174,68 +8519,134 @@ class _$Gproduct_requerimentsFilterSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GDatetimeFilter))!
-              as GDatetimeFilter);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
           break;
         case 'updated_at':
-          result.updated_at.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GDatetimeFilter))!
-              as GDatetimeFilter);
+          result.updated_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
           break;
         case 'user_id':
-          result.user_id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          result.user_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
           break;
         case 'text':
-          result.text.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.text.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'audio_path':
-          result.audio_path.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.audio_path.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'audio_transcription':
-          result.audio_transcription.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.audio_transcription.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'video_path':
-          result.video_path.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.video_path.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'image_path':
-          result.image_path.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.image_path.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'category':
-          result.category.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(Gproduct_categoryFilter))!
-              as Gproduct_categoryFilter);
+          result.category.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(Gproduct_categoryFilter),
+                )!
+                as Gproduct_categoryFilter,
+          );
           break;
         case 'nodeId':
-          result.nodeId.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GIDFilter))! as GIDFilter);
+          result.nodeId.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIDFilter),
+                )!
+                as GIDFilter,
+          );
           break;
         case 'and':
-          result.and.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(Gproduct_requerimentsFilter)
-              ]))! as BuiltList<Object?>);
+          result.and.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(Gproduct_requerimentsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'or':
-          result.or.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(Gproduct_requerimentsFilter)
-              ]))! as BuiltList<Object?>);
+          result.or.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(Gproduct_requerimentsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'not':
-          result.not.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(Gproduct_requerimentsFilter))!
-              as Gproduct_requerimentsFilter);
+          result.not.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(Gproduct_requerimentsFilter),
+                )!
+                as Gproduct_requerimentsFilter,
+          );
           break;
       }
     }
@@ -4249,15 +8660,17 @@ class _$Gproduct_requerimentsInsertInputSerializer
   @override
   final Iterable<Type> types = const [
     Gproduct_requerimentsInsertInput,
-    _$Gproduct_requerimentsInsertInput
+    _$Gproduct_requerimentsInsertInput,
   ];
   @override
   final String wireName = 'Gproduct_requerimentsInsertInput';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gproduct_requerimentsInsertInput object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gproduct_requerimentsInsertInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
@@ -4265,79 +8678,100 @@ class _$Gproduct_requerimentsInsertInputSerializer
       result
         ..add('id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.updated_at;
     if (value != null) {
       result
         ..add('updated_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.user_id;
     if (value != null) {
       result
         ..add('user_id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.text;
     if (value != null) {
       result
         ..add('text')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.audio_path;
     if (value != null) {
       result
         ..add('audio_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.audio_transcription;
     if (value != null) {
       result
         ..add('audio_transcription')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.video_path;
     if (value != null) {
       result
         ..add('video_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.image_path;
     if (value != null) {
       result
         ..add('image_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.category;
     if (value != null) {
       result
         ..add('category')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gproduct_category)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gproduct_category),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gproduct_requerimentsInsertInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gproduct_requerimentsInsertInputBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gproduct_requerimentsInsertInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -4346,45 +8780,88 @@ class _$Gproduct_requerimentsInsertInputSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'updated_at':
-          result.updated_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.updated_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'user_id':
-          result.user_id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.user_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'text':
-          result.text = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.text =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'audio_path':
-          result.audio_path = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.audio_path =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'audio_transcription':
-          result.audio_transcription = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.audio_transcription =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'video_path':
-          result.video_path = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.video_path =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'image_path':
-          result.image_path = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.image_path =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'category':
-          result.category = serializers.deserialize(value,
-                  specifiedType: const FullType(Gproduct_category))
-              as Gproduct_category?;
+          result.category =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(Gproduct_category),
+                  )
+                  as Gproduct_category?;
           break;
       }
     }
@@ -4398,95 +8875,139 @@ class _$Gproduct_requerimentsOrderBySerializer
   @override
   final Iterable<Type> types = const [
     Gproduct_requerimentsOrderBy,
-    _$Gproduct_requerimentsOrderBy
+    _$Gproduct_requerimentsOrderBy,
   ];
   @override
   final String wireName = 'Gproduct_requerimentsOrderBy';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gproduct_requerimentsOrderBy object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gproduct_requerimentsOrderBy object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
     if (value != null) {
       result
         ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.updated_at;
     if (value != null) {
       result
         ..add('updated_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.user_id;
     if (value != null) {
       result
         ..add('user_id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.text;
     if (value != null) {
       result
         ..add('text')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.audio_path;
     if (value != null) {
       result
         ..add('audio_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.audio_transcription;
     if (value != null) {
       result
         ..add('audio_transcription')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.video_path;
     if (value != null) {
       result
         ..add('video_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.image_path;
     if (value != null) {
       result
         ..add('image_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.category;
     if (value != null) {
       result
         ..add('category')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gproduct_requerimentsOrderBy deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gproduct_requerimentsOrderByBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gproduct_requerimentsOrderByBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -4495,54 +9016,84 @@ class _$Gproduct_requerimentsOrderBySerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'created_at':
-          result.created_at = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.created_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'updated_at':
-          result.updated_at = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.updated_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'user_id':
-          result.user_id = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.user_id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'text':
-          result.text = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.text =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'audio_path':
-          result.audio_path = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.audio_path =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'audio_transcription':
-          result.audio_transcription = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.audio_transcription =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'video_path':
-          result.video_path = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.video_path =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'image_path':
-          result.image_path = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.image_path =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'category':
-          result.category = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.category =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
       }
     }
@@ -4556,15 +9107,17 @@ class _$Gproduct_requerimentsUpdateInputSerializer
   @override
   final Iterable<Type> types = const [
     Gproduct_requerimentsUpdateInput,
-    _$Gproduct_requerimentsUpdateInput
+    _$Gproduct_requerimentsUpdateInput,
   ];
   @override
   final String wireName = 'Gproduct_requerimentsUpdateInput';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, Gproduct_requerimentsUpdateInput object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    Gproduct_requerimentsUpdateInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
@@ -4572,79 +9125,100 @@ class _$Gproduct_requerimentsUpdateInputSerializer
       result
         ..add('id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.updated_at;
     if (value != null) {
       result
         ..add('updated_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.user_id;
     if (value != null) {
       result
         ..add('user_id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.text;
     if (value != null) {
       result
         ..add('text')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.audio_path;
     if (value != null) {
       result
         ..add('audio_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.audio_transcription;
     if (value != null) {
       result
         ..add('audio_transcription')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.video_path;
     if (value != null) {
       result
         ..add('video_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.image_path;
     if (value != null) {
       result
         ..add('image_path')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.category;
     if (value != null) {
       result
         ..add('category')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Gproduct_category)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Gproduct_category),
+          ),
+        );
     }
     return result;
   }
 
   @override
   Gproduct_requerimentsUpdateInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new Gproduct_requerimentsUpdateInputBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Gproduct_requerimentsUpdateInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -4653,45 +9227,1283 @@ class _$Gproduct_requerimentsUpdateInputSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'updated_at':
-          result.updated_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.updated_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'user_id':
-          result.user_id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.user_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'text':
-          result.text = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.text =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'audio_path':
-          result.audio_path = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.audio_path =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'audio_transcription':
-          result.audio_transcription = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.audio_transcription =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'video_path':
-          result.video_path = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.video_path =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'image_path':
-          result.image_path = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.image_path =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'category':
-          result.category = serializers.deserialize(value,
-                  specifiedType: const FullType(Gproduct_category))
-              as Gproduct_category?;
+          result.category =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(Gproduct_category),
+                  )
+                  as Gproduct_category?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$Guser_carsFilterSerializer
+    implements StructuredSerializer<Guser_carsFilter> {
+  @override
+  final Iterable<Type> types = const [Guser_carsFilter, _$Guser_carsFilter];
+  @override
+  final String wireName = 'Guser_carsFilter';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    Guser_carsFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
+    }
+    value = object.updated_at;
+    if (value != null) {
+      result
+        ..add('updated_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
+    }
+    value = object.user_id;
+    if (value != null) {
+      result
+        ..add('user_id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
+    }
+    value = object.car_id;
+    if (value != null) {
+      result
+        ..add('car_id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
+    }
+    value = object.vin;
+    if (value != null) {
+      result
+        ..add('vin')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.license_plate;
+    if (value != null) {
+      result
+        ..add('license_plate')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.color;
+    if (value != null) {
+      result
+        ..add('color')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.mileage;
+    if (value != null) {
+      result
+        ..add('mileage')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIntFilter),
+          ),
+        );
+    }
+    value = object.purchase_date;
+    if (value != null) {
+      result
+        ..add('purchase_date')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDateFilter),
+          ),
+        );
+    }
+    value = object.notes;
+    if (value != null) {
+      result
+        ..add('notes')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
+    }
+    value = object.is_primary;
+    if (value != null) {
+      result
+        ..add('is_primary')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GBooleanFilter),
+          ),
+        );
+    }
+    value = object.deleted_at;
+    if (value != null) {
+      result
+        ..add('deleted_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
+    }
+    value = object.nodeId;
+    if (value != null) {
+      result
+        ..add('nodeId')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIDFilter),
+          ),
+        );
+    }
+    value = object.and;
+    if (value != null) {
+      result
+        ..add('and')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Guser_carsFilter),
+            ]),
+          ),
+        );
+    }
+    value = object.or;
+    if (value != null) {
+      result
+        ..add('or')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Guser_carsFilter),
+            ]),
+          ),
+        );
+    }
+    value = object.not;
+    if (value != null) {
+      result
+        ..add('not')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(Guser_carsFilter),
+          ),
+        );
+    }
+    return result;
+  }
+
+  @override
+  Guser_carsFilter deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Guser_carsFilterBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
+          break;
+        case 'updated_at':
+          result.updated_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
+          break;
+        case 'user_id':
+          result.user_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
+          break;
+        case 'car_id':
+          result.car_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
+          break;
+        case 'vin':
+          result.vin.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'license_plate':
+          result.license_plate.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'color':
+          result.color.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'mileage':
+          result.mileage.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIntFilter),
+                )!
+                as GIntFilter,
+          );
+          break;
+        case 'purchase_date':
+          result.purchase_date.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDateFilter),
+                )!
+                as GDateFilter,
+          );
+          break;
+        case 'notes':
+          result.notes.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
+          break;
+        case 'is_primary':
+          result.is_primary.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GBooleanFilter),
+                )!
+                as GBooleanFilter,
+          );
+          break;
+        case 'deleted_at':
+          result.deleted_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
+          break;
+        case 'nodeId':
+          result.nodeId.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIDFilter),
+                )!
+                as GIDFilter,
+          );
+          break;
+        case 'and':
+          result.and.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(Guser_carsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
+          break;
+        case 'or':
+          result.or.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(Guser_carsFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
+          break;
+        case 'not':
+          result.not.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(Guser_carsFilter),
+                )!
+                as Guser_carsFilter,
+          );
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$Guser_carsInsertInputSerializer
+    implements StructuredSerializer<Guser_carsInsertInput> {
+  @override
+  final Iterable<Type> types = const [
+    Guser_carsInsertInput,
+    _$Guser_carsInsertInput,
+  ];
+  @override
+  final String wireName = 'Guser_carsInsertInput';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    Guser_carsInsertInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    value = object.updated_at;
+    if (value != null) {
+      result
+        ..add('updated_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    value = object.user_id;
+    if (value != null) {
+      result
+        ..add('user_id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.car_id;
+    if (value != null) {
+      result
+        ..add('car_id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.vin;
+    if (value != null) {
+      result
+        ..add('vin')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.license_plate;
+    if (value != null) {
+      result
+        ..add('license_plate')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.color;
+    if (value != null) {
+      result
+        ..add('color')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.mileage;
+    if (value != null) {
+      result
+        ..add('mileage')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.purchase_date;
+    if (value != null) {
+      result
+        ..add('purchase_date')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GDate)),
+        );
+    }
+    value = object.notes;
+    if (value != null) {
+      result
+        ..add('notes')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.is_primary;
+    if (value != null) {
+      result
+        ..add('is_primary')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(bool)),
+        );
+    }
+    value = object.deleted_at;
+    if (value != null) {
+      result
+        ..add('deleted_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    return result;
+  }
+
+  @override
+  Guser_carsInsertInput deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Guser_carsInsertInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+        case 'updated_at':
+          result.updated_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+        case 'user_id':
+          result.user_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'car_id':
+          result.car_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'vin':
+          result.vin =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'license_plate':
+          result.license_plate =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'color':
+          result.color =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'mileage':
+          result.mileage =
+              serializers.deserialize(value, specifiedType: const FullType(int))
+                  as int?;
+          break;
+        case 'purchase_date':
+          result.purchase_date.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDate),
+                )!
+                as GDate,
+          );
+          break;
+        case 'notes':
+          result.notes =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'is_primary':
+          result.is_primary =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(bool),
+                  )
+                  as bool?;
+          break;
+        case 'deleted_at':
+          result.deleted_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$Guser_carsOrderBySerializer
+    implements StructuredSerializer<Guser_carsOrderBy> {
+  @override
+  final Iterable<Type> types = const [Guser_carsOrderBy, _$Guser_carsOrderBy];
+  @override
+  final String wireName = 'Guser_carsOrderBy';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    Guser_carsOrderBy object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.updated_at;
+    if (value != null) {
+      result
+        ..add('updated_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.user_id;
+    if (value != null) {
+      result
+        ..add('user_id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.car_id;
+    if (value != null) {
+      result
+        ..add('car_id')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.vin;
+    if (value != null) {
+      result
+        ..add('vin')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.license_plate;
+    if (value != null) {
+      result
+        ..add('license_plate')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.color;
+    if (value != null) {
+      result
+        ..add('color')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.mileage;
+    if (value != null) {
+      result
+        ..add('mileage')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.purchase_date;
+    if (value != null) {
+      result
+        ..add('purchase_date')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.notes;
+    if (value != null) {
+      result
+        ..add('notes')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.is_primary;
+    if (value != null) {
+      result
+        ..add('is_primary')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    value = object.deleted_at;
+    if (value != null) {
+      result
+        ..add('deleted_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
+    }
+    return result;
+  }
+
+  @override
+  Guser_carsOrderBy deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Guser_carsOrderByBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'created_at':
+          result.created_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'updated_at':
+          result.updated_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'user_id':
+          result.user_id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'car_id':
+          result.car_id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'vin':
+          result.vin =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'license_plate':
+          result.license_plate =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'color':
+          result.color =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'mileage':
+          result.mileage =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'purchase_date':
+          result.purchase_date =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'notes':
+          result.notes =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'is_primary':
+          result.is_primary =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+        case 'deleted_at':
+          result.deleted_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$Guser_carsUpdateInputSerializer
+    implements StructuredSerializer<Guser_carsUpdateInput> {
+  @override
+  final Iterable<Type> types = const [
+    Guser_carsUpdateInput,
+    _$Guser_carsUpdateInput,
+  ];
+  @override
+  final String wireName = 'Guser_carsUpdateInput';
+
+  @override
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    Guser_carsUpdateInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.created_at;
+    if (value != null) {
+      result
+        ..add('created_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    value = object.updated_at;
+    if (value != null) {
+      result
+        ..add('updated_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    value = object.user_id;
+    if (value != null) {
+      result
+        ..add('user_id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.car_id;
+    if (value != null) {
+      result
+        ..add('car_id')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
+    }
+    value = object.vin;
+    if (value != null) {
+      result
+        ..add('vin')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.license_plate;
+    if (value != null) {
+      result
+        ..add('license_plate')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.color;
+    if (value != null) {
+      result
+        ..add('color')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.mileage;
+    if (value != null) {
+      result
+        ..add('mileage')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.purchase_date;
+    if (value != null) {
+      result
+        ..add('purchase_date')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(GDate)),
+        );
+    }
+    value = object.notes;
+    if (value != null) {
+      result
+        ..add('notes')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
+    value = object.is_primary;
+    if (value != null) {
+      result
+        ..add('is_primary')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(bool)),
+        );
+    }
+    value = object.deleted_at;
+    if (value != null) {
+      result
+        ..add('deleted_at')
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
+    }
+    return result;
+  }
+
+  @override
+  Guser_carsUpdateInput deserialize(
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = Guser_carsUpdateInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'created_at':
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+        case 'updated_at':
+          result.updated_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
+          break;
+        case 'user_id':
+          result.user_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'car_id':
+          result.car_id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
+          break;
+        case 'vin':
+          result.vin =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'license_plate':
+          result.license_plate =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'color':
+          result.color =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'mileage':
+          result.mileage =
+              serializers.deserialize(value, specifiedType: const FullType(int))
+                  as int?;
+          break;
+        case 'purchase_date':
+          result.purchase_date.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDate),
+                )!
+                as GDate,
+          );
+          break;
+        case 'notes':
+          result.notes =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
+          break;
+        case 'is_primary':
+          result.is_primary =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(bool),
+                  )
+                  as bool?;
+          break;
+        case 'deleted_at':
+          result.deleted_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
       }
     }
@@ -4707,83 +10519,126 @@ class _$GusersFilterSerializer implements StructuredSerializer<GusersFilter> {
   final String wireName = 'GusersFilter';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GusersFilter object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GusersFilter object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
     if (value != null) {
       result
         ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GUUIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetimeFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetimeFilter),
+          ),
+        );
     }
     value = object.email;
     if (value != null) {
       result
         ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GStringFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GStringFilter),
+          ),
+        );
     }
     value = object.auth_uid;
     if (value != null) {
       result
         ..add('auth_uid')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GUUIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GUUIDFilter),
+          ),
+        );
     }
     value = object.nodeId;
     if (value != null) {
       result
         ..add('nodeId')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GIDFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GIDFilter),
+          ),
+        );
     }
     value = object.and;
     if (value != null) {
       result
         ..add('and')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(GusersFilter)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GusersFilter),
+            ]),
+          ),
+        );
     }
     value = object.or;
     if (value != null) {
       result
         ..add('or')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(GusersFilter)])));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GusersFilter),
+            ]),
+          ),
+        );
     }
     value = object.not;
     if (value != null) {
       result
         ..add('not')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GusersFilter)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GusersFilter),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GusersFilter deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GusersFilterBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GusersFilterBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -4792,45 +10647,89 @@ class _$GusersFilterSerializer implements StructuredSerializer<GusersFilter> {
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GDatetimeFilter))!
-              as GDatetimeFilter);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetimeFilter),
+                )!
+                as GDatetimeFilter,
+          );
           break;
         case 'email':
-          result.email.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.email.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'phone':
-          result.phone.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GStringFilter))! as GStringFilter);
+          result.phone.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GStringFilter),
+                )!
+                as GStringFilter,
+          );
           break;
         case 'auth_uid':
-          result.auth_uid.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUIDFilter))! as GUUIDFilter);
+          result.auth_uid.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUIDFilter),
+                )!
+                as GUUIDFilter,
+          );
           break;
         case 'nodeId':
-          result.nodeId.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GIDFilter))! as GIDFilter);
+          result.nodeId.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GIDFilter),
+                )!
+                as GIDFilter,
+          );
           break;
         case 'and':
-          result.and.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GusersFilter)]))!
-              as BuiltList<Object?>);
+          result.and.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GusersFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'or':
-          result.or.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GusersFilter)]))!
-              as BuiltList<Object?>);
+          result.or.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GusersFilter),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
         case 'not':
-          result.not.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GusersFilter))! as GusersFilter);
+          result.not.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GusersFilter),
+                )!
+                as GusersFilter,
+          );
           break;
       }
     }
@@ -4847,8 +10746,11 @@ class _$GusersInsertInputSerializer
   final String wireName = 'GusersInsertInput';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GusersInsertInput object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GusersInsertInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
@@ -4856,44 +10758,54 @@ class _$GusersInsertInputSerializer
       result
         ..add('id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.email;
     if (value != null) {
       result
         ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.auth_uid;
     if (value != null) {
       result
         ..add('auth_uid')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     return result;
   }
 
   @override
   GusersInsertInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GusersInsertInputBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GusersInsertInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -4902,24 +10814,47 @@ class _$GusersInsertInputSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.email =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.phone =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'auth_uid':
-          result.auth_uid.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.auth_uid.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
       }
     }
@@ -4935,53 +10870,78 @@ class _$GusersOrderBySerializer implements StructuredSerializer<GusersOrderBy> {
   final String wireName = 'GusersOrderBy';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GusersOrderBy object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GusersOrderBy object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
     if (value != null) {
       result
         ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.email;
     if (value != null) {
       result
         ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     value = object.auth_uid;
     if (value != null) {
       result
         ..add('auth_uid')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GOrderByDirection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GOrderByDirection),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GusersOrderBy deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GusersOrderByBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GusersOrderByBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -4990,29 +10950,44 @@ class _$GusersOrderBySerializer implements StructuredSerializer<GusersOrderBy> {
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.id =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'created_at':
-          result.created_at = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.created_at =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'email':
-          result.email = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.email =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'phone':
-          result.phone = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.phone =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
         case 'auth_uid':
-          result.auth_uid = serializers.deserialize(value,
-                  specifiedType: const FullType(GOrderByDirection))
-              as GOrderByDirection?;
+          result.auth_uid =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(GOrderByDirection),
+                  )
+                  as GOrderByDirection?;
           break;
       }
     }
@@ -5029,8 +11004,11 @@ class _$GusersUpdateInputSerializer
   final String wireName = 'GusersUpdateInput';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GusersUpdateInput object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GusersUpdateInput object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[];
     Object? value;
     value = object.id;
@@ -5038,44 +11016,54 @@ class _$GusersUpdateInputSerializer
       result
         ..add('id')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     value = object.created_at;
     if (value != null) {
       result
         ..add('created_at')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(GDatetime)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GDatetime),
+          ),
+        );
     }
     value = object.email;
     if (value != null) {
       result
         ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     value = object.auth_uid;
     if (value != null) {
       result
         ..add('auth_uid')
         ..add(
-            serializers.serialize(value, specifiedType: const FullType(GUUID)));
+          serializers.serialize(value, specifiedType: const FullType(GUUID)),
+        );
     }
     return result;
   }
 
   @override
   GusersUpdateInput deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GusersUpdateInputBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GusersUpdateInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -5084,24 +11072,47 @@ class _$GusersUpdateInputSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GDatetime))! as GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GDatetime),
+                )!
+                as GDatetime,
+          );
           break;
         case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.email =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.phone =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'auth_uid':
-          result.auth_uid.replace(serializers.deserialize(value,
-              specifiedType: const FullType(GUUID))! as GUUID);
+          result.auth_uid.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(GUUID),
+                )!
+                as GUUID,
+          );
           break;
       }
     }
@@ -5115,18 +11126,15 @@ class _$GBigFloat extends GBigFloat {
   final String value;
 
   factory _$GBigFloat([void Function(GBigFloatBuilder)? updates]) =>
-      (new GBigFloatBuilder()..update(updates))._build();
+      (GBigFloatBuilder()..update(updates))._build();
 
-  _$GBigFloat._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GBigFloat', 'value');
-  }
-
+  _$GBigFloat._({required this.value}) : super._();
   @override
   GBigFloat rebuild(void Function(GBigFloatBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GBigFloatBuilder toBuilder() => new GBigFloatBuilder()..replace(this);
+  GBigFloatBuilder toBuilder() => GBigFloatBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -5144,8 +11152,9 @@ class _$GBigFloat extends GBigFloat {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GBigFloat')..add('value', value))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GBigFloat',
+    )..add('value', value)).toString();
   }
 }
 
@@ -5169,7 +11178,6 @@ class GBigFloatBuilder implements Builder<GBigFloat, GBigFloatBuilder> {
 
   @override
   void replace(GBigFloat other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GBigFloat;
   }
 
@@ -5182,10 +11190,14 @@ class GBigFloatBuilder implements Builder<GBigFloat, GBigFloatBuilder> {
   GBigFloat build() => _build();
 
   _$GBigFloat _build() {
-    final _$result = _$v ??
-        new _$GBigFloat._(
+    final _$result =
+        _$v ??
+        _$GBigFloat._(
           value: BuiltValueNullFieldError.checkNotNull(
-              value, r'GBigFloat', 'value'),
+            value,
+            r'GBigFloat',
+            'value',
+          ),
         );
     replace(_$result);
     return _$result;
@@ -5211,26 +11223,24 @@ class _$GBigFloatFilter extends GBigFloatFilter {
   final GBigFloat? neq;
 
   factory _$GBigFloatFilter([void Function(GBigFloatFilterBuilder)? updates]) =>
-      (new GBigFloatFilterBuilder()..update(updates))._build();
+      (GBigFloatFilterBuilder()..update(updates))._build();
 
-  _$GBigFloatFilter._(
-      {this.eq,
-      this.gt,
-      this.gte,
-      this.Gin,
-      this.Gis,
-      this.lt,
-      this.lte,
-      this.neq})
-      : super._();
-
+  _$GBigFloatFilter._({
+    this.eq,
+    this.gt,
+    this.gte,
+    this.Gin,
+    this.Gis,
+    this.lt,
+    this.lte,
+    this.neq,
+  }) : super._();
   @override
   GBigFloatFilter rebuild(void Function(GBigFloatFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GBigFloatFilterBuilder toBuilder() =>
-      new GBigFloatFilterBuilder()..replace(this);
+  GBigFloatFilterBuilder toBuilder() => GBigFloatFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -5281,20 +11291,19 @@ class GBigFloatFilterBuilder
   _$GBigFloatFilter? _$v;
 
   GBigFloatBuilder? _eq;
-  GBigFloatBuilder get eq => _$this._eq ??= new GBigFloatBuilder();
+  GBigFloatBuilder get eq => _$this._eq ??= GBigFloatBuilder();
   set eq(GBigFloatBuilder? eq) => _$this._eq = eq;
 
   GBigFloatBuilder? _gt;
-  GBigFloatBuilder get gt => _$this._gt ??= new GBigFloatBuilder();
+  GBigFloatBuilder get gt => _$this._gt ??= GBigFloatBuilder();
   set gt(GBigFloatBuilder? gt) => _$this._gt = gt;
 
   GBigFloatBuilder? _gte;
-  GBigFloatBuilder get gte => _$this._gte ??= new GBigFloatBuilder();
+  GBigFloatBuilder get gte => _$this._gte ??= GBigFloatBuilder();
   set gte(GBigFloatBuilder? gte) => _$this._gte = gte;
 
   ListBuilder<GBigFloat>? _Gin;
-  ListBuilder<GBigFloat> get Gin =>
-      _$this._Gin ??= new ListBuilder<GBigFloat>();
+  ListBuilder<GBigFloat> get Gin => _$this._Gin ??= ListBuilder<GBigFloat>();
   set Gin(ListBuilder<GBigFloat>? Gin) => _$this._Gin = Gin;
 
   GFilterIs? _Gis;
@@ -5302,15 +11311,15 @@ class GBigFloatFilterBuilder
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   GBigFloatBuilder? _lt;
-  GBigFloatBuilder get lt => _$this._lt ??= new GBigFloatBuilder();
+  GBigFloatBuilder get lt => _$this._lt ??= GBigFloatBuilder();
   set lt(GBigFloatBuilder? lt) => _$this._lt = lt;
 
   GBigFloatBuilder? _lte;
-  GBigFloatBuilder get lte => _$this._lte ??= new GBigFloatBuilder();
+  GBigFloatBuilder get lte => _$this._lte ??= GBigFloatBuilder();
   set lte(GBigFloatBuilder? lte) => _$this._lte = lte;
 
   GBigFloatBuilder? _neq;
-  GBigFloatBuilder get neq => _$this._neq ??= new GBigFloatBuilder();
+  GBigFloatBuilder get neq => _$this._neq ??= GBigFloatBuilder();
   set neq(GBigFloatBuilder? neq) => _$this._neq = neq;
 
   GBigFloatFilterBuilder();
@@ -5333,7 +11342,6 @@ class GBigFloatFilterBuilder
 
   @override
   void replace(GBigFloatFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GBigFloatFilter;
   }
 
@@ -5348,8 +11356,9 @@ class GBigFloatFilterBuilder
   _$GBigFloatFilter _build() {
     _$GBigFloatFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GBigFloatFilter._(
+      _$result =
+          _$v ??
+          _$GBigFloatFilter._(
             eq: _eq?.build(),
             gt: _gt?.build(),
             gte: _gte?.build(),
@@ -5378,8 +11387,11 @@ class GBigFloatFilterBuilder
         _$failedField = 'neq';
         _neq?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GBigFloatFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GBigFloatFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -5400,22 +11412,25 @@ class _$GBigFloatListFilter extends GBigFloatListFilter {
   @override
   final BuiltList<GBigFloat>? overlaps;
 
-  factory _$GBigFloatListFilter(
-          [void Function(GBigFloatListFilterBuilder)? updates]) =>
-      (new GBigFloatListFilterBuilder()..update(updates))._build();
+  factory _$GBigFloatListFilter([
+    void Function(GBigFloatListFilterBuilder)? updates,
+  ]) => (GBigFloatListFilterBuilder()..update(updates))._build();
 
-  _$GBigFloatListFilter._(
-      {this.containedBy, this.contains, this.eq, this.Gis, this.overlaps})
-      : super._();
-
+  _$GBigFloatListFilter._({
+    this.containedBy,
+    this.contains,
+    this.eq,
+    this.Gis,
+    this.overlaps,
+  }) : super._();
   @override
   GBigFloatListFilter rebuild(
-          void Function(GBigFloatListFilterBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GBigFloatListFilterBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GBigFloatListFilterBuilder toBuilder() =>
-      new GBigFloatListFilterBuilder()..replace(this);
+      GBigFloatListFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -5458,17 +11473,17 @@ class GBigFloatListFilterBuilder
 
   ListBuilder<GBigFloat>? _containedBy;
   ListBuilder<GBigFloat> get containedBy =>
-      _$this._containedBy ??= new ListBuilder<GBigFloat>();
+      _$this._containedBy ??= ListBuilder<GBigFloat>();
   set containedBy(ListBuilder<GBigFloat>? containedBy) =>
       _$this._containedBy = containedBy;
 
   ListBuilder<GBigFloat>? _contains;
   ListBuilder<GBigFloat> get contains =>
-      _$this._contains ??= new ListBuilder<GBigFloat>();
+      _$this._contains ??= ListBuilder<GBigFloat>();
   set contains(ListBuilder<GBigFloat>? contains) => _$this._contains = contains;
 
   ListBuilder<GBigFloat>? _eq;
-  ListBuilder<GBigFloat> get eq => _$this._eq ??= new ListBuilder<GBigFloat>();
+  ListBuilder<GBigFloat> get eq => _$this._eq ??= ListBuilder<GBigFloat>();
   set eq(ListBuilder<GBigFloat>? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -5477,7 +11492,7 @@ class GBigFloatListFilterBuilder
 
   ListBuilder<GBigFloat>? _overlaps;
   ListBuilder<GBigFloat> get overlaps =>
-      _$this._overlaps ??= new ListBuilder<GBigFloat>();
+      _$this._overlaps ??= ListBuilder<GBigFloat>();
   set overlaps(ListBuilder<GBigFloat>? overlaps) => _$this._overlaps = overlaps;
 
   GBigFloatListFilterBuilder();
@@ -5497,7 +11512,6 @@ class GBigFloatListFilterBuilder
 
   @override
   void replace(GBigFloatListFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GBigFloatListFilter;
   }
 
@@ -5512,8 +11526,9 @@ class GBigFloatListFilterBuilder
   _$GBigFloatListFilter _build() {
     _$GBigFloatListFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GBigFloatListFilter._(
+      _$result =
+          _$v ??
+          _$GBigFloatListFilter._(
             containedBy: _containedBy?.build(),
             contains: _contains?.build(),
             eq: _eq?.build(),
@@ -5533,8 +11548,11 @@ class GBigFloatListFilterBuilder
         _$failedField = 'overlaps';
         _overlaps?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GBigFloatListFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GBigFloatListFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -5548,18 +11566,15 @@ class _$GBigInt extends GBigInt {
   final String value;
 
   factory _$GBigInt([void Function(GBigIntBuilder)? updates]) =>
-      (new GBigIntBuilder()..update(updates))._build();
+      (GBigIntBuilder()..update(updates))._build();
 
-  _$GBigInt._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GBigInt', 'value');
-  }
-
+  _$GBigInt._({required this.value}) : super._();
   @override
   GBigInt rebuild(void Function(GBigIntBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GBigIntBuilder toBuilder() => new GBigIntBuilder()..replace(this);
+  GBigIntBuilder toBuilder() => GBigIntBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -5577,8 +11592,9 @@ class _$GBigInt extends GBigInt {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GBigInt')..add('value', value))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GBigInt',
+    )..add('value', value)).toString();
   }
 }
 
@@ -5602,7 +11618,6 @@ class GBigIntBuilder implements Builder<GBigInt, GBigIntBuilder> {
 
   @override
   void replace(GBigInt other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GBigInt;
   }
 
@@ -5615,10 +11630,14 @@ class GBigIntBuilder implements Builder<GBigInt, GBigIntBuilder> {
   GBigInt build() => _build();
 
   _$GBigInt _build() {
-    final _$result = _$v ??
-        new _$GBigInt._(
-          value:
-              BuiltValueNullFieldError.checkNotNull(value, r'GBigInt', 'value'),
+    final _$result =
+        _$v ??
+        _$GBigInt._(
+          value: BuiltValueNullFieldError.checkNotNull(
+            value,
+            r'GBigInt',
+            'value',
+          ),
         );
     replace(_$result);
     return _$result;
@@ -5644,25 +11663,24 @@ class _$GBigIntFilter extends GBigIntFilter {
   final GBigInt? neq;
 
   factory _$GBigIntFilter([void Function(GBigIntFilterBuilder)? updates]) =>
-      (new GBigIntFilterBuilder()..update(updates))._build();
+      (GBigIntFilterBuilder()..update(updates))._build();
 
-  _$GBigIntFilter._(
-      {this.eq,
-      this.gt,
-      this.gte,
-      this.Gin,
-      this.Gis,
-      this.lt,
-      this.lte,
-      this.neq})
-      : super._();
-
+  _$GBigIntFilter._({
+    this.eq,
+    this.gt,
+    this.gte,
+    this.Gin,
+    this.Gis,
+    this.lt,
+    this.lte,
+    this.neq,
+  }) : super._();
   @override
   GBigIntFilter rebuild(void Function(GBigIntFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GBigIntFilterBuilder toBuilder() => new GBigIntFilterBuilder()..replace(this);
+  GBigIntFilterBuilder toBuilder() => GBigIntFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -5713,19 +11731,19 @@ class GBigIntFilterBuilder
   _$GBigIntFilter? _$v;
 
   GBigIntBuilder? _eq;
-  GBigIntBuilder get eq => _$this._eq ??= new GBigIntBuilder();
+  GBigIntBuilder get eq => _$this._eq ??= GBigIntBuilder();
   set eq(GBigIntBuilder? eq) => _$this._eq = eq;
 
   GBigIntBuilder? _gt;
-  GBigIntBuilder get gt => _$this._gt ??= new GBigIntBuilder();
+  GBigIntBuilder get gt => _$this._gt ??= GBigIntBuilder();
   set gt(GBigIntBuilder? gt) => _$this._gt = gt;
 
   GBigIntBuilder? _gte;
-  GBigIntBuilder get gte => _$this._gte ??= new GBigIntBuilder();
+  GBigIntBuilder get gte => _$this._gte ??= GBigIntBuilder();
   set gte(GBigIntBuilder? gte) => _$this._gte = gte;
 
   ListBuilder<GBigInt>? _Gin;
-  ListBuilder<GBigInt> get Gin => _$this._Gin ??= new ListBuilder<GBigInt>();
+  ListBuilder<GBigInt> get Gin => _$this._Gin ??= ListBuilder<GBigInt>();
   set Gin(ListBuilder<GBigInt>? Gin) => _$this._Gin = Gin;
 
   GFilterIs? _Gis;
@@ -5733,15 +11751,15 @@ class GBigIntFilterBuilder
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   GBigIntBuilder? _lt;
-  GBigIntBuilder get lt => _$this._lt ??= new GBigIntBuilder();
+  GBigIntBuilder get lt => _$this._lt ??= GBigIntBuilder();
   set lt(GBigIntBuilder? lt) => _$this._lt = lt;
 
   GBigIntBuilder? _lte;
-  GBigIntBuilder get lte => _$this._lte ??= new GBigIntBuilder();
+  GBigIntBuilder get lte => _$this._lte ??= GBigIntBuilder();
   set lte(GBigIntBuilder? lte) => _$this._lte = lte;
 
   GBigIntBuilder? _neq;
-  GBigIntBuilder get neq => _$this._neq ??= new GBigIntBuilder();
+  GBigIntBuilder get neq => _$this._neq ??= GBigIntBuilder();
   set neq(GBigIntBuilder? neq) => _$this._neq = neq;
 
   GBigIntFilterBuilder();
@@ -5764,7 +11782,6 @@ class GBigIntFilterBuilder
 
   @override
   void replace(GBigIntFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GBigIntFilter;
   }
 
@@ -5779,8 +11796,9 @@ class GBigIntFilterBuilder
   _$GBigIntFilter _build() {
     _$GBigIntFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GBigIntFilter._(
+      _$result =
+          _$v ??
+          _$GBigIntFilter._(
             eq: _eq?.build(),
             gt: _gt?.build(),
             gte: _gte?.build(),
@@ -5809,8 +11827,11 @@ class GBigIntFilterBuilder
         _$failedField = 'neq';
         _neq?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GBigIntFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GBigIntFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -5831,21 +11852,24 @@ class _$GBigIntListFilter extends GBigIntListFilter {
   @override
   final BuiltList<GBigInt>? overlaps;
 
-  factory _$GBigIntListFilter(
-          [void Function(GBigIntListFilterBuilder)? updates]) =>
-      (new GBigIntListFilterBuilder()..update(updates))._build();
+  factory _$GBigIntListFilter([
+    void Function(GBigIntListFilterBuilder)? updates,
+  ]) => (GBigIntListFilterBuilder()..update(updates))._build();
 
-  _$GBigIntListFilter._(
-      {this.containedBy, this.contains, this.eq, this.Gis, this.overlaps})
-      : super._();
-
+  _$GBigIntListFilter._({
+    this.containedBy,
+    this.contains,
+    this.eq,
+    this.Gis,
+    this.overlaps,
+  }) : super._();
   @override
   GBigIntListFilter rebuild(void Function(GBigIntListFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   GBigIntListFilterBuilder toBuilder() =>
-      new GBigIntListFilterBuilder()..replace(this);
+      GBigIntListFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -5888,17 +11912,17 @@ class GBigIntListFilterBuilder
 
   ListBuilder<GBigInt>? _containedBy;
   ListBuilder<GBigInt> get containedBy =>
-      _$this._containedBy ??= new ListBuilder<GBigInt>();
+      _$this._containedBy ??= ListBuilder<GBigInt>();
   set containedBy(ListBuilder<GBigInt>? containedBy) =>
       _$this._containedBy = containedBy;
 
   ListBuilder<GBigInt>? _contains;
   ListBuilder<GBigInt> get contains =>
-      _$this._contains ??= new ListBuilder<GBigInt>();
+      _$this._contains ??= ListBuilder<GBigInt>();
   set contains(ListBuilder<GBigInt>? contains) => _$this._contains = contains;
 
   ListBuilder<GBigInt>? _eq;
-  ListBuilder<GBigInt> get eq => _$this._eq ??= new ListBuilder<GBigInt>();
+  ListBuilder<GBigInt> get eq => _$this._eq ??= ListBuilder<GBigInt>();
   set eq(ListBuilder<GBigInt>? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -5907,7 +11931,7 @@ class GBigIntListFilterBuilder
 
   ListBuilder<GBigInt>? _overlaps;
   ListBuilder<GBigInt> get overlaps =>
-      _$this._overlaps ??= new ListBuilder<GBigInt>();
+      _$this._overlaps ??= ListBuilder<GBigInt>();
   set overlaps(ListBuilder<GBigInt>? overlaps) => _$this._overlaps = overlaps;
 
   GBigIntListFilterBuilder();
@@ -5927,7 +11951,6 @@ class GBigIntListFilterBuilder
 
   @override
   void replace(GBigIntListFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GBigIntListFilter;
   }
 
@@ -5942,8 +11965,9 @@ class GBigIntListFilterBuilder
   _$GBigIntListFilter _build() {
     _$GBigIntListFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GBigIntListFilter._(
+      _$result =
+          _$v ??
+          _$GBigIntListFilter._(
             containedBy: _containedBy?.build(),
             contains: _contains?.build(),
             eq: _eq?.build(),
@@ -5963,8 +11987,11 @@ class GBigIntListFilterBuilder
         _$failedField = 'overlaps';
         _overlaps?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GBigIntListFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GBigIntListFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -5980,17 +12007,15 @@ class _$GBooleanFilter extends GBooleanFilter {
   final GFilterIs? Gis;
 
   factory _$GBooleanFilter([void Function(GBooleanFilterBuilder)? updates]) =>
-      (new GBooleanFilterBuilder()..update(updates))._build();
+      (GBooleanFilterBuilder()..update(updates))._build();
 
   _$GBooleanFilter._({this.eq, this.Gis}) : super._();
-
   @override
   GBooleanFilter rebuild(void Function(GBooleanFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GBooleanFilterBuilder toBuilder() =>
-      new GBooleanFilterBuilder()..replace(this);
+  GBooleanFilterBuilder toBuilder() => GBooleanFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -6042,7 +12067,6 @@ class GBooleanFilterBuilder
 
   @override
   void replace(GBooleanFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GBooleanFilter;
   }
 
@@ -6055,11 +12079,7 @@ class GBooleanFilterBuilder
   GBooleanFilter build() => _build();
 
   _$GBooleanFilter _build() {
-    final _$result = _$v ??
-        new _$GBooleanFilter._(
-          eq: eq,
-          Gis: Gis,
-        );
+    final _$result = _$v ?? _$GBooleanFilter._(eq: eq, Gis: Gis);
     replace(_$result);
     return _$result;
   }
@@ -6077,22 +12097,25 @@ class _$GBooleanListFilter extends GBooleanListFilter {
   @override
   final BuiltList<bool>? overlaps;
 
-  factory _$GBooleanListFilter(
-          [void Function(GBooleanListFilterBuilder)? updates]) =>
-      (new GBooleanListFilterBuilder()..update(updates))._build();
+  factory _$GBooleanListFilter([
+    void Function(GBooleanListFilterBuilder)? updates,
+  ]) => (GBooleanListFilterBuilder()..update(updates))._build();
 
-  _$GBooleanListFilter._(
-      {this.containedBy, this.contains, this.eq, this.Gis, this.overlaps})
-      : super._();
-
+  _$GBooleanListFilter._({
+    this.containedBy,
+    this.contains,
+    this.eq,
+    this.Gis,
+    this.overlaps,
+  }) : super._();
   @override
   GBooleanListFilter rebuild(
-          void Function(GBooleanListFilterBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GBooleanListFilterBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GBooleanListFilterBuilder toBuilder() =>
-      new GBooleanListFilterBuilder()..replace(this);
+      GBooleanListFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -6135,17 +12158,16 @@ class GBooleanListFilterBuilder
 
   ListBuilder<bool>? _containedBy;
   ListBuilder<bool> get containedBy =>
-      _$this._containedBy ??= new ListBuilder<bool>();
+      _$this._containedBy ??= ListBuilder<bool>();
   set containedBy(ListBuilder<bool>? containedBy) =>
       _$this._containedBy = containedBy;
 
   ListBuilder<bool>? _contains;
-  ListBuilder<bool> get contains =>
-      _$this._contains ??= new ListBuilder<bool>();
+  ListBuilder<bool> get contains => _$this._contains ??= ListBuilder<bool>();
   set contains(ListBuilder<bool>? contains) => _$this._contains = contains;
 
   ListBuilder<bool>? _eq;
-  ListBuilder<bool> get eq => _$this._eq ??= new ListBuilder<bool>();
+  ListBuilder<bool> get eq => _$this._eq ??= ListBuilder<bool>();
   set eq(ListBuilder<bool>? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -6153,8 +12175,7 @@ class GBooleanListFilterBuilder
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   ListBuilder<bool>? _overlaps;
-  ListBuilder<bool> get overlaps =>
-      _$this._overlaps ??= new ListBuilder<bool>();
+  ListBuilder<bool> get overlaps => _$this._overlaps ??= ListBuilder<bool>();
   set overlaps(ListBuilder<bool>? overlaps) => _$this._overlaps = overlaps;
 
   GBooleanListFilterBuilder();
@@ -6174,7 +12195,6 @@ class GBooleanListFilterBuilder
 
   @override
   void replace(GBooleanListFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GBooleanListFilter;
   }
 
@@ -6189,8 +12209,9 @@ class GBooleanListFilterBuilder
   _$GBooleanListFilter _build() {
     _$GBooleanListFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GBooleanListFilter._(
+      _$result =
+          _$v ??
+          _$GBooleanListFilter._(
             containedBy: _containedBy?.build(),
             contains: _contains?.build(),
             eq: _eq?.build(),
@@ -6210,8 +12231,11 @@ class GBooleanListFilterBuilder
         _$failedField = 'overlaps';
         _overlaps?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GBooleanListFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GBooleanListFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -6225,18 +12249,15 @@ class _$GCursor extends GCursor {
   final String value;
 
   factory _$GCursor([void Function(GCursorBuilder)? updates]) =>
-      (new GCursorBuilder()..update(updates))._build();
+      (GCursorBuilder()..update(updates))._build();
 
-  _$GCursor._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GCursor', 'value');
-  }
-
+  _$GCursor._({required this.value}) : super._();
   @override
   GCursor rebuild(void Function(GCursorBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GCursorBuilder toBuilder() => new GCursorBuilder()..replace(this);
+  GCursorBuilder toBuilder() => GCursorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -6254,8 +12275,9 @@ class _$GCursor extends GCursor {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GCursor')..add('value', value))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GCursor',
+    )..add('value', value)).toString();
   }
 }
 
@@ -6279,7 +12301,6 @@ class GCursorBuilder implements Builder<GCursor, GCursorBuilder> {
 
   @override
   void replace(GCursor other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GCursor;
   }
 
@@ -6292,10 +12313,14 @@ class GCursorBuilder implements Builder<GCursor, GCursorBuilder> {
   GCursor build() => _build();
 
   _$GCursor _build() {
-    final _$result = _$v ??
-        new _$GCursor._(
-          value:
-              BuiltValueNullFieldError.checkNotNull(value, r'GCursor', 'value'),
+    final _$result =
+        _$v ??
+        _$GCursor._(
+          value: BuiltValueNullFieldError.checkNotNull(
+            value,
+            r'GCursor',
+            'value',
+          ),
         );
     replace(_$result);
     return _$result;
@@ -6307,18 +12332,15 @@ class _$GDate extends GDate {
   final String value;
 
   factory _$GDate([void Function(GDateBuilder)? updates]) =>
-      (new GDateBuilder()..update(updates))._build();
+      (GDateBuilder()..update(updates))._build();
 
-  _$GDate._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GDate', 'value');
-  }
-
+  _$GDate._({required this.value}) : super._();
   @override
   GDate rebuild(void Function(GDateBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GDateBuilder toBuilder() => new GDateBuilder()..replace(this);
+  GDateBuilder toBuilder() => GDateBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -6336,8 +12358,9 @@ class _$GDate extends GDate {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GDate')..add('value', value))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GDate',
+    )..add('value', value)).toString();
   }
 }
 
@@ -6361,7 +12384,6 @@ class GDateBuilder implements Builder<GDate, GDateBuilder> {
 
   @override
   void replace(GDate other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GDate;
   }
 
@@ -6374,10 +12396,14 @@ class GDateBuilder implements Builder<GDate, GDateBuilder> {
   GDate build() => _build();
 
   _$GDate _build() {
-    final _$result = _$v ??
-        new _$GDate._(
-          value:
-              BuiltValueNullFieldError.checkNotNull(value, r'GDate', 'value'),
+    final _$result =
+        _$v ??
+        _$GDate._(
+          value: BuiltValueNullFieldError.checkNotNull(
+            value,
+            r'GDate',
+            'value',
+          ),
         );
     replace(_$result);
     return _$result;
@@ -6403,25 +12429,24 @@ class _$GDateFilter extends GDateFilter {
   final GDate? neq;
 
   factory _$GDateFilter([void Function(GDateFilterBuilder)? updates]) =>
-      (new GDateFilterBuilder()..update(updates))._build();
+      (GDateFilterBuilder()..update(updates))._build();
 
-  _$GDateFilter._(
-      {this.eq,
-      this.gt,
-      this.gte,
-      this.Gin,
-      this.Gis,
-      this.lt,
-      this.lte,
-      this.neq})
-      : super._();
-
+  _$GDateFilter._({
+    this.eq,
+    this.gt,
+    this.gte,
+    this.Gin,
+    this.Gis,
+    this.lt,
+    this.lte,
+    this.neq,
+  }) : super._();
   @override
   GDateFilter rebuild(void Function(GDateFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GDateFilterBuilder toBuilder() => new GDateFilterBuilder()..replace(this);
+  GDateFilterBuilder toBuilder() => GDateFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -6471,19 +12496,19 @@ class GDateFilterBuilder implements Builder<GDateFilter, GDateFilterBuilder> {
   _$GDateFilter? _$v;
 
   GDateBuilder? _eq;
-  GDateBuilder get eq => _$this._eq ??= new GDateBuilder();
+  GDateBuilder get eq => _$this._eq ??= GDateBuilder();
   set eq(GDateBuilder? eq) => _$this._eq = eq;
 
   GDateBuilder? _gt;
-  GDateBuilder get gt => _$this._gt ??= new GDateBuilder();
+  GDateBuilder get gt => _$this._gt ??= GDateBuilder();
   set gt(GDateBuilder? gt) => _$this._gt = gt;
 
   GDateBuilder? _gte;
-  GDateBuilder get gte => _$this._gte ??= new GDateBuilder();
+  GDateBuilder get gte => _$this._gte ??= GDateBuilder();
   set gte(GDateBuilder? gte) => _$this._gte = gte;
 
   ListBuilder<GDate>? _Gin;
-  ListBuilder<GDate> get Gin => _$this._Gin ??= new ListBuilder<GDate>();
+  ListBuilder<GDate> get Gin => _$this._Gin ??= ListBuilder<GDate>();
   set Gin(ListBuilder<GDate>? Gin) => _$this._Gin = Gin;
 
   GFilterIs? _Gis;
@@ -6491,15 +12516,15 @@ class GDateFilterBuilder implements Builder<GDateFilter, GDateFilterBuilder> {
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   GDateBuilder? _lt;
-  GDateBuilder get lt => _$this._lt ??= new GDateBuilder();
+  GDateBuilder get lt => _$this._lt ??= GDateBuilder();
   set lt(GDateBuilder? lt) => _$this._lt = lt;
 
   GDateBuilder? _lte;
-  GDateBuilder get lte => _$this._lte ??= new GDateBuilder();
+  GDateBuilder get lte => _$this._lte ??= GDateBuilder();
   set lte(GDateBuilder? lte) => _$this._lte = lte;
 
   GDateBuilder? _neq;
-  GDateBuilder get neq => _$this._neq ??= new GDateBuilder();
+  GDateBuilder get neq => _$this._neq ??= GDateBuilder();
   set neq(GDateBuilder? neq) => _$this._neq = neq;
 
   GDateFilterBuilder();
@@ -6522,7 +12547,6 @@ class GDateFilterBuilder implements Builder<GDateFilter, GDateFilterBuilder> {
 
   @override
   void replace(GDateFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GDateFilter;
   }
 
@@ -6537,8 +12561,9 @@ class GDateFilterBuilder implements Builder<GDateFilter, GDateFilterBuilder> {
   _$GDateFilter _build() {
     _$GDateFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GDateFilter._(
+      _$result =
+          _$v ??
+          _$GDateFilter._(
             eq: _eq?.build(),
             gt: _gt?.build(),
             gte: _gte?.build(),
@@ -6567,8 +12592,11 @@ class GDateFilterBuilder implements Builder<GDateFilter, GDateFilterBuilder> {
         _$failedField = 'neq';
         _neq?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GDateFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GDateFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -6590,19 +12618,21 @@ class _$GDateListFilter extends GDateListFilter {
   final BuiltList<GDate>? overlaps;
 
   factory _$GDateListFilter([void Function(GDateListFilterBuilder)? updates]) =>
-      (new GDateListFilterBuilder()..update(updates))._build();
+      (GDateListFilterBuilder()..update(updates))._build();
 
-  _$GDateListFilter._(
-      {this.containedBy, this.contains, this.eq, this.Gis, this.overlaps})
-      : super._();
-
+  _$GDateListFilter._({
+    this.containedBy,
+    this.contains,
+    this.eq,
+    this.Gis,
+    this.overlaps,
+  }) : super._();
   @override
   GDateListFilter rebuild(void Function(GDateListFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GDateListFilterBuilder toBuilder() =>
-      new GDateListFilterBuilder()..replace(this);
+  GDateListFilterBuilder toBuilder() => GDateListFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -6645,17 +12675,16 @@ class GDateListFilterBuilder
 
   ListBuilder<GDate>? _containedBy;
   ListBuilder<GDate> get containedBy =>
-      _$this._containedBy ??= new ListBuilder<GDate>();
+      _$this._containedBy ??= ListBuilder<GDate>();
   set containedBy(ListBuilder<GDate>? containedBy) =>
       _$this._containedBy = containedBy;
 
   ListBuilder<GDate>? _contains;
-  ListBuilder<GDate> get contains =>
-      _$this._contains ??= new ListBuilder<GDate>();
+  ListBuilder<GDate> get contains => _$this._contains ??= ListBuilder<GDate>();
   set contains(ListBuilder<GDate>? contains) => _$this._contains = contains;
 
   ListBuilder<GDate>? _eq;
-  ListBuilder<GDate> get eq => _$this._eq ??= new ListBuilder<GDate>();
+  ListBuilder<GDate> get eq => _$this._eq ??= ListBuilder<GDate>();
   set eq(ListBuilder<GDate>? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -6663,8 +12692,7 @@ class GDateListFilterBuilder
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   ListBuilder<GDate>? _overlaps;
-  ListBuilder<GDate> get overlaps =>
-      _$this._overlaps ??= new ListBuilder<GDate>();
+  ListBuilder<GDate> get overlaps => _$this._overlaps ??= ListBuilder<GDate>();
   set overlaps(ListBuilder<GDate>? overlaps) => _$this._overlaps = overlaps;
 
   GDateListFilterBuilder();
@@ -6684,7 +12712,6 @@ class GDateListFilterBuilder
 
   @override
   void replace(GDateListFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GDateListFilter;
   }
 
@@ -6699,8 +12726,9 @@ class GDateListFilterBuilder
   _$GDateListFilter _build() {
     _$GDateListFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GDateListFilter._(
+      _$result =
+          _$v ??
+          _$GDateListFilter._(
             containedBy: _containedBy?.build(),
             contains: _contains?.build(),
             eq: _eq?.build(),
@@ -6720,8 +12748,11 @@ class GDateListFilterBuilder
         _$failedField = 'overlaps';
         _overlaps?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GDateListFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GDateListFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -6735,18 +12766,15 @@ class _$GDatetime extends GDatetime {
   final String value;
 
   factory _$GDatetime([void Function(GDatetimeBuilder)? updates]) =>
-      (new GDatetimeBuilder()..update(updates))._build();
+      (GDatetimeBuilder()..update(updates))._build();
 
-  _$GDatetime._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GDatetime', 'value');
-  }
-
+  _$GDatetime._({required this.value}) : super._();
   @override
   GDatetime rebuild(void Function(GDatetimeBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GDatetimeBuilder toBuilder() => new GDatetimeBuilder()..replace(this);
+  GDatetimeBuilder toBuilder() => GDatetimeBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -6764,8 +12792,9 @@ class _$GDatetime extends GDatetime {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GDatetime')..add('value', value))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GDatetime',
+    )..add('value', value)).toString();
   }
 }
 
@@ -6789,7 +12818,6 @@ class GDatetimeBuilder implements Builder<GDatetime, GDatetimeBuilder> {
 
   @override
   void replace(GDatetime other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GDatetime;
   }
 
@@ -6802,10 +12830,14 @@ class GDatetimeBuilder implements Builder<GDatetime, GDatetimeBuilder> {
   GDatetime build() => _build();
 
   _$GDatetime _build() {
-    final _$result = _$v ??
-        new _$GDatetime._(
+    final _$result =
+        _$v ??
+        _$GDatetime._(
           value: BuiltValueNullFieldError.checkNotNull(
-              value, r'GDatetime', 'value'),
+            value,
+            r'GDatetime',
+            'value',
+          ),
         );
     replace(_$result);
     return _$result;
@@ -6831,26 +12863,24 @@ class _$GDatetimeFilter extends GDatetimeFilter {
   final GDatetime? neq;
 
   factory _$GDatetimeFilter([void Function(GDatetimeFilterBuilder)? updates]) =>
-      (new GDatetimeFilterBuilder()..update(updates))._build();
+      (GDatetimeFilterBuilder()..update(updates))._build();
 
-  _$GDatetimeFilter._(
-      {this.eq,
-      this.gt,
-      this.gte,
-      this.Gin,
-      this.Gis,
-      this.lt,
-      this.lte,
-      this.neq})
-      : super._();
-
+  _$GDatetimeFilter._({
+    this.eq,
+    this.gt,
+    this.gte,
+    this.Gin,
+    this.Gis,
+    this.lt,
+    this.lte,
+    this.neq,
+  }) : super._();
   @override
   GDatetimeFilter rebuild(void Function(GDatetimeFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GDatetimeFilterBuilder toBuilder() =>
-      new GDatetimeFilterBuilder()..replace(this);
+  GDatetimeFilterBuilder toBuilder() => GDatetimeFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -6901,20 +12931,19 @@ class GDatetimeFilterBuilder
   _$GDatetimeFilter? _$v;
 
   GDatetimeBuilder? _eq;
-  GDatetimeBuilder get eq => _$this._eq ??= new GDatetimeBuilder();
+  GDatetimeBuilder get eq => _$this._eq ??= GDatetimeBuilder();
   set eq(GDatetimeBuilder? eq) => _$this._eq = eq;
 
   GDatetimeBuilder? _gt;
-  GDatetimeBuilder get gt => _$this._gt ??= new GDatetimeBuilder();
+  GDatetimeBuilder get gt => _$this._gt ??= GDatetimeBuilder();
   set gt(GDatetimeBuilder? gt) => _$this._gt = gt;
 
   GDatetimeBuilder? _gte;
-  GDatetimeBuilder get gte => _$this._gte ??= new GDatetimeBuilder();
+  GDatetimeBuilder get gte => _$this._gte ??= GDatetimeBuilder();
   set gte(GDatetimeBuilder? gte) => _$this._gte = gte;
 
   ListBuilder<GDatetime>? _Gin;
-  ListBuilder<GDatetime> get Gin =>
-      _$this._Gin ??= new ListBuilder<GDatetime>();
+  ListBuilder<GDatetime> get Gin => _$this._Gin ??= ListBuilder<GDatetime>();
   set Gin(ListBuilder<GDatetime>? Gin) => _$this._Gin = Gin;
 
   GFilterIs? _Gis;
@@ -6922,15 +12951,15 @@ class GDatetimeFilterBuilder
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   GDatetimeBuilder? _lt;
-  GDatetimeBuilder get lt => _$this._lt ??= new GDatetimeBuilder();
+  GDatetimeBuilder get lt => _$this._lt ??= GDatetimeBuilder();
   set lt(GDatetimeBuilder? lt) => _$this._lt = lt;
 
   GDatetimeBuilder? _lte;
-  GDatetimeBuilder get lte => _$this._lte ??= new GDatetimeBuilder();
+  GDatetimeBuilder get lte => _$this._lte ??= GDatetimeBuilder();
   set lte(GDatetimeBuilder? lte) => _$this._lte = lte;
 
   GDatetimeBuilder? _neq;
-  GDatetimeBuilder get neq => _$this._neq ??= new GDatetimeBuilder();
+  GDatetimeBuilder get neq => _$this._neq ??= GDatetimeBuilder();
   set neq(GDatetimeBuilder? neq) => _$this._neq = neq;
 
   GDatetimeFilterBuilder();
@@ -6953,7 +12982,6 @@ class GDatetimeFilterBuilder
 
   @override
   void replace(GDatetimeFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GDatetimeFilter;
   }
 
@@ -6968,8 +12996,9 @@ class GDatetimeFilterBuilder
   _$GDatetimeFilter _build() {
     _$GDatetimeFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GDatetimeFilter._(
+      _$result =
+          _$v ??
+          _$GDatetimeFilter._(
             eq: _eq?.build(),
             gt: _gt?.build(),
             gte: _gte?.build(),
@@ -6998,8 +13027,11 @@ class GDatetimeFilterBuilder
         _$failedField = 'neq';
         _neq?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GDatetimeFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GDatetimeFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -7020,22 +13052,25 @@ class _$GDatetimeListFilter extends GDatetimeListFilter {
   @override
   final BuiltList<GDatetime>? overlaps;
 
-  factory _$GDatetimeListFilter(
-          [void Function(GDatetimeListFilterBuilder)? updates]) =>
-      (new GDatetimeListFilterBuilder()..update(updates))._build();
+  factory _$GDatetimeListFilter([
+    void Function(GDatetimeListFilterBuilder)? updates,
+  ]) => (GDatetimeListFilterBuilder()..update(updates))._build();
 
-  _$GDatetimeListFilter._(
-      {this.containedBy, this.contains, this.eq, this.Gis, this.overlaps})
-      : super._();
-
+  _$GDatetimeListFilter._({
+    this.containedBy,
+    this.contains,
+    this.eq,
+    this.Gis,
+    this.overlaps,
+  }) : super._();
   @override
   GDatetimeListFilter rebuild(
-          void Function(GDatetimeListFilterBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GDatetimeListFilterBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GDatetimeListFilterBuilder toBuilder() =>
-      new GDatetimeListFilterBuilder()..replace(this);
+      GDatetimeListFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -7078,17 +13113,17 @@ class GDatetimeListFilterBuilder
 
   ListBuilder<GDatetime>? _containedBy;
   ListBuilder<GDatetime> get containedBy =>
-      _$this._containedBy ??= new ListBuilder<GDatetime>();
+      _$this._containedBy ??= ListBuilder<GDatetime>();
   set containedBy(ListBuilder<GDatetime>? containedBy) =>
       _$this._containedBy = containedBy;
 
   ListBuilder<GDatetime>? _contains;
   ListBuilder<GDatetime> get contains =>
-      _$this._contains ??= new ListBuilder<GDatetime>();
+      _$this._contains ??= ListBuilder<GDatetime>();
   set contains(ListBuilder<GDatetime>? contains) => _$this._contains = contains;
 
   ListBuilder<GDatetime>? _eq;
-  ListBuilder<GDatetime> get eq => _$this._eq ??= new ListBuilder<GDatetime>();
+  ListBuilder<GDatetime> get eq => _$this._eq ??= ListBuilder<GDatetime>();
   set eq(ListBuilder<GDatetime>? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -7097,7 +13132,7 @@ class GDatetimeListFilterBuilder
 
   ListBuilder<GDatetime>? _overlaps;
   ListBuilder<GDatetime> get overlaps =>
-      _$this._overlaps ??= new ListBuilder<GDatetime>();
+      _$this._overlaps ??= ListBuilder<GDatetime>();
   set overlaps(ListBuilder<GDatetime>? overlaps) => _$this._overlaps = overlaps;
 
   GDatetimeListFilterBuilder();
@@ -7117,7 +13152,6 @@ class GDatetimeListFilterBuilder
 
   @override
   void replace(GDatetimeListFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GDatetimeListFilter;
   }
 
@@ -7132,8 +13166,9 @@ class GDatetimeListFilterBuilder
   _$GDatetimeListFilter _build() {
     _$GDatetimeListFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GDatetimeListFilter._(
+      _$result =
+          _$v ??
+          _$GDatetimeListFilter._(
             containedBy: _containedBy?.build(),
             contains: _contains?.build(),
             eq: _eq?.build(),
@@ -7153,8 +13188,11 @@ class GDatetimeListFilterBuilder
         _$failedField = 'overlaps';
         _overlaps?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GDatetimeListFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GDatetimeListFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -7182,25 +13220,24 @@ class _$GFloatFilter extends GFloatFilter {
   final double? neq;
 
   factory _$GFloatFilter([void Function(GFloatFilterBuilder)? updates]) =>
-      (new GFloatFilterBuilder()..update(updates))._build();
+      (GFloatFilterBuilder()..update(updates))._build();
 
-  _$GFloatFilter._(
-      {this.eq,
-      this.gt,
-      this.gte,
-      this.Gin,
-      this.Gis,
-      this.lt,
-      this.lte,
-      this.neq})
-      : super._();
-
+  _$GFloatFilter._({
+    this.eq,
+    this.gt,
+    this.gte,
+    this.Gin,
+    this.Gis,
+    this.lt,
+    this.lte,
+    this.neq,
+  }) : super._();
   @override
   GFloatFilter rebuild(void Function(GFloatFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GFloatFilterBuilder toBuilder() => new GFloatFilterBuilder()..replace(this);
+  GFloatFilterBuilder toBuilder() => GFloatFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -7263,7 +13300,7 @@ class GFloatFilterBuilder
   set gte(double? gte) => _$this._gte = gte;
 
   ListBuilder<double>? _Gin;
-  ListBuilder<double> get Gin => _$this._Gin ??= new ListBuilder<double>();
+  ListBuilder<double> get Gin => _$this._Gin ??= ListBuilder<double>();
   set Gin(ListBuilder<double>? Gin) => _$this._Gin = Gin;
 
   GFilterIs? _Gis;
@@ -7302,7 +13339,6 @@ class GFloatFilterBuilder
 
   @override
   void replace(GFloatFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GFloatFilter;
   }
 
@@ -7317,8 +13353,9 @@ class GFloatFilterBuilder
   _$GFloatFilter _build() {
     _$GFloatFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GFloatFilter._(
+      _$result =
+          _$v ??
+          _$GFloatFilter._(
             eq: eq,
             gt: gt,
             gte: gte,
@@ -7334,8 +13371,11 @@ class GFloatFilterBuilder
         _$failedField = 'Gin';
         _Gin?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GFloatFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GFloatFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -7356,21 +13396,24 @@ class _$GFloatListFilter extends GFloatListFilter {
   @override
   final BuiltList<double>? overlaps;
 
-  factory _$GFloatListFilter(
-          [void Function(GFloatListFilterBuilder)? updates]) =>
-      (new GFloatListFilterBuilder()..update(updates))._build();
+  factory _$GFloatListFilter([
+    void Function(GFloatListFilterBuilder)? updates,
+  ]) => (GFloatListFilterBuilder()..update(updates))._build();
 
-  _$GFloatListFilter._(
-      {this.containedBy, this.contains, this.eq, this.Gis, this.overlaps})
-      : super._();
-
+  _$GFloatListFilter._({
+    this.containedBy,
+    this.contains,
+    this.eq,
+    this.Gis,
+    this.overlaps,
+  }) : super._();
   @override
   GFloatListFilter rebuild(void Function(GFloatListFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   GFloatListFilterBuilder toBuilder() =>
-      new GFloatListFilterBuilder()..replace(this);
+      GFloatListFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -7413,17 +13456,17 @@ class GFloatListFilterBuilder
 
   ListBuilder<double>? _containedBy;
   ListBuilder<double> get containedBy =>
-      _$this._containedBy ??= new ListBuilder<double>();
+      _$this._containedBy ??= ListBuilder<double>();
   set containedBy(ListBuilder<double>? containedBy) =>
       _$this._containedBy = containedBy;
 
   ListBuilder<double>? _contains;
   ListBuilder<double> get contains =>
-      _$this._contains ??= new ListBuilder<double>();
+      _$this._contains ??= ListBuilder<double>();
   set contains(ListBuilder<double>? contains) => _$this._contains = contains;
 
   ListBuilder<double>? _eq;
-  ListBuilder<double> get eq => _$this._eq ??= new ListBuilder<double>();
+  ListBuilder<double> get eq => _$this._eq ??= ListBuilder<double>();
   set eq(ListBuilder<double>? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -7432,7 +13475,7 @@ class GFloatListFilterBuilder
 
   ListBuilder<double>? _overlaps;
   ListBuilder<double> get overlaps =>
-      _$this._overlaps ??= new ListBuilder<double>();
+      _$this._overlaps ??= ListBuilder<double>();
   set overlaps(ListBuilder<double>? overlaps) => _$this._overlaps = overlaps;
 
   GFloatListFilterBuilder();
@@ -7452,7 +13495,6 @@ class GFloatListFilterBuilder
 
   @override
   void replace(GFloatListFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GFloatListFilter;
   }
 
@@ -7467,8 +13509,9 @@ class GFloatListFilterBuilder
   _$GFloatListFilter _build() {
     _$GFloatListFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GFloatListFilter._(
+      _$result =
+          _$v ??
+          _$GFloatListFilter._(
             containedBy: _containedBy?.build(),
             contains: _contains?.build(),
             eq: _eq?.build(),
@@ -7488,8 +13531,11 @@ class GFloatListFilterBuilder
         _$failedField = 'overlaps';
         _overlaps?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GFloatListFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GFloatListFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -7503,16 +13549,15 @@ class _$GIDFilter extends GIDFilter {
   final String? eq;
 
   factory _$GIDFilter([void Function(GIDFilterBuilder)? updates]) =>
-      (new GIDFilterBuilder()..update(updates))._build();
+      (GIDFilterBuilder()..update(updates))._build();
 
   _$GIDFilter._({this.eq}) : super._();
-
   @override
   GIDFilter rebuild(void Function(GIDFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GIDFilterBuilder toBuilder() => new GIDFilterBuilder()..replace(this);
+  GIDFilterBuilder toBuilder() => GIDFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -7530,8 +13575,9 @@ class _$GIDFilter extends GIDFilter {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GIDFilter')..add('eq', eq))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GIDFilter',
+    )..add('eq', eq)).toString();
   }
 }
 
@@ -7555,7 +13601,6 @@ class GIDFilterBuilder implements Builder<GIDFilter, GIDFilterBuilder> {
 
   @override
   void replace(GIDFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GIDFilter;
   }
 
@@ -7568,10 +13613,7 @@ class GIDFilterBuilder implements Builder<GIDFilter, GIDFilterBuilder> {
   GIDFilter build() => _build();
 
   _$GIDFilter _build() {
-    final _$result = _$v ??
-        new _$GIDFilter._(
-          eq: eq,
-        );
+    final _$result = _$v ?? _$GIDFilter._(eq: eq);
     replace(_$result);
     return _$result;
   }
@@ -7596,25 +13638,24 @@ class _$GIntFilter extends GIntFilter {
   final int? neq;
 
   factory _$GIntFilter([void Function(GIntFilterBuilder)? updates]) =>
-      (new GIntFilterBuilder()..update(updates))._build();
+      (GIntFilterBuilder()..update(updates))._build();
 
-  _$GIntFilter._(
-      {this.eq,
-      this.gt,
-      this.gte,
-      this.Gin,
-      this.Gis,
-      this.lt,
-      this.lte,
-      this.neq})
-      : super._();
-
+  _$GIntFilter._({
+    this.eq,
+    this.gt,
+    this.gte,
+    this.Gin,
+    this.Gis,
+    this.lt,
+    this.lte,
+    this.neq,
+  }) : super._();
   @override
   GIntFilter rebuild(void Function(GIntFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GIntFilterBuilder toBuilder() => new GIntFilterBuilder()..replace(this);
+  GIntFilterBuilder toBuilder() => GIntFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -7676,7 +13717,7 @@ class GIntFilterBuilder implements Builder<GIntFilter, GIntFilterBuilder> {
   set gte(int? gte) => _$this._gte = gte;
 
   ListBuilder<int>? _Gin;
-  ListBuilder<int> get Gin => _$this._Gin ??= new ListBuilder<int>();
+  ListBuilder<int> get Gin => _$this._Gin ??= ListBuilder<int>();
   set Gin(ListBuilder<int>? Gin) => _$this._Gin = Gin;
 
   GFilterIs? _Gis;
@@ -7715,7 +13756,6 @@ class GIntFilterBuilder implements Builder<GIntFilter, GIntFilterBuilder> {
 
   @override
   void replace(GIntFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GIntFilter;
   }
 
@@ -7730,8 +13770,9 @@ class GIntFilterBuilder implements Builder<GIntFilter, GIntFilterBuilder> {
   _$GIntFilter _build() {
     _$GIntFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GIntFilter._(
+      _$result =
+          _$v ??
+          _$GIntFilter._(
             eq: eq,
             gt: gt,
             gte: gte,
@@ -7747,8 +13788,11 @@ class GIntFilterBuilder implements Builder<GIntFilter, GIntFilterBuilder> {
         _$failedField = 'Gin';
         _Gin?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GIntFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GIntFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -7770,19 +13814,21 @@ class _$GIntListFilter extends GIntListFilter {
   final BuiltList<int>? overlaps;
 
   factory _$GIntListFilter([void Function(GIntListFilterBuilder)? updates]) =>
-      (new GIntListFilterBuilder()..update(updates))._build();
+      (GIntListFilterBuilder()..update(updates))._build();
 
-  _$GIntListFilter._(
-      {this.containedBy, this.contains, this.eq, this.Gis, this.overlaps})
-      : super._();
-
+  _$GIntListFilter._({
+    this.containedBy,
+    this.contains,
+    this.eq,
+    this.Gis,
+    this.overlaps,
+  }) : super._();
   @override
   GIntListFilter rebuild(void Function(GIntListFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GIntListFilterBuilder toBuilder() =>
-      new GIntListFilterBuilder()..replace(this);
+  GIntListFilterBuilder toBuilder() => GIntListFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -7825,16 +13871,16 @@ class GIntListFilterBuilder
 
   ListBuilder<int>? _containedBy;
   ListBuilder<int> get containedBy =>
-      _$this._containedBy ??= new ListBuilder<int>();
+      _$this._containedBy ??= ListBuilder<int>();
   set containedBy(ListBuilder<int>? containedBy) =>
       _$this._containedBy = containedBy;
 
   ListBuilder<int>? _contains;
-  ListBuilder<int> get contains => _$this._contains ??= new ListBuilder<int>();
+  ListBuilder<int> get contains => _$this._contains ??= ListBuilder<int>();
   set contains(ListBuilder<int>? contains) => _$this._contains = contains;
 
   ListBuilder<int>? _eq;
-  ListBuilder<int> get eq => _$this._eq ??= new ListBuilder<int>();
+  ListBuilder<int> get eq => _$this._eq ??= ListBuilder<int>();
   set eq(ListBuilder<int>? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -7842,7 +13888,7 @@ class GIntListFilterBuilder
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   ListBuilder<int>? _overlaps;
-  ListBuilder<int> get overlaps => _$this._overlaps ??= new ListBuilder<int>();
+  ListBuilder<int> get overlaps => _$this._overlaps ??= ListBuilder<int>();
   set overlaps(ListBuilder<int>? overlaps) => _$this._overlaps = overlaps;
 
   GIntListFilterBuilder();
@@ -7862,7 +13908,6 @@ class GIntListFilterBuilder
 
   @override
   void replace(GIntListFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GIntListFilter;
   }
 
@@ -7877,8 +13922,9 @@ class GIntListFilterBuilder
   _$GIntListFilter _build() {
     _$GIntListFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GIntListFilter._(
+      _$result =
+          _$v ??
+          _$GIntListFilter._(
             containedBy: _containedBy?.build(),
             contains: _contains?.build(),
             eq: _eq?.build(),
@@ -7898,8 +13944,11 @@ class GIntListFilterBuilder
         _$failedField = 'overlaps';
         _overlaps?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GIntListFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GIntListFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -7913,18 +13962,15 @@ class _$GJSON extends GJSON {
   final String value;
 
   factory _$GJSON([void Function(GJSONBuilder)? updates]) =>
-      (new GJSONBuilder()..update(updates))._build();
+      (GJSONBuilder()..update(updates))._build();
 
-  _$GJSON._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GJSON', 'value');
-  }
-
+  _$GJSON._({required this.value}) : super._();
   @override
   GJSON rebuild(void Function(GJSONBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GJSONBuilder toBuilder() => new GJSONBuilder()..replace(this);
+  GJSONBuilder toBuilder() => GJSONBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -7942,8 +13988,9 @@ class _$GJSON extends GJSON {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GJSON')..add('value', value))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GJSON',
+    )..add('value', value)).toString();
   }
 }
 
@@ -7967,7 +14014,6 @@ class GJSONBuilder implements Builder<GJSON, GJSONBuilder> {
 
   @override
   void replace(GJSON other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GJSON;
   }
 
@@ -7980,10 +14026,14 @@ class GJSONBuilder implements Builder<GJSON, GJSONBuilder> {
   GJSON build() => _build();
 
   _$GJSON _build() {
-    final _$result = _$v ??
-        new _$GJSON._(
-          value:
-              BuiltValueNullFieldError.checkNotNull(value, r'GJSON', 'value'),
+    final _$result =
+        _$v ??
+        _$GJSON._(
+          value: BuiltValueNullFieldError.checkNotNull(
+            value,
+            r'GJSON',
+            'value',
+          ),
         );
     replace(_$result);
     return _$result;
@@ -7995,18 +14045,15 @@ class _$GOpaque extends GOpaque {
   final String value;
 
   factory _$GOpaque([void Function(GOpaqueBuilder)? updates]) =>
-      (new GOpaqueBuilder()..update(updates))._build();
+      (GOpaqueBuilder()..update(updates))._build();
 
-  _$GOpaque._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GOpaque', 'value');
-  }
-
+  _$GOpaque._({required this.value}) : super._();
   @override
   GOpaque rebuild(void Function(GOpaqueBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GOpaqueBuilder toBuilder() => new GOpaqueBuilder()..replace(this);
+  GOpaqueBuilder toBuilder() => GOpaqueBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -8024,8 +14071,9 @@ class _$GOpaque extends GOpaque {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GOpaque')..add('value', value))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GOpaque',
+    )..add('value', value)).toString();
   }
 }
 
@@ -8049,7 +14097,6 @@ class GOpaqueBuilder implements Builder<GOpaque, GOpaqueBuilder> {
 
   @override
   void replace(GOpaque other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GOpaque;
   }
 
@@ -8062,10 +14109,14 @@ class GOpaqueBuilder implements Builder<GOpaque, GOpaqueBuilder> {
   GOpaque build() => _build();
 
   _$GOpaque _build() {
-    final _$result = _$v ??
-        new _$GOpaque._(
-          value:
-              BuiltValueNullFieldError.checkNotNull(value, r'GOpaque', 'value'),
+    final _$result =
+        _$v ??
+        _$GOpaque._(
+          value: BuiltValueNullFieldError.checkNotNull(
+            value,
+            r'GOpaque',
+            'value',
+          ),
         );
     replace(_$result);
     return _$result;
@@ -8079,16 +14130,15 @@ class _$GOpaqueFilter extends GOpaqueFilter {
   final GFilterIs? Gis;
 
   factory _$GOpaqueFilter([void Function(GOpaqueFilterBuilder)? updates]) =>
-      (new GOpaqueFilterBuilder()..update(updates))._build();
+      (GOpaqueFilterBuilder()..update(updates))._build();
 
   _$GOpaqueFilter._({this.eq, this.Gis}) : super._();
-
   @override
   GOpaqueFilter rebuild(void Function(GOpaqueFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GOpaqueFilterBuilder toBuilder() => new GOpaqueFilterBuilder()..replace(this);
+  GOpaqueFilterBuilder toBuilder() => GOpaqueFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -8119,7 +14169,7 @@ class GOpaqueFilterBuilder
   _$GOpaqueFilter? _$v;
 
   GOpaqueBuilder? _eq;
-  GOpaqueBuilder get eq => _$this._eq ??= new GOpaqueBuilder();
+  GOpaqueBuilder get eq => _$this._eq ??= GOpaqueBuilder();
   set eq(GOpaqueBuilder? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -8140,7 +14190,6 @@ class GOpaqueFilterBuilder
 
   @override
   void replace(GOpaqueFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GOpaqueFilter;
   }
 
@@ -8155,19 +14204,18 @@ class GOpaqueFilterBuilder
   _$GOpaqueFilter _build() {
     _$GOpaqueFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GOpaqueFilter._(
-            eq: _eq?.build(),
-            Gis: Gis,
-          );
+      _$result = _$v ?? _$GOpaqueFilter._(eq: _eq?.build(), Gis: Gis);
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'eq';
         _eq?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GOpaqueFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GOpaqueFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -8205,30 +14253,29 @@ class _$GStringFilter extends GStringFilter {
   final String? startsWith;
 
   factory _$GStringFilter([void Function(GStringFilterBuilder)? updates]) =>
-      (new GStringFilterBuilder()..update(updates))._build();
+      (GStringFilterBuilder()..update(updates))._build();
 
-  _$GStringFilter._(
-      {this.eq,
-      this.gt,
-      this.gte,
-      this.ilike,
-      this.Gin,
-      this.iregex,
-      this.Gis,
-      this.like,
-      this.lt,
-      this.lte,
-      this.neq,
-      this.regex,
-      this.startsWith})
-      : super._();
-
+  _$GStringFilter._({
+    this.eq,
+    this.gt,
+    this.gte,
+    this.ilike,
+    this.Gin,
+    this.iregex,
+    this.Gis,
+    this.like,
+    this.lt,
+    this.lte,
+    this.neq,
+    this.regex,
+    this.startsWith,
+  }) : super._();
   @override
   GStringFilter rebuild(void Function(GStringFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GStringFilterBuilder toBuilder() => new GStringFilterBuilder()..replace(this);
+  GStringFilterBuilder toBuilder() => GStringFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -8310,7 +14357,7 @@ class GStringFilterBuilder
   set ilike(String? ilike) => _$this._ilike = ilike;
 
   ListBuilder<String>? _Gin;
-  ListBuilder<String> get Gin => _$this._Gin ??= new ListBuilder<String>();
+  ListBuilder<String> get Gin => _$this._Gin ??= ListBuilder<String>();
   set Gin(ListBuilder<String>? Gin) => _$this._Gin = Gin;
 
   String? _iregex;
@@ -8370,7 +14417,6 @@ class GStringFilterBuilder
 
   @override
   void replace(GStringFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GStringFilter;
   }
 
@@ -8385,8 +14431,9 @@ class GStringFilterBuilder
   _$GStringFilter _build() {
     _$GStringFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GStringFilter._(
+      _$result =
+          _$v ??
+          _$GStringFilter._(
             eq: eq,
             gt: gt,
             gte: gte,
@@ -8407,8 +14454,11 @@ class GStringFilterBuilder
         _$failedField = 'Gin';
         _Gin?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GStringFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GStringFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -8429,21 +14479,24 @@ class _$GStringListFilter extends GStringListFilter {
   @override
   final BuiltList<String>? overlaps;
 
-  factory _$GStringListFilter(
-          [void Function(GStringListFilterBuilder)? updates]) =>
-      (new GStringListFilterBuilder()..update(updates))._build();
+  factory _$GStringListFilter([
+    void Function(GStringListFilterBuilder)? updates,
+  ]) => (GStringListFilterBuilder()..update(updates))._build();
 
-  _$GStringListFilter._(
-      {this.containedBy, this.contains, this.eq, this.Gis, this.overlaps})
-      : super._();
-
+  _$GStringListFilter._({
+    this.containedBy,
+    this.contains,
+    this.eq,
+    this.Gis,
+    this.overlaps,
+  }) : super._();
   @override
   GStringListFilter rebuild(void Function(GStringListFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   GStringListFilterBuilder toBuilder() =>
-      new GStringListFilterBuilder()..replace(this);
+      GStringListFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -8486,17 +14539,17 @@ class GStringListFilterBuilder
 
   ListBuilder<String>? _containedBy;
   ListBuilder<String> get containedBy =>
-      _$this._containedBy ??= new ListBuilder<String>();
+      _$this._containedBy ??= ListBuilder<String>();
   set containedBy(ListBuilder<String>? containedBy) =>
       _$this._containedBy = containedBy;
 
   ListBuilder<String>? _contains;
   ListBuilder<String> get contains =>
-      _$this._contains ??= new ListBuilder<String>();
+      _$this._contains ??= ListBuilder<String>();
   set contains(ListBuilder<String>? contains) => _$this._contains = contains;
 
   ListBuilder<String>? _eq;
-  ListBuilder<String> get eq => _$this._eq ??= new ListBuilder<String>();
+  ListBuilder<String> get eq => _$this._eq ??= ListBuilder<String>();
   set eq(ListBuilder<String>? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -8505,7 +14558,7 @@ class GStringListFilterBuilder
 
   ListBuilder<String>? _overlaps;
   ListBuilder<String> get overlaps =>
-      _$this._overlaps ??= new ListBuilder<String>();
+      _$this._overlaps ??= ListBuilder<String>();
   set overlaps(ListBuilder<String>? overlaps) => _$this._overlaps = overlaps;
 
   GStringListFilterBuilder();
@@ -8525,7 +14578,6 @@ class GStringListFilterBuilder
 
   @override
   void replace(GStringListFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GStringListFilter;
   }
 
@@ -8540,8 +14592,9 @@ class GStringListFilterBuilder
   _$GStringListFilter _build() {
     _$GStringListFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GStringListFilter._(
+      _$result =
+          _$v ??
+          _$GStringListFilter._(
             containedBy: _containedBy?.build(),
             contains: _contains?.build(),
             eq: _eq?.build(),
@@ -8561,8 +14614,11 @@ class GStringListFilterBuilder
         _$failedField = 'overlaps';
         _overlaps?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GStringListFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GStringListFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -8576,18 +14632,15 @@ class _$GTime extends GTime {
   final String value;
 
   factory _$GTime([void Function(GTimeBuilder)? updates]) =>
-      (new GTimeBuilder()..update(updates))._build();
+      (GTimeBuilder()..update(updates))._build();
 
-  _$GTime._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GTime', 'value');
-  }
-
+  _$GTime._({required this.value}) : super._();
   @override
   GTime rebuild(void Function(GTimeBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GTimeBuilder toBuilder() => new GTimeBuilder()..replace(this);
+  GTimeBuilder toBuilder() => GTimeBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -8605,8 +14658,9 @@ class _$GTime extends GTime {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GTime')..add('value', value))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GTime',
+    )..add('value', value)).toString();
   }
 }
 
@@ -8630,7 +14684,6 @@ class GTimeBuilder implements Builder<GTime, GTimeBuilder> {
 
   @override
   void replace(GTime other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GTime;
   }
 
@@ -8643,10 +14696,14 @@ class GTimeBuilder implements Builder<GTime, GTimeBuilder> {
   GTime build() => _build();
 
   _$GTime _build() {
-    final _$result = _$v ??
-        new _$GTime._(
-          value:
-              BuiltValueNullFieldError.checkNotNull(value, r'GTime', 'value'),
+    final _$result =
+        _$v ??
+        _$GTime._(
+          value: BuiltValueNullFieldError.checkNotNull(
+            value,
+            r'GTime',
+            'value',
+          ),
         );
     replace(_$result);
     return _$result;
@@ -8672,25 +14729,24 @@ class _$GTimeFilter extends GTimeFilter {
   final GTime? neq;
 
   factory _$GTimeFilter([void Function(GTimeFilterBuilder)? updates]) =>
-      (new GTimeFilterBuilder()..update(updates))._build();
+      (GTimeFilterBuilder()..update(updates))._build();
 
-  _$GTimeFilter._(
-      {this.eq,
-      this.gt,
-      this.gte,
-      this.Gin,
-      this.Gis,
-      this.lt,
-      this.lte,
-      this.neq})
-      : super._();
-
+  _$GTimeFilter._({
+    this.eq,
+    this.gt,
+    this.gte,
+    this.Gin,
+    this.Gis,
+    this.lt,
+    this.lte,
+    this.neq,
+  }) : super._();
   @override
   GTimeFilter rebuild(void Function(GTimeFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GTimeFilterBuilder toBuilder() => new GTimeFilterBuilder()..replace(this);
+  GTimeFilterBuilder toBuilder() => GTimeFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -8740,19 +14796,19 @@ class GTimeFilterBuilder implements Builder<GTimeFilter, GTimeFilterBuilder> {
   _$GTimeFilter? _$v;
 
   GTimeBuilder? _eq;
-  GTimeBuilder get eq => _$this._eq ??= new GTimeBuilder();
+  GTimeBuilder get eq => _$this._eq ??= GTimeBuilder();
   set eq(GTimeBuilder? eq) => _$this._eq = eq;
 
   GTimeBuilder? _gt;
-  GTimeBuilder get gt => _$this._gt ??= new GTimeBuilder();
+  GTimeBuilder get gt => _$this._gt ??= GTimeBuilder();
   set gt(GTimeBuilder? gt) => _$this._gt = gt;
 
   GTimeBuilder? _gte;
-  GTimeBuilder get gte => _$this._gte ??= new GTimeBuilder();
+  GTimeBuilder get gte => _$this._gte ??= GTimeBuilder();
   set gte(GTimeBuilder? gte) => _$this._gte = gte;
 
   ListBuilder<GTime>? _Gin;
-  ListBuilder<GTime> get Gin => _$this._Gin ??= new ListBuilder<GTime>();
+  ListBuilder<GTime> get Gin => _$this._Gin ??= ListBuilder<GTime>();
   set Gin(ListBuilder<GTime>? Gin) => _$this._Gin = Gin;
 
   GFilterIs? _Gis;
@@ -8760,15 +14816,15 @@ class GTimeFilterBuilder implements Builder<GTimeFilter, GTimeFilterBuilder> {
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   GTimeBuilder? _lt;
-  GTimeBuilder get lt => _$this._lt ??= new GTimeBuilder();
+  GTimeBuilder get lt => _$this._lt ??= GTimeBuilder();
   set lt(GTimeBuilder? lt) => _$this._lt = lt;
 
   GTimeBuilder? _lte;
-  GTimeBuilder get lte => _$this._lte ??= new GTimeBuilder();
+  GTimeBuilder get lte => _$this._lte ??= GTimeBuilder();
   set lte(GTimeBuilder? lte) => _$this._lte = lte;
 
   GTimeBuilder? _neq;
-  GTimeBuilder get neq => _$this._neq ??= new GTimeBuilder();
+  GTimeBuilder get neq => _$this._neq ??= GTimeBuilder();
   set neq(GTimeBuilder? neq) => _$this._neq = neq;
 
   GTimeFilterBuilder();
@@ -8791,7 +14847,6 @@ class GTimeFilterBuilder implements Builder<GTimeFilter, GTimeFilterBuilder> {
 
   @override
   void replace(GTimeFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GTimeFilter;
   }
 
@@ -8806,8 +14861,9 @@ class GTimeFilterBuilder implements Builder<GTimeFilter, GTimeFilterBuilder> {
   _$GTimeFilter _build() {
     _$GTimeFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GTimeFilter._(
+      _$result =
+          _$v ??
+          _$GTimeFilter._(
             eq: _eq?.build(),
             gt: _gt?.build(),
             gte: _gte?.build(),
@@ -8836,8 +14892,11 @@ class GTimeFilterBuilder implements Builder<GTimeFilter, GTimeFilterBuilder> {
         _$failedField = 'neq';
         _neq?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GTimeFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GTimeFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -8859,19 +14918,21 @@ class _$GTimeListFilter extends GTimeListFilter {
   final BuiltList<GTime>? overlaps;
 
   factory _$GTimeListFilter([void Function(GTimeListFilterBuilder)? updates]) =>
-      (new GTimeListFilterBuilder()..update(updates))._build();
+      (GTimeListFilterBuilder()..update(updates))._build();
 
-  _$GTimeListFilter._(
-      {this.containedBy, this.contains, this.eq, this.Gis, this.overlaps})
-      : super._();
-
+  _$GTimeListFilter._({
+    this.containedBy,
+    this.contains,
+    this.eq,
+    this.Gis,
+    this.overlaps,
+  }) : super._();
   @override
   GTimeListFilter rebuild(void Function(GTimeListFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GTimeListFilterBuilder toBuilder() =>
-      new GTimeListFilterBuilder()..replace(this);
+  GTimeListFilterBuilder toBuilder() => GTimeListFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -8914,17 +14975,16 @@ class GTimeListFilterBuilder
 
   ListBuilder<GTime>? _containedBy;
   ListBuilder<GTime> get containedBy =>
-      _$this._containedBy ??= new ListBuilder<GTime>();
+      _$this._containedBy ??= ListBuilder<GTime>();
   set containedBy(ListBuilder<GTime>? containedBy) =>
       _$this._containedBy = containedBy;
 
   ListBuilder<GTime>? _contains;
-  ListBuilder<GTime> get contains =>
-      _$this._contains ??= new ListBuilder<GTime>();
+  ListBuilder<GTime> get contains => _$this._contains ??= ListBuilder<GTime>();
   set contains(ListBuilder<GTime>? contains) => _$this._contains = contains;
 
   ListBuilder<GTime>? _eq;
-  ListBuilder<GTime> get eq => _$this._eq ??= new ListBuilder<GTime>();
+  ListBuilder<GTime> get eq => _$this._eq ??= ListBuilder<GTime>();
   set eq(ListBuilder<GTime>? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -8932,8 +14992,7 @@ class GTimeListFilterBuilder
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   ListBuilder<GTime>? _overlaps;
-  ListBuilder<GTime> get overlaps =>
-      _$this._overlaps ??= new ListBuilder<GTime>();
+  ListBuilder<GTime> get overlaps => _$this._overlaps ??= ListBuilder<GTime>();
   set overlaps(ListBuilder<GTime>? overlaps) => _$this._overlaps = overlaps;
 
   GTimeListFilterBuilder();
@@ -8953,7 +15012,6 @@ class GTimeListFilterBuilder
 
   @override
   void replace(GTimeListFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GTimeListFilter;
   }
 
@@ -8968,8 +15026,9 @@ class GTimeListFilterBuilder
   _$GTimeListFilter _build() {
     _$GTimeListFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GTimeListFilter._(
+      _$result =
+          _$v ??
+          _$GTimeListFilter._(
             containedBy: _containedBy?.build(),
             contains: _contains?.build(),
             eq: _eq?.build(),
@@ -8989,8 +15048,11 @@ class GTimeListFilterBuilder
         _$failedField = 'overlaps';
         _overlaps?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GTimeListFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GTimeListFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -9004,18 +15066,15 @@ class _$GUUID extends GUUID {
   final String value;
 
   factory _$GUUID([void Function(GUUIDBuilder)? updates]) =>
-      (new GUUIDBuilder()..update(updates))._build();
+      (GUUIDBuilder()..update(updates))._build();
 
-  _$GUUID._({required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'GUUID', 'value');
-  }
-
+  _$GUUID._({required this.value}) : super._();
   @override
   GUUID rebuild(void Function(GUUIDBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GUUIDBuilder toBuilder() => new GUUIDBuilder()..replace(this);
+  GUUIDBuilder toBuilder() => GUUIDBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -9033,8 +15092,9 @@ class _$GUUID extends GUUID {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GUUID')..add('value', value))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GUUID',
+    )..add('value', value)).toString();
   }
 }
 
@@ -9058,7 +15118,6 @@ class GUUIDBuilder implements Builder<GUUID, GUUIDBuilder> {
 
   @override
   void replace(GUUID other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GUUID;
   }
 
@@ -9071,10 +15130,14 @@ class GUUIDBuilder implements Builder<GUUID, GUUIDBuilder> {
   GUUID build() => _build();
 
   _$GUUID _build() {
-    final _$result = _$v ??
-        new _$GUUID._(
-          value:
-              BuiltValueNullFieldError.checkNotNull(value, r'GUUID', 'value'),
+    final _$result =
+        _$v ??
+        _$GUUID._(
+          value: BuiltValueNullFieldError.checkNotNull(
+            value,
+            r'GUUID',
+            'value',
+          ),
         );
     replace(_$result);
     return _$result;
@@ -9092,16 +15155,15 @@ class _$GUUIDFilter extends GUUIDFilter {
   final GUUID? neq;
 
   factory _$GUUIDFilter([void Function(GUUIDFilterBuilder)? updates]) =>
-      (new GUUIDFilterBuilder()..update(updates))._build();
+      (GUUIDFilterBuilder()..update(updates))._build();
 
   _$GUUIDFilter._({this.eq, this.Gin, this.Gis, this.neq}) : super._();
-
   @override
   GUUIDFilter rebuild(void Function(GUUIDFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GUUIDFilterBuilder toBuilder() => new GUUIDFilterBuilder()..replace(this);
+  GUUIDFilterBuilder toBuilder() => GUUIDFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -9139,11 +15201,11 @@ class GUUIDFilterBuilder implements Builder<GUUIDFilter, GUUIDFilterBuilder> {
   _$GUUIDFilter? _$v;
 
   GUUIDBuilder? _eq;
-  GUUIDBuilder get eq => _$this._eq ??= new GUUIDBuilder();
+  GUUIDBuilder get eq => _$this._eq ??= GUUIDBuilder();
   set eq(GUUIDBuilder? eq) => _$this._eq = eq;
 
   ListBuilder<GUUID>? _Gin;
-  ListBuilder<GUUID> get Gin => _$this._Gin ??= new ListBuilder<GUUID>();
+  ListBuilder<GUUID> get Gin => _$this._Gin ??= ListBuilder<GUUID>();
   set Gin(ListBuilder<GUUID>? Gin) => _$this._Gin = Gin;
 
   GFilterIs? _Gis;
@@ -9151,7 +15213,7 @@ class GUUIDFilterBuilder implements Builder<GUUIDFilter, GUUIDFilterBuilder> {
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   GUUIDBuilder? _neq;
-  GUUIDBuilder get neq => _$this._neq ??= new GUUIDBuilder();
+  GUUIDBuilder get neq => _$this._neq ??= GUUIDBuilder();
   set neq(GUUIDBuilder? neq) => _$this._neq = neq;
 
   GUUIDFilterBuilder();
@@ -9170,7 +15232,6 @@ class GUUIDFilterBuilder implements Builder<GUUIDFilter, GUUIDFilterBuilder> {
 
   @override
   void replace(GUUIDFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GUUIDFilter;
   }
 
@@ -9185,8 +15246,9 @@ class GUUIDFilterBuilder implements Builder<GUUIDFilter, GUUIDFilterBuilder> {
   _$GUUIDFilter _build() {
     _$GUUIDFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GUUIDFilter._(
+      _$result =
+          _$v ??
+          _$GUUIDFilter._(
             eq: _eq?.build(),
             Gin: _Gin?.build(),
             Gis: Gis,
@@ -9203,8 +15265,11 @@ class GUUIDFilterBuilder implements Builder<GUUIDFilter, GUUIDFilterBuilder> {
         _$failedField = 'neq';
         _neq?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GUUIDFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GUUIDFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -9226,19 +15291,21 @@ class _$GUUIDListFilter extends GUUIDListFilter {
   final BuiltList<GUUID>? overlaps;
 
   factory _$GUUIDListFilter([void Function(GUUIDListFilterBuilder)? updates]) =>
-      (new GUUIDListFilterBuilder()..update(updates))._build();
+      (GUUIDListFilterBuilder()..update(updates))._build();
 
-  _$GUUIDListFilter._(
-      {this.containedBy, this.contains, this.eq, this.Gis, this.overlaps})
-      : super._();
-
+  _$GUUIDListFilter._({
+    this.containedBy,
+    this.contains,
+    this.eq,
+    this.Gis,
+    this.overlaps,
+  }) : super._();
   @override
   GUUIDListFilter rebuild(void Function(GUUIDListFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GUUIDListFilterBuilder toBuilder() =>
-      new GUUIDListFilterBuilder()..replace(this);
+  GUUIDListFilterBuilder toBuilder() => GUUIDListFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -9281,17 +15348,16 @@ class GUUIDListFilterBuilder
 
   ListBuilder<GUUID>? _containedBy;
   ListBuilder<GUUID> get containedBy =>
-      _$this._containedBy ??= new ListBuilder<GUUID>();
+      _$this._containedBy ??= ListBuilder<GUUID>();
   set containedBy(ListBuilder<GUUID>? containedBy) =>
       _$this._containedBy = containedBy;
 
   ListBuilder<GUUID>? _contains;
-  ListBuilder<GUUID> get contains =>
-      _$this._contains ??= new ListBuilder<GUUID>();
+  ListBuilder<GUUID> get contains => _$this._contains ??= ListBuilder<GUUID>();
   set contains(ListBuilder<GUUID>? contains) => _$this._contains = contains;
 
   ListBuilder<GUUID>? _eq;
-  ListBuilder<GUUID> get eq => _$this._eq ??= new ListBuilder<GUUID>();
+  ListBuilder<GUUID> get eq => _$this._eq ??= ListBuilder<GUUID>();
   set eq(ListBuilder<GUUID>? eq) => _$this._eq = eq;
 
   GFilterIs? _Gis;
@@ -9299,8 +15365,7 @@ class GUUIDListFilterBuilder
   set Gis(GFilterIs? Gis) => _$this._Gis = Gis;
 
   ListBuilder<GUUID>? _overlaps;
-  ListBuilder<GUUID> get overlaps =>
-      _$this._overlaps ??= new ListBuilder<GUUID>();
+  ListBuilder<GUUID> get overlaps => _$this._overlaps ??= ListBuilder<GUUID>();
   set overlaps(ListBuilder<GUUID>? overlaps) => _$this._overlaps = overlaps;
 
   GUUIDListFilterBuilder();
@@ -9320,7 +15385,6 @@ class GUUIDListFilterBuilder
 
   @override
   void replace(GUUIDListFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GUUIDListFilter;
   }
 
@@ -9335,8 +15399,9 @@ class GUUIDListFilterBuilder
   _$GUUIDListFilter _build() {
     _$GUUIDListFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GUUIDListFilter._(
+      _$result =
+          _$v ??
+          _$GUUIDListFilter._(
             containedBy: _containedBy?.build(),
             contains: _contains?.build(),
             eq: _eq?.build(),
@@ -9356,8 +15421,1691 @@ class GUUIDListFilterBuilder
         _$failedField = 'overlaps';
         _overlaps?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GUUIDListFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GUUIDListFilter',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GbrandsFilter extends GbrandsFilter {
+  @override
+  final GUUIDFilter? id;
+  @override
+  final GDatetimeFilter? created_at;
+  @override
+  final GStringFilter? name;
+  @override
+  final GStringFilter? slug;
+  @override
+  final GStringFilter? description;
+  @override
+  final GBooleanFilter? is_active;
+  @override
+  final GIDFilter? nodeId;
+  @override
+  final BuiltList<GbrandsFilter>? and;
+  @override
+  final BuiltList<GbrandsFilter>? or;
+  @override
+  final GbrandsFilter? not;
+
+  factory _$GbrandsFilter([void Function(GbrandsFilterBuilder)? updates]) =>
+      (GbrandsFilterBuilder()..update(updates))._build();
+
+  _$GbrandsFilter._({
+    this.id,
+    this.created_at,
+    this.name,
+    this.slug,
+    this.description,
+    this.is_active,
+    this.nodeId,
+    this.and,
+    this.or,
+    this.not,
+  }) : super._();
+  @override
+  GbrandsFilter rebuild(void Function(GbrandsFilterBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GbrandsFilterBuilder toBuilder() => GbrandsFilterBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GbrandsFilter &&
+        id == other.id &&
+        created_at == other.created_at &&
+        name == other.name &&
+        slug == other.slug &&
+        description == other.description &&
+        is_active == other.is_active &&
+        nodeId == other.nodeId &&
+        and == other.and &&
+        or == other.or &&
+        not == other.not;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, slug.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, is_active.hashCode);
+    _$hash = $jc(_$hash, nodeId.hashCode);
+    _$hash = $jc(_$hash, and.hashCode);
+    _$hash = $jc(_$hash, or.hashCode);
+    _$hash = $jc(_$hash, not.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GbrandsFilter')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('name', name)
+          ..add('slug', slug)
+          ..add('description', description)
+          ..add('is_active', is_active)
+          ..add('nodeId', nodeId)
+          ..add('and', and)
+          ..add('or', or)
+          ..add('not', not))
+        .toString();
+  }
+}
+
+class GbrandsFilterBuilder
+    implements Builder<GbrandsFilter, GbrandsFilterBuilder> {
+  _$GbrandsFilter? _$v;
+
+  GUUIDFilterBuilder? _id;
+  GUUIDFilterBuilder get id => _$this._id ??= GUUIDFilterBuilder();
+  set id(GUUIDFilterBuilder? id) => _$this._id = id;
+
+  GDatetimeFilterBuilder? _created_at;
+  GDatetimeFilterBuilder get created_at =>
+      _$this._created_at ??= GDatetimeFilterBuilder();
+  set created_at(GDatetimeFilterBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GStringFilterBuilder? _name;
+  GStringFilterBuilder get name => _$this._name ??= GStringFilterBuilder();
+  set name(GStringFilterBuilder? name) => _$this._name = name;
+
+  GStringFilterBuilder? _slug;
+  GStringFilterBuilder get slug => _$this._slug ??= GStringFilterBuilder();
+  set slug(GStringFilterBuilder? slug) => _$this._slug = slug;
+
+  GStringFilterBuilder? _description;
+  GStringFilterBuilder get description =>
+      _$this._description ??= GStringFilterBuilder();
+  set description(GStringFilterBuilder? description) =>
+      _$this._description = description;
+
+  GBooleanFilterBuilder? _is_active;
+  GBooleanFilterBuilder get is_active =>
+      _$this._is_active ??= GBooleanFilterBuilder();
+  set is_active(GBooleanFilterBuilder? is_active) =>
+      _$this._is_active = is_active;
+
+  GIDFilterBuilder? _nodeId;
+  GIDFilterBuilder get nodeId => _$this._nodeId ??= GIDFilterBuilder();
+  set nodeId(GIDFilterBuilder? nodeId) => _$this._nodeId = nodeId;
+
+  ListBuilder<GbrandsFilter>? _and;
+  ListBuilder<GbrandsFilter> get and =>
+      _$this._and ??= ListBuilder<GbrandsFilter>();
+  set and(ListBuilder<GbrandsFilter>? and) => _$this._and = and;
+
+  ListBuilder<GbrandsFilter>? _or;
+  ListBuilder<GbrandsFilter> get or =>
+      _$this._or ??= ListBuilder<GbrandsFilter>();
+  set or(ListBuilder<GbrandsFilter>? or) => _$this._or = or;
+
+  GbrandsFilterBuilder? _not;
+  GbrandsFilterBuilder get not => _$this._not ??= GbrandsFilterBuilder();
+  set not(GbrandsFilterBuilder? not) => _$this._not = not;
+
+  GbrandsFilterBuilder();
+
+  GbrandsFilterBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _name = $v.name?.toBuilder();
+      _slug = $v.slug?.toBuilder();
+      _description = $v.description?.toBuilder();
+      _is_active = $v.is_active?.toBuilder();
+      _nodeId = $v.nodeId?.toBuilder();
+      _and = $v.and?.toBuilder();
+      _or = $v.or?.toBuilder();
+      _not = $v.not?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GbrandsFilter other) {
+    _$v = other as _$GbrandsFilter;
+  }
+
+  @override
+  void update(void Function(GbrandsFilterBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GbrandsFilter build() => _build();
+
+  _$GbrandsFilter _build() {
+    _$GbrandsFilter _$result;
+    try {
+      _$result =
+          _$v ??
+          _$GbrandsFilter._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            name: _name?.build(),
+            slug: _slug?.build(),
+            description: _description?.build(),
+            is_active: _is_active?.build(),
+            nodeId: _nodeId?.build(),
+            and: _and?.build(),
+            or: _or?.build(),
+            not: _not?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'name';
+        _name?.build();
+        _$failedField = 'slug';
+        _slug?.build();
+        _$failedField = 'description';
+        _description?.build();
+        _$failedField = 'is_active';
+        _is_active?.build();
+        _$failedField = 'nodeId';
+        _nodeId?.build();
+        _$failedField = 'and';
+        _and?.build();
+        _$failedField = 'or';
+        _or?.build();
+        _$failedField = 'not';
+        _not?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'GbrandsFilter',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GbrandsInsertInput extends GbrandsInsertInput {
+  @override
+  final GUUID? id;
+  @override
+  final GDatetime? created_at;
+  @override
+  final String? name;
+  @override
+  final String? slug;
+  @override
+  final String? description;
+  @override
+  final bool? is_active;
+
+  factory _$GbrandsInsertInput([
+    void Function(GbrandsInsertInputBuilder)? updates,
+  ]) => (GbrandsInsertInputBuilder()..update(updates))._build();
+
+  _$GbrandsInsertInput._({
+    this.id,
+    this.created_at,
+    this.name,
+    this.slug,
+    this.description,
+    this.is_active,
+  }) : super._();
+  @override
+  GbrandsInsertInput rebuild(
+    void Function(GbrandsInsertInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
+
+  @override
+  GbrandsInsertInputBuilder toBuilder() =>
+      GbrandsInsertInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GbrandsInsertInput &&
+        id == other.id &&
+        created_at == other.created_at &&
+        name == other.name &&
+        slug == other.slug &&
+        description == other.description &&
+        is_active == other.is_active;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, slug.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, is_active.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GbrandsInsertInput')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('name', name)
+          ..add('slug', slug)
+          ..add('description', description)
+          ..add('is_active', is_active))
+        .toString();
+  }
+}
+
+class GbrandsInsertInputBuilder
+    implements Builder<GbrandsInsertInput, GbrandsInsertInputBuilder> {
+  _$GbrandsInsertInput? _$v;
+
+  GUUIDBuilder? _id;
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
+  set id(GUUIDBuilder? id) => _$this._id = id;
+
+  GDatetimeBuilder? _created_at;
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
+  set created_at(GDatetimeBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  String? _slug;
+  String? get slug => _$this._slug;
+  set slug(String? slug) => _$this._slug = slug;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
+
+  bool? _is_active;
+  bool? get is_active => _$this._is_active;
+  set is_active(bool? is_active) => _$this._is_active = is_active;
+
+  GbrandsInsertInputBuilder();
+
+  GbrandsInsertInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _name = $v.name;
+      _slug = $v.slug;
+      _description = $v.description;
+      _is_active = $v.is_active;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GbrandsInsertInput other) {
+    _$v = other as _$GbrandsInsertInput;
+  }
+
+  @override
+  void update(void Function(GbrandsInsertInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GbrandsInsertInput build() => _build();
+
+  _$GbrandsInsertInput _build() {
+    _$GbrandsInsertInput _$result;
+    try {
+      _$result =
+          _$v ??
+          _$GbrandsInsertInput._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            name: name,
+            slug: slug,
+            description: description,
+            is_active: is_active,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'GbrandsInsertInput',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GbrandsOrderBy extends GbrandsOrderBy {
+  @override
+  final GOrderByDirection? id;
+  @override
+  final GOrderByDirection? created_at;
+  @override
+  final GOrderByDirection? name;
+  @override
+  final GOrderByDirection? slug;
+  @override
+  final GOrderByDirection? description;
+  @override
+  final GOrderByDirection? is_active;
+
+  factory _$GbrandsOrderBy([void Function(GbrandsOrderByBuilder)? updates]) =>
+      (GbrandsOrderByBuilder()..update(updates))._build();
+
+  _$GbrandsOrderBy._({
+    this.id,
+    this.created_at,
+    this.name,
+    this.slug,
+    this.description,
+    this.is_active,
+  }) : super._();
+  @override
+  GbrandsOrderBy rebuild(void Function(GbrandsOrderByBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GbrandsOrderByBuilder toBuilder() => GbrandsOrderByBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GbrandsOrderBy &&
+        id == other.id &&
+        created_at == other.created_at &&
+        name == other.name &&
+        slug == other.slug &&
+        description == other.description &&
+        is_active == other.is_active;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, slug.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, is_active.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GbrandsOrderBy')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('name', name)
+          ..add('slug', slug)
+          ..add('description', description)
+          ..add('is_active', is_active))
+        .toString();
+  }
+}
+
+class GbrandsOrderByBuilder
+    implements Builder<GbrandsOrderBy, GbrandsOrderByBuilder> {
+  _$GbrandsOrderBy? _$v;
+
+  GOrderByDirection? _id;
+  GOrderByDirection? get id => _$this._id;
+  set id(GOrderByDirection? id) => _$this._id = id;
+
+  GOrderByDirection? _created_at;
+  GOrderByDirection? get created_at => _$this._created_at;
+  set created_at(GOrderByDirection? created_at) =>
+      _$this._created_at = created_at;
+
+  GOrderByDirection? _name;
+  GOrderByDirection? get name => _$this._name;
+  set name(GOrderByDirection? name) => _$this._name = name;
+
+  GOrderByDirection? _slug;
+  GOrderByDirection? get slug => _$this._slug;
+  set slug(GOrderByDirection? slug) => _$this._slug = slug;
+
+  GOrderByDirection? _description;
+  GOrderByDirection? get description => _$this._description;
+  set description(GOrderByDirection? description) =>
+      _$this._description = description;
+
+  GOrderByDirection? _is_active;
+  GOrderByDirection? get is_active => _$this._is_active;
+  set is_active(GOrderByDirection? is_active) => _$this._is_active = is_active;
+
+  GbrandsOrderByBuilder();
+
+  GbrandsOrderByBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _created_at = $v.created_at;
+      _name = $v.name;
+      _slug = $v.slug;
+      _description = $v.description;
+      _is_active = $v.is_active;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GbrandsOrderBy other) {
+    _$v = other as _$GbrandsOrderBy;
+  }
+
+  @override
+  void update(void Function(GbrandsOrderByBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GbrandsOrderBy build() => _build();
+
+  _$GbrandsOrderBy _build() {
+    final _$result =
+        _$v ??
+        _$GbrandsOrderBy._(
+          id: id,
+          created_at: created_at,
+          name: name,
+          slug: slug,
+          description: description,
+          is_active: is_active,
+        );
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GbrandsUpdateInput extends GbrandsUpdateInput {
+  @override
+  final GUUID? id;
+  @override
+  final GDatetime? created_at;
+  @override
+  final String? name;
+  @override
+  final String? slug;
+  @override
+  final String? description;
+  @override
+  final bool? is_active;
+
+  factory _$GbrandsUpdateInput([
+    void Function(GbrandsUpdateInputBuilder)? updates,
+  ]) => (GbrandsUpdateInputBuilder()..update(updates))._build();
+
+  _$GbrandsUpdateInput._({
+    this.id,
+    this.created_at,
+    this.name,
+    this.slug,
+    this.description,
+    this.is_active,
+  }) : super._();
+  @override
+  GbrandsUpdateInput rebuild(
+    void Function(GbrandsUpdateInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
+
+  @override
+  GbrandsUpdateInputBuilder toBuilder() =>
+      GbrandsUpdateInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GbrandsUpdateInput &&
+        id == other.id &&
+        created_at == other.created_at &&
+        name == other.name &&
+        slug == other.slug &&
+        description == other.description &&
+        is_active == other.is_active;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, slug.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, is_active.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GbrandsUpdateInput')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('name', name)
+          ..add('slug', slug)
+          ..add('description', description)
+          ..add('is_active', is_active))
+        .toString();
+  }
+}
+
+class GbrandsUpdateInputBuilder
+    implements Builder<GbrandsUpdateInput, GbrandsUpdateInputBuilder> {
+  _$GbrandsUpdateInput? _$v;
+
+  GUUIDBuilder? _id;
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
+  set id(GUUIDBuilder? id) => _$this._id = id;
+
+  GDatetimeBuilder? _created_at;
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
+  set created_at(GDatetimeBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  String? _slug;
+  String? get slug => _$this._slug;
+  set slug(String? slug) => _$this._slug = slug;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
+
+  bool? _is_active;
+  bool? get is_active => _$this._is_active;
+  set is_active(bool? is_active) => _$this._is_active = is_active;
+
+  GbrandsUpdateInputBuilder();
+
+  GbrandsUpdateInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _name = $v.name;
+      _slug = $v.slug;
+      _description = $v.description;
+      _is_active = $v.is_active;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GbrandsUpdateInput other) {
+    _$v = other as _$GbrandsUpdateInput;
+  }
+
+  @override
+  void update(void Function(GbrandsUpdateInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GbrandsUpdateInput build() => _build();
+
+  _$GbrandsUpdateInput _build() {
+    _$GbrandsUpdateInput _$result;
+    try {
+      _$result =
+          _$v ??
+          _$GbrandsUpdateInput._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            name: name,
+            slug: slug,
+            description: description,
+            is_active: is_active,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'GbrandsUpdateInput',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GcarsFilter extends GcarsFilter {
+  @override
+  final GUUIDFilter? id;
+  @override
+  final GDatetimeFilter? created_at;
+  @override
+  final GUUIDFilter? model_id;
+  @override
+  final GIntFilter? year;
+  @override
+  final GStringFilter? generation;
+  @override
+  final GStringFilter? body_type;
+  @override
+  final GStringFilter? engine_type;
+  @override
+  final GStringFilter? transmission_type;
+  @override
+  final GStringFilter? drivetrain;
+  @override
+  final GStringFilter? trim;
+  @override
+  final GStringFilter? description;
+  @override
+  final GIDFilter? nodeId;
+  @override
+  final BuiltList<GcarsFilter>? and;
+  @override
+  final BuiltList<GcarsFilter>? or;
+  @override
+  final GcarsFilter? not;
+
+  factory _$GcarsFilter([void Function(GcarsFilterBuilder)? updates]) =>
+      (GcarsFilterBuilder()..update(updates))._build();
+
+  _$GcarsFilter._({
+    this.id,
+    this.created_at,
+    this.model_id,
+    this.year,
+    this.generation,
+    this.body_type,
+    this.engine_type,
+    this.transmission_type,
+    this.drivetrain,
+    this.trim,
+    this.description,
+    this.nodeId,
+    this.and,
+    this.or,
+    this.not,
+  }) : super._();
+  @override
+  GcarsFilter rebuild(void Function(GcarsFilterBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GcarsFilterBuilder toBuilder() => GcarsFilterBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GcarsFilter &&
+        id == other.id &&
+        created_at == other.created_at &&
+        model_id == other.model_id &&
+        year == other.year &&
+        generation == other.generation &&
+        body_type == other.body_type &&
+        engine_type == other.engine_type &&
+        transmission_type == other.transmission_type &&
+        drivetrain == other.drivetrain &&
+        trim == other.trim &&
+        description == other.description &&
+        nodeId == other.nodeId &&
+        and == other.and &&
+        or == other.or &&
+        not == other.not;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, model_id.hashCode);
+    _$hash = $jc(_$hash, year.hashCode);
+    _$hash = $jc(_$hash, generation.hashCode);
+    _$hash = $jc(_$hash, body_type.hashCode);
+    _$hash = $jc(_$hash, engine_type.hashCode);
+    _$hash = $jc(_$hash, transmission_type.hashCode);
+    _$hash = $jc(_$hash, drivetrain.hashCode);
+    _$hash = $jc(_$hash, trim.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, nodeId.hashCode);
+    _$hash = $jc(_$hash, and.hashCode);
+    _$hash = $jc(_$hash, or.hashCode);
+    _$hash = $jc(_$hash, not.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GcarsFilter')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('model_id', model_id)
+          ..add('year', year)
+          ..add('generation', generation)
+          ..add('body_type', body_type)
+          ..add('engine_type', engine_type)
+          ..add('transmission_type', transmission_type)
+          ..add('drivetrain', drivetrain)
+          ..add('trim', trim)
+          ..add('description', description)
+          ..add('nodeId', nodeId)
+          ..add('and', and)
+          ..add('or', or)
+          ..add('not', not))
+        .toString();
+  }
+}
+
+class GcarsFilterBuilder implements Builder<GcarsFilter, GcarsFilterBuilder> {
+  _$GcarsFilter? _$v;
+
+  GUUIDFilterBuilder? _id;
+  GUUIDFilterBuilder get id => _$this._id ??= GUUIDFilterBuilder();
+  set id(GUUIDFilterBuilder? id) => _$this._id = id;
+
+  GDatetimeFilterBuilder? _created_at;
+  GDatetimeFilterBuilder get created_at =>
+      _$this._created_at ??= GDatetimeFilterBuilder();
+  set created_at(GDatetimeFilterBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GUUIDFilterBuilder? _model_id;
+  GUUIDFilterBuilder get model_id => _$this._model_id ??= GUUIDFilterBuilder();
+  set model_id(GUUIDFilterBuilder? model_id) => _$this._model_id = model_id;
+
+  GIntFilterBuilder? _year;
+  GIntFilterBuilder get year => _$this._year ??= GIntFilterBuilder();
+  set year(GIntFilterBuilder? year) => _$this._year = year;
+
+  GStringFilterBuilder? _generation;
+  GStringFilterBuilder get generation =>
+      _$this._generation ??= GStringFilterBuilder();
+  set generation(GStringFilterBuilder? generation) =>
+      _$this._generation = generation;
+
+  GStringFilterBuilder? _body_type;
+  GStringFilterBuilder get body_type =>
+      _$this._body_type ??= GStringFilterBuilder();
+  set body_type(GStringFilterBuilder? body_type) =>
+      _$this._body_type = body_type;
+
+  GStringFilterBuilder? _engine_type;
+  GStringFilterBuilder get engine_type =>
+      _$this._engine_type ??= GStringFilterBuilder();
+  set engine_type(GStringFilterBuilder? engine_type) =>
+      _$this._engine_type = engine_type;
+
+  GStringFilterBuilder? _transmission_type;
+  GStringFilterBuilder get transmission_type =>
+      _$this._transmission_type ??= GStringFilterBuilder();
+  set transmission_type(GStringFilterBuilder? transmission_type) =>
+      _$this._transmission_type = transmission_type;
+
+  GStringFilterBuilder? _drivetrain;
+  GStringFilterBuilder get drivetrain =>
+      _$this._drivetrain ??= GStringFilterBuilder();
+  set drivetrain(GStringFilterBuilder? drivetrain) =>
+      _$this._drivetrain = drivetrain;
+
+  GStringFilterBuilder? _trim;
+  GStringFilterBuilder get trim => _$this._trim ??= GStringFilterBuilder();
+  set trim(GStringFilterBuilder? trim) => _$this._trim = trim;
+
+  GStringFilterBuilder? _description;
+  GStringFilterBuilder get description =>
+      _$this._description ??= GStringFilterBuilder();
+  set description(GStringFilterBuilder? description) =>
+      _$this._description = description;
+
+  GIDFilterBuilder? _nodeId;
+  GIDFilterBuilder get nodeId => _$this._nodeId ??= GIDFilterBuilder();
+  set nodeId(GIDFilterBuilder? nodeId) => _$this._nodeId = nodeId;
+
+  ListBuilder<GcarsFilter>? _and;
+  ListBuilder<GcarsFilter> get and =>
+      _$this._and ??= ListBuilder<GcarsFilter>();
+  set and(ListBuilder<GcarsFilter>? and) => _$this._and = and;
+
+  ListBuilder<GcarsFilter>? _or;
+  ListBuilder<GcarsFilter> get or => _$this._or ??= ListBuilder<GcarsFilter>();
+  set or(ListBuilder<GcarsFilter>? or) => _$this._or = or;
+
+  GcarsFilterBuilder? _not;
+  GcarsFilterBuilder get not => _$this._not ??= GcarsFilterBuilder();
+  set not(GcarsFilterBuilder? not) => _$this._not = not;
+
+  GcarsFilterBuilder();
+
+  GcarsFilterBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _model_id = $v.model_id?.toBuilder();
+      _year = $v.year?.toBuilder();
+      _generation = $v.generation?.toBuilder();
+      _body_type = $v.body_type?.toBuilder();
+      _engine_type = $v.engine_type?.toBuilder();
+      _transmission_type = $v.transmission_type?.toBuilder();
+      _drivetrain = $v.drivetrain?.toBuilder();
+      _trim = $v.trim?.toBuilder();
+      _description = $v.description?.toBuilder();
+      _nodeId = $v.nodeId?.toBuilder();
+      _and = $v.and?.toBuilder();
+      _or = $v.or?.toBuilder();
+      _not = $v.not?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GcarsFilter other) {
+    _$v = other as _$GcarsFilter;
+  }
+
+  @override
+  void update(void Function(GcarsFilterBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GcarsFilter build() => _build();
+
+  _$GcarsFilter _build() {
+    _$GcarsFilter _$result;
+    try {
+      _$result =
+          _$v ??
+          _$GcarsFilter._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            model_id: _model_id?.build(),
+            year: _year?.build(),
+            generation: _generation?.build(),
+            body_type: _body_type?.build(),
+            engine_type: _engine_type?.build(),
+            transmission_type: _transmission_type?.build(),
+            drivetrain: _drivetrain?.build(),
+            trim: _trim?.build(),
+            description: _description?.build(),
+            nodeId: _nodeId?.build(),
+            and: _and?.build(),
+            or: _or?.build(),
+            not: _not?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'model_id';
+        _model_id?.build();
+        _$failedField = 'year';
+        _year?.build();
+        _$failedField = 'generation';
+        _generation?.build();
+        _$failedField = 'body_type';
+        _body_type?.build();
+        _$failedField = 'engine_type';
+        _engine_type?.build();
+        _$failedField = 'transmission_type';
+        _transmission_type?.build();
+        _$failedField = 'drivetrain';
+        _drivetrain?.build();
+        _$failedField = 'trim';
+        _trim?.build();
+        _$failedField = 'description';
+        _description?.build();
+        _$failedField = 'nodeId';
+        _nodeId?.build();
+        _$failedField = 'and';
+        _and?.build();
+        _$failedField = 'or';
+        _or?.build();
+        _$failedField = 'not';
+        _not?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'GcarsFilter',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GcarsInsertInput extends GcarsInsertInput {
+  @override
+  final GUUID? id;
+  @override
+  final GDatetime? created_at;
+  @override
+  final GUUID? model_id;
+  @override
+  final int? year;
+  @override
+  final String? generation;
+  @override
+  final String? body_type;
+  @override
+  final String? engine_type;
+  @override
+  final String? transmission_type;
+  @override
+  final String? drivetrain;
+  @override
+  final String? trim;
+  @override
+  final String? description;
+
+  factory _$GcarsInsertInput([
+    void Function(GcarsInsertInputBuilder)? updates,
+  ]) => (GcarsInsertInputBuilder()..update(updates))._build();
+
+  _$GcarsInsertInput._({
+    this.id,
+    this.created_at,
+    this.model_id,
+    this.year,
+    this.generation,
+    this.body_type,
+    this.engine_type,
+    this.transmission_type,
+    this.drivetrain,
+    this.trim,
+    this.description,
+  }) : super._();
+  @override
+  GcarsInsertInput rebuild(void Function(GcarsInsertInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GcarsInsertInputBuilder toBuilder() =>
+      GcarsInsertInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GcarsInsertInput &&
+        id == other.id &&
+        created_at == other.created_at &&
+        model_id == other.model_id &&
+        year == other.year &&
+        generation == other.generation &&
+        body_type == other.body_type &&
+        engine_type == other.engine_type &&
+        transmission_type == other.transmission_type &&
+        drivetrain == other.drivetrain &&
+        trim == other.trim &&
+        description == other.description;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, model_id.hashCode);
+    _$hash = $jc(_$hash, year.hashCode);
+    _$hash = $jc(_$hash, generation.hashCode);
+    _$hash = $jc(_$hash, body_type.hashCode);
+    _$hash = $jc(_$hash, engine_type.hashCode);
+    _$hash = $jc(_$hash, transmission_type.hashCode);
+    _$hash = $jc(_$hash, drivetrain.hashCode);
+    _$hash = $jc(_$hash, trim.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GcarsInsertInput')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('model_id', model_id)
+          ..add('year', year)
+          ..add('generation', generation)
+          ..add('body_type', body_type)
+          ..add('engine_type', engine_type)
+          ..add('transmission_type', transmission_type)
+          ..add('drivetrain', drivetrain)
+          ..add('trim', trim)
+          ..add('description', description))
+        .toString();
+  }
+}
+
+class GcarsInsertInputBuilder
+    implements Builder<GcarsInsertInput, GcarsInsertInputBuilder> {
+  _$GcarsInsertInput? _$v;
+
+  GUUIDBuilder? _id;
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
+  set id(GUUIDBuilder? id) => _$this._id = id;
+
+  GDatetimeBuilder? _created_at;
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
+  set created_at(GDatetimeBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GUUIDBuilder? _model_id;
+  GUUIDBuilder get model_id => _$this._model_id ??= GUUIDBuilder();
+  set model_id(GUUIDBuilder? model_id) => _$this._model_id = model_id;
+
+  int? _year;
+  int? get year => _$this._year;
+  set year(int? year) => _$this._year = year;
+
+  String? _generation;
+  String? get generation => _$this._generation;
+  set generation(String? generation) => _$this._generation = generation;
+
+  String? _body_type;
+  String? get body_type => _$this._body_type;
+  set body_type(String? body_type) => _$this._body_type = body_type;
+
+  String? _engine_type;
+  String? get engine_type => _$this._engine_type;
+  set engine_type(String? engine_type) => _$this._engine_type = engine_type;
+
+  String? _transmission_type;
+  String? get transmission_type => _$this._transmission_type;
+  set transmission_type(String? transmission_type) =>
+      _$this._transmission_type = transmission_type;
+
+  String? _drivetrain;
+  String? get drivetrain => _$this._drivetrain;
+  set drivetrain(String? drivetrain) => _$this._drivetrain = drivetrain;
+
+  String? _trim;
+  String? get trim => _$this._trim;
+  set trim(String? trim) => _$this._trim = trim;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
+
+  GcarsInsertInputBuilder();
+
+  GcarsInsertInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _model_id = $v.model_id?.toBuilder();
+      _year = $v.year;
+      _generation = $v.generation;
+      _body_type = $v.body_type;
+      _engine_type = $v.engine_type;
+      _transmission_type = $v.transmission_type;
+      _drivetrain = $v.drivetrain;
+      _trim = $v.trim;
+      _description = $v.description;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GcarsInsertInput other) {
+    _$v = other as _$GcarsInsertInput;
+  }
+
+  @override
+  void update(void Function(GcarsInsertInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GcarsInsertInput build() => _build();
+
+  _$GcarsInsertInput _build() {
+    _$GcarsInsertInput _$result;
+    try {
+      _$result =
+          _$v ??
+          _$GcarsInsertInput._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            model_id: _model_id?.build(),
+            year: year,
+            generation: generation,
+            body_type: body_type,
+            engine_type: engine_type,
+            transmission_type: transmission_type,
+            drivetrain: drivetrain,
+            trim: trim,
+            description: description,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'model_id';
+        _model_id?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'GcarsInsertInput',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GcarsOrderBy extends GcarsOrderBy {
+  @override
+  final GOrderByDirection? id;
+  @override
+  final GOrderByDirection? created_at;
+  @override
+  final GOrderByDirection? model_id;
+  @override
+  final GOrderByDirection? year;
+  @override
+  final GOrderByDirection? generation;
+  @override
+  final GOrderByDirection? body_type;
+  @override
+  final GOrderByDirection? engine_type;
+  @override
+  final GOrderByDirection? transmission_type;
+  @override
+  final GOrderByDirection? drivetrain;
+  @override
+  final GOrderByDirection? trim;
+  @override
+  final GOrderByDirection? description;
+
+  factory _$GcarsOrderBy([void Function(GcarsOrderByBuilder)? updates]) =>
+      (GcarsOrderByBuilder()..update(updates))._build();
+
+  _$GcarsOrderBy._({
+    this.id,
+    this.created_at,
+    this.model_id,
+    this.year,
+    this.generation,
+    this.body_type,
+    this.engine_type,
+    this.transmission_type,
+    this.drivetrain,
+    this.trim,
+    this.description,
+  }) : super._();
+  @override
+  GcarsOrderBy rebuild(void Function(GcarsOrderByBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GcarsOrderByBuilder toBuilder() => GcarsOrderByBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GcarsOrderBy &&
+        id == other.id &&
+        created_at == other.created_at &&
+        model_id == other.model_id &&
+        year == other.year &&
+        generation == other.generation &&
+        body_type == other.body_type &&
+        engine_type == other.engine_type &&
+        transmission_type == other.transmission_type &&
+        drivetrain == other.drivetrain &&
+        trim == other.trim &&
+        description == other.description;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, model_id.hashCode);
+    _$hash = $jc(_$hash, year.hashCode);
+    _$hash = $jc(_$hash, generation.hashCode);
+    _$hash = $jc(_$hash, body_type.hashCode);
+    _$hash = $jc(_$hash, engine_type.hashCode);
+    _$hash = $jc(_$hash, transmission_type.hashCode);
+    _$hash = $jc(_$hash, drivetrain.hashCode);
+    _$hash = $jc(_$hash, trim.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GcarsOrderBy')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('model_id', model_id)
+          ..add('year', year)
+          ..add('generation', generation)
+          ..add('body_type', body_type)
+          ..add('engine_type', engine_type)
+          ..add('transmission_type', transmission_type)
+          ..add('drivetrain', drivetrain)
+          ..add('trim', trim)
+          ..add('description', description))
+        .toString();
+  }
+}
+
+class GcarsOrderByBuilder
+    implements Builder<GcarsOrderBy, GcarsOrderByBuilder> {
+  _$GcarsOrderBy? _$v;
+
+  GOrderByDirection? _id;
+  GOrderByDirection? get id => _$this._id;
+  set id(GOrderByDirection? id) => _$this._id = id;
+
+  GOrderByDirection? _created_at;
+  GOrderByDirection? get created_at => _$this._created_at;
+  set created_at(GOrderByDirection? created_at) =>
+      _$this._created_at = created_at;
+
+  GOrderByDirection? _model_id;
+  GOrderByDirection? get model_id => _$this._model_id;
+  set model_id(GOrderByDirection? model_id) => _$this._model_id = model_id;
+
+  GOrderByDirection? _year;
+  GOrderByDirection? get year => _$this._year;
+  set year(GOrderByDirection? year) => _$this._year = year;
+
+  GOrderByDirection? _generation;
+  GOrderByDirection? get generation => _$this._generation;
+  set generation(GOrderByDirection? generation) =>
+      _$this._generation = generation;
+
+  GOrderByDirection? _body_type;
+  GOrderByDirection? get body_type => _$this._body_type;
+  set body_type(GOrderByDirection? body_type) => _$this._body_type = body_type;
+
+  GOrderByDirection? _engine_type;
+  GOrderByDirection? get engine_type => _$this._engine_type;
+  set engine_type(GOrderByDirection? engine_type) =>
+      _$this._engine_type = engine_type;
+
+  GOrderByDirection? _transmission_type;
+  GOrderByDirection? get transmission_type => _$this._transmission_type;
+  set transmission_type(GOrderByDirection? transmission_type) =>
+      _$this._transmission_type = transmission_type;
+
+  GOrderByDirection? _drivetrain;
+  GOrderByDirection? get drivetrain => _$this._drivetrain;
+  set drivetrain(GOrderByDirection? drivetrain) =>
+      _$this._drivetrain = drivetrain;
+
+  GOrderByDirection? _trim;
+  GOrderByDirection? get trim => _$this._trim;
+  set trim(GOrderByDirection? trim) => _$this._trim = trim;
+
+  GOrderByDirection? _description;
+  GOrderByDirection? get description => _$this._description;
+  set description(GOrderByDirection? description) =>
+      _$this._description = description;
+
+  GcarsOrderByBuilder();
+
+  GcarsOrderByBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _created_at = $v.created_at;
+      _model_id = $v.model_id;
+      _year = $v.year;
+      _generation = $v.generation;
+      _body_type = $v.body_type;
+      _engine_type = $v.engine_type;
+      _transmission_type = $v.transmission_type;
+      _drivetrain = $v.drivetrain;
+      _trim = $v.trim;
+      _description = $v.description;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GcarsOrderBy other) {
+    _$v = other as _$GcarsOrderBy;
+  }
+
+  @override
+  void update(void Function(GcarsOrderByBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GcarsOrderBy build() => _build();
+
+  _$GcarsOrderBy _build() {
+    final _$result =
+        _$v ??
+        _$GcarsOrderBy._(
+          id: id,
+          created_at: created_at,
+          model_id: model_id,
+          year: year,
+          generation: generation,
+          body_type: body_type,
+          engine_type: engine_type,
+          transmission_type: transmission_type,
+          drivetrain: drivetrain,
+          trim: trim,
+          description: description,
+        );
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GcarsUpdateInput extends GcarsUpdateInput {
+  @override
+  final GUUID? id;
+  @override
+  final GDatetime? created_at;
+  @override
+  final GUUID? model_id;
+  @override
+  final int? year;
+  @override
+  final String? generation;
+  @override
+  final String? body_type;
+  @override
+  final String? engine_type;
+  @override
+  final String? transmission_type;
+  @override
+  final String? drivetrain;
+  @override
+  final String? trim;
+  @override
+  final String? description;
+
+  factory _$GcarsUpdateInput([
+    void Function(GcarsUpdateInputBuilder)? updates,
+  ]) => (GcarsUpdateInputBuilder()..update(updates))._build();
+
+  _$GcarsUpdateInput._({
+    this.id,
+    this.created_at,
+    this.model_id,
+    this.year,
+    this.generation,
+    this.body_type,
+    this.engine_type,
+    this.transmission_type,
+    this.drivetrain,
+    this.trim,
+    this.description,
+  }) : super._();
+  @override
+  GcarsUpdateInput rebuild(void Function(GcarsUpdateInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GcarsUpdateInputBuilder toBuilder() =>
+      GcarsUpdateInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GcarsUpdateInput &&
+        id == other.id &&
+        created_at == other.created_at &&
+        model_id == other.model_id &&
+        year == other.year &&
+        generation == other.generation &&
+        body_type == other.body_type &&
+        engine_type == other.engine_type &&
+        transmission_type == other.transmission_type &&
+        drivetrain == other.drivetrain &&
+        trim == other.trim &&
+        description == other.description;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, model_id.hashCode);
+    _$hash = $jc(_$hash, year.hashCode);
+    _$hash = $jc(_$hash, generation.hashCode);
+    _$hash = $jc(_$hash, body_type.hashCode);
+    _$hash = $jc(_$hash, engine_type.hashCode);
+    _$hash = $jc(_$hash, transmission_type.hashCode);
+    _$hash = $jc(_$hash, drivetrain.hashCode);
+    _$hash = $jc(_$hash, trim.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GcarsUpdateInput')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('model_id', model_id)
+          ..add('year', year)
+          ..add('generation', generation)
+          ..add('body_type', body_type)
+          ..add('engine_type', engine_type)
+          ..add('transmission_type', transmission_type)
+          ..add('drivetrain', drivetrain)
+          ..add('trim', trim)
+          ..add('description', description))
+        .toString();
+  }
+}
+
+class GcarsUpdateInputBuilder
+    implements Builder<GcarsUpdateInput, GcarsUpdateInputBuilder> {
+  _$GcarsUpdateInput? _$v;
+
+  GUUIDBuilder? _id;
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
+  set id(GUUIDBuilder? id) => _$this._id = id;
+
+  GDatetimeBuilder? _created_at;
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
+  set created_at(GDatetimeBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GUUIDBuilder? _model_id;
+  GUUIDBuilder get model_id => _$this._model_id ??= GUUIDBuilder();
+  set model_id(GUUIDBuilder? model_id) => _$this._model_id = model_id;
+
+  int? _year;
+  int? get year => _$this._year;
+  set year(int? year) => _$this._year = year;
+
+  String? _generation;
+  String? get generation => _$this._generation;
+  set generation(String? generation) => _$this._generation = generation;
+
+  String? _body_type;
+  String? get body_type => _$this._body_type;
+  set body_type(String? body_type) => _$this._body_type = body_type;
+
+  String? _engine_type;
+  String? get engine_type => _$this._engine_type;
+  set engine_type(String? engine_type) => _$this._engine_type = engine_type;
+
+  String? _transmission_type;
+  String? get transmission_type => _$this._transmission_type;
+  set transmission_type(String? transmission_type) =>
+      _$this._transmission_type = transmission_type;
+
+  String? _drivetrain;
+  String? get drivetrain => _$this._drivetrain;
+  set drivetrain(String? drivetrain) => _$this._drivetrain = drivetrain;
+
+  String? _trim;
+  String? get trim => _$this._trim;
+  set trim(String? trim) => _$this._trim = trim;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
+
+  GcarsUpdateInputBuilder();
+
+  GcarsUpdateInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _model_id = $v.model_id?.toBuilder();
+      _year = $v.year;
+      _generation = $v.generation;
+      _body_type = $v.body_type;
+      _engine_type = $v.engine_type;
+      _transmission_type = $v.transmission_type;
+      _drivetrain = $v.drivetrain;
+      _trim = $v.trim;
+      _description = $v.description;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GcarsUpdateInput other) {
+    _$v = other as _$GcarsUpdateInput;
+  }
+
+  @override
+  void update(void Function(GcarsUpdateInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GcarsUpdateInput build() => _build();
+
+  _$GcarsUpdateInput _build() {
+    _$GcarsUpdateInput _$result;
+    try {
+      _$result =
+          _$v ??
+          _$GcarsUpdateInput._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            model_id: _model_id?.build(),
+            year: year,
+            generation: generation,
+            body_type: body_type,
+            engine_type: engine_type,
+            transmission_type: transmission_type,
+            drivetrain: drivetrain,
+            trim: trim,
+            description: description,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'model_id';
+        _model_id?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'GcarsUpdateInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -9386,30 +17134,29 @@ class _$Gchat_messagesFilter extends Gchat_messagesFilter {
   @override
   final Gchat_messagesFilter? not;
 
-  factory _$Gchat_messagesFilter(
-          [void Function(Gchat_messagesFilterBuilder)? updates]) =>
-      (new Gchat_messagesFilterBuilder()..update(updates))._build();
+  factory _$Gchat_messagesFilter([
+    void Function(Gchat_messagesFilterBuilder)? updates,
+  ]) => (Gchat_messagesFilterBuilder()..update(updates))._build();
 
-  _$Gchat_messagesFilter._(
-      {this.id,
-      this.created_at,
-      this.session_id,
-      this.message,
-      this.sender_type,
-      this.nodeId,
-      this.and,
-      this.or,
-      this.not})
-      : super._();
-
+  _$Gchat_messagesFilter._({
+    this.id,
+    this.created_at,
+    this.session_id,
+    this.message,
+    this.sender_type,
+    this.nodeId,
+    this.and,
+    this.or,
+    this.not,
+  }) : super._();
   @override
   Gchat_messagesFilter rebuild(
-          void Function(Gchat_messagesFilterBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gchat_messagesFilterBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gchat_messagesFilterBuilder toBuilder() =>
-      new Gchat_messagesFilterBuilder()..replace(this);
+      Gchat_messagesFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -9463,49 +17210,49 @@ class Gchat_messagesFilterBuilder
   _$Gchat_messagesFilter? _$v;
 
   GUUIDFilterBuilder? _id;
-  GUUIDFilterBuilder get id => _$this._id ??= new GUUIDFilterBuilder();
+  GUUIDFilterBuilder get id => _$this._id ??= GUUIDFilterBuilder();
   set id(GUUIDFilterBuilder? id) => _$this._id = id;
 
   GDatetimeFilterBuilder? _created_at;
   GDatetimeFilterBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeFilterBuilder();
+      _$this._created_at ??= GDatetimeFilterBuilder();
   set created_at(GDatetimeFilterBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GUUIDFilterBuilder? _session_id;
   GUUIDFilterBuilder get session_id =>
-      _$this._session_id ??= new GUUIDFilterBuilder();
+      _$this._session_id ??= GUUIDFilterBuilder();
   set session_id(GUUIDFilterBuilder? session_id) =>
       _$this._session_id = session_id;
 
   GStringFilterBuilder? _message;
   GStringFilterBuilder get message =>
-      _$this._message ??= new GStringFilterBuilder();
+      _$this._message ??= GStringFilterBuilder();
   set message(GStringFilterBuilder? message) => _$this._message = message;
 
   Gchat_sender_typeFilterBuilder? _sender_type;
   Gchat_sender_typeFilterBuilder get sender_type =>
-      _$this._sender_type ??= new Gchat_sender_typeFilterBuilder();
+      _$this._sender_type ??= Gchat_sender_typeFilterBuilder();
   set sender_type(Gchat_sender_typeFilterBuilder? sender_type) =>
       _$this._sender_type = sender_type;
 
   GIDFilterBuilder? _nodeId;
-  GIDFilterBuilder get nodeId => _$this._nodeId ??= new GIDFilterBuilder();
+  GIDFilterBuilder get nodeId => _$this._nodeId ??= GIDFilterBuilder();
   set nodeId(GIDFilterBuilder? nodeId) => _$this._nodeId = nodeId;
 
   ListBuilder<Gchat_messagesFilter>? _and;
   ListBuilder<Gchat_messagesFilter> get and =>
-      _$this._and ??= new ListBuilder<Gchat_messagesFilter>();
+      _$this._and ??= ListBuilder<Gchat_messagesFilter>();
   set and(ListBuilder<Gchat_messagesFilter>? and) => _$this._and = and;
 
   ListBuilder<Gchat_messagesFilter>? _or;
   ListBuilder<Gchat_messagesFilter> get or =>
-      _$this._or ??= new ListBuilder<Gchat_messagesFilter>();
+      _$this._or ??= ListBuilder<Gchat_messagesFilter>();
   set or(ListBuilder<Gchat_messagesFilter>? or) => _$this._or = or;
 
   Gchat_messagesFilterBuilder? _not;
   Gchat_messagesFilterBuilder get not =>
-      _$this._not ??= new Gchat_messagesFilterBuilder();
+      _$this._not ??= Gchat_messagesFilterBuilder();
   set not(Gchat_messagesFilterBuilder? not) => _$this._not = not;
 
   Gchat_messagesFilterBuilder();
@@ -9529,7 +17276,6 @@ class Gchat_messagesFilterBuilder
 
   @override
   void replace(Gchat_messagesFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gchat_messagesFilter;
   }
 
@@ -9544,8 +17290,9 @@ class Gchat_messagesFilterBuilder
   _$Gchat_messagesFilter _build() {
     _$Gchat_messagesFilter _$result;
     try {
-      _$result = _$v ??
-          new _$Gchat_messagesFilter._(
+      _$result =
+          _$v ??
+          _$Gchat_messagesFilter._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             session_id: _session_id?.build(),
@@ -9578,8 +17325,11 @@ class Gchat_messagesFilterBuilder
         _$failedField = 'not';
         _not?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gchat_messagesFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gchat_messagesFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -9600,26 +17350,25 @@ class _$Gchat_messagesInsertInput extends Gchat_messagesInsertInput {
   @override
   final Gchat_sender_type? sender_type;
 
-  factory _$Gchat_messagesInsertInput(
-          [void Function(Gchat_messagesInsertInputBuilder)? updates]) =>
-      (new Gchat_messagesInsertInputBuilder()..update(updates))._build();
+  factory _$Gchat_messagesInsertInput([
+    void Function(Gchat_messagesInsertInputBuilder)? updates,
+  ]) => (Gchat_messagesInsertInputBuilder()..update(updates))._build();
 
-  _$Gchat_messagesInsertInput._(
-      {this.id,
-      this.created_at,
-      this.session_id,
-      this.message,
-      this.sender_type})
-      : super._();
-
+  _$Gchat_messagesInsertInput._({
+    this.id,
+    this.created_at,
+    this.session_id,
+    this.message,
+    this.sender_type,
+  }) : super._();
   @override
   Gchat_messagesInsertInput rebuild(
-          void Function(Gchat_messagesInsertInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gchat_messagesInsertInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gchat_messagesInsertInputBuilder toBuilder() =>
-      new Gchat_messagesInsertInputBuilder()..replace(this);
+      Gchat_messagesInsertInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -9662,17 +17411,16 @@ class Gchat_messagesInsertInputBuilder
   _$Gchat_messagesInsertInput? _$v;
 
   GUUIDBuilder? _id;
-  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
   set id(GUUIDBuilder? id) => _$this._id = id;
 
   GDatetimeBuilder? _created_at;
-  GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
   set created_at(GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GUUIDBuilder? _session_id;
-  GUUIDBuilder get session_id => _$this._session_id ??= new GUUIDBuilder();
+  GUUIDBuilder get session_id => _$this._session_id ??= GUUIDBuilder();
   set session_id(GUUIDBuilder? session_id) => _$this._session_id = session_id;
 
   String? _message;
@@ -9701,7 +17449,6 @@ class Gchat_messagesInsertInputBuilder
 
   @override
   void replace(Gchat_messagesInsertInput other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gchat_messagesInsertInput;
   }
 
@@ -9716,8 +17463,9 @@ class Gchat_messagesInsertInputBuilder
   _$Gchat_messagesInsertInput _build() {
     _$Gchat_messagesInsertInput _$result;
     try {
-      _$result = _$v ??
-          new _$Gchat_messagesInsertInput._(
+      _$result =
+          _$v ??
+          _$Gchat_messagesInsertInput._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             session_id: _session_id?.build(),
@@ -9734,8 +17482,11 @@ class Gchat_messagesInsertInputBuilder
         _$failedField = 'session_id';
         _session_id?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gchat_messagesInsertInput', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gchat_messagesInsertInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -9756,26 +17507,25 @@ class _$Gchat_messagesOrderBy extends Gchat_messagesOrderBy {
   @override
   final GOrderByDirection? sender_type;
 
-  factory _$Gchat_messagesOrderBy(
-          [void Function(Gchat_messagesOrderByBuilder)? updates]) =>
-      (new Gchat_messagesOrderByBuilder()..update(updates))._build();
+  factory _$Gchat_messagesOrderBy([
+    void Function(Gchat_messagesOrderByBuilder)? updates,
+  ]) => (Gchat_messagesOrderByBuilder()..update(updates))._build();
 
-  _$Gchat_messagesOrderBy._(
-      {this.id,
-      this.created_at,
-      this.session_id,
-      this.message,
-      this.sender_type})
-      : super._();
-
+  _$Gchat_messagesOrderBy._({
+    this.id,
+    this.created_at,
+    this.session_id,
+    this.message,
+    this.sender_type,
+  }) : super._();
   @override
   Gchat_messagesOrderBy rebuild(
-          void Function(Gchat_messagesOrderByBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gchat_messagesOrderByBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gchat_messagesOrderByBuilder toBuilder() =>
-      new Gchat_messagesOrderByBuilder()..replace(this);
+      Gchat_messagesOrderByBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -9856,7 +17606,6 @@ class Gchat_messagesOrderByBuilder
 
   @override
   void replace(Gchat_messagesOrderBy other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gchat_messagesOrderBy;
   }
 
@@ -9869,8 +17618,9 @@ class Gchat_messagesOrderByBuilder
   Gchat_messagesOrderBy build() => _build();
 
   _$Gchat_messagesOrderBy _build() {
-    final _$result = _$v ??
-        new _$Gchat_messagesOrderBy._(
+    final _$result =
+        _$v ??
+        _$Gchat_messagesOrderBy._(
           id: id,
           created_at: created_at,
           session_id: session_id,
@@ -9894,26 +17644,25 @@ class _$Gchat_messagesUpdateInput extends Gchat_messagesUpdateInput {
   @override
   final Gchat_sender_type? sender_type;
 
-  factory _$Gchat_messagesUpdateInput(
-          [void Function(Gchat_messagesUpdateInputBuilder)? updates]) =>
-      (new Gchat_messagesUpdateInputBuilder()..update(updates))._build();
+  factory _$Gchat_messagesUpdateInput([
+    void Function(Gchat_messagesUpdateInputBuilder)? updates,
+  ]) => (Gchat_messagesUpdateInputBuilder()..update(updates))._build();
 
-  _$Gchat_messagesUpdateInput._(
-      {this.id,
-      this.created_at,
-      this.session_id,
-      this.message,
-      this.sender_type})
-      : super._();
-
+  _$Gchat_messagesUpdateInput._({
+    this.id,
+    this.created_at,
+    this.session_id,
+    this.message,
+    this.sender_type,
+  }) : super._();
   @override
   Gchat_messagesUpdateInput rebuild(
-          void Function(Gchat_messagesUpdateInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gchat_messagesUpdateInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gchat_messagesUpdateInputBuilder toBuilder() =>
-      new Gchat_messagesUpdateInputBuilder()..replace(this);
+      Gchat_messagesUpdateInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -9956,17 +17705,16 @@ class Gchat_messagesUpdateInputBuilder
   _$Gchat_messagesUpdateInput? _$v;
 
   GUUIDBuilder? _id;
-  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
   set id(GUUIDBuilder? id) => _$this._id = id;
 
   GDatetimeBuilder? _created_at;
-  GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
   set created_at(GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GUUIDBuilder? _session_id;
-  GUUIDBuilder get session_id => _$this._session_id ??= new GUUIDBuilder();
+  GUUIDBuilder get session_id => _$this._session_id ??= GUUIDBuilder();
   set session_id(GUUIDBuilder? session_id) => _$this._session_id = session_id;
 
   String? _message;
@@ -9995,7 +17743,6 @@ class Gchat_messagesUpdateInputBuilder
 
   @override
   void replace(Gchat_messagesUpdateInput other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gchat_messagesUpdateInput;
   }
 
@@ -10010,8 +17757,9 @@ class Gchat_messagesUpdateInputBuilder
   _$Gchat_messagesUpdateInput _build() {
     _$Gchat_messagesUpdateInput _$result;
     try {
-      _$result = _$v ??
-          new _$Gchat_messagesUpdateInput._(
+      _$result =
+          _$v ??
+          _$Gchat_messagesUpdateInput._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             session_id: _session_id?.build(),
@@ -10028,8 +17776,11 @@ class Gchat_messagesUpdateInputBuilder
         _$failedField = 'session_id';
         _session_id?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gchat_messagesUpdateInput', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gchat_messagesUpdateInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -10048,21 +17799,20 @@ class _$Gchat_sender_typeFilter extends Gchat_sender_typeFilter {
   @override
   final Gchat_sender_type? neq;
 
-  factory _$Gchat_sender_typeFilter(
-          [void Function(Gchat_sender_typeFilterBuilder)? updates]) =>
-      (new Gchat_sender_typeFilterBuilder()..update(updates))._build();
+  factory _$Gchat_sender_typeFilter([
+    void Function(Gchat_sender_typeFilterBuilder)? updates,
+  ]) => (Gchat_sender_typeFilterBuilder()..update(updates))._build();
 
   _$Gchat_sender_typeFilter._({this.eq, this.Gin, this.Gis, this.neq})
-      : super._();
-
+    : super._();
   @override
   Gchat_sender_typeFilter rebuild(
-          void Function(Gchat_sender_typeFilterBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gchat_sender_typeFilterBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gchat_sender_typeFilterBuilder toBuilder() =>
-      new Gchat_sender_typeFilterBuilder()..replace(this);
+      Gchat_sender_typeFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -10107,7 +17857,7 @@ class Gchat_sender_typeFilterBuilder
 
   ListBuilder<Gchat_sender_type>? _Gin;
   ListBuilder<Gchat_sender_type> get Gin =>
-      _$this._Gin ??= new ListBuilder<Gchat_sender_type>();
+      _$this._Gin ??= ListBuilder<Gchat_sender_type>();
   set Gin(ListBuilder<Gchat_sender_type>? Gin) => _$this._Gin = Gin;
 
   GFilterIs? _Gis;
@@ -10134,7 +17884,6 @@ class Gchat_sender_typeFilterBuilder
 
   @override
   void replace(Gchat_sender_typeFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gchat_sender_typeFilter;
   }
 
@@ -10149,8 +17898,9 @@ class Gchat_sender_typeFilterBuilder
   _$Gchat_sender_typeFilter _build() {
     _$Gchat_sender_typeFilter _$result;
     try {
-      _$result = _$v ??
-          new _$Gchat_sender_typeFilter._(
+      _$result =
+          _$v ??
+          _$Gchat_sender_typeFilter._(
             eq: eq,
             Gin: _Gin?.build(),
             Gis: Gis,
@@ -10162,8 +17912,11 @@ class Gchat_sender_typeFilterBuilder
         _$failedField = 'Gin';
         _Gin?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gchat_sender_typeFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gchat_sender_typeFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -10190,29 +17943,28 @@ class _$Gchat_sessionsFilter extends Gchat_sessionsFilter {
   @override
   final Gchat_sessionsFilter? not;
 
-  factory _$Gchat_sessionsFilter(
-          [void Function(Gchat_sessionsFilterBuilder)? updates]) =>
-      (new Gchat_sessionsFilterBuilder()..update(updates))._build();
+  factory _$Gchat_sessionsFilter([
+    void Function(Gchat_sessionsFilterBuilder)? updates,
+  ]) => (Gchat_sessionsFilterBuilder()..update(updates))._build();
 
-  _$Gchat_sessionsFilter._(
-      {this.id,
-      this.created_at,
-      this.updated_at,
-      this.user_id,
-      this.nodeId,
-      this.and,
-      this.or,
-      this.not})
-      : super._();
-
+  _$Gchat_sessionsFilter._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.nodeId,
+    this.and,
+    this.or,
+    this.not,
+  }) : super._();
   @override
   Gchat_sessionsFilter rebuild(
-          void Function(Gchat_sessionsFilterBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gchat_sessionsFilterBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gchat_sessionsFilterBuilder toBuilder() =>
-      new Gchat_sessionsFilterBuilder()..replace(this);
+      Gchat_sessionsFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -10263,43 +18015,42 @@ class Gchat_sessionsFilterBuilder
   _$Gchat_sessionsFilter? _$v;
 
   GUUIDFilterBuilder? _id;
-  GUUIDFilterBuilder get id => _$this._id ??= new GUUIDFilterBuilder();
+  GUUIDFilterBuilder get id => _$this._id ??= GUUIDFilterBuilder();
   set id(GUUIDFilterBuilder? id) => _$this._id = id;
 
   GDatetimeFilterBuilder? _created_at;
   GDatetimeFilterBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeFilterBuilder();
+      _$this._created_at ??= GDatetimeFilterBuilder();
   set created_at(GDatetimeFilterBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GDatetimeFilterBuilder? _updated_at;
   GDatetimeFilterBuilder get updated_at =>
-      _$this._updated_at ??= new GDatetimeFilterBuilder();
+      _$this._updated_at ??= GDatetimeFilterBuilder();
   set updated_at(GDatetimeFilterBuilder? updated_at) =>
       _$this._updated_at = updated_at;
 
   GUUIDFilterBuilder? _user_id;
-  GUUIDFilterBuilder get user_id =>
-      _$this._user_id ??= new GUUIDFilterBuilder();
+  GUUIDFilterBuilder get user_id => _$this._user_id ??= GUUIDFilterBuilder();
   set user_id(GUUIDFilterBuilder? user_id) => _$this._user_id = user_id;
 
   GIDFilterBuilder? _nodeId;
-  GIDFilterBuilder get nodeId => _$this._nodeId ??= new GIDFilterBuilder();
+  GIDFilterBuilder get nodeId => _$this._nodeId ??= GIDFilterBuilder();
   set nodeId(GIDFilterBuilder? nodeId) => _$this._nodeId = nodeId;
 
   ListBuilder<Gchat_sessionsFilter>? _and;
   ListBuilder<Gchat_sessionsFilter> get and =>
-      _$this._and ??= new ListBuilder<Gchat_sessionsFilter>();
+      _$this._and ??= ListBuilder<Gchat_sessionsFilter>();
   set and(ListBuilder<Gchat_sessionsFilter>? and) => _$this._and = and;
 
   ListBuilder<Gchat_sessionsFilter>? _or;
   ListBuilder<Gchat_sessionsFilter> get or =>
-      _$this._or ??= new ListBuilder<Gchat_sessionsFilter>();
+      _$this._or ??= ListBuilder<Gchat_sessionsFilter>();
   set or(ListBuilder<Gchat_sessionsFilter>? or) => _$this._or = or;
 
   Gchat_sessionsFilterBuilder? _not;
   Gchat_sessionsFilterBuilder get not =>
-      _$this._not ??= new Gchat_sessionsFilterBuilder();
+      _$this._not ??= Gchat_sessionsFilterBuilder();
   set not(Gchat_sessionsFilterBuilder? not) => _$this._not = not;
 
   Gchat_sessionsFilterBuilder();
@@ -10322,7 +18073,6 @@ class Gchat_sessionsFilterBuilder
 
   @override
   void replace(Gchat_sessionsFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gchat_sessionsFilter;
   }
 
@@ -10337,8 +18087,9 @@ class Gchat_sessionsFilterBuilder
   _$Gchat_sessionsFilter _build() {
     _$Gchat_sessionsFilter _$result;
     try {
-      _$result = _$v ??
-          new _$Gchat_sessionsFilter._(
+      _$result =
+          _$v ??
+          _$Gchat_sessionsFilter._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             updated_at: _updated_at?.build(),
@@ -10368,8 +18119,11 @@ class Gchat_sessionsFilterBuilder
         _$failedField = 'not';
         _not?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gchat_sessionsFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gchat_sessionsFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -10390,26 +18144,25 @@ class _$Gchat_sessionsInsertInput extends Gchat_sessionsInsertInput {
   @override
   final GJSON? bearing_data;
 
-  factory _$Gchat_sessionsInsertInput(
-          [void Function(Gchat_sessionsInsertInputBuilder)? updates]) =>
-      (new Gchat_sessionsInsertInputBuilder()..update(updates))._build();
+  factory _$Gchat_sessionsInsertInput([
+    void Function(Gchat_sessionsInsertInputBuilder)? updates,
+  ]) => (Gchat_sessionsInsertInputBuilder()..update(updates))._build();
 
-  _$Gchat_sessionsInsertInput._(
-      {this.id,
-      this.created_at,
-      this.updated_at,
-      this.user_id,
-      this.bearing_data})
-      : super._();
-
+  _$Gchat_sessionsInsertInput._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.bearing_data,
+  }) : super._();
   @override
   Gchat_sessionsInsertInput rebuild(
-          void Function(Gchat_sessionsInsertInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gchat_sessionsInsertInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gchat_sessionsInsertInputBuilder toBuilder() =>
-      new Gchat_sessionsInsertInputBuilder()..replace(this);
+      Gchat_sessionsInsertInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -10452,27 +18205,25 @@ class Gchat_sessionsInsertInputBuilder
   _$Gchat_sessionsInsertInput? _$v;
 
   GUUIDBuilder? _id;
-  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
   set id(GUUIDBuilder? id) => _$this._id = id;
 
   GDatetimeBuilder? _created_at;
-  GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
   set created_at(GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GDatetimeBuilder? _updated_at;
-  GDatetimeBuilder get updated_at =>
-      _$this._updated_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get updated_at => _$this._updated_at ??= GDatetimeBuilder();
   set updated_at(GDatetimeBuilder? updated_at) =>
       _$this._updated_at = updated_at;
 
   GUUIDBuilder? _user_id;
-  GUUIDBuilder get user_id => _$this._user_id ??= new GUUIDBuilder();
+  GUUIDBuilder get user_id => _$this._user_id ??= GUUIDBuilder();
   set user_id(GUUIDBuilder? user_id) => _$this._user_id = user_id;
 
   GJSONBuilder? _bearing_data;
-  GJSONBuilder get bearing_data => _$this._bearing_data ??= new GJSONBuilder();
+  GJSONBuilder get bearing_data => _$this._bearing_data ??= GJSONBuilder();
   set bearing_data(GJSONBuilder? bearing_data) =>
       _$this._bearing_data = bearing_data;
 
@@ -10493,7 +18244,6 @@ class Gchat_sessionsInsertInputBuilder
 
   @override
   void replace(Gchat_sessionsInsertInput other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gchat_sessionsInsertInput;
   }
 
@@ -10508,8 +18258,9 @@ class Gchat_sessionsInsertInputBuilder
   _$Gchat_sessionsInsertInput _build() {
     _$Gchat_sessionsInsertInput _$result;
     try {
-      _$result = _$v ??
-          new _$Gchat_sessionsInsertInput._(
+      _$result =
+          _$v ??
+          _$Gchat_sessionsInsertInput._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             updated_at: _updated_at?.build(),
@@ -10530,8 +18281,11 @@ class Gchat_sessionsInsertInputBuilder
         _$failedField = 'bearing_data';
         _bearing_data?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gchat_sessionsInsertInput', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gchat_sessionsInsertInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -10550,22 +18304,24 @@ class _$Gchat_sessionsOrderBy extends Gchat_sessionsOrderBy {
   @override
   final GOrderByDirection? user_id;
 
-  factory _$Gchat_sessionsOrderBy(
-          [void Function(Gchat_sessionsOrderByBuilder)? updates]) =>
-      (new Gchat_sessionsOrderByBuilder()..update(updates))._build();
+  factory _$Gchat_sessionsOrderBy([
+    void Function(Gchat_sessionsOrderByBuilder)? updates,
+  ]) => (Gchat_sessionsOrderByBuilder()..update(updates))._build();
 
-  _$Gchat_sessionsOrderBy._(
-      {this.id, this.created_at, this.updated_at, this.user_id})
-      : super._();
-
+  _$Gchat_sessionsOrderBy._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+  }) : super._();
   @override
   Gchat_sessionsOrderBy rebuild(
-          void Function(Gchat_sessionsOrderByBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gchat_sessionsOrderByBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gchat_sessionsOrderByBuilder toBuilder() =>
-      new Gchat_sessionsOrderByBuilder()..replace(this);
+      Gchat_sessionsOrderByBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -10637,7 +18393,6 @@ class Gchat_sessionsOrderByBuilder
 
   @override
   void replace(Gchat_sessionsOrderBy other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gchat_sessionsOrderBy;
   }
 
@@ -10650,8 +18405,9 @@ class Gchat_sessionsOrderByBuilder
   Gchat_sessionsOrderBy build() => _build();
 
   _$Gchat_sessionsOrderBy _build() {
-    final _$result = _$v ??
-        new _$Gchat_sessionsOrderBy._(
+    final _$result =
+        _$v ??
+        _$Gchat_sessionsOrderBy._(
           id: id,
           created_at: created_at,
           updated_at: updated_at,
@@ -10674,26 +18430,25 @@ class _$Gchat_sessionsUpdateInput extends Gchat_sessionsUpdateInput {
   @override
   final GJSON? bearing_data;
 
-  factory _$Gchat_sessionsUpdateInput(
-          [void Function(Gchat_sessionsUpdateInputBuilder)? updates]) =>
-      (new Gchat_sessionsUpdateInputBuilder()..update(updates))._build();
+  factory _$Gchat_sessionsUpdateInput([
+    void Function(Gchat_sessionsUpdateInputBuilder)? updates,
+  ]) => (Gchat_sessionsUpdateInputBuilder()..update(updates))._build();
 
-  _$Gchat_sessionsUpdateInput._(
-      {this.id,
-      this.created_at,
-      this.updated_at,
-      this.user_id,
-      this.bearing_data})
-      : super._();
-
+  _$Gchat_sessionsUpdateInput._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.bearing_data,
+  }) : super._();
   @override
   Gchat_sessionsUpdateInput rebuild(
-          void Function(Gchat_sessionsUpdateInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gchat_sessionsUpdateInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gchat_sessionsUpdateInputBuilder toBuilder() =>
-      new Gchat_sessionsUpdateInputBuilder()..replace(this);
+      Gchat_sessionsUpdateInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -10736,27 +18491,25 @@ class Gchat_sessionsUpdateInputBuilder
   _$Gchat_sessionsUpdateInput? _$v;
 
   GUUIDBuilder? _id;
-  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
   set id(GUUIDBuilder? id) => _$this._id = id;
 
   GDatetimeBuilder? _created_at;
-  GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
   set created_at(GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GDatetimeBuilder? _updated_at;
-  GDatetimeBuilder get updated_at =>
-      _$this._updated_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get updated_at => _$this._updated_at ??= GDatetimeBuilder();
   set updated_at(GDatetimeBuilder? updated_at) =>
       _$this._updated_at = updated_at;
 
   GUUIDBuilder? _user_id;
-  GUUIDBuilder get user_id => _$this._user_id ??= new GUUIDBuilder();
+  GUUIDBuilder get user_id => _$this._user_id ??= GUUIDBuilder();
   set user_id(GUUIDBuilder? user_id) => _$this._user_id = user_id;
 
   GJSONBuilder? _bearing_data;
-  GJSONBuilder get bearing_data => _$this._bearing_data ??= new GJSONBuilder();
+  GJSONBuilder get bearing_data => _$this._bearing_data ??= GJSONBuilder();
   set bearing_data(GJSONBuilder? bearing_data) =>
       _$this._bearing_data = bearing_data;
 
@@ -10777,7 +18530,6 @@ class Gchat_sessionsUpdateInputBuilder
 
   @override
   void replace(Gchat_sessionsUpdateInput other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gchat_sessionsUpdateInput;
   }
 
@@ -10792,8 +18544,9 @@ class Gchat_sessionsUpdateInputBuilder
   _$Gchat_sessionsUpdateInput _build() {
     _$Gchat_sessionsUpdateInput _$result;
     try {
-      _$result = _$v ??
-          new _$Gchat_sessionsUpdateInput._(
+      _$result =
+          _$v ??
+          _$Gchat_sessionsUpdateInput._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             updated_at: _updated_at?.build(),
@@ -10814,8 +18567,11 @@ class Gchat_sessionsUpdateInputBuilder
         _$failedField = 'bearing_data';
         _bearing_data?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gchat_sessionsUpdateInput', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gchat_sessionsUpdateInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -10846,30 +18602,29 @@ class _$GcompaniesFilter extends GcompaniesFilter {
   @override
   final GcompaniesFilter? not;
 
-  factory _$GcompaniesFilter(
-          [void Function(GcompaniesFilterBuilder)? updates]) =>
-      (new GcompaniesFilterBuilder()..update(updates))._build();
+  factory _$GcompaniesFilter([
+    void Function(GcompaniesFilterBuilder)? updates,
+  ]) => (GcompaniesFilterBuilder()..update(updates))._build();
 
-  _$GcompaniesFilter._(
-      {this.id,
-      this.created_at,
-      this.email,
-      this.name,
-      this.phone,
-      this.address,
-      this.nodeId,
-      this.and,
-      this.or,
-      this.not})
-      : super._();
-
+  _$GcompaniesFilter._({
+    this.id,
+    this.created_at,
+    this.email,
+    this.name,
+    this.phone,
+    this.address,
+    this.nodeId,
+    this.and,
+    this.or,
+    this.not,
+  }) : super._();
   @override
   GcompaniesFilter rebuild(void Function(GcompaniesFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   GcompaniesFilterBuilder toBuilder() =>
-      new GcompaniesFilterBuilder()..replace(this);
+      GcompaniesFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -10926,51 +18681,48 @@ class GcompaniesFilterBuilder
   _$GcompaniesFilter? _$v;
 
   GUUIDFilterBuilder? _id;
-  GUUIDFilterBuilder get id => _$this._id ??= new GUUIDFilterBuilder();
+  GUUIDFilterBuilder get id => _$this._id ??= GUUIDFilterBuilder();
   set id(GUUIDFilterBuilder? id) => _$this._id = id;
 
   GDatetimeFilterBuilder? _created_at;
   GDatetimeFilterBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeFilterBuilder();
+      _$this._created_at ??= GDatetimeFilterBuilder();
   set created_at(GDatetimeFilterBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GStringFilterBuilder? _email;
-  GStringFilterBuilder get email =>
-      _$this._email ??= new GStringFilterBuilder();
+  GStringFilterBuilder get email => _$this._email ??= GStringFilterBuilder();
   set email(GStringFilterBuilder? email) => _$this._email = email;
 
   GStringFilterBuilder? _name;
-  GStringFilterBuilder get name => _$this._name ??= new GStringFilterBuilder();
+  GStringFilterBuilder get name => _$this._name ??= GStringFilterBuilder();
   set name(GStringFilterBuilder? name) => _$this._name = name;
 
   GStringFilterBuilder? _phone;
-  GStringFilterBuilder get phone =>
-      _$this._phone ??= new GStringFilterBuilder();
+  GStringFilterBuilder get phone => _$this._phone ??= GStringFilterBuilder();
   set phone(GStringFilterBuilder? phone) => _$this._phone = phone;
 
   GStringFilterBuilder? _address;
   GStringFilterBuilder get address =>
-      _$this._address ??= new GStringFilterBuilder();
+      _$this._address ??= GStringFilterBuilder();
   set address(GStringFilterBuilder? address) => _$this._address = address;
 
   GIDFilterBuilder? _nodeId;
-  GIDFilterBuilder get nodeId => _$this._nodeId ??= new GIDFilterBuilder();
+  GIDFilterBuilder get nodeId => _$this._nodeId ??= GIDFilterBuilder();
   set nodeId(GIDFilterBuilder? nodeId) => _$this._nodeId = nodeId;
 
   ListBuilder<GcompaniesFilter>? _and;
   ListBuilder<GcompaniesFilter> get and =>
-      _$this._and ??= new ListBuilder<GcompaniesFilter>();
+      _$this._and ??= ListBuilder<GcompaniesFilter>();
   set and(ListBuilder<GcompaniesFilter>? and) => _$this._and = and;
 
   ListBuilder<GcompaniesFilter>? _or;
   ListBuilder<GcompaniesFilter> get or =>
-      _$this._or ??= new ListBuilder<GcompaniesFilter>();
+      _$this._or ??= ListBuilder<GcompaniesFilter>();
   set or(ListBuilder<GcompaniesFilter>? or) => _$this._or = or;
 
   GcompaniesFilterBuilder? _not;
-  GcompaniesFilterBuilder get not =>
-      _$this._not ??= new GcompaniesFilterBuilder();
+  GcompaniesFilterBuilder get not => _$this._not ??= GcompaniesFilterBuilder();
   set not(GcompaniesFilterBuilder? not) => _$this._not = not;
 
   GcompaniesFilterBuilder();
@@ -10995,7 +18747,6 @@ class GcompaniesFilterBuilder
 
   @override
   void replace(GcompaniesFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GcompaniesFilter;
   }
 
@@ -11010,8 +18761,9 @@ class GcompaniesFilterBuilder
   _$GcompaniesFilter _build() {
     _$GcompaniesFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GcompaniesFilter._(
+      _$result =
+          _$v ??
+          _$GcompaniesFilter._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             email: _email?.build(),
@@ -11047,8 +18799,11 @@ class GcompaniesFilterBuilder
         _$failedField = 'not';
         _not?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GcompaniesFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GcompaniesFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -11071,27 +18826,26 @@ class _$GcompaniesInsertInput extends GcompaniesInsertInput {
   @override
   final String? address;
 
-  factory _$GcompaniesInsertInput(
-          [void Function(GcompaniesInsertInputBuilder)? updates]) =>
-      (new GcompaniesInsertInputBuilder()..update(updates))._build();
+  factory _$GcompaniesInsertInput([
+    void Function(GcompaniesInsertInputBuilder)? updates,
+  ]) => (GcompaniesInsertInputBuilder()..update(updates))._build();
 
-  _$GcompaniesInsertInput._(
-      {this.id,
-      this.created_at,
-      this.email,
-      this.name,
-      this.phone,
-      this.address})
-      : super._();
-
+  _$GcompaniesInsertInput._({
+    this.id,
+    this.created_at,
+    this.email,
+    this.name,
+    this.phone,
+    this.address,
+  }) : super._();
   @override
   GcompaniesInsertInput rebuild(
-          void Function(GcompaniesInsertInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GcompaniesInsertInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GcompaniesInsertInputBuilder toBuilder() =>
-      new GcompaniesInsertInputBuilder()..replace(this);
+      GcompaniesInsertInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -11136,12 +18890,11 @@ class GcompaniesInsertInputBuilder
   _$GcompaniesInsertInput? _$v;
 
   GUUIDBuilder? _id;
-  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
   set id(GUUIDBuilder? id) => _$this._id = id;
 
   GDatetimeBuilder? _created_at;
-  GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
   set created_at(GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
@@ -11179,7 +18932,6 @@ class GcompaniesInsertInputBuilder
 
   @override
   void replace(GcompaniesInsertInput other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GcompaniesInsertInput;
   }
 
@@ -11194,8 +18946,9 @@ class GcompaniesInsertInputBuilder
   _$GcompaniesInsertInput _build() {
     _$GcompaniesInsertInput _$result;
     try {
-      _$result = _$v ??
-          new _$GcompaniesInsertInput._(
+      _$result =
+          _$v ??
+          _$GcompaniesInsertInput._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             email: email,
@@ -11211,8 +18964,11 @@ class GcompaniesInsertInputBuilder
         _$failedField = 'created_at';
         _created_at?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GcompaniesInsertInput', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GcompaniesInsertInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -11235,26 +18991,25 @@ class _$GcompaniesOrderBy extends GcompaniesOrderBy {
   @override
   final GOrderByDirection? address;
 
-  factory _$GcompaniesOrderBy(
-          [void Function(GcompaniesOrderByBuilder)? updates]) =>
-      (new GcompaniesOrderByBuilder()..update(updates))._build();
+  factory _$GcompaniesOrderBy([
+    void Function(GcompaniesOrderByBuilder)? updates,
+  ]) => (GcompaniesOrderByBuilder()..update(updates))._build();
 
-  _$GcompaniesOrderBy._(
-      {this.id,
-      this.created_at,
-      this.email,
-      this.name,
-      this.phone,
-      this.address})
-      : super._();
-
+  _$GcompaniesOrderBy._({
+    this.id,
+    this.created_at,
+    this.email,
+    this.name,
+    this.phone,
+    this.address,
+  }) : super._();
   @override
   GcompaniesOrderBy rebuild(void Function(GcompaniesOrderByBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   GcompaniesOrderByBuilder toBuilder() =>
-      new GcompaniesOrderByBuilder()..replace(this);
+      GcompaniesOrderByBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -11341,7 +19096,6 @@ class GcompaniesOrderByBuilder
 
   @override
   void replace(GcompaniesOrderBy other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GcompaniesOrderBy;
   }
 
@@ -11354,8 +19108,9 @@ class GcompaniesOrderByBuilder
   GcompaniesOrderBy build() => _build();
 
   _$GcompaniesOrderBy _build() {
-    final _$result = _$v ??
-        new _$GcompaniesOrderBy._(
+    final _$result =
+        _$v ??
+        _$GcompaniesOrderBy._(
           id: id,
           created_at: created_at,
           email: email,
@@ -11382,27 +19137,26 @@ class _$GcompaniesUpdateInput extends GcompaniesUpdateInput {
   @override
   final String? address;
 
-  factory _$GcompaniesUpdateInput(
-          [void Function(GcompaniesUpdateInputBuilder)? updates]) =>
-      (new GcompaniesUpdateInputBuilder()..update(updates))._build();
+  factory _$GcompaniesUpdateInput([
+    void Function(GcompaniesUpdateInputBuilder)? updates,
+  ]) => (GcompaniesUpdateInputBuilder()..update(updates))._build();
 
-  _$GcompaniesUpdateInput._(
-      {this.id,
-      this.created_at,
-      this.email,
-      this.name,
-      this.phone,
-      this.address})
-      : super._();
-
+  _$GcompaniesUpdateInput._({
+    this.id,
+    this.created_at,
+    this.email,
+    this.name,
+    this.phone,
+    this.address,
+  }) : super._();
   @override
   GcompaniesUpdateInput rebuild(
-          void Function(GcompaniesUpdateInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GcompaniesUpdateInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GcompaniesUpdateInputBuilder toBuilder() =>
-      new GcompaniesUpdateInputBuilder()..replace(this);
+      GcompaniesUpdateInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -11447,12 +19201,11 @@ class GcompaniesUpdateInputBuilder
   _$GcompaniesUpdateInput? _$v;
 
   GUUIDBuilder? _id;
-  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
   set id(GUUIDBuilder? id) => _$this._id = id;
 
   GDatetimeBuilder? _created_at;
-  GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
   set created_at(GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
@@ -11490,7 +19243,6 @@ class GcompaniesUpdateInputBuilder
 
   @override
   void replace(GcompaniesUpdateInput other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GcompaniesUpdateInput;
   }
 
@@ -11505,8 +19257,9 @@ class GcompaniesUpdateInputBuilder
   _$GcompaniesUpdateInput _build() {
     _$GcompaniesUpdateInput _$result;
     try {
-      _$result = _$v ??
-          new _$GcompaniesUpdateInput._(
+      _$result =
+          _$v ??
+          _$GcompaniesUpdateInput._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             email: email,
@@ -11522,8 +19275,773 @@ class GcompaniesUpdateInputBuilder
         _$failedField = 'created_at';
         _created_at?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GcompaniesUpdateInput', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GcompaniesUpdateInput',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GmodelsFilter extends GmodelsFilter {
+  @override
+  final GUUIDFilter? id;
+  @override
+  final GDatetimeFilter? created_at;
+  @override
+  final GUUIDFilter? brand_id;
+  @override
+  final GStringFilter? name;
+  @override
+  final GStringFilter? slug;
+  @override
+  final GStringFilter? description;
+  @override
+  final GBooleanFilter? is_active;
+  @override
+  final GIDFilter? nodeId;
+  @override
+  final BuiltList<GmodelsFilter>? and;
+  @override
+  final BuiltList<GmodelsFilter>? or;
+  @override
+  final GmodelsFilter? not;
+
+  factory _$GmodelsFilter([void Function(GmodelsFilterBuilder)? updates]) =>
+      (GmodelsFilterBuilder()..update(updates))._build();
+
+  _$GmodelsFilter._({
+    this.id,
+    this.created_at,
+    this.brand_id,
+    this.name,
+    this.slug,
+    this.description,
+    this.is_active,
+    this.nodeId,
+    this.and,
+    this.or,
+    this.not,
+  }) : super._();
+  @override
+  GmodelsFilter rebuild(void Function(GmodelsFilterBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GmodelsFilterBuilder toBuilder() => GmodelsFilterBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GmodelsFilter &&
+        id == other.id &&
+        created_at == other.created_at &&
+        brand_id == other.brand_id &&
+        name == other.name &&
+        slug == other.slug &&
+        description == other.description &&
+        is_active == other.is_active &&
+        nodeId == other.nodeId &&
+        and == other.and &&
+        or == other.or &&
+        not == other.not;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, brand_id.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, slug.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, is_active.hashCode);
+    _$hash = $jc(_$hash, nodeId.hashCode);
+    _$hash = $jc(_$hash, and.hashCode);
+    _$hash = $jc(_$hash, or.hashCode);
+    _$hash = $jc(_$hash, not.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GmodelsFilter')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('brand_id', brand_id)
+          ..add('name', name)
+          ..add('slug', slug)
+          ..add('description', description)
+          ..add('is_active', is_active)
+          ..add('nodeId', nodeId)
+          ..add('and', and)
+          ..add('or', or)
+          ..add('not', not))
+        .toString();
+  }
+}
+
+class GmodelsFilterBuilder
+    implements Builder<GmodelsFilter, GmodelsFilterBuilder> {
+  _$GmodelsFilter? _$v;
+
+  GUUIDFilterBuilder? _id;
+  GUUIDFilterBuilder get id => _$this._id ??= GUUIDFilterBuilder();
+  set id(GUUIDFilterBuilder? id) => _$this._id = id;
+
+  GDatetimeFilterBuilder? _created_at;
+  GDatetimeFilterBuilder get created_at =>
+      _$this._created_at ??= GDatetimeFilterBuilder();
+  set created_at(GDatetimeFilterBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GUUIDFilterBuilder? _brand_id;
+  GUUIDFilterBuilder get brand_id => _$this._brand_id ??= GUUIDFilterBuilder();
+  set brand_id(GUUIDFilterBuilder? brand_id) => _$this._brand_id = brand_id;
+
+  GStringFilterBuilder? _name;
+  GStringFilterBuilder get name => _$this._name ??= GStringFilterBuilder();
+  set name(GStringFilterBuilder? name) => _$this._name = name;
+
+  GStringFilterBuilder? _slug;
+  GStringFilterBuilder get slug => _$this._slug ??= GStringFilterBuilder();
+  set slug(GStringFilterBuilder? slug) => _$this._slug = slug;
+
+  GStringFilterBuilder? _description;
+  GStringFilterBuilder get description =>
+      _$this._description ??= GStringFilterBuilder();
+  set description(GStringFilterBuilder? description) =>
+      _$this._description = description;
+
+  GBooleanFilterBuilder? _is_active;
+  GBooleanFilterBuilder get is_active =>
+      _$this._is_active ??= GBooleanFilterBuilder();
+  set is_active(GBooleanFilterBuilder? is_active) =>
+      _$this._is_active = is_active;
+
+  GIDFilterBuilder? _nodeId;
+  GIDFilterBuilder get nodeId => _$this._nodeId ??= GIDFilterBuilder();
+  set nodeId(GIDFilterBuilder? nodeId) => _$this._nodeId = nodeId;
+
+  ListBuilder<GmodelsFilter>? _and;
+  ListBuilder<GmodelsFilter> get and =>
+      _$this._and ??= ListBuilder<GmodelsFilter>();
+  set and(ListBuilder<GmodelsFilter>? and) => _$this._and = and;
+
+  ListBuilder<GmodelsFilter>? _or;
+  ListBuilder<GmodelsFilter> get or =>
+      _$this._or ??= ListBuilder<GmodelsFilter>();
+  set or(ListBuilder<GmodelsFilter>? or) => _$this._or = or;
+
+  GmodelsFilterBuilder? _not;
+  GmodelsFilterBuilder get not => _$this._not ??= GmodelsFilterBuilder();
+  set not(GmodelsFilterBuilder? not) => _$this._not = not;
+
+  GmodelsFilterBuilder();
+
+  GmodelsFilterBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _brand_id = $v.brand_id?.toBuilder();
+      _name = $v.name?.toBuilder();
+      _slug = $v.slug?.toBuilder();
+      _description = $v.description?.toBuilder();
+      _is_active = $v.is_active?.toBuilder();
+      _nodeId = $v.nodeId?.toBuilder();
+      _and = $v.and?.toBuilder();
+      _or = $v.or?.toBuilder();
+      _not = $v.not?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GmodelsFilter other) {
+    _$v = other as _$GmodelsFilter;
+  }
+
+  @override
+  void update(void Function(GmodelsFilterBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GmodelsFilter build() => _build();
+
+  _$GmodelsFilter _build() {
+    _$GmodelsFilter _$result;
+    try {
+      _$result =
+          _$v ??
+          _$GmodelsFilter._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            brand_id: _brand_id?.build(),
+            name: _name?.build(),
+            slug: _slug?.build(),
+            description: _description?.build(),
+            is_active: _is_active?.build(),
+            nodeId: _nodeId?.build(),
+            and: _and?.build(),
+            or: _or?.build(),
+            not: _not?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'brand_id';
+        _brand_id?.build();
+        _$failedField = 'name';
+        _name?.build();
+        _$failedField = 'slug';
+        _slug?.build();
+        _$failedField = 'description';
+        _description?.build();
+        _$failedField = 'is_active';
+        _is_active?.build();
+        _$failedField = 'nodeId';
+        _nodeId?.build();
+        _$failedField = 'and';
+        _and?.build();
+        _$failedField = 'or';
+        _or?.build();
+        _$failedField = 'not';
+        _not?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'GmodelsFilter',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GmodelsInsertInput extends GmodelsInsertInput {
+  @override
+  final GUUID? id;
+  @override
+  final GDatetime? created_at;
+  @override
+  final GUUID? brand_id;
+  @override
+  final String? name;
+  @override
+  final String? slug;
+  @override
+  final String? description;
+  @override
+  final bool? is_active;
+
+  factory _$GmodelsInsertInput([
+    void Function(GmodelsInsertInputBuilder)? updates,
+  ]) => (GmodelsInsertInputBuilder()..update(updates))._build();
+
+  _$GmodelsInsertInput._({
+    this.id,
+    this.created_at,
+    this.brand_id,
+    this.name,
+    this.slug,
+    this.description,
+    this.is_active,
+  }) : super._();
+  @override
+  GmodelsInsertInput rebuild(
+    void Function(GmodelsInsertInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
+
+  @override
+  GmodelsInsertInputBuilder toBuilder() =>
+      GmodelsInsertInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GmodelsInsertInput &&
+        id == other.id &&
+        created_at == other.created_at &&
+        brand_id == other.brand_id &&
+        name == other.name &&
+        slug == other.slug &&
+        description == other.description &&
+        is_active == other.is_active;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, brand_id.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, slug.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, is_active.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GmodelsInsertInput')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('brand_id', brand_id)
+          ..add('name', name)
+          ..add('slug', slug)
+          ..add('description', description)
+          ..add('is_active', is_active))
+        .toString();
+  }
+}
+
+class GmodelsInsertInputBuilder
+    implements Builder<GmodelsInsertInput, GmodelsInsertInputBuilder> {
+  _$GmodelsInsertInput? _$v;
+
+  GUUIDBuilder? _id;
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
+  set id(GUUIDBuilder? id) => _$this._id = id;
+
+  GDatetimeBuilder? _created_at;
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
+  set created_at(GDatetimeBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GUUIDBuilder? _brand_id;
+  GUUIDBuilder get brand_id => _$this._brand_id ??= GUUIDBuilder();
+  set brand_id(GUUIDBuilder? brand_id) => _$this._brand_id = brand_id;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  String? _slug;
+  String? get slug => _$this._slug;
+  set slug(String? slug) => _$this._slug = slug;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
+
+  bool? _is_active;
+  bool? get is_active => _$this._is_active;
+  set is_active(bool? is_active) => _$this._is_active = is_active;
+
+  GmodelsInsertInputBuilder();
+
+  GmodelsInsertInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _brand_id = $v.brand_id?.toBuilder();
+      _name = $v.name;
+      _slug = $v.slug;
+      _description = $v.description;
+      _is_active = $v.is_active;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GmodelsInsertInput other) {
+    _$v = other as _$GmodelsInsertInput;
+  }
+
+  @override
+  void update(void Function(GmodelsInsertInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GmodelsInsertInput build() => _build();
+
+  _$GmodelsInsertInput _build() {
+    _$GmodelsInsertInput _$result;
+    try {
+      _$result =
+          _$v ??
+          _$GmodelsInsertInput._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            brand_id: _brand_id?.build(),
+            name: name,
+            slug: slug,
+            description: description,
+            is_active: is_active,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'brand_id';
+        _brand_id?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'GmodelsInsertInput',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GmodelsOrderBy extends GmodelsOrderBy {
+  @override
+  final GOrderByDirection? id;
+  @override
+  final GOrderByDirection? created_at;
+  @override
+  final GOrderByDirection? brand_id;
+  @override
+  final GOrderByDirection? name;
+  @override
+  final GOrderByDirection? slug;
+  @override
+  final GOrderByDirection? description;
+  @override
+  final GOrderByDirection? is_active;
+
+  factory _$GmodelsOrderBy([void Function(GmodelsOrderByBuilder)? updates]) =>
+      (GmodelsOrderByBuilder()..update(updates))._build();
+
+  _$GmodelsOrderBy._({
+    this.id,
+    this.created_at,
+    this.brand_id,
+    this.name,
+    this.slug,
+    this.description,
+    this.is_active,
+  }) : super._();
+  @override
+  GmodelsOrderBy rebuild(void Function(GmodelsOrderByBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GmodelsOrderByBuilder toBuilder() => GmodelsOrderByBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GmodelsOrderBy &&
+        id == other.id &&
+        created_at == other.created_at &&
+        brand_id == other.brand_id &&
+        name == other.name &&
+        slug == other.slug &&
+        description == other.description &&
+        is_active == other.is_active;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, brand_id.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, slug.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, is_active.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GmodelsOrderBy')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('brand_id', brand_id)
+          ..add('name', name)
+          ..add('slug', slug)
+          ..add('description', description)
+          ..add('is_active', is_active))
+        .toString();
+  }
+}
+
+class GmodelsOrderByBuilder
+    implements Builder<GmodelsOrderBy, GmodelsOrderByBuilder> {
+  _$GmodelsOrderBy? _$v;
+
+  GOrderByDirection? _id;
+  GOrderByDirection? get id => _$this._id;
+  set id(GOrderByDirection? id) => _$this._id = id;
+
+  GOrderByDirection? _created_at;
+  GOrderByDirection? get created_at => _$this._created_at;
+  set created_at(GOrderByDirection? created_at) =>
+      _$this._created_at = created_at;
+
+  GOrderByDirection? _brand_id;
+  GOrderByDirection? get brand_id => _$this._brand_id;
+  set brand_id(GOrderByDirection? brand_id) => _$this._brand_id = brand_id;
+
+  GOrderByDirection? _name;
+  GOrderByDirection? get name => _$this._name;
+  set name(GOrderByDirection? name) => _$this._name = name;
+
+  GOrderByDirection? _slug;
+  GOrderByDirection? get slug => _$this._slug;
+  set slug(GOrderByDirection? slug) => _$this._slug = slug;
+
+  GOrderByDirection? _description;
+  GOrderByDirection? get description => _$this._description;
+  set description(GOrderByDirection? description) =>
+      _$this._description = description;
+
+  GOrderByDirection? _is_active;
+  GOrderByDirection? get is_active => _$this._is_active;
+  set is_active(GOrderByDirection? is_active) => _$this._is_active = is_active;
+
+  GmodelsOrderByBuilder();
+
+  GmodelsOrderByBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _created_at = $v.created_at;
+      _brand_id = $v.brand_id;
+      _name = $v.name;
+      _slug = $v.slug;
+      _description = $v.description;
+      _is_active = $v.is_active;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GmodelsOrderBy other) {
+    _$v = other as _$GmodelsOrderBy;
+  }
+
+  @override
+  void update(void Function(GmodelsOrderByBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GmodelsOrderBy build() => _build();
+
+  _$GmodelsOrderBy _build() {
+    final _$result =
+        _$v ??
+        _$GmodelsOrderBy._(
+          id: id,
+          created_at: created_at,
+          brand_id: brand_id,
+          name: name,
+          slug: slug,
+          description: description,
+          is_active: is_active,
+        );
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GmodelsUpdateInput extends GmodelsUpdateInput {
+  @override
+  final GUUID? id;
+  @override
+  final GDatetime? created_at;
+  @override
+  final GUUID? brand_id;
+  @override
+  final String? name;
+  @override
+  final String? slug;
+  @override
+  final String? description;
+  @override
+  final bool? is_active;
+
+  factory _$GmodelsUpdateInput([
+    void Function(GmodelsUpdateInputBuilder)? updates,
+  ]) => (GmodelsUpdateInputBuilder()..update(updates))._build();
+
+  _$GmodelsUpdateInput._({
+    this.id,
+    this.created_at,
+    this.brand_id,
+    this.name,
+    this.slug,
+    this.description,
+    this.is_active,
+  }) : super._();
+  @override
+  GmodelsUpdateInput rebuild(
+    void Function(GmodelsUpdateInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
+
+  @override
+  GmodelsUpdateInputBuilder toBuilder() =>
+      GmodelsUpdateInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GmodelsUpdateInput &&
+        id == other.id &&
+        created_at == other.created_at &&
+        brand_id == other.brand_id &&
+        name == other.name &&
+        slug == other.slug &&
+        description == other.description &&
+        is_active == other.is_active;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, brand_id.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, slug.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, is_active.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GmodelsUpdateInput')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('brand_id', brand_id)
+          ..add('name', name)
+          ..add('slug', slug)
+          ..add('description', description)
+          ..add('is_active', is_active))
+        .toString();
+  }
+}
+
+class GmodelsUpdateInputBuilder
+    implements Builder<GmodelsUpdateInput, GmodelsUpdateInputBuilder> {
+  _$GmodelsUpdateInput? _$v;
+
+  GUUIDBuilder? _id;
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
+  set id(GUUIDBuilder? id) => _$this._id = id;
+
+  GDatetimeBuilder? _created_at;
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
+  set created_at(GDatetimeBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GUUIDBuilder? _brand_id;
+  GUUIDBuilder get brand_id => _$this._brand_id ??= GUUIDBuilder();
+  set brand_id(GUUIDBuilder? brand_id) => _$this._brand_id = brand_id;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  String? _slug;
+  String? get slug => _$this._slug;
+  set slug(String? slug) => _$this._slug = slug;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
+
+  bool? _is_active;
+  bool? get is_active => _$this._is_active;
+  set is_active(bool? is_active) => _$this._is_active = is_active;
+
+  GmodelsUpdateInputBuilder();
+
+  GmodelsUpdateInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _brand_id = $v.brand_id?.toBuilder();
+      _name = $v.name;
+      _slug = $v.slug;
+      _description = $v.description;
+      _is_active = $v.is_active;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GmodelsUpdateInput other) {
+    _$v = other as _$GmodelsUpdateInput;
+  }
+
+  @override
+  void update(void Function(GmodelsUpdateInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GmodelsUpdateInput build() => _build();
+
+  _$GmodelsUpdateInput _build() {
+    _$GmodelsUpdateInput _$result;
+    try {
+      _$result =
+          _$v ??
+          _$GmodelsUpdateInput._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            brand_id: _brand_id?.build(),
+            name: name,
+            slug: slug,
+            description: description,
+            is_active: is_active,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'brand_id';
+        _brand_id?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'GmodelsUpdateInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -11542,21 +20060,20 @@ class _$Gproduct_categoryFilter extends Gproduct_categoryFilter {
   @override
   final Gproduct_category? neq;
 
-  factory _$Gproduct_categoryFilter(
-          [void Function(Gproduct_categoryFilterBuilder)? updates]) =>
-      (new Gproduct_categoryFilterBuilder()..update(updates))._build();
+  factory _$Gproduct_categoryFilter([
+    void Function(Gproduct_categoryFilterBuilder)? updates,
+  ]) => (Gproduct_categoryFilterBuilder()..update(updates))._build();
 
   _$Gproduct_categoryFilter._({this.eq, this.Gin, this.Gis, this.neq})
-      : super._();
-
+    : super._();
   @override
   Gproduct_categoryFilter rebuild(
-          void Function(Gproduct_categoryFilterBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gproduct_categoryFilterBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gproduct_categoryFilterBuilder toBuilder() =>
-      new Gproduct_categoryFilterBuilder()..replace(this);
+      Gproduct_categoryFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -11601,7 +20118,7 @@ class Gproduct_categoryFilterBuilder
 
   ListBuilder<Gproduct_category>? _Gin;
   ListBuilder<Gproduct_category> get Gin =>
-      _$this._Gin ??= new ListBuilder<Gproduct_category>();
+      _$this._Gin ??= ListBuilder<Gproduct_category>();
   set Gin(ListBuilder<Gproduct_category>? Gin) => _$this._Gin = Gin;
 
   GFilterIs? _Gis;
@@ -11628,7 +20145,6 @@ class Gproduct_categoryFilterBuilder
 
   @override
   void replace(Gproduct_categoryFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gproduct_categoryFilter;
   }
 
@@ -11643,8 +20159,9 @@ class Gproduct_categoryFilterBuilder
   _$Gproduct_categoryFilter _build() {
     _$Gproduct_categoryFilter _$result;
     try {
-      _$result = _$v ??
-          new _$Gproduct_categoryFilter._(
+      _$result =
+          _$v ??
+          _$Gproduct_categoryFilter._(
             eq: eq,
             Gin: _Gin?.build(),
             Gis: Gis,
@@ -11656,8 +20173,11 @@ class Gproduct_categoryFilterBuilder
         _$failedField = 'Gin';
         _Gin?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gproduct_categoryFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gproduct_categoryFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -11696,35 +20216,34 @@ class _$Gproduct_requerimentsFilter extends Gproduct_requerimentsFilter {
   @override
   final Gproduct_requerimentsFilter? not;
 
-  factory _$Gproduct_requerimentsFilter(
-          [void Function(Gproduct_requerimentsFilterBuilder)? updates]) =>
-      (new Gproduct_requerimentsFilterBuilder()..update(updates))._build();
+  factory _$Gproduct_requerimentsFilter([
+    void Function(Gproduct_requerimentsFilterBuilder)? updates,
+  ]) => (Gproduct_requerimentsFilterBuilder()..update(updates))._build();
 
-  _$Gproduct_requerimentsFilter._(
-      {this.id,
-      this.created_at,
-      this.updated_at,
-      this.user_id,
-      this.text,
-      this.audio_path,
-      this.audio_transcription,
-      this.video_path,
-      this.image_path,
-      this.category,
-      this.nodeId,
-      this.and,
-      this.or,
-      this.not})
-      : super._();
-
+  _$Gproduct_requerimentsFilter._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.text,
+    this.audio_path,
+    this.audio_transcription,
+    this.video_path,
+    this.image_path,
+    this.category,
+    this.nodeId,
+    this.and,
+    this.or,
+    this.not,
+  }) : super._();
   @override
   Gproduct_requerimentsFilter rebuild(
-          void Function(Gproduct_requerimentsFilterBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gproduct_requerimentsFilterBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gproduct_requerimentsFilterBuilder toBuilder() =>
-      new Gproduct_requerimentsFilterBuilder()..replace(this);
+      Gproduct_requerimentsFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -11790,82 +20309,83 @@ class _$Gproduct_requerimentsFilter extends Gproduct_requerimentsFilter {
 
 class Gproduct_requerimentsFilterBuilder
     implements
-        Builder<Gproduct_requerimentsFilter,
-            Gproduct_requerimentsFilterBuilder> {
+        Builder<
+          Gproduct_requerimentsFilter,
+          Gproduct_requerimentsFilterBuilder
+        > {
   _$Gproduct_requerimentsFilter? _$v;
 
   GUUIDFilterBuilder? _id;
-  GUUIDFilterBuilder get id => _$this._id ??= new GUUIDFilterBuilder();
+  GUUIDFilterBuilder get id => _$this._id ??= GUUIDFilterBuilder();
   set id(GUUIDFilterBuilder? id) => _$this._id = id;
 
   GDatetimeFilterBuilder? _created_at;
   GDatetimeFilterBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeFilterBuilder();
+      _$this._created_at ??= GDatetimeFilterBuilder();
   set created_at(GDatetimeFilterBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GDatetimeFilterBuilder? _updated_at;
   GDatetimeFilterBuilder get updated_at =>
-      _$this._updated_at ??= new GDatetimeFilterBuilder();
+      _$this._updated_at ??= GDatetimeFilterBuilder();
   set updated_at(GDatetimeFilterBuilder? updated_at) =>
       _$this._updated_at = updated_at;
 
   GUUIDFilterBuilder? _user_id;
-  GUUIDFilterBuilder get user_id =>
-      _$this._user_id ??= new GUUIDFilterBuilder();
+  GUUIDFilterBuilder get user_id => _$this._user_id ??= GUUIDFilterBuilder();
   set user_id(GUUIDFilterBuilder? user_id) => _$this._user_id = user_id;
 
   GStringFilterBuilder? _text;
-  GStringFilterBuilder get text => _$this._text ??= new GStringFilterBuilder();
+  GStringFilterBuilder get text => _$this._text ??= GStringFilterBuilder();
   set text(GStringFilterBuilder? text) => _$this._text = text;
 
   GStringFilterBuilder? _audio_path;
   GStringFilterBuilder get audio_path =>
-      _$this._audio_path ??= new GStringFilterBuilder();
+      _$this._audio_path ??= GStringFilterBuilder();
   set audio_path(GStringFilterBuilder? audio_path) =>
       _$this._audio_path = audio_path;
 
   GStringFilterBuilder? _audio_transcription;
   GStringFilterBuilder get audio_transcription =>
-      _$this._audio_transcription ??= new GStringFilterBuilder();
+      _$this._audio_transcription ??= GStringFilterBuilder();
   set audio_transcription(GStringFilterBuilder? audio_transcription) =>
       _$this._audio_transcription = audio_transcription;
 
   GStringFilterBuilder? _video_path;
   GStringFilterBuilder get video_path =>
-      _$this._video_path ??= new GStringFilterBuilder();
+      _$this._video_path ??= GStringFilterBuilder();
   set video_path(GStringFilterBuilder? video_path) =>
       _$this._video_path = video_path;
 
   GStringFilterBuilder? _image_path;
   GStringFilterBuilder get image_path =>
-      _$this._image_path ??= new GStringFilterBuilder();
+      _$this._image_path ??= GStringFilterBuilder();
   set image_path(GStringFilterBuilder? image_path) =>
       _$this._image_path = image_path;
 
   Gproduct_categoryFilterBuilder? _category;
   Gproduct_categoryFilterBuilder get category =>
-      _$this._category ??= new Gproduct_categoryFilterBuilder();
+      _$this._category ??= Gproduct_categoryFilterBuilder();
   set category(Gproduct_categoryFilterBuilder? category) =>
       _$this._category = category;
 
   GIDFilterBuilder? _nodeId;
-  GIDFilterBuilder get nodeId => _$this._nodeId ??= new GIDFilterBuilder();
+  GIDFilterBuilder get nodeId => _$this._nodeId ??= GIDFilterBuilder();
   set nodeId(GIDFilterBuilder? nodeId) => _$this._nodeId = nodeId;
 
   ListBuilder<Gproduct_requerimentsFilter>? _and;
   ListBuilder<Gproduct_requerimentsFilter> get and =>
-      _$this._and ??= new ListBuilder<Gproduct_requerimentsFilter>();
+      _$this._and ??= ListBuilder<Gproduct_requerimentsFilter>();
   set and(ListBuilder<Gproduct_requerimentsFilter>? and) => _$this._and = and;
 
   ListBuilder<Gproduct_requerimentsFilter>? _or;
   ListBuilder<Gproduct_requerimentsFilter> get or =>
-      _$this._or ??= new ListBuilder<Gproduct_requerimentsFilter>();
+      _$this._or ??= ListBuilder<Gproduct_requerimentsFilter>();
   set or(ListBuilder<Gproduct_requerimentsFilter>? or) => _$this._or = or;
 
   Gproduct_requerimentsFilterBuilder? _not;
   Gproduct_requerimentsFilterBuilder get not =>
-      _$this._not ??= new Gproduct_requerimentsFilterBuilder();
+      _$this._not ??= Gproduct_requerimentsFilterBuilder();
   set not(Gproduct_requerimentsFilterBuilder? not) => _$this._not = not;
 
   Gproduct_requerimentsFilterBuilder();
@@ -11894,7 +20414,6 @@ class Gproduct_requerimentsFilterBuilder
 
   @override
   void replace(Gproduct_requerimentsFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gproduct_requerimentsFilter;
   }
 
@@ -11909,8 +20428,9 @@ class Gproduct_requerimentsFilterBuilder
   _$Gproduct_requerimentsFilter _build() {
     _$Gproduct_requerimentsFilter _$result;
     try {
-      _$result = _$v ??
-          new _$Gproduct_requerimentsFilter._(
+      _$result =
+          _$v ??
+          _$Gproduct_requerimentsFilter._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             updated_at: _updated_at?.build(),
@@ -11958,8 +20478,11 @@ class Gproduct_requerimentsFilterBuilder
         _$failedField = 'not';
         _not?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gproduct_requerimentsFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gproduct_requerimentsFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -11991,31 +20514,30 @@ class _$Gproduct_requerimentsInsertInput
   @override
   final Gproduct_category? category;
 
-  factory _$Gproduct_requerimentsInsertInput(
-          [void Function(Gproduct_requerimentsInsertInputBuilder)? updates]) =>
-      (new Gproduct_requerimentsInsertInputBuilder()..update(updates))._build();
+  factory _$Gproduct_requerimentsInsertInput([
+    void Function(Gproduct_requerimentsInsertInputBuilder)? updates,
+  ]) => (Gproduct_requerimentsInsertInputBuilder()..update(updates))._build();
 
-  _$Gproduct_requerimentsInsertInput._(
-      {this.id,
-      this.created_at,
-      this.updated_at,
-      this.user_id,
-      this.text,
-      this.audio_path,
-      this.audio_transcription,
-      this.video_path,
-      this.image_path,
-      this.category})
-      : super._();
-
+  _$Gproduct_requerimentsInsertInput._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.text,
+    this.audio_path,
+    this.audio_transcription,
+    this.video_path,
+    this.image_path,
+    this.category,
+  }) : super._();
   @override
   Gproduct_requerimentsInsertInput rebuild(
-          void Function(Gproduct_requerimentsInsertInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gproduct_requerimentsInsertInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gproduct_requerimentsInsertInputBuilder toBuilder() =>
-      new Gproduct_requerimentsInsertInputBuilder()..replace(this);
+      Gproduct_requerimentsInsertInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -12069,28 +20591,28 @@ class _$Gproduct_requerimentsInsertInput
 
 class Gproduct_requerimentsInsertInputBuilder
     implements
-        Builder<Gproduct_requerimentsInsertInput,
-            Gproduct_requerimentsInsertInputBuilder> {
+        Builder<
+          Gproduct_requerimentsInsertInput,
+          Gproduct_requerimentsInsertInputBuilder
+        > {
   _$Gproduct_requerimentsInsertInput? _$v;
 
   GUUIDBuilder? _id;
-  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
   set id(GUUIDBuilder? id) => _$this._id = id;
 
   GDatetimeBuilder? _created_at;
-  GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
   set created_at(GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GDatetimeBuilder? _updated_at;
-  GDatetimeBuilder get updated_at =>
-      _$this._updated_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get updated_at => _$this._updated_at ??= GDatetimeBuilder();
   set updated_at(GDatetimeBuilder? updated_at) =>
       _$this._updated_at = updated_at;
 
   GUUIDBuilder? _user_id;
-  GUUIDBuilder get user_id => _$this._user_id ??= new GUUIDBuilder();
+  GUUIDBuilder get user_id => _$this._user_id ??= GUUIDBuilder();
   set user_id(GUUIDBuilder? user_id) => _$this._user_id = user_id;
 
   String? _text;
@@ -12140,7 +20662,6 @@ class Gproduct_requerimentsInsertInputBuilder
 
   @override
   void replace(Gproduct_requerimentsInsertInput other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gproduct_requerimentsInsertInput;
   }
 
@@ -12155,8 +20676,9 @@ class Gproduct_requerimentsInsertInputBuilder
   _$Gproduct_requerimentsInsertInput _build() {
     _$Gproduct_requerimentsInsertInput _$result;
     try {
-      _$result = _$v ??
-          new _$Gproduct_requerimentsInsertInput._(
+      _$result =
+          _$v ??
+          _$Gproduct_requerimentsInsertInput._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             updated_at: _updated_at?.build(),
@@ -12180,8 +20702,11 @@ class Gproduct_requerimentsInsertInputBuilder
         _$failedField = 'user_id';
         _user_id?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gproduct_requerimentsInsertInput', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gproduct_requerimentsInsertInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -12212,31 +20737,30 @@ class _$Gproduct_requerimentsOrderBy extends Gproduct_requerimentsOrderBy {
   @override
   final GOrderByDirection? category;
 
-  factory _$Gproduct_requerimentsOrderBy(
-          [void Function(Gproduct_requerimentsOrderByBuilder)? updates]) =>
-      (new Gproduct_requerimentsOrderByBuilder()..update(updates))._build();
+  factory _$Gproduct_requerimentsOrderBy([
+    void Function(Gproduct_requerimentsOrderByBuilder)? updates,
+  ]) => (Gproduct_requerimentsOrderByBuilder()..update(updates))._build();
 
-  _$Gproduct_requerimentsOrderBy._(
-      {this.id,
-      this.created_at,
-      this.updated_at,
-      this.user_id,
-      this.text,
-      this.audio_path,
-      this.audio_transcription,
-      this.video_path,
-      this.image_path,
-      this.category})
-      : super._();
-
+  _$Gproduct_requerimentsOrderBy._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.text,
+    this.audio_path,
+    this.audio_transcription,
+    this.video_path,
+    this.image_path,
+    this.category,
+  }) : super._();
   @override
   Gproduct_requerimentsOrderBy rebuild(
-          void Function(Gproduct_requerimentsOrderByBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gproduct_requerimentsOrderByBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gproduct_requerimentsOrderByBuilder toBuilder() =>
-      new Gproduct_requerimentsOrderByBuilder()..replace(this);
+      Gproduct_requerimentsOrderByBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -12290,8 +20814,10 @@ class _$Gproduct_requerimentsOrderBy extends Gproduct_requerimentsOrderBy {
 
 class Gproduct_requerimentsOrderByBuilder
     implements
-        Builder<Gproduct_requerimentsOrderBy,
-            Gproduct_requerimentsOrderByBuilder> {
+        Builder<
+          Gproduct_requerimentsOrderBy,
+          Gproduct_requerimentsOrderByBuilder
+        > {
   _$Gproduct_requerimentsOrderBy? _$v;
 
   GOrderByDirection? _id;
@@ -12362,7 +20888,6 @@ class Gproduct_requerimentsOrderByBuilder
 
   @override
   void replace(Gproduct_requerimentsOrderBy other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gproduct_requerimentsOrderBy;
   }
 
@@ -12375,8 +20900,9 @@ class Gproduct_requerimentsOrderByBuilder
   Gproduct_requerimentsOrderBy build() => _build();
 
   _$Gproduct_requerimentsOrderBy _build() {
-    final _$result = _$v ??
-        new _$Gproduct_requerimentsOrderBy._(
+    final _$result =
+        _$v ??
+        _$Gproduct_requerimentsOrderBy._(
           id: id,
           created_at: created_at,
           updated_at: updated_at,
@@ -12416,31 +20942,30 @@ class _$Gproduct_requerimentsUpdateInput
   @override
   final Gproduct_category? category;
 
-  factory _$Gproduct_requerimentsUpdateInput(
-          [void Function(Gproduct_requerimentsUpdateInputBuilder)? updates]) =>
-      (new Gproduct_requerimentsUpdateInputBuilder()..update(updates))._build();
+  factory _$Gproduct_requerimentsUpdateInput([
+    void Function(Gproduct_requerimentsUpdateInputBuilder)? updates,
+  ]) => (Gproduct_requerimentsUpdateInputBuilder()..update(updates))._build();
 
-  _$Gproduct_requerimentsUpdateInput._(
-      {this.id,
-      this.created_at,
-      this.updated_at,
-      this.user_id,
-      this.text,
-      this.audio_path,
-      this.audio_transcription,
-      this.video_path,
-      this.image_path,
-      this.category})
-      : super._();
-
+  _$Gproduct_requerimentsUpdateInput._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.text,
+    this.audio_path,
+    this.audio_transcription,
+    this.video_path,
+    this.image_path,
+    this.category,
+  }) : super._();
   @override
   Gproduct_requerimentsUpdateInput rebuild(
-          void Function(Gproduct_requerimentsUpdateInputBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(Gproduct_requerimentsUpdateInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   Gproduct_requerimentsUpdateInputBuilder toBuilder() =>
-      new Gproduct_requerimentsUpdateInputBuilder()..replace(this);
+      Gproduct_requerimentsUpdateInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -12494,28 +21019,28 @@ class _$Gproduct_requerimentsUpdateInput
 
 class Gproduct_requerimentsUpdateInputBuilder
     implements
-        Builder<Gproduct_requerimentsUpdateInput,
-            Gproduct_requerimentsUpdateInputBuilder> {
+        Builder<
+          Gproduct_requerimentsUpdateInput,
+          Gproduct_requerimentsUpdateInputBuilder
+        > {
   _$Gproduct_requerimentsUpdateInput? _$v;
 
   GUUIDBuilder? _id;
-  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
   set id(GUUIDBuilder? id) => _$this._id = id;
 
   GDatetimeBuilder? _created_at;
-  GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
   set created_at(GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GDatetimeBuilder? _updated_at;
-  GDatetimeBuilder get updated_at =>
-      _$this._updated_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get updated_at => _$this._updated_at ??= GDatetimeBuilder();
   set updated_at(GDatetimeBuilder? updated_at) =>
       _$this._updated_at = updated_at;
 
   GUUIDBuilder? _user_id;
-  GUUIDBuilder get user_id => _$this._user_id ??= new GUUIDBuilder();
+  GUUIDBuilder get user_id => _$this._user_id ??= GUUIDBuilder();
   set user_id(GUUIDBuilder? user_id) => _$this._user_id = user_id;
 
   String? _text;
@@ -12565,7 +21090,6 @@ class Gproduct_requerimentsUpdateInputBuilder
 
   @override
   void replace(Gproduct_requerimentsUpdateInput other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Gproduct_requerimentsUpdateInput;
   }
 
@@ -12580,8 +21104,9 @@ class Gproduct_requerimentsUpdateInputBuilder
   _$Gproduct_requerimentsUpdateInput _build() {
     _$Gproduct_requerimentsUpdateInput _$result;
     try {
-      _$result = _$v ??
-          new _$Gproduct_requerimentsUpdateInput._(
+      _$result =
+          _$v ??
+          _$Gproduct_requerimentsUpdateInput._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             updated_at: _updated_at?.build(),
@@ -12605,8 +21130,1115 @@ class Gproduct_requerimentsUpdateInputBuilder
         _$failedField = 'user_id';
         _user_id?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Gproduct_requerimentsUpdateInput', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'Gproduct_requerimentsUpdateInput',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$Guser_carsFilter extends Guser_carsFilter {
+  @override
+  final GUUIDFilter? id;
+  @override
+  final GDatetimeFilter? created_at;
+  @override
+  final GDatetimeFilter? updated_at;
+  @override
+  final GUUIDFilter? user_id;
+  @override
+  final GUUIDFilter? car_id;
+  @override
+  final GStringFilter? vin;
+  @override
+  final GStringFilter? license_plate;
+  @override
+  final GStringFilter? color;
+  @override
+  final GIntFilter? mileage;
+  @override
+  final GDateFilter? purchase_date;
+  @override
+  final GStringFilter? notes;
+  @override
+  final GBooleanFilter? is_primary;
+  @override
+  final GDatetimeFilter? deleted_at;
+  @override
+  final GIDFilter? nodeId;
+  @override
+  final BuiltList<Guser_carsFilter>? and;
+  @override
+  final BuiltList<Guser_carsFilter>? or;
+  @override
+  final Guser_carsFilter? not;
+
+  factory _$Guser_carsFilter([
+    void Function(Guser_carsFilterBuilder)? updates,
+  ]) => (Guser_carsFilterBuilder()..update(updates))._build();
+
+  _$Guser_carsFilter._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.car_id,
+    this.vin,
+    this.license_plate,
+    this.color,
+    this.mileage,
+    this.purchase_date,
+    this.notes,
+    this.is_primary,
+    this.deleted_at,
+    this.nodeId,
+    this.and,
+    this.or,
+    this.not,
+  }) : super._();
+  @override
+  Guser_carsFilter rebuild(void Function(Guser_carsFilterBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  Guser_carsFilterBuilder toBuilder() =>
+      Guser_carsFilterBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is Guser_carsFilter &&
+        id == other.id &&
+        created_at == other.created_at &&
+        updated_at == other.updated_at &&
+        user_id == other.user_id &&
+        car_id == other.car_id &&
+        vin == other.vin &&
+        license_plate == other.license_plate &&
+        color == other.color &&
+        mileage == other.mileage &&
+        purchase_date == other.purchase_date &&
+        notes == other.notes &&
+        is_primary == other.is_primary &&
+        deleted_at == other.deleted_at &&
+        nodeId == other.nodeId &&
+        and == other.and &&
+        or == other.or &&
+        not == other.not;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, updated_at.hashCode);
+    _$hash = $jc(_$hash, user_id.hashCode);
+    _$hash = $jc(_$hash, car_id.hashCode);
+    _$hash = $jc(_$hash, vin.hashCode);
+    _$hash = $jc(_$hash, license_plate.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, mileage.hashCode);
+    _$hash = $jc(_$hash, purchase_date.hashCode);
+    _$hash = $jc(_$hash, notes.hashCode);
+    _$hash = $jc(_$hash, is_primary.hashCode);
+    _$hash = $jc(_$hash, deleted_at.hashCode);
+    _$hash = $jc(_$hash, nodeId.hashCode);
+    _$hash = $jc(_$hash, and.hashCode);
+    _$hash = $jc(_$hash, or.hashCode);
+    _$hash = $jc(_$hash, not.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'Guser_carsFilter')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('updated_at', updated_at)
+          ..add('user_id', user_id)
+          ..add('car_id', car_id)
+          ..add('vin', vin)
+          ..add('license_plate', license_plate)
+          ..add('color', color)
+          ..add('mileage', mileage)
+          ..add('purchase_date', purchase_date)
+          ..add('notes', notes)
+          ..add('is_primary', is_primary)
+          ..add('deleted_at', deleted_at)
+          ..add('nodeId', nodeId)
+          ..add('and', and)
+          ..add('or', or)
+          ..add('not', not))
+        .toString();
+  }
+}
+
+class Guser_carsFilterBuilder
+    implements Builder<Guser_carsFilter, Guser_carsFilterBuilder> {
+  _$Guser_carsFilter? _$v;
+
+  GUUIDFilterBuilder? _id;
+  GUUIDFilterBuilder get id => _$this._id ??= GUUIDFilterBuilder();
+  set id(GUUIDFilterBuilder? id) => _$this._id = id;
+
+  GDatetimeFilterBuilder? _created_at;
+  GDatetimeFilterBuilder get created_at =>
+      _$this._created_at ??= GDatetimeFilterBuilder();
+  set created_at(GDatetimeFilterBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GDatetimeFilterBuilder? _updated_at;
+  GDatetimeFilterBuilder get updated_at =>
+      _$this._updated_at ??= GDatetimeFilterBuilder();
+  set updated_at(GDatetimeFilterBuilder? updated_at) =>
+      _$this._updated_at = updated_at;
+
+  GUUIDFilterBuilder? _user_id;
+  GUUIDFilterBuilder get user_id => _$this._user_id ??= GUUIDFilterBuilder();
+  set user_id(GUUIDFilterBuilder? user_id) => _$this._user_id = user_id;
+
+  GUUIDFilterBuilder? _car_id;
+  GUUIDFilterBuilder get car_id => _$this._car_id ??= GUUIDFilterBuilder();
+  set car_id(GUUIDFilterBuilder? car_id) => _$this._car_id = car_id;
+
+  GStringFilterBuilder? _vin;
+  GStringFilterBuilder get vin => _$this._vin ??= GStringFilterBuilder();
+  set vin(GStringFilterBuilder? vin) => _$this._vin = vin;
+
+  GStringFilterBuilder? _license_plate;
+  GStringFilterBuilder get license_plate =>
+      _$this._license_plate ??= GStringFilterBuilder();
+  set license_plate(GStringFilterBuilder? license_plate) =>
+      _$this._license_plate = license_plate;
+
+  GStringFilterBuilder? _color;
+  GStringFilterBuilder get color => _$this._color ??= GStringFilterBuilder();
+  set color(GStringFilterBuilder? color) => _$this._color = color;
+
+  GIntFilterBuilder? _mileage;
+  GIntFilterBuilder get mileage => _$this._mileage ??= GIntFilterBuilder();
+  set mileage(GIntFilterBuilder? mileage) => _$this._mileage = mileage;
+
+  GDateFilterBuilder? _purchase_date;
+  GDateFilterBuilder get purchase_date =>
+      _$this._purchase_date ??= GDateFilterBuilder();
+  set purchase_date(GDateFilterBuilder? purchase_date) =>
+      _$this._purchase_date = purchase_date;
+
+  GStringFilterBuilder? _notes;
+  GStringFilterBuilder get notes => _$this._notes ??= GStringFilterBuilder();
+  set notes(GStringFilterBuilder? notes) => _$this._notes = notes;
+
+  GBooleanFilterBuilder? _is_primary;
+  GBooleanFilterBuilder get is_primary =>
+      _$this._is_primary ??= GBooleanFilterBuilder();
+  set is_primary(GBooleanFilterBuilder? is_primary) =>
+      _$this._is_primary = is_primary;
+
+  GDatetimeFilterBuilder? _deleted_at;
+  GDatetimeFilterBuilder get deleted_at =>
+      _$this._deleted_at ??= GDatetimeFilterBuilder();
+  set deleted_at(GDatetimeFilterBuilder? deleted_at) =>
+      _$this._deleted_at = deleted_at;
+
+  GIDFilterBuilder? _nodeId;
+  GIDFilterBuilder get nodeId => _$this._nodeId ??= GIDFilterBuilder();
+  set nodeId(GIDFilterBuilder? nodeId) => _$this._nodeId = nodeId;
+
+  ListBuilder<Guser_carsFilter>? _and;
+  ListBuilder<Guser_carsFilter> get and =>
+      _$this._and ??= ListBuilder<Guser_carsFilter>();
+  set and(ListBuilder<Guser_carsFilter>? and) => _$this._and = and;
+
+  ListBuilder<Guser_carsFilter>? _or;
+  ListBuilder<Guser_carsFilter> get or =>
+      _$this._or ??= ListBuilder<Guser_carsFilter>();
+  set or(ListBuilder<Guser_carsFilter>? or) => _$this._or = or;
+
+  Guser_carsFilterBuilder? _not;
+  Guser_carsFilterBuilder get not => _$this._not ??= Guser_carsFilterBuilder();
+  set not(Guser_carsFilterBuilder? not) => _$this._not = not;
+
+  Guser_carsFilterBuilder();
+
+  Guser_carsFilterBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _updated_at = $v.updated_at?.toBuilder();
+      _user_id = $v.user_id?.toBuilder();
+      _car_id = $v.car_id?.toBuilder();
+      _vin = $v.vin?.toBuilder();
+      _license_plate = $v.license_plate?.toBuilder();
+      _color = $v.color?.toBuilder();
+      _mileage = $v.mileage?.toBuilder();
+      _purchase_date = $v.purchase_date?.toBuilder();
+      _notes = $v.notes?.toBuilder();
+      _is_primary = $v.is_primary?.toBuilder();
+      _deleted_at = $v.deleted_at?.toBuilder();
+      _nodeId = $v.nodeId?.toBuilder();
+      _and = $v.and?.toBuilder();
+      _or = $v.or?.toBuilder();
+      _not = $v.not?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(Guser_carsFilter other) {
+    _$v = other as _$Guser_carsFilter;
+  }
+
+  @override
+  void update(void Function(Guser_carsFilterBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  Guser_carsFilter build() => _build();
+
+  _$Guser_carsFilter _build() {
+    _$Guser_carsFilter _$result;
+    try {
+      _$result =
+          _$v ??
+          _$Guser_carsFilter._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            updated_at: _updated_at?.build(),
+            user_id: _user_id?.build(),
+            car_id: _car_id?.build(),
+            vin: _vin?.build(),
+            license_plate: _license_plate?.build(),
+            color: _color?.build(),
+            mileage: _mileage?.build(),
+            purchase_date: _purchase_date?.build(),
+            notes: _notes?.build(),
+            is_primary: _is_primary?.build(),
+            deleted_at: _deleted_at?.build(),
+            nodeId: _nodeId?.build(),
+            and: _and?.build(),
+            or: _or?.build(),
+            not: _not?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'updated_at';
+        _updated_at?.build();
+        _$failedField = 'user_id';
+        _user_id?.build();
+        _$failedField = 'car_id';
+        _car_id?.build();
+        _$failedField = 'vin';
+        _vin?.build();
+        _$failedField = 'license_plate';
+        _license_plate?.build();
+        _$failedField = 'color';
+        _color?.build();
+        _$failedField = 'mileage';
+        _mileage?.build();
+        _$failedField = 'purchase_date';
+        _purchase_date?.build();
+        _$failedField = 'notes';
+        _notes?.build();
+        _$failedField = 'is_primary';
+        _is_primary?.build();
+        _$failedField = 'deleted_at';
+        _deleted_at?.build();
+        _$failedField = 'nodeId';
+        _nodeId?.build();
+        _$failedField = 'and';
+        _and?.build();
+        _$failedField = 'or';
+        _or?.build();
+        _$failedField = 'not';
+        _not?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'Guser_carsFilter',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$Guser_carsInsertInput extends Guser_carsInsertInput {
+  @override
+  final GUUID? id;
+  @override
+  final GDatetime? created_at;
+  @override
+  final GDatetime? updated_at;
+  @override
+  final GUUID? user_id;
+  @override
+  final GUUID? car_id;
+  @override
+  final String? vin;
+  @override
+  final String? license_plate;
+  @override
+  final String? color;
+  @override
+  final int? mileage;
+  @override
+  final GDate? purchase_date;
+  @override
+  final String? notes;
+  @override
+  final bool? is_primary;
+  @override
+  final GDatetime? deleted_at;
+
+  factory _$Guser_carsInsertInput([
+    void Function(Guser_carsInsertInputBuilder)? updates,
+  ]) => (Guser_carsInsertInputBuilder()..update(updates))._build();
+
+  _$Guser_carsInsertInput._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.car_id,
+    this.vin,
+    this.license_plate,
+    this.color,
+    this.mileage,
+    this.purchase_date,
+    this.notes,
+    this.is_primary,
+    this.deleted_at,
+  }) : super._();
+  @override
+  Guser_carsInsertInput rebuild(
+    void Function(Guser_carsInsertInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
+
+  @override
+  Guser_carsInsertInputBuilder toBuilder() =>
+      Guser_carsInsertInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is Guser_carsInsertInput &&
+        id == other.id &&
+        created_at == other.created_at &&
+        updated_at == other.updated_at &&
+        user_id == other.user_id &&
+        car_id == other.car_id &&
+        vin == other.vin &&
+        license_plate == other.license_plate &&
+        color == other.color &&
+        mileage == other.mileage &&
+        purchase_date == other.purchase_date &&
+        notes == other.notes &&
+        is_primary == other.is_primary &&
+        deleted_at == other.deleted_at;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, updated_at.hashCode);
+    _$hash = $jc(_$hash, user_id.hashCode);
+    _$hash = $jc(_$hash, car_id.hashCode);
+    _$hash = $jc(_$hash, vin.hashCode);
+    _$hash = $jc(_$hash, license_plate.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, mileage.hashCode);
+    _$hash = $jc(_$hash, purchase_date.hashCode);
+    _$hash = $jc(_$hash, notes.hashCode);
+    _$hash = $jc(_$hash, is_primary.hashCode);
+    _$hash = $jc(_$hash, deleted_at.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'Guser_carsInsertInput')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('updated_at', updated_at)
+          ..add('user_id', user_id)
+          ..add('car_id', car_id)
+          ..add('vin', vin)
+          ..add('license_plate', license_plate)
+          ..add('color', color)
+          ..add('mileage', mileage)
+          ..add('purchase_date', purchase_date)
+          ..add('notes', notes)
+          ..add('is_primary', is_primary)
+          ..add('deleted_at', deleted_at))
+        .toString();
+  }
+}
+
+class Guser_carsInsertInputBuilder
+    implements Builder<Guser_carsInsertInput, Guser_carsInsertInputBuilder> {
+  _$Guser_carsInsertInput? _$v;
+
+  GUUIDBuilder? _id;
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
+  set id(GUUIDBuilder? id) => _$this._id = id;
+
+  GDatetimeBuilder? _created_at;
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
+  set created_at(GDatetimeBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GDatetimeBuilder? _updated_at;
+  GDatetimeBuilder get updated_at => _$this._updated_at ??= GDatetimeBuilder();
+  set updated_at(GDatetimeBuilder? updated_at) =>
+      _$this._updated_at = updated_at;
+
+  GUUIDBuilder? _user_id;
+  GUUIDBuilder get user_id => _$this._user_id ??= GUUIDBuilder();
+  set user_id(GUUIDBuilder? user_id) => _$this._user_id = user_id;
+
+  GUUIDBuilder? _car_id;
+  GUUIDBuilder get car_id => _$this._car_id ??= GUUIDBuilder();
+  set car_id(GUUIDBuilder? car_id) => _$this._car_id = car_id;
+
+  String? _vin;
+  String? get vin => _$this._vin;
+  set vin(String? vin) => _$this._vin = vin;
+
+  String? _license_plate;
+  String? get license_plate => _$this._license_plate;
+  set license_plate(String? license_plate) =>
+      _$this._license_plate = license_plate;
+
+  String? _color;
+  String? get color => _$this._color;
+  set color(String? color) => _$this._color = color;
+
+  int? _mileage;
+  int? get mileage => _$this._mileage;
+  set mileage(int? mileage) => _$this._mileage = mileage;
+
+  GDateBuilder? _purchase_date;
+  GDateBuilder get purchase_date => _$this._purchase_date ??= GDateBuilder();
+  set purchase_date(GDateBuilder? purchase_date) =>
+      _$this._purchase_date = purchase_date;
+
+  String? _notes;
+  String? get notes => _$this._notes;
+  set notes(String? notes) => _$this._notes = notes;
+
+  bool? _is_primary;
+  bool? get is_primary => _$this._is_primary;
+  set is_primary(bool? is_primary) => _$this._is_primary = is_primary;
+
+  GDatetimeBuilder? _deleted_at;
+  GDatetimeBuilder get deleted_at => _$this._deleted_at ??= GDatetimeBuilder();
+  set deleted_at(GDatetimeBuilder? deleted_at) =>
+      _$this._deleted_at = deleted_at;
+
+  Guser_carsInsertInputBuilder();
+
+  Guser_carsInsertInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _updated_at = $v.updated_at?.toBuilder();
+      _user_id = $v.user_id?.toBuilder();
+      _car_id = $v.car_id?.toBuilder();
+      _vin = $v.vin;
+      _license_plate = $v.license_plate;
+      _color = $v.color;
+      _mileage = $v.mileage;
+      _purchase_date = $v.purchase_date?.toBuilder();
+      _notes = $v.notes;
+      _is_primary = $v.is_primary;
+      _deleted_at = $v.deleted_at?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(Guser_carsInsertInput other) {
+    _$v = other as _$Guser_carsInsertInput;
+  }
+
+  @override
+  void update(void Function(Guser_carsInsertInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  Guser_carsInsertInput build() => _build();
+
+  _$Guser_carsInsertInput _build() {
+    _$Guser_carsInsertInput _$result;
+    try {
+      _$result =
+          _$v ??
+          _$Guser_carsInsertInput._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            updated_at: _updated_at?.build(),
+            user_id: _user_id?.build(),
+            car_id: _car_id?.build(),
+            vin: vin,
+            license_plate: license_plate,
+            color: color,
+            mileage: mileage,
+            purchase_date: _purchase_date?.build(),
+            notes: notes,
+            is_primary: is_primary,
+            deleted_at: _deleted_at?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'updated_at';
+        _updated_at?.build();
+        _$failedField = 'user_id';
+        _user_id?.build();
+        _$failedField = 'car_id';
+        _car_id?.build();
+
+        _$failedField = 'purchase_date';
+        _purchase_date?.build();
+
+        _$failedField = 'deleted_at';
+        _deleted_at?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'Guser_carsInsertInput',
+          _$failedField,
+          e.toString(),
+        );
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$Guser_carsOrderBy extends Guser_carsOrderBy {
+  @override
+  final GOrderByDirection? id;
+  @override
+  final GOrderByDirection? created_at;
+  @override
+  final GOrderByDirection? updated_at;
+  @override
+  final GOrderByDirection? user_id;
+  @override
+  final GOrderByDirection? car_id;
+  @override
+  final GOrderByDirection? vin;
+  @override
+  final GOrderByDirection? license_plate;
+  @override
+  final GOrderByDirection? color;
+  @override
+  final GOrderByDirection? mileage;
+  @override
+  final GOrderByDirection? purchase_date;
+  @override
+  final GOrderByDirection? notes;
+  @override
+  final GOrderByDirection? is_primary;
+  @override
+  final GOrderByDirection? deleted_at;
+
+  factory _$Guser_carsOrderBy([
+    void Function(Guser_carsOrderByBuilder)? updates,
+  ]) => (Guser_carsOrderByBuilder()..update(updates))._build();
+
+  _$Guser_carsOrderBy._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.car_id,
+    this.vin,
+    this.license_plate,
+    this.color,
+    this.mileage,
+    this.purchase_date,
+    this.notes,
+    this.is_primary,
+    this.deleted_at,
+  }) : super._();
+  @override
+  Guser_carsOrderBy rebuild(void Function(Guser_carsOrderByBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  Guser_carsOrderByBuilder toBuilder() =>
+      Guser_carsOrderByBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is Guser_carsOrderBy &&
+        id == other.id &&
+        created_at == other.created_at &&
+        updated_at == other.updated_at &&
+        user_id == other.user_id &&
+        car_id == other.car_id &&
+        vin == other.vin &&
+        license_plate == other.license_plate &&
+        color == other.color &&
+        mileage == other.mileage &&
+        purchase_date == other.purchase_date &&
+        notes == other.notes &&
+        is_primary == other.is_primary &&
+        deleted_at == other.deleted_at;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, updated_at.hashCode);
+    _$hash = $jc(_$hash, user_id.hashCode);
+    _$hash = $jc(_$hash, car_id.hashCode);
+    _$hash = $jc(_$hash, vin.hashCode);
+    _$hash = $jc(_$hash, license_plate.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, mileage.hashCode);
+    _$hash = $jc(_$hash, purchase_date.hashCode);
+    _$hash = $jc(_$hash, notes.hashCode);
+    _$hash = $jc(_$hash, is_primary.hashCode);
+    _$hash = $jc(_$hash, deleted_at.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'Guser_carsOrderBy')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('updated_at', updated_at)
+          ..add('user_id', user_id)
+          ..add('car_id', car_id)
+          ..add('vin', vin)
+          ..add('license_plate', license_plate)
+          ..add('color', color)
+          ..add('mileage', mileage)
+          ..add('purchase_date', purchase_date)
+          ..add('notes', notes)
+          ..add('is_primary', is_primary)
+          ..add('deleted_at', deleted_at))
+        .toString();
+  }
+}
+
+class Guser_carsOrderByBuilder
+    implements Builder<Guser_carsOrderBy, Guser_carsOrderByBuilder> {
+  _$Guser_carsOrderBy? _$v;
+
+  GOrderByDirection? _id;
+  GOrderByDirection? get id => _$this._id;
+  set id(GOrderByDirection? id) => _$this._id = id;
+
+  GOrderByDirection? _created_at;
+  GOrderByDirection? get created_at => _$this._created_at;
+  set created_at(GOrderByDirection? created_at) =>
+      _$this._created_at = created_at;
+
+  GOrderByDirection? _updated_at;
+  GOrderByDirection? get updated_at => _$this._updated_at;
+  set updated_at(GOrderByDirection? updated_at) =>
+      _$this._updated_at = updated_at;
+
+  GOrderByDirection? _user_id;
+  GOrderByDirection? get user_id => _$this._user_id;
+  set user_id(GOrderByDirection? user_id) => _$this._user_id = user_id;
+
+  GOrderByDirection? _car_id;
+  GOrderByDirection? get car_id => _$this._car_id;
+  set car_id(GOrderByDirection? car_id) => _$this._car_id = car_id;
+
+  GOrderByDirection? _vin;
+  GOrderByDirection? get vin => _$this._vin;
+  set vin(GOrderByDirection? vin) => _$this._vin = vin;
+
+  GOrderByDirection? _license_plate;
+  GOrderByDirection? get license_plate => _$this._license_plate;
+  set license_plate(GOrderByDirection? license_plate) =>
+      _$this._license_plate = license_plate;
+
+  GOrderByDirection? _color;
+  GOrderByDirection? get color => _$this._color;
+  set color(GOrderByDirection? color) => _$this._color = color;
+
+  GOrderByDirection? _mileage;
+  GOrderByDirection? get mileage => _$this._mileage;
+  set mileage(GOrderByDirection? mileage) => _$this._mileage = mileage;
+
+  GOrderByDirection? _purchase_date;
+  GOrderByDirection? get purchase_date => _$this._purchase_date;
+  set purchase_date(GOrderByDirection? purchase_date) =>
+      _$this._purchase_date = purchase_date;
+
+  GOrderByDirection? _notes;
+  GOrderByDirection? get notes => _$this._notes;
+  set notes(GOrderByDirection? notes) => _$this._notes = notes;
+
+  GOrderByDirection? _is_primary;
+  GOrderByDirection? get is_primary => _$this._is_primary;
+  set is_primary(GOrderByDirection? is_primary) =>
+      _$this._is_primary = is_primary;
+
+  GOrderByDirection? _deleted_at;
+  GOrderByDirection? get deleted_at => _$this._deleted_at;
+  set deleted_at(GOrderByDirection? deleted_at) =>
+      _$this._deleted_at = deleted_at;
+
+  Guser_carsOrderByBuilder();
+
+  Guser_carsOrderByBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _created_at = $v.created_at;
+      _updated_at = $v.updated_at;
+      _user_id = $v.user_id;
+      _car_id = $v.car_id;
+      _vin = $v.vin;
+      _license_plate = $v.license_plate;
+      _color = $v.color;
+      _mileage = $v.mileage;
+      _purchase_date = $v.purchase_date;
+      _notes = $v.notes;
+      _is_primary = $v.is_primary;
+      _deleted_at = $v.deleted_at;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(Guser_carsOrderBy other) {
+    _$v = other as _$Guser_carsOrderBy;
+  }
+
+  @override
+  void update(void Function(Guser_carsOrderByBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  Guser_carsOrderBy build() => _build();
+
+  _$Guser_carsOrderBy _build() {
+    final _$result =
+        _$v ??
+        _$Guser_carsOrderBy._(
+          id: id,
+          created_at: created_at,
+          updated_at: updated_at,
+          user_id: user_id,
+          car_id: car_id,
+          vin: vin,
+          license_plate: license_plate,
+          color: color,
+          mileage: mileage,
+          purchase_date: purchase_date,
+          notes: notes,
+          is_primary: is_primary,
+          deleted_at: deleted_at,
+        );
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$Guser_carsUpdateInput extends Guser_carsUpdateInput {
+  @override
+  final GUUID? id;
+  @override
+  final GDatetime? created_at;
+  @override
+  final GDatetime? updated_at;
+  @override
+  final GUUID? user_id;
+  @override
+  final GUUID? car_id;
+  @override
+  final String? vin;
+  @override
+  final String? license_plate;
+  @override
+  final String? color;
+  @override
+  final int? mileage;
+  @override
+  final GDate? purchase_date;
+  @override
+  final String? notes;
+  @override
+  final bool? is_primary;
+  @override
+  final GDatetime? deleted_at;
+
+  factory _$Guser_carsUpdateInput([
+    void Function(Guser_carsUpdateInputBuilder)? updates,
+  ]) => (Guser_carsUpdateInputBuilder()..update(updates))._build();
+
+  _$Guser_carsUpdateInput._({
+    this.id,
+    this.created_at,
+    this.updated_at,
+    this.user_id,
+    this.car_id,
+    this.vin,
+    this.license_plate,
+    this.color,
+    this.mileage,
+    this.purchase_date,
+    this.notes,
+    this.is_primary,
+    this.deleted_at,
+  }) : super._();
+  @override
+  Guser_carsUpdateInput rebuild(
+    void Function(Guser_carsUpdateInputBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
+
+  @override
+  Guser_carsUpdateInputBuilder toBuilder() =>
+      Guser_carsUpdateInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is Guser_carsUpdateInput &&
+        id == other.id &&
+        created_at == other.created_at &&
+        updated_at == other.updated_at &&
+        user_id == other.user_id &&
+        car_id == other.car_id &&
+        vin == other.vin &&
+        license_plate == other.license_plate &&
+        color == other.color &&
+        mileage == other.mileage &&
+        purchase_date == other.purchase_date &&
+        notes == other.notes &&
+        is_primary == other.is_primary &&
+        deleted_at == other.deleted_at;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, created_at.hashCode);
+    _$hash = $jc(_$hash, updated_at.hashCode);
+    _$hash = $jc(_$hash, user_id.hashCode);
+    _$hash = $jc(_$hash, car_id.hashCode);
+    _$hash = $jc(_$hash, vin.hashCode);
+    _$hash = $jc(_$hash, license_plate.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, mileage.hashCode);
+    _$hash = $jc(_$hash, purchase_date.hashCode);
+    _$hash = $jc(_$hash, notes.hashCode);
+    _$hash = $jc(_$hash, is_primary.hashCode);
+    _$hash = $jc(_$hash, deleted_at.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'Guser_carsUpdateInput')
+          ..add('id', id)
+          ..add('created_at', created_at)
+          ..add('updated_at', updated_at)
+          ..add('user_id', user_id)
+          ..add('car_id', car_id)
+          ..add('vin', vin)
+          ..add('license_plate', license_plate)
+          ..add('color', color)
+          ..add('mileage', mileage)
+          ..add('purchase_date', purchase_date)
+          ..add('notes', notes)
+          ..add('is_primary', is_primary)
+          ..add('deleted_at', deleted_at))
+        .toString();
+  }
+}
+
+class Guser_carsUpdateInputBuilder
+    implements Builder<Guser_carsUpdateInput, Guser_carsUpdateInputBuilder> {
+  _$Guser_carsUpdateInput? _$v;
+
+  GUUIDBuilder? _id;
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
+  set id(GUUIDBuilder? id) => _$this._id = id;
+
+  GDatetimeBuilder? _created_at;
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
+  set created_at(GDatetimeBuilder? created_at) =>
+      _$this._created_at = created_at;
+
+  GDatetimeBuilder? _updated_at;
+  GDatetimeBuilder get updated_at => _$this._updated_at ??= GDatetimeBuilder();
+  set updated_at(GDatetimeBuilder? updated_at) =>
+      _$this._updated_at = updated_at;
+
+  GUUIDBuilder? _user_id;
+  GUUIDBuilder get user_id => _$this._user_id ??= GUUIDBuilder();
+  set user_id(GUUIDBuilder? user_id) => _$this._user_id = user_id;
+
+  GUUIDBuilder? _car_id;
+  GUUIDBuilder get car_id => _$this._car_id ??= GUUIDBuilder();
+  set car_id(GUUIDBuilder? car_id) => _$this._car_id = car_id;
+
+  String? _vin;
+  String? get vin => _$this._vin;
+  set vin(String? vin) => _$this._vin = vin;
+
+  String? _license_plate;
+  String? get license_plate => _$this._license_plate;
+  set license_plate(String? license_plate) =>
+      _$this._license_plate = license_plate;
+
+  String? _color;
+  String? get color => _$this._color;
+  set color(String? color) => _$this._color = color;
+
+  int? _mileage;
+  int? get mileage => _$this._mileage;
+  set mileage(int? mileage) => _$this._mileage = mileage;
+
+  GDateBuilder? _purchase_date;
+  GDateBuilder get purchase_date => _$this._purchase_date ??= GDateBuilder();
+  set purchase_date(GDateBuilder? purchase_date) =>
+      _$this._purchase_date = purchase_date;
+
+  String? _notes;
+  String? get notes => _$this._notes;
+  set notes(String? notes) => _$this._notes = notes;
+
+  bool? _is_primary;
+  bool? get is_primary => _$this._is_primary;
+  set is_primary(bool? is_primary) => _$this._is_primary = is_primary;
+
+  GDatetimeBuilder? _deleted_at;
+  GDatetimeBuilder get deleted_at => _$this._deleted_at ??= GDatetimeBuilder();
+  set deleted_at(GDatetimeBuilder? deleted_at) =>
+      _$this._deleted_at = deleted_at;
+
+  Guser_carsUpdateInputBuilder();
+
+  Guser_carsUpdateInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id?.toBuilder();
+      _created_at = $v.created_at?.toBuilder();
+      _updated_at = $v.updated_at?.toBuilder();
+      _user_id = $v.user_id?.toBuilder();
+      _car_id = $v.car_id?.toBuilder();
+      _vin = $v.vin;
+      _license_plate = $v.license_plate;
+      _color = $v.color;
+      _mileage = $v.mileage;
+      _purchase_date = $v.purchase_date?.toBuilder();
+      _notes = $v.notes;
+      _is_primary = $v.is_primary;
+      _deleted_at = $v.deleted_at?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(Guser_carsUpdateInput other) {
+    _$v = other as _$Guser_carsUpdateInput;
+  }
+
+  @override
+  void update(void Function(Guser_carsUpdateInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  Guser_carsUpdateInput build() => _build();
+
+  _$Guser_carsUpdateInput _build() {
+    _$Guser_carsUpdateInput _$result;
+    try {
+      _$result =
+          _$v ??
+          _$Guser_carsUpdateInput._(
+            id: _id?.build(),
+            created_at: _created_at?.build(),
+            updated_at: _updated_at?.build(),
+            user_id: _user_id?.build(),
+            car_id: _car_id?.build(),
+            vin: vin,
+            license_plate: license_plate,
+            color: color,
+            mileage: mileage,
+            purchase_date: _purchase_date?.build(),
+            notes: notes,
+            is_primary: is_primary,
+            deleted_at: _deleted_at?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        _id?.build();
+        _$failedField = 'created_at';
+        _created_at?.build();
+        _$failedField = 'updated_at';
+        _updated_at?.build();
+        _$failedField = 'user_id';
+        _user_id?.build();
+        _$failedField = 'car_id';
+        _car_id?.build();
+
+        _$failedField = 'purchase_date';
+        _purchase_date?.build();
+
+        _$failedField = 'deleted_at';
+        _deleted_at?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'Guser_carsUpdateInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -12636,26 +22268,25 @@ class _$GusersFilter extends GusersFilter {
   final GusersFilter? not;
 
   factory _$GusersFilter([void Function(GusersFilterBuilder)? updates]) =>
-      (new GusersFilterBuilder()..update(updates))._build();
+      (GusersFilterBuilder()..update(updates))._build();
 
-  _$GusersFilter._(
-      {this.id,
-      this.created_at,
-      this.email,
-      this.phone,
-      this.auth_uid,
-      this.nodeId,
-      this.and,
-      this.or,
-      this.not})
-      : super._();
-
+  _$GusersFilter._({
+    this.id,
+    this.created_at,
+    this.email,
+    this.phone,
+    this.auth_uid,
+    this.nodeId,
+    this.and,
+    this.or,
+    this.not,
+  }) : super._();
   @override
   GusersFilter rebuild(void Function(GusersFilterBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GusersFilterBuilder toBuilder() => new GusersFilterBuilder()..replace(this);
+  GusersFilterBuilder toBuilder() => GusersFilterBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -12709,46 +22340,43 @@ class GusersFilterBuilder
   _$GusersFilter? _$v;
 
   GUUIDFilterBuilder? _id;
-  GUUIDFilterBuilder get id => _$this._id ??= new GUUIDFilterBuilder();
+  GUUIDFilterBuilder get id => _$this._id ??= GUUIDFilterBuilder();
   set id(GUUIDFilterBuilder? id) => _$this._id = id;
 
   GDatetimeFilterBuilder? _created_at;
   GDatetimeFilterBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeFilterBuilder();
+      _$this._created_at ??= GDatetimeFilterBuilder();
   set created_at(GDatetimeFilterBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GStringFilterBuilder? _email;
-  GStringFilterBuilder get email =>
-      _$this._email ??= new GStringFilterBuilder();
+  GStringFilterBuilder get email => _$this._email ??= GStringFilterBuilder();
   set email(GStringFilterBuilder? email) => _$this._email = email;
 
   GStringFilterBuilder? _phone;
-  GStringFilterBuilder get phone =>
-      _$this._phone ??= new GStringFilterBuilder();
+  GStringFilterBuilder get phone => _$this._phone ??= GStringFilterBuilder();
   set phone(GStringFilterBuilder? phone) => _$this._phone = phone;
 
   GUUIDFilterBuilder? _auth_uid;
-  GUUIDFilterBuilder get auth_uid =>
-      _$this._auth_uid ??= new GUUIDFilterBuilder();
+  GUUIDFilterBuilder get auth_uid => _$this._auth_uid ??= GUUIDFilterBuilder();
   set auth_uid(GUUIDFilterBuilder? auth_uid) => _$this._auth_uid = auth_uid;
 
   GIDFilterBuilder? _nodeId;
-  GIDFilterBuilder get nodeId => _$this._nodeId ??= new GIDFilterBuilder();
+  GIDFilterBuilder get nodeId => _$this._nodeId ??= GIDFilterBuilder();
   set nodeId(GIDFilterBuilder? nodeId) => _$this._nodeId = nodeId;
 
   ListBuilder<GusersFilter>? _and;
   ListBuilder<GusersFilter> get and =>
-      _$this._and ??= new ListBuilder<GusersFilter>();
+      _$this._and ??= ListBuilder<GusersFilter>();
   set and(ListBuilder<GusersFilter>? and) => _$this._and = and;
 
   ListBuilder<GusersFilter>? _or;
   ListBuilder<GusersFilter> get or =>
-      _$this._or ??= new ListBuilder<GusersFilter>();
+      _$this._or ??= ListBuilder<GusersFilter>();
   set or(ListBuilder<GusersFilter>? or) => _$this._or = or;
 
   GusersFilterBuilder? _not;
-  GusersFilterBuilder get not => _$this._not ??= new GusersFilterBuilder();
+  GusersFilterBuilder get not => _$this._not ??= GusersFilterBuilder();
   set not(GusersFilterBuilder? not) => _$this._not = not;
 
   GusersFilterBuilder();
@@ -12772,7 +22400,6 @@ class GusersFilterBuilder
 
   @override
   void replace(GusersFilter other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GusersFilter;
   }
 
@@ -12787,8 +22414,9 @@ class GusersFilterBuilder
   _$GusersFilter _build() {
     _$GusersFilter _$result;
     try {
-      _$result = _$v ??
-          new _$GusersFilter._(
+      _$result =
+          _$v ??
+          _$GusersFilter._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             email: _email?.build(),
@@ -12821,8 +22449,11 @@ class GusersFilterBuilder
         _$failedField = 'not';
         _not?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GusersFilter', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GusersFilter',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -12843,21 +22474,24 @@ class _$GusersInsertInput extends GusersInsertInput {
   @override
   final GUUID? auth_uid;
 
-  factory _$GusersInsertInput(
-          [void Function(GusersInsertInputBuilder)? updates]) =>
-      (new GusersInsertInputBuilder()..update(updates))._build();
+  factory _$GusersInsertInput([
+    void Function(GusersInsertInputBuilder)? updates,
+  ]) => (GusersInsertInputBuilder()..update(updates))._build();
 
-  _$GusersInsertInput._(
-      {this.id, this.created_at, this.email, this.phone, this.auth_uid})
-      : super._();
-
+  _$GusersInsertInput._({
+    this.id,
+    this.created_at,
+    this.email,
+    this.phone,
+    this.auth_uid,
+  }) : super._();
   @override
   GusersInsertInput rebuild(void Function(GusersInsertInputBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   GusersInsertInputBuilder toBuilder() =>
-      new GusersInsertInputBuilder()..replace(this);
+      GusersInsertInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -12899,12 +22533,11 @@ class GusersInsertInputBuilder
   _$GusersInsertInput? _$v;
 
   GUUIDBuilder? _id;
-  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
   set id(GUUIDBuilder? id) => _$this._id = id;
 
   GDatetimeBuilder? _created_at;
-  GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
   set created_at(GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
@@ -12917,7 +22550,7 @@ class GusersInsertInputBuilder
   set phone(String? phone) => _$this._phone = phone;
 
   GUUIDBuilder? _auth_uid;
-  GUUIDBuilder get auth_uid => _$this._auth_uid ??= new GUUIDBuilder();
+  GUUIDBuilder get auth_uid => _$this._auth_uid ??= GUUIDBuilder();
   set auth_uid(GUUIDBuilder? auth_uid) => _$this._auth_uid = auth_uid;
 
   GusersInsertInputBuilder();
@@ -12937,7 +22570,6 @@ class GusersInsertInputBuilder
 
   @override
   void replace(GusersInsertInput other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GusersInsertInput;
   }
 
@@ -12952,8 +22584,9 @@ class GusersInsertInputBuilder
   _$GusersInsertInput _build() {
     _$GusersInsertInput _$result;
     try {
-      _$result = _$v ??
-          new _$GusersInsertInput._(
+      _$result =
+          _$v ??
+          _$GusersInsertInput._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             email: email,
@@ -12971,8 +22604,11 @@ class GusersInsertInputBuilder
         _$failedField = 'auth_uid';
         _auth_uid?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GusersInsertInput', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GusersInsertInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -12994,18 +22630,21 @@ class _$GusersOrderBy extends GusersOrderBy {
   final GOrderByDirection? auth_uid;
 
   factory _$GusersOrderBy([void Function(GusersOrderByBuilder)? updates]) =>
-      (new GusersOrderByBuilder()..update(updates))._build();
+      (GusersOrderByBuilder()..update(updates))._build();
 
-  _$GusersOrderBy._(
-      {this.id, this.created_at, this.email, this.phone, this.auth_uid})
-      : super._();
-
+  _$GusersOrderBy._({
+    this.id,
+    this.created_at,
+    this.email,
+    this.phone,
+    this.auth_uid,
+  }) : super._();
   @override
   GusersOrderBy rebuild(void Function(GusersOrderByBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GusersOrderByBuilder toBuilder() => new GusersOrderByBuilder()..replace(this);
+  GusersOrderByBuilder toBuilder() => GusersOrderByBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -13084,7 +22723,6 @@ class GusersOrderByBuilder
 
   @override
   void replace(GusersOrderBy other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GusersOrderBy;
   }
 
@@ -13097,8 +22735,9 @@ class GusersOrderByBuilder
   GusersOrderBy build() => _build();
 
   _$GusersOrderBy _build() {
-    final _$result = _$v ??
-        new _$GusersOrderBy._(
+    final _$result =
+        _$v ??
+        _$GusersOrderBy._(
           id: id,
           created_at: created_at,
           email: email,
@@ -13122,21 +22761,24 @@ class _$GusersUpdateInput extends GusersUpdateInput {
   @override
   final GUUID? auth_uid;
 
-  factory _$GusersUpdateInput(
-          [void Function(GusersUpdateInputBuilder)? updates]) =>
-      (new GusersUpdateInputBuilder()..update(updates))._build();
+  factory _$GusersUpdateInput([
+    void Function(GusersUpdateInputBuilder)? updates,
+  ]) => (GusersUpdateInputBuilder()..update(updates))._build();
 
-  _$GusersUpdateInput._(
-      {this.id, this.created_at, this.email, this.phone, this.auth_uid})
-      : super._();
-
+  _$GusersUpdateInput._({
+    this.id,
+    this.created_at,
+    this.email,
+    this.phone,
+    this.auth_uid,
+  }) : super._();
   @override
   GusersUpdateInput rebuild(void Function(GusersUpdateInputBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   GusersUpdateInputBuilder toBuilder() =>
-      new GusersUpdateInputBuilder()..replace(this);
+      GusersUpdateInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -13178,12 +22820,11 @@ class GusersUpdateInputBuilder
   _$GusersUpdateInput? _$v;
 
   GUUIDBuilder? _id;
-  GUUIDBuilder get id => _$this._id ??= new GUUIDBuilder();
+  GUUIDBuilder get id => _$this._id ??= GUUIDBuilder();
   set id(GUUIDBuilder? id) => _$this._id = id;
 
   GDatetimeBuilder? _created_at;
-  GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new GDatetimeBuilder();
+  GDatetimeBuilder get created_at => _$this._created_at ??= GDatetimeBuilder();
   set created_at(GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
@@ -13196,7 +22837,7 @@ class GusersUpdateInputBuilder
   set phone(String? phone) => _$this._phone = phone;
 
   GUUIDBuilder? _auth_uid;
-  GUUIDBuilder get auth_uid => _$this._auth_uid ??= new GUUIDBuilder();
+  GUUIDBuilder get auth_uid => _$this._auth_uid ??= GUUIDBuilder();
   set auth_uid(GUUIDBuilder? auth_uid) => _$this._auth_uid = auth_uid;
 
   GusersUpdateInputBuilder();
@@ -13216,7 +22857,6 @@ class GusersUpdateInputBuilder
 
   @override
   void replace(GusersUpdateInput other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GusersUpdateInput;
   }
 
@@ -13231,8 +22871,9 @@ class GusersUpdateInputBuilder
   _$GusersUpdateInput _build() {
     _$GusersUpdateInput _$result;
     try {
-      _$result = _$v ??
-          new _$GusersUpdateInput._(
+      _$result =
+          _$v ??
+          _$GusersUpdateInput._(
             id: _id?.build(),
             created_at: _created_at?.build(),
             email: email,
@@ -13250,8 +22891,11 @@ class GusersUpdateInputBuilder
         _$failedField = 'auth_uid';
         _auth_uid?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GusersUpdateInput', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GusersUpdateInput',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }

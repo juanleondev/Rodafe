@@ -7,53 +7,62 @@ part of 'get_current_user.data.gql.dart';
 // **************************************************************************
 
 Serializer<GGetCurrentUserData> _$gGetCurrentUserDataSerializer =
-    new _$GGetCurrentUserDataSerializer();
+    _$GGetCurrentUserDataSerializer();
 Serializer<GGetCurrentUserData_usersCollection>
-    _$gGetCurrentUserDataUsersCollectionSerializer =
-    new _$GGetCurrentUserData_usersCollectionSerializer();
+_$gGetCurrentUserDataUsersCollectionSerializer =
+    _$GGetCurrentUserData_usersCollectionSerializer();
 Serializer<GGetCurrentUserData_usersCollection_edges>
-    _$gGetCurrentUserDataUsersCollectionEdgesSerializer =
-    new _$GGetCurrentUserData_usersCollection_edgesSerializer();
+_$gGetCurrentUserDataUsersCollectionEdgesSerializer =
+    _$GGetCurrentUserData_usersCollection_edgesSerializer();
 Serializer<GGetCurrentUserData_usersCollection_edges_node>
-    _$gGetCurrentUserDataUsersCollectionEdgesNodeSerializer =
-    new _$GGetCurrentUserData_usersCollection_edges_nodeSerializer();
+_$gGetCurrentUserDataUsersCollectionEdgesNodeSerializer =
+    _$GGetCurrentUserData_usersCollection_edges_nodeSerializer();
 
 class _$GGetCurrentUserDataSerializer
     implements StructuredSerializer<GGetCurrentUserData> {
   @override
   final Iterable<Type> types = const [
     GGetCurrentUserData,
-    _$GGetCurrentUserData
+    _$GGetCurrentUserData,
   ];
   @override
   final String wireName = 'GGetCurrentUserData';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GGetCurrentUserData object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    GGetCurrentUserData object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[
       '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
+      serializers.serialize(
+        object.G__typename,
+        specifiedType: const FullType(String),
+      ),
     ];
     Object? value;
     value = object.usersCollection;
     if (value != null) {
       result
         ..add('usersCollection')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(GGetCurrentUserData_usersCollection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(GGetCurrentUserData_usersCollection),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GGetCurrentUserData deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GGetCurrentUserDataBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GGetCurrentUserDataBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -62,14 +71,23 @@ class _$GGetCurrentUserDataSerializer
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
+          result.G__typename =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )!
+                  as String;
           break;
         case 'usersCollection':
-          result.usersCollection.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(GGetCurrentUserData_usersCollection))!
-              as GGetCurrentUserData_usersCollection);
+          result.usersCollection.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(
+                    GGetCurrentUserData_usersCollection,
+                  ),
+                )!
+                as GGetCurrentUserData_usersCollection,
+          );
           break;
       }
     }
@@ -83,24 +101,30 @@ class _$GGetCurrentUserData_usersCollectionSerializer
   @override
   final Iterable<Type> types = const [
     GGetCurrentUserData_usersCollection,
-    _$GGetCurrentUserData_usersCollection
+    _$GGetCurrentUserData_usersCollection,
   ];
   @override
   final String wireName = 'GGetCurrentUserData_usersCollection';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GGetCurrentUserData_usersCollection object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    GGetCurrentUserData_usersCollection object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[
       '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
+      serializers.serialize(
+        object.G__typename,
+        specifiedType: const FullType(String),
+      ),
       'edges',
-      serializers.serialize(object.edges,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(GGetCurrentUserData_usersCollection_edges)
-          ])),
+      serializers.serialize(
+        object.edges,
+        specifiedType: const FullType(BuiltList, const [
+          const FullType(GGetCurrentUserData_usersCollection_edges),
+        ]),
+      ),
     ];
 
     return result;
@@ -108,9 +132,11 @@ class _$GGetCurrentUserData_usersCollectionSerializer
 
   @override
   GGetCurrentUserData_usersCollection deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GGetCurrentUserData_usersCollectionBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GGetCurrentUserData_usersCollectionBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -119,14 +145,23 @@ class _$GGetCurrentUserData_usersCollectionSerializer
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
+          result.G__typename =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )!
+                  as String;
           break;
         case 'edges':
-          result.edges.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GGetCurrentUserData_usersCollection_edges)
-              ]))! as BuiltList<Object?>);
+          result.edges.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(GGetCurrentUserData_usersCollection_edges),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -140,23 +175,30 @@ class _$GGetCurrentUserData_usersCollection_edgesSerializer
   @override
   final Iterable<Type> types = const [
     GGetCurrentUserData_usersCollection_edges,
-    _$GGetCurrentUserData_usersCollection_edges
+    _$GGetCurrentUserData_usersCollection_edges,
   ];
   @override
   final String wireName = 'GGetCurrentUserData_usersCollection_edges';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GGetCurrentUserData_usersCollection_edges object,
-      {FullType specifiedType = FullType.unspecified}) {
+    Serializers serializers,
+    GGetCurrentUserData_usersCollection_edges object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[
       '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
+      serializers.serialize(
+        object.G__typename,
+        specifiedType: const FullType(String),
+      ),
       'node',
-      serializers.serialize(object.node,
-          specifiedType:
-              const FullType(GGetCurrentUserData_usersCollection_edges_node)),
+      serializers.serialize(
+        object.node,
+        specifiedType: const FullType(
+          GGetCurrentUserData_usersCollection_edges_node,
+        ),
+      ),
     ];
 
     return result;
@@ -164,9 +206,11 @@ class _$GGetCurrentUserData_usersCollection_edgesSerializer
 
   @override
   GGetCurrentUserData_usersCollection_edges deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GGetCurrentUserData_usersCollection_edgesBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GGetCurrentUserData_usersCollection_edgesBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -175,14 +219,23 @@ class _$GGetCurrentUserData_usersCollection_edgesSerializer
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
+          result.G__typename =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )!
+                  as String;
           break;
         case 'node':
-          result.node.replace(serializers.deserialize(value,
+          result.node.replace(
+            serializers.deserialize(
+                  value,
                   specifiedType: const FullType(
-                      GGetCurrentUserData_usersCollection_edges_node))!
-              as GGetCurrentUserData_usersCollection_edges_node);
+                    GGetCurrentUserData_usersCollection_edges_node,
+                  ),
+                )!
+                as GGetCurrentUserData_usersCollection_edges_node,
+          );
           break;
       }
     }
@@ -197,48 +250,63 @@ class _$GGetCurrentUserData_usersCollection_edges_nodeSerializer
   @override
   final Iterable<Type> types = const [
     GGetCurrentUserData_usersCollection_edges_node,
-    _$GGetCurrentUserData_usersCollection_edges_node
+    _$GGetCurrentUserData_usersCollection_edges_node,
   ];
   @override
   final String wireName = 'GGetCurrentUserData_usersCollection_edges_node';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GGetCurrentUserData_usersCollection_edges_node object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GGetCurrentUserData_usersCollection_edges_node object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[
       '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
+      serializers.serialize(
+        object.G__typename,
+        specifiedType: const FullType(String),
+      ),
       'id',
-      serializers.serialize(object.id,
-          specifiedType: const FullType(_i2.GUUID)),
+      serializers.serialize(
+        object.id,
+        specifiedType: const FullType(_i2.GUUID),
+      ),
       'email',
-      serializers.serialize(object.email,
-          specifiedType: const FullType(String)),
+      serializers.serialize(
+        object.email,
+        specifiedType: const FullType(String),
+      ),
       'auth_uid',
-      serializers.serialize(object.auth_uid,
-          specifiedType: const FullType(_i2.GUUID)),
+      serializers.serialize(
+        object.auth_uid,
+        specifiedType: const FullType(_i2.GUUID),
+      ),
       'created_at',
-      serializers.serialize(object.created_at,
-          specifiedType: const FullType(_i2.GDatetime)),
+      serializers.serialize(
+        object.created_at,
+        specifiedType: const FullType(_i2.GDatetime),
+      ),
     ];
     Object? value;
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     return result;
   }
 
   @override
   GGetCurrentUserData_usersCollection_edges_node deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GGetCurrentUserData_usersCollection_edges_nodeBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GGetCurrentUserData_usersCollection_edges_nodeBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -247,28 +315,55 @@ class _$GGetCurrentUserData_usersCollection_edges_nodeSerializer
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
+          result.G__typename =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )!
+                  as String;
           break;
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GUUID))! as _i2.GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(_i2.GUUID),
+                )!
+                as _i2.GUUID,
+          );
           break;
         case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
+          result.email =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )!
+                  as String;
           break;
         case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.phone =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'auth_uid':
-          result.auth_uid.replace(serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GUUID))! as _i2.GUUID);
+          result.auth_uid.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(_i2.GUUID),
+                )!
+                as _i2.GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GDatetime))! as _i2.GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(_i2.GDatetime),
+                )!
+                as _i2.GDatetime,
+          );
           break;
       }
     }
@@ -283,24 +378,20 @@ class _$GGetCurrentUserData extends GGetCurrentUserData {
   @override
   final GGetCurrentUserData_usersCollection? usersCollection;
 
-  factory _$GGetCurrentUserData(
-          [void Function(GGetCurrentUserDataBuilder)? updates]) =>
-      (new GGetCurrentUserDataBuilder()..update(updates))._build();
+  factory _$GGetCurrentUserData([
+    void Function(GGetCurrentUserDataBuilder)? updates,
+  ]) => (GGetCurrentUserDataBuilder()..update(updates))._build();
 
   _$GGetCurrentUserData._({required this.G__typename, this.usersCollection})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GGetCurrentUserData', 'G__typename');
-  }
-
+    : super._();
   @override
   GGetCurrentUserData rebuild(
-          void Function(GGetCurrentUserDataBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GGetCurrentUserDataBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GGetCurrentUserDataBuilder toBuilder() =>
-      new GGetCurrentUserDataBuilder()..replace(this);
+      GGetCurrentUserDataBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -338,11 +429,10 @@ class GGetCurrentUserDataBuilder
 
   GGetCurrentUserData_usersCollectionBuilder? _usersCollection;
   GGetCurrentUserData_usersCollectionBuilder get usersCollection =>
-      _$this._usersCollection ??=
-          new GGetCurrentUserData_usersCollectionBuilder();
+      _$this._usersCollection ??= GGetCurrentUserData_usersCollectionBuilder();
   set usersCollection(
-          GGetCurrentUserData_usersCollectionBuilder? usersCollection) =>
-      _$this._usersCollection = usersCollection;
+    GGetCurrentUserData_usersCollectionBuilder? usersCollection,
+  ) => _$this._usersCollection = usersCollection;
 
   GGetCurrentUserDataBuilder() {
     GGetCurrentUserData._initializeBuilder(this);
@@ -360,7 +450,6 @@ class GGetCurrentUserDataBuilder
 
   @override
   void replace(GGetCurrentUserData other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GGetCurrentUserData;
   }
 
@@ -375,10 +464,14 @@ class GGetCurrentUserDataBuilder
   _$GGetCurrentUserData _build() {
     _$GGetCurrentUserData _$result;
     try {
-      _$result = _$v ??
-          new _$GGetCurrentUserData._(
+      _$result =
+          _$v ??
+          _$GGetCurrentUserData._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, r'GGetCurrentUserData', 'G__typename'),
+              G__typename,
+              r'GGetCurrentUserData',
+              'G__typename',
+            ),
             usersCollection: _usersCollection?.build(),
           );
     } catch (_) {
@@ -387,8 +480,11 @@ class GGetCurrentUserDataBuilder
         _$failedField = 'usersCollection';
         _usersCollection?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GGetCurrentUserData', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GGetCurrentUserData',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -404,29 +500,23 @@ class _$GGetCurrentUserData_usersCollection
   @override
   final BuiltList<GGetCurrentUserData_usersCollection_edges> edges;
 
-  factory _$GGetCurrentUserData_usersCollection(
-          [void Function(GGetCurrentUserData_usersCollectionBuilder)?
-              updates]) =>
-      (new GGetCurrentUserData_usersCollectionBuilder()..update(updates))
-          ._build();
+  factory _$GGetCurrentUserData_usersCollection([
+    void Function(GGetCurrentUserData_usersCollectionBuilder)? updates,
+  ]) =>
+      (GGetCurrentUserData_usersCollectionBuilder()..update(updates))._build();
 
-  _$GGetCurrentUserData_usersCollection._(
-      {required this.G__typename, required this.edges})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GGetCurrentUserData_usersCollection', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        edges, r'GGetCurrentUserData_usersCollection', 'edges');
-  }
-
+  _$GGetCurrentUserData_usersCollection._({
+    required this.G__typename,
+    required this.edges,
+  }) : super._();
   @override
   GGetCurrentUserData_usersCollection rebuild(
-          void Function(GGetCurrentUserData_usersCollectionBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GGetCurrentUserData_usersCollectionBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GGetCurrentUserData_usersCollectionBuilder toBuilder() =>
-      new GGetCurrentUserData_usersCollectionBuilder()..replace(this);
+      GGetCurrentUserData_usersCollectionBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -456,8 +546,10 @@ class _$GGetCurrentUserData_usersCollection
 
 class GGetCurrentUserData_usersCollectionBuilder
     implements
-        Builder<GGetCurrentUserData_usersCollection,
-            GGetCurrentUserData_usersCollectionBuilder> {
+        Builder<
+          GGetCurrentUserData_usersCollection,
+          GGetCurrentUserData_usersCollectionBuilder
+        > {
   _$GGetCurrentUserData_usersCollection? _$v;
 
   String? _G__typename;
@@ -467,7 +559,7 @@ class GGetCurrentUserData_usersCollectionBuilder
   ListBuilder<GGetCurrentUserData_usersCollection_edges>? _edges;
   ListBuilder<GGetCurrentUserData_usersCollection_edges> get edges =>
       _$this._edges ??=
-          new ListBuilder<GGetCurrentUserData_usersCollection_edges>();
+          ListBuilder<GGetCurrentUserData_usersCollection_edges>();
   set edges(ListBuilder<GGetCurrentUserData_usersCollection_edges>? edges) =>
       _$this._edges = edges;
 
@@ -487,13 +579,13 @@ class GGetCurrentUserData_usersCollectionBuilder
 
   @override
   void replace(GGetCurrentUserData_usersCollection other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GGetCurrentUserData_usersCollection;
   }
 
   @override
   void update(
-      void Function(GGetCurrentUserData_usersCollectionBuilder)? updates) {
+    void Function(GGetCurrentUserData_usersCollectionBuilder)? updates,
+  ) {
     if (updates != null) updates(this);
   }
 
@@ -503,10 +595,14 @@ class GGetCurrentUserData_usersCollectionBuilder
   _$GGetCurrentUserData_usersCollection _build() {
     _$GGetCurrentUserData_usersCollection _$result;
     try {
-      _$result = _$v ??
-          new _$GGetCurrentUserData_usersCollection._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GGetCurrentUserData_usersCollection', 'G__typename'),
+      _$result =
+          _$v ??
+          _$GGetCurrentUserData_usersCollection._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+              G__typename,
+              r'GGetCurrentUserData_usersCollection',
+              'G__typename',
+            ),
             edges: edges.build(),
           );
     } catch (_) {
@@ -515,10 +611,11 @@ class GGetCurrentUserData_usersCollectionBuilder
         _$failedField = 'edges';
         edges.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GGetCurrentUserData_usersCollection',
-            _$failedField,
-            e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GGetCurrentUserData_usersCollection',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -534,30 +631,23 @@ class _$GGetCurrentUserData_usersCollection_edges
   @override
   final GGetCurrentUserData_usersCollection_edges_node node;
 
-  factory _$GGetCurrentUserData_usersCollection_edges(
-          [void Function(GGetCurrentUserData_usersCollection_edgesBuilder)?
-              updates]) =>
-      (new GGetCurrentUserData_usersCollection_edgesBuilder()..update(updates))
-          ._build();
+  factory _$GGetCurrentUserData_usersCollection_edges([
+    void Function(GGetCurrentUserData_usersCollection_edgesBuilder)? updates,
+  ]) => (GGetCurrentUserData_usersCollection_edgesBuilder()..update(updates))
+      ._build();
 
-  _$GGetCurrentUserData_usersCollection_edges._(
-      {required this.G__typename, required this.node})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GGetCurrentUserData_usersCollection_edges', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        node, r'GGetCurrentUserData_usersCollection_edges', 'node');
-  }
-
+  _$GGetCurrentUserData_usersCollection_edges._({
+    required this.G__typename,
+    required this.node,
+  }) : super._();
   @override
   GGetCurrentUserData_usersCollection_edges rebuild(
-          void Function(GGetCurrentUserData_usersCollection_edgesBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GGetCurrentUserData_usersCollection_edgesBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GGetCurrentUserData_usersCollection_edgesBuilder toBuilder() =>
-      new GGetCurrentUserData_usersCollection_edgesBuilder()..replace(this);
+      GGetCurrentUserData_usersCollection_edgesBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -579,7 +669,8 @@ class _$GGetCurrentUserData_usersCollection_edges
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            r'GGetCurrentUserData_usersCollection_edges')
+            r'GGetCurrentUserData_usersCollection_edges',
+          )
           ..add('G__typename', G__typename)
           ..add('node', node))
         .toString();
@@ -588,8 +679,10 @@ class _$GGetCurrentUserData_usersCollection_edges
 
 class GGetCurrentUserData_usersCollection_edgesBuilder
     implements
-        Builder<GGetCurrentUserData_usersCollection_edges,
-            GGetCurrentUserData_usersCollection_edgesBuilder> {
+        Builder<
+          GGetCurrentUserData_usersCollection_edges,
+          GGetCurrentUserData_usersCollection_edgesBuilder
+        > {
   _$GGetCurrentUserData_usersCollection_edges? _$v;
 
   String? _G__typename;
@@ -598,8 +691,7 @@ class GGetCurrentUserData_usersCollection_edgesBuilder
 
   GGetCurrentUserData_usersCollection_edges_nodeBuilder? _node;
   GGetCurrentUserData_usersCollection_edges_nodeBuilder get node =>
-      _$this._node ??=
-          new GGetCurrentUserData_usersCollection_edges_nodeBuilder();
+      _$this._node ??= GGetCurrentUserData_usersCollection_edges_nodeBuilder();
   set node(GGetCurrentUserData_usersCollection_edges_nodeBuilder? node) =>
       _$this._node = node;
 
@@ -619,14 +711,13 @@ class GGetCurrentUserData_usersCollection_edgesBuilder
 
   @override
   void replace(GGetCurrentUserData_usersCollection_edges other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GGetCurrentUserData_usersCollection_edges;
   }
 
   @override
   void update(
-      void Function(GGetCurrentUserData_usersCollection_edgesBuilder)?
-          updates) {
+    void Function(GGetCurrentUserData_usersCollection_edgesBuilder)? updates,
+  ) {
     if (updates != null) updates(this);
   }
 
@@ -636,10 +727,14 @@ class GGetCurrentUserData_usersCollection_edgesBuilder
   _$GGetCurrentUserData_usersCollection_edges _build() {
     _$GGetCurrentUserData_usersCollection_edges _$result;
     try {
-      _$result = _$v ??
-          new _$GGetCurrentUserData_usersCollection_edges._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GGetCurrentUserData_usersCollection_edges', 'G__typename'),
+      _$result =
+          _$v ??
+          _$GGetCurrentUserData_usersCollection_edges._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+              G__typename,
+              r'GGetCurrentUserData_usersCollection_edges',
+              'G__typename',
+            ),
             node: node.build(),
           );
     } catch (_) {
@@ -648,10 +743,11 @@ class GGetCurrentUserData_usersCollection_edgesBuilder
         _$failedField = 'node';
         node.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GGetCurrentUserData_usersCollection_edges',
-            _$failedField,
-            e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GGetCurrentUserData_usersCollection_edges',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -675,43 +771,30 @@ class _$GGetCurrentUserData_usersCollection_edges_node
   @override
   final _i2.GDatetime created_at;
 
-  factory _$GGetCurrentUserData_usersCollection_edges_node(
-          [void Function(GGetCurrentUserData_usersCollection_edges_nodeBuilder)?
-              updates]) =>
-      (new GGetCurrentUserData_usersCollection_edges_nodeBuilder()
-            ..update(updates))
+  factory _$GGetCurrentUserData_usersCollection_edges_node([
+    void Function(GGetCurrentUserData_usersCollection_edges_nodeBuilder)?
+    updates,
+  ]) =>
+      (GGetCurrentUserData_usersCollection_edges_nodeBuilder()..update(updates))
           ._build();
 
-  _$GGetCurrentUserData_usersCollection_edges_node._(
-      {required this.G__typename,
-      required this.id,
-      required this.email,
-      this.phone,
-      required this.auth_uid,
-      required this.created_at})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GGetCurrentUserData_usersCollection_edges_node', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'GGetCurrentUserData_usersCollection_edges_node', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        email, r'GGetCurrentUserData_usersCollection_edges_node', 'email');
-    BuiltValueNullFieldError.checkNotNull(auth_uid,
-        r'GGetCurrentUserData_usersCollection_edges_node', 'auth_uid');
-    BuiltValueNullFieldError.checkNotNull(created_at,
-        r'GGetCurrentUserData_usersCollection_edges_node', 'created_at');
-  }
-
+  _$GGetCurrentUserData_usersCollection_edges_node._({
+    required this.G__typename,
+    required this.id,
+    required this.email,
+    this.phone,
+    required this.auth_uid,
+    required this.created_at,
+  }) : super._();
   @override
   GGetCurrentUserData_usersCollection_edges_node rebuild(
-          void Function(GGetCurrentUserData_usersCollection_edges_nodeBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GGetCurrentUserData_usersCollection_edges_nodeBuilder)
+    updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GGetCurrentUserData_usersCollection_edges_nodeBuilder toBuilder() =>
-      new GGetCurrentUserData_usersCollection_edges_nodeBuilder()
-        ..replace(this);
+      GGetCurrentUserData_usersCollection_edges_nodeBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -741,7 +824,8 @@ class _$GGetCurrentUserData_usersCollection_edges_node
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            r'GGetCurrentUserData_usersCollection_edges_node')
+            r'GGetCurrentUserData_usersCollection_edges_node',
+          )
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('email', email)
@@ -754,8 +838,10 @@ class _$GGetCurrentUserData_usersCollection_edges_node
 
 class GGetCurrentUserData_usersCollection_edges_nodeBuilder
     implements
-        Builder<GGetCurrentUserData_usersCollection_edges_node,
-            GGetCurrentUserData_usersCollection_edges_nodeBuilder> {
+        Builder<
+          GGetCurrentUserData_usersCollection_edges_node,
+          GGetCurrentUserData_usersCollection_edges_nodeBuilder
+        > {
   _$GGetCurrentUserData_usersCollection_edges_node? _$v;
 
   String? _G__typename;
@@ -763,7 +849,7 @@ class GGetCurrentUserData_usersCollection_edges_nodeBuilder
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
   _i2.GUUIDBuilder? _id;
-  _i2.GUUIDBuilder get id => _$this._id ??= new _i2.GUUIDBuilder();
+  _i2.GUUIDBuilder get id => _$this._id ??= _i2.GUUIDBuilder();
   set id(_i2.GUUIDBuilder? id) => _$this._id = id;
 
   String? _email;
@@ -775,12 +861,12 @@ class GGetCurrentUserData_usersCollection_edges_nodeBuilder
   set phone(String? phone) => _$this._phone = phone;
 
   _i2.GUUIDBuilder? _auth_uid;
-  _i2.GUUIDBuilder get auth_uid => _$this._auth_uid ??= new _i2.GUUIDBuilder();
+  _i2.GUUIDBuilder get auth_uid => _$this._auth_uid ??= _i2.GUUIDBuilder();
   set auth_uid(_i2.GUUIDBuilder? auth_uid) => _$this._auth_uid = auth_uid;
 
   _i2.GDatetimeBuilder? _created_at;
   _i2.GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new _i2.GDatetimeBuilder();
+      _$this._created_at ??= _i2.GDatetimeBuilder();
   set created_at(_i2.GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
@@ -804,14 +890,14 @@ class GGetCurrentUserData_usersCollection_edges_nodeBuilder
 
   @override
   void replace(GGetCurrentUserData_usersCollection_edges_node other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GGetCurrentUserData_usersCollection_edges_node;
   }
 
   @override
   void update(
-      void Function(GGetCurrentUserData_usersCollection_edges_nodeBuilder)?
-          updates) {
+    void Function(GGetCurrentUserData_usersCollection_edges_nodeBuilder)?
+    updates,
+  ) {
     if (updates != null) updates(this);
   }
 
@@ -821,15 +907,20 @@ class GGetCurrentUserData_usersCollection_edges_nodeBuilder
   _$GGetCurrentUserData_usersCollection_edges_node _build() {
     _$GGetCurrentUserData_usersCollection_edges_node _$result;
     try {
-      _$result = _$v ??
-          new _$GGetCurrentUserData_usersCollection_edges_node._(
+      _$result =
+          _$v ??
+          _$GGetCurrentUserData_usersCollection_edges_node._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GGetCurrentUserData_usersCollection_edges_node',
-                'G__typename'),
+              G__typename,
+              r'GGetCurrentUserData_usersCollection_edges_node',
+              'G__typename',
+            ),
             id: id.build(),
-            email: BuiltValueNullFieldError.checkNotNull(email,
-                r'GGetCurrentUserData_usersCollection_edges_node', 'email'),
+            email: BuiltValueNullFieldError.checkNotNull(
+              email,
+              r'GGetCurrentUserData_usersCollection_edges_node',
+              'email',
+            ),
             phone: phone,
             auth_uid: auth_uid.build(),
             created_at: created_at.build(),
@@ -845,10 +936,11 @@ class GGetCurrentUserData_usersCollection_edges_nodeBuilder
         _$failedField = 'created_at';
         created_at.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GGetCurrentUserData_usersCollection_edges_node',
-            _$failedField,
-            e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GGetCurrentUserData_usersCollection_edges_node',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }

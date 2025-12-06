@@ -7,6 +7,7 @@ environment:
 workspace:
   - packages/authentication_provider
   - packages/graphql_data_source
+  - packages/car_repository
   - packages/product_requeriment_repository
   - packages/shared_models
   - packages/user_repository

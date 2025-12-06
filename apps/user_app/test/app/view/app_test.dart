@@ -1,4 +1,5 @@
 import 'package:authentication_provider/authentication_provider.dart';
+import 'package:car_repository/car_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:graphql_data_source/graphql_data_source.dart';
 import 'package:mocktail/mocktail.dart';
@@ -12,6 +13,8 @@ class MockGraphqlDataSource extends Mock implements GraphqlDataSource {}
 
 class MockUserRepository extends Mock implements UserRepository {}
 
+class MockCarRepository extends Mock implements CarRepository {}
+
 class MockAuthenticationProvider extends Mock
     implements AuthenticationProvider {}
 
@@ -21,6 +24,7 @@ void main() {
   group('App', () {
     testWidgets('renders SignInPage when no user found', (tester) async {
       final mockUserRepository = MockUserRepository();
+      final mockCarRepository = MockCarRepository();
       final mockAuthProvider = MockAuthenticationProvider();
       final mockAuthenticationBloc = MockAuthenticationBloc();
 
@@ -52,6 +56,7 @@ void main() {
       await tester.pumpWidget(
         App(
           userRepository: mockUserRepository,
+          carRepository: mockCarRepository,
           authProvider: mockAuthProvider,
           authenticationBloc: mockAuthenticationBloc,
           router: router,
