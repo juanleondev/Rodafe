@@ -3,8 +3,10 @@ import 'dart:async';
 import 'package:authentication_provider/authentication_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:user_app/app/router/route_guard.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
 import 'package:user_app/cars_creation/cars_creation.dart';
+import 'package:user_app/home/view/home_page.dart';
 import 'package:user_app/register/register.dart';
 import 'package:user_app/sign_in/sign_in.dart';
 import 'package:user_app/splash/splash.dart';
@@ -15,31 +17,30 @@ class AppRouter {
   static const String homeRoute = '/home';
   static const String signInRoute = '/sign-in';
   static const String registerRoute = '/register';
+  static const String carsCreationRoute = '/cars-creation';
+
+  /// Route configuration: maps route paths to their access types
+  static const Map<String, RouteType> routeConfig = {
+    splashRoute: RouteType.public,
+    signInRoute: RouteType.public,
+    registerRoute: RouteType.authenticated,
+    homeRoute: RouteType.registered,
+    carsCreationRoute: RouteType.registered,
+  };
 
   static GoRouter getRouter(
     AuthenticationProvider authProvider,
     UserRepository userRepository,
   ) {
+    final routeGuard = RouteGuard(
+      authProvider: authProvider,
+      userRepository: userRepository,
+      routeConfig: routeConfig,
+    );
+
     return GoRouter(
       initialLocation: splashRoute,
-      redirect: (context, state) {
-        final currentUser = userRepository.currentUser;
-        final isAuthenticated = authProvider.isAuthenticated;
-
-        // If we're on splash, let it handle the flow
-        if (state.matchedLocation == splashRoute) {
-          return null;
-        }
-        if (currentUser != null) {
-          return homeRoute;
-        }
-
-        if (isAuthenticated) {
-          return registerRoute;
-        }
-
-        return signInRoute;
-      },
+      redirect: routeGuard.redirect,
       routes: [
         GoRoute(
           path: splashRoute,
@@ -53,8 +54,9 @@ class AppRouter {
           path: registerRoute,
           builder: (context, state) => const RegisterPage(),
         ),
+        GoRoute(path: homeRoute, builder: (context, state) => const HomePage()),
         GoRoute(
-          path: homeRoute,
+          path: carsCreationRoute,
           builder: (context, state) => const CarsCreationPage(),
         ),
       ],
