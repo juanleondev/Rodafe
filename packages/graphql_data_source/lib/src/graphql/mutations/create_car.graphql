@@ -1,0 +1,43 @@
+mutation CreateCar(
+  $modelId: UUID!
+  $year: Int!
+  $generation: String
+  $bodyType: String
+  $engineType: String
+  $transmissionType: String
+  $drivetrain: String
+  $trim: String
+  $description: String
+) {
+  insertIntocarsCollection(
+    objects: [
+      {
+        model_id: $modelId
+        year: $year
+        generation: $generation
+        body_type: $bodyType
+        engine_type: $engineType
+        transmission_type: $transmissionType
+        drivetrain: $drivetrain
+        trim: $trim
+        description: $description
+      }
+    ]
+  ) {
+    affectedCount
+    records {
+      id
+      model_id
+      year
+      generation
+      body_type
+      engine_type
+      transmission_type
+      drivetrain
+      trim
+      description
+      created_at
+    }
+  }
+}
+

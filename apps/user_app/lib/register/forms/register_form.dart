@@ -28,27 +28,4 @@ class RegisterForm extends FormGroup {
   bool get isValid => valid;
   bool get isEmailValid => control(emailControl).valid;
   bool get isPhoneValid => control(phoneControl).valid;
-
-  String? get emailError {
-    final control = this.control(emailControl);
-    if (control.valid || control.pristine) return null;
-
-    if (control.hasError(ValidationMessage.required)) {
-      return 'Email is required';
-    }
-    if (control.hasError(ValidationMessage.email)) {
-      return 'Please enter a valid email';
-    }
-    return null;
-  }
-
-  String? get phoneError {
-    final control = this.control(phoneControl);
-    if (control.valid || control.pristine) return null;
-
-    if (control.hasError(ValidationMessage.pattern)) {
-      return 'Please enter a valid phone number';
-    }
-    return null;
-  }
 }

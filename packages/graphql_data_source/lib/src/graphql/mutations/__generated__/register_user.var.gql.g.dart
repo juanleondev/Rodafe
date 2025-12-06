@@ -7,7 +7,7 @@ part of 'register_user.var.gql.dart';
 // **************************************************************************
 
 Serializer<GRegisterUserVars> _$gRegisterUserVarsSerializer =
-    new _$GRegisterUserVarsSerializer();
+    _$GRegisterUserVarsSerializer();
 
 class _$GRegisterUserVarsSerializer
     implements StructuredSerializer<GRegisterUserVars> {
@@ -17,32 +17,42 @@ class _$GRegisterUserVarsSerializer
   final String wireName = 'GRegisterUserVars';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GRegisterUserVars object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GRegisterUserVars object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[
       'email',
-      serializers.serialize(object.email,
-          specifiedType: const FullType(String)),
+      serializers.serialize(
+        object.email,
+        specifiedType: const FullType(String),
+      ),
       'authUid',
-      serializers.serialize(object.authUid,
-          specifiedType: const FullType(_i1.GUUID)),
+      serializers.serialize(
+        object.authUid,
+        specifiedType: const FullType(_i1.GUUID),
+      ),
     ];
     Object? value;
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     return result;
   }
 
   @override
   GRegisterUserVars deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GRegisterUserVarsBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GRegisterUserVarsBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -51,16 +61,29 @@ class _$GRegisterUserVarsSerializer
       final Object? value = iterator.current;
       switch (key) {
         case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
+          result.email =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )!
+                  as String;
           break;
         case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.phone =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'authUid':
-          result.authUid.replace(serializers.deserialize(value,
-              specifiedType: const FullType(_i1.GUUID))! as _i1.GUUID);
+          result.authUid.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(_i1.GUUID),
+                )!
+                as _i1.GUUID,
+          );
           break;
       }
     }
@@ -77,25 +100,22 @@ class _$GRegisterUserVars extends GRegisterUserVars {
   @override
   final _i1.GUUID authUid;
 
-  factory _$GRegisterUserVars(
-          [void Function(GRegisterUserVarsBuilder)? updates]) =>
-      (new GRegisterUserVarsBuilder()..update(updates))._build();
+  factory _$GRegisterUserVars([
+    void Function(GRegisterUserVarsBuilder)? updates,
+  ]) => (GRegisterUserVarsBuilder()..update(updates))._build();
 
-  _$GRegisterUserVars._(
-      {required this.email, this.phone, required this.authUid})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(email, r'GRegisterUserVars', 'email');
-    BuiltValueNullFieldError.checkNotNull(
-        authUid, r'GRegisterUserVars', 'authUid');
-  }
-
+  _$GRegisterUserVars._({
+    required this.email,
+    this.phone,
+    required this.authUid,
+  }) : super._();
   @override
   GRegisterUserVars rebuild(void Function(GRegisterUserVarsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   GRegisterUserVarsBuilder toBuilder() =>
-      new GRegisterUserVarsBuilder()..replace(this);
+      GRegisterUserVarsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -139,7 +159,7 @@ class GRegisterUserVarsBuilder
   set phone(String? phone) => _$this._phone = phone;
 
   _i1.GUUIDBuilder? _authUid;
-  _i1.GUUIDBuilder get authUid => _$this._authUid ??= new _i1.GUUIDBuilder();
+  _i1.GUUIDBuilder get authUid => _$this._authUid ??= _i1.GUUIDBuilder();
   set authUid(_i1.GUUIDBuilder? authUid) => _$this._authUid = authUid;
 
   GRegisterUserVarsBuilder();
@@ -157,7 +177,6 @@ class GRegisterUserVarsBuilder
 
   @override
   void replace(GRegisterUserVars other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GRegisterUserVars;
   }
 
@@ -172,10 +191,14 @@ class GRegisterUserVarsBuilder
   _$GRegisterUserVars _build() {
     _$GRegisterUserVars _$result;
     try {
-      _$result = _$v ??
-          new _$GRegisterUserVars._(
+      _$result =
+          _$v ??
+          _$GRegisterUserVars._(
             email: BuiltValueNullFieldError.checkNotNull(
-                email, r'GRegisterUserVars', 'email'),
+              email,
+              r'GRegisterUserVars',
+              'email',
+            ),
             phone: phone,
             authUid: authUid.build(),
           );
@@ -185,8 +208,11 @@ class GRegisterUserVarsBuilder
         _$failedField = 'authUid';
         authUid.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GRegisterUserVars', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GRegisterUserVars',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }

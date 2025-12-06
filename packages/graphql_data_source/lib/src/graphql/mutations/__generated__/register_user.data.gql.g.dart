@@ -7,13 +7,13 @@ part of 'register_user.data.gql.dart';
 // **************************************************************************
 
 Serializer<GRegisterUserData> _$gRegisterUserDataSerializer =
-    new _$GRegisterUserDataSerializer();
+    _$GRegisterUserDataSerializer();
 Serializer<GRegisterUserData_insertIntousersCollection>
-    _$gRegisterUserDataInsertIntousersCollectionSerializer =
-    new _$GRegisterUserData_insertIntousersCollectionSerializer();
+_$gRegisterUserDataInsertIntousersCollectionSerializer =
+    _$GRegisterUserData_insertIntousersCollectionSerializer();
 Serializer<GRegisterUserData_insertIntousersCollection_records>
-    _$gRegisterUserDataInsertIntousersCollectionRecordsSerializer =
-    new _$GRegisterUserData_insertIntousersCollection_recordsSerializer();
+_$gRegisterUserDataInsertIntousersCollectionRecordsSerializer =
+    _$GRegisterUserData_insertIntousersCollection_recordsSerializer();
 
 class _$GRegisterUserDataSerializer
     implements StructuredSerializer<GRegisterUserData> {
@@ -23,30 +23,42 @@ class _$GRegisterUserDataSerializer
   final String wireName = 'GRegisterUserData';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers, GRegisterUserData object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GRegisterUserData object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[
       '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
+      serializers.serialize(
+        object.G__typename,
+        specifiedType: const FullType(String),
+      ),
     ];
     Object? value;
     value = object.insertIntousersCollection;
     if (value != null) {
       result
         ..add('insertIntousersCollection')
-        ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(GRegisterUserData_insertIntousersCollection)));
+        ..add(
+          serializers.serialize(
+            value,
+            specifiedType: const FullType(
+              GRegisterUserData_insertIntousersCollection,
+            ),
+          ),
+        );
     }
     return result;
   }
 
   @override
   GRegisterUserData deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GRegisterUserDataBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GRegisterUserDataBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -55,15 +67,23 @@ class _$GRegisterUserDataSerializer
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
+          result.G__typename =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )!
+                  as String;
           break;
         case 'insertIntousersCollection':
-          result.insertIntousersCollection.replace(serializers.deserialize(
+          result.insertIntousersCollection.replace(
+            serializers.deserialize(
                   value,
                   specifiedType: const FullType(
-                      GRegisterUserData_insertIntousersCollection))!
-              as GRegisterUserData_insertIntousersCollection);
+                    GRegisterUserData_insertIntousersCollection,
+                  ),
+                )!
+                as GRegisterUserData_insertIntousersCollection,
+          );
           break;
       }
     }
@@ -78,27 +98,35 @@ class _$GRegisterUserData_insertIntousersCollectionSerializer
   @override
   final Iterable<Type> types = const [
     GRegisterUserData_insertIntousersCollection,
-    _$GRegisterUserData_insertIntousersCollection
+    _$GRegisterUserData_insertIntousersCollection,
   ];
   @override
   final String wireName = 'GRegisterUserData_insertIntousersCollection';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GRegisterUserData_insertIntousersCollection object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GRegisterUserData_insertIntousersCollection object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[
       '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
+      serializers.serialize(
+        object.G__typename,
+        specifiedType: const FullType(String),
+      ),
       'affectedCount',
-      serializers.serialize(object.affectedCount,
-          specifiedType: const FullType(int)),
+      serializers.serialize(
+        object.affectedCount,
+        specifiedType: const FullType(int),
+      ),
       'records',
-      serializers.serialize(object.records,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(GRegisterUserData_insertIntousersCollection_records)
-          ])),
+      serializers.serialize(
+        object.records,
+        specifiedType: const FullType(BuiltList, const [
+          const FullType(GRegisterUserData_insertIntousersCollection_records),
+        ]),
+      ),
     ];
 
     return result;
@@ -106,9 +134,11 @@ class _$GRegisterUserData_insertIntousersCollectionSerializer
 
   @override
   GRegisterUserData_insertIntousersCollection deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GRegisterUserData_insertIntousersCollectionBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GRegisterUserData_insertIntousersCollectionBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -117,19 +147,33 @@ class _$GRegisterUserData_insertIntousersCollectionSerializer
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
+          result.G__typename =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )!
+                  as String;
           break;
         case 'affectedCount':
-          result.affectedCount = serializers.deserialize(value,
-              specifiedType: const FullType(int))! as int;
+          result.affectedCount =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(int),
+                  )!
+                  as int;
           break;
         case 'records':
-          result.records.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(
-                    GRegisterUserData_insertIntousersCollection_records)
-              ]))! as BuiltList<Object?>);
+          result.records.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(BuiltList, const [
+                    const FullType(
+                      GRegisterUserData_insertIntousersCollection_records,
+                    ),
+                  ]),
+                )!
+                as BuiltList<Object?>,
+          );
           break;
       }
     }
@@ -141,53 +185,68 @@ class _$GRegisterUserData_insertIntousersCollectionSerializer
 class _$GRegisterUserData_insertIntousersCollection_recordsSerializer
     implements
         StructuredSerializer<
-            GRegisterUserData_insertIntousersCollection_records> {
+          GRegisterUserData_insertIntousersCollection_records
+        > {
   @override
   final Iterable<Type> types = const [
     GRegisterUserData_insertIntousersCollection_records,
-    _$GRegisterUserData_insertIntousersCollection_records
+    _$GRegisterUserData_insertIntousersCollection_records,
   ];
   @override
   final String wireName = 'GRegisterUserData_insertIntousersCollection_records';
 
   @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GRegisterUserData_insertIntousersCollection_records object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object?> serialize(
+    Serializers serializers,
+    GRegisterUserData_insertIntousersCollection_records object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
     final result = <Object?>[
       '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
+      serializers.serialize(
+        object.G__typename,
+        specifiedType: const FullType(String),
+      ),
       'id',
-      serializers.serialize(object.id,
-          specifiedType: const FullType(_i2.GUUID)),
+      serializers.serialize(
+        object.id,
+        specifiedType: const FullType(_i2.GUUID),
+      ),
       'email',
-      serializers.serialize(object.email,
-          specifiedType: const FullType(String)),
+      serializers.serialize(
+        object.email,
+        specifiedType: const FullType(String),
+      ),
       'auth_uid',
-      serializers.serialize(object.auth_uid,
-          specifiedType: const FullType(_i2.GUUID)),
+      serializers.serialize(
+        object.auth_uid,
+        specifiedType: const FullType(_i2.GUUID),
+      ),
       'created_at',
-      serializers.serialize(object.created_at,
-          specifiedType: const FullType(_i2.GDatetime)),
+      serializers.serialize(
+        object.created_at,
+        specifiedType: const FullType(_i2.GDatetime),
+      ),
     ];
     Object? value;
     value = object.phone;
     if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
     }
     return result;
   }
 
   @override
   GRegisterUserData_insertIntousersCollection_records deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GRegisterUserData_insertIntousersCollection_recordsBuilder();
+    Serializers serializers,
+    Iterable<Object?> serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GRegisterUserData_insertIntousersCollection_recordsBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -196,28 +255,55 @@ class _$GRegisterUserData_insertIntousersCollection_recordsSerializer
       final Object? value = iterator.current;
       switch (key) {
         case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
+          result.G__typename =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )!
+                  as String;
           break;
         case 'id':
-          result.id.replace(serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GUUID))! as _i2.GUUID);
+          result.id.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(_i2.GUUID),
+                )!
+                as _i2.GUUID,
+          );
           break;
         case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
+          result.email =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )!
+                  as String;
           break;
         case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+          result.phone =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'auth_uid':
-          result.auth_uid.replace(serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GUUID))! as _i2.GUUID);
+          result.auth_uid.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(_i2.GUUID),
+                )!
+                as _i2.GUUID,
+          );
           break;
         case 'created_at':
-          result.created_at.replace(serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GDatetime))! as _i2.GDatetime);
+          result.created_at.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(_i2.GDatetime),
+                )!
+                as _i2.GDatetime,
+          );
           break;
       }
     }
@@ -232,24 +318,21 @@ class _$GRegisterUserData extends GRegisterUserData {
   @override
   final GRegisterUserData_insertIntousersCollection? insertIntousersCollection;
 
-  factory _$GRegisterUserData(
-          [void Function(GRegisterUserDataBuilder)? updates]) =>
-      (new GRegisterUserDataBuilder()..update(updates))._build();
+  factory _$GRegisterUserData([
+    void Function(GRegisterUserDataBuilder)? updates,
+  ]) => (GRegisterUserDataBuilder()..update(updates))._build();
 
-  _$GRegisterUserData._(
-      {required this.G__typename, this.insertIntousersCollection})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GRegisterUserData', 'G__typename');
-  }
-
+  _$GRegisterUserData._({
+    required this.G__typename,
+    this.insertIntousersCollection,
+  }) : super._();
   @override
   GRegisterUserData rebuild(void Function(GRegisterUserDataBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   GRegisterUserDataBuilder toBuilder() =>
-      new GRegisterUserDataBuilder()..replace(this);
+      GRegisterUserDataBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -286,14 +369,14 @@ class GRegisterUserDataBuilder
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
   GRegisterUserData_insertIntousersCollectionBuilder?
-      _insertIntousersCollection;
+  _insertIntousersCollection;
   GRegisterUserData_insertIntousersCollectionBuilder
-      get insertIntousersCollection => _$this._insertIntousersCollection ??=
-          new GRegisterUserData_insertIntousersCollectionBuilder();
+  get insertIntousersCollection => _$this._insertIntousersCollection ??=
+      GRegisterUserData_insertIntousersCollectionBuilder();
   set insertIntousersCollection(
-          GRegisterUserData_insertIntousersCollectionBuilder?
-              insertIntousersCollection) =>
-      _$this._insertIntousersCollection = insertIntousersCollection;
+    GRegisterUserData_insertIntousersCollectionBuilder?
+    insertIntousersCollection,
+  ) => _$this._insertIntousersCollection = insertIntousersCollection;
 
   GRegisterUserDataBuilder() {
     GRegisterUserData._initializeBuilder(this);
@@ -311,7 +394,6 @@ class GRegisterUserDataBuilder
 
   @override
   void replace(GRegisterUserData other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GRegisterUserData;
   }
 
@@ -326,10 +408,14 @@ class GRegisterUserDataBuilder
   _$GRegisterUserData _build() {
     _$GRegisterUserData _$result;
     try {
-      _$result = _$v ??
-          new _$GRegisterUserData._(
+      _$result =
+          _$v ??
+          _$GRegisterUserData._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, r'GRegisterUserData', 'G__typename'),
+              G__typename,
+              r'GRegisterUserData',
+              'G__typename',
+            ),
             insertIntousersCollection: _insertIntousersCollection?.build(),
           );
     } catch (_) {
@@ -338,8 +424,11 @@ class GRegisterUserDataBuilder
         _$failedField = 'insertIntousersCollection';
         _insertIntousersCollection?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GRegisterUserData', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GRegisterUserData',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -357,35 +446,24 @@ class _$GRegisterUserData_insertIntousersCollection
   @override
   final BuiltList<GRegisterUserData_insertIntousersCollection_records> records;
 
-  factory _$GRegisterUserData_insertIntousersCollection(
-          [void Function(GRegisterUserData_insertIntousersCollectionBuilder)?
-              updates]) =>
-      (new GRegisterUserData_insertIntousersCollectionBuilder()
-            ..update(updates))
-          ._build();
+  factory _$GRegisterUserData_insertIntousersCollection([
+    void Function(GRegisterUserData_insertIntousersCollectionBuilder)? updates,
+  ]) => (GRegisterUserData_insertIntousersCollectionBuilder()..update(updates))
+      ._build();
 
-  _$GRegisterUserData_insertIntousersCollection._(
-      {required this.G__typename,
-      required this.affectedCount,
-      required this.records})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GRegisterUserData_insertIntousersCollection', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(affectedCount,
-        r'GRegisterUserData_insertIntousersCollection', 'affectedCount');
-    BuiltValueNullFieldError.checkNotNull(
-        records, r'GRegisterUserData_insertIntousersCollection', 'records');
-  }
-
+  _$GRegisterUserData_insertIntousersCollection._({
+    required this.G__typename,
+    required this.affectedCount,
+    required this.records,
+  }) : super._();
   @override
   GRegisterUserData_insertIntousersCollection rebuild(
-          void Function(GRegisterUserData_insertIntousersCollectionBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GRegisterUserData_insertIntousersCollectionBuilder) updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GRegisterUserData_insertIntousersCollectionBuilder toBuilder() =>
-      new GRegisterUserData_insertIntousersCollectionBuilder()..replace(this);
+      GRegisterUserData_insertIntousersCollectionBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -409,7 +487,8 @@ class _$GRegisterUserData_insertIntousersCollection
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            r'GRegisterUserData_insertIntousersCollection')
+            r'GRegisterUserData_insertIntousersCollection',
+          )
           ..add('G__typename', G__typename)
           ..add('affectedCount', affectedCount)
           ..add('records', records))
@@ -419,8 +498,10 @@ class _$GRegisterUserData_insertIntousersCollection
 
 class GRegisterUserData_insertIntousersCollectionBuilder
     implements
-        Builder<GRegisterUserData_insertIntousersCollection,
-            GRegisterUserData_insertIntousersCollectionBuilder> {
+        Builder<
+          GRegisterUserData_insertIntousersCollection,
+          GRegisterUserData_insertIntousersCollectionBuilder
+        > {
   _$GRegisterUserData_insertIntousersCollection? _$v;
 
   String? _G__typename;
@@ -433,14 +514,12 @@ class GRegisterUserData_insertIntousersCollectionBuilder
       _$this._affectedCount = affectedCount;
 
   ListBuilder<GRegisterUserData_insertIntousersCollection_records>? _records;
-  ListBuilder<
-      GRegisterUserData_insertIntousersCollection_records> get records => _$this
-          ._records ??=
-      new ListBuilder<GRegisterUserData_insertIntousersCollection_records>();
+  ListBuilder<GRegisterUserData_insertIntousersCollection_records>
+  get records => _$this._records ??=
+      ListBuilder<GRegisterUserData_insertIntousersCollection_records>();
   set records(
-          ListBuilder<GRegisterUserData_insertIntousersCollection_records>?
-              records) =>
-      _$this._records = records;
+    ListBuilder<GRegisterUserData_insertIntousersCollection_records>? records,
+  ) => _$this._records = records;
 
   GRegisterUserData_insertIntousersCollectionBuilder() {
     GRegisterUserData_insertIntousersCollection._initializeBuilder(this);
@@ -459,14 +538,13 @@ class GRegisterUserData_insertIntousersCollectionBuilder
 
   @override
   void replace(GRegisterUserData_insertIntousersCollection other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GRegisterUserData_insertIntousersCollection;
   }
 
   @override
   void update(
-      void Function(GRegisterUserData_insertIntousersCollectionBuilder)?
-          updates) {
+    void Function(GRegisterUserData_insertIntousersCollectionBuilder)? updates,
+  ) {
     if (updates != null) updates(this);
   }
 
@@ -476,14 +554,19 @@ class GRegisterUserData_insertIntousersCollectionBuilder
   _$GRegisterUserData_insertIntousersCollection _build() {
     _$GRegisterUserData_insertIntousersCollection _$result;
     try {
-      _$result = _$v ??
-          new _$GRegisterUserData_insertIntousersCollection._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GRegisterUserData_insertIntousersCollection', 'G__typename'),
+      _$result =
+          _$v ??
+          _$GRegisterUserData_insertIntousersCollection._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+              G__typename,
+              r'GRegisterUserData_insertIntousersCollection',
+              'G__typename',
+            ),
             affectedCount: BuiltValueNullFieldError.checkNotNull(
-                affectedCount,
-                r'GRegisterUserData_insertIntousersCollection',
-                'affectedCount'),
+              affectedCount,
+              r'GRegisterUserData_insertIntousersCollection',
+              'affectedCount',
+            ),
             records: records.build(),
           );
     } catch (_) {
@@ -492,10 +575,11 @@ class GRegisterUserData_insertIntousersCollectionBuilder
         _$failedField = 'records';
         records.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GRegisterUserData_insertIntousersCollection',
-            _$failedField,
-            e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GRegisterUserData_insertIntousersCollection',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
@@ -519,44 +603,31 @@ class _$GRegisterUserData_insertIntousersCollection_records
   @override
   final _i2.GDatetime created_at;
 
-  factory _$GRegisterUserData_insertIntousersCollection_records(
-          [void Function(
-                  GRegisterUserData_insertIntousersCollection_recordsBuilder)?
-              updates]) =>
-      (new GRegisterUserData_insertIntousersCollection_recordsBuilder()
+  factory _$GRegisterUserData_insertIntousersCollection_records([
+    void Function(GRegisterUserData_insertIntousersCollection_recordsBuilder)?
+    updates,
+  ]) =>
+      (GRegisterUserData_insertIntousersCollection_recordsBuilder()
             ..update(updates))
           ._build();
 
-  _$GRegisterUserData_insertIntousersCollection_records._(
-      {required this.G__typename,
-      required this.id,
-      required this.email,
-      this.phone,
-      required this.auth_uid,
-      required this.created_at})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GRegisterUserData_insertIntousersCollection_records', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'GRegisterUserData_insertIntousersCollection_records', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        email, r'GRegisterUserData_insertIntousersCollection_records', 'email');
-    BuiltValueNullFieldError.checkNotNull(auth_uid,
-        r'GRegisterUserData_insertIntousersCollection_records', 'auth_uid');
-    BuiltValueNullFieldError.checkNotNull(created_at,
-        r'GRegisterUserData_insertIntousersCollection_records', 'created_at');
-  }
-
+  _$GRegisterUserData_insertIntousersCollection_records._({
+    required this.G__typename,
+    required this.id,
+    required this.email,
+    this.phone,
+    required this.auth_uid,
+    required this.created_at,
+  }) : super._();
   @override
   GRegisterUserData_insertIntousersCollection_records rebuild(
-          void Function(
-                  GRegisterUserData_insertIntousersCollection_recordsBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
+    void Function(GRegisterUserData_insertIntousersCollection_recordsBuilder)
+    updates,
+  ) => (toBuilder()..update(updates)).build();
 
   @override
   GRegisterUserData_insertIntousersCollection_recordsBuilder toBuilder() =>
-      new GRegisterUserData_insertIntousersCollection_recordsBuilder()
+      GRegisterUserData_insertIntousersCollection_recordsBuilder()
         ..replace(this);
 
   @override
@@ -587,7 +658,8 @@ class _$GRegisterUserData_insertIntousersCollection_records
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            r'GRegisterUserData_insertIntousersCollection_records')
+            r'GRegisterUserData_insertIntousersCollection_records',
+          )
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('email', email)
@@ -600,8 +672,10 @@ class _$GRegisterUserData_insertIntousersCollection_records
 
 class GRegisterUserData_insertIntousersCollection_recordsBuilder
     implements
-        Builder<GRegisterUserData_insertIntousersCollection_records,
-            GRegisterUserData_insertIntousersCollection_recordsBuilder> {
+        Builder<
+          GRegisterUserData_insertIntousersCollection_records,
+          GRegisterUserData_insertIntousersCollection_recordsBuilder
+        > {
   _$GRegisterUserData_insertIntousersCollection_records? _$v;
 
   String? _G__typename;
@@ -609,7 +683,7 @@ class GRegisterUserData_insertIntousersCollection_recordsBuilder
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
   _i2.GUUIDBuilder? _id;
-  _i2.GUUIDBuilder get id => _$this._id ??= new _i2.GUUIDBuilder();
+  _i2.GUUIDBuilder get id => _$this._id ??= _i2.GUUIDBuilder();
   set id(_i2.GUUIDBuilder? id) => _$this._id = id;
 
   String? _email;
@@ -621,18 +695,19 @@ class GRegisterUserData_insertIntousersCollection_recordsBuilder
   set phone(String? phone) => _$this._phone = phone;
 
   _i2.GUUIDBuilder? _auth_uid;
-  _i2.GUUIDBuilder get auth_uid => _$this._auth_uid ??= new _i2.GUUIDBuilder();
+  _i2.GUUIDBuilder get auth_uid => _$this._auth_uid ??= _i2.GUUIDBuilder();
   set auth_uid(_i2.GUUIDBuilder? auth_uid) => _$this._auth_uid = auth_uid;
 
   _i2.GDatetimeBuilder? _created_at;
   _i2.GDatetimeBuilder get created_at =>
-      _$this._created_at ??= new _i2.GDatetimeBuilder();
+      _$this._created_at ??= _i2.GDatetimeBuilder();
   set created_at(_i2.GDatetimeBuilder? created_at) =>
       _$this._created_at = created_at;
 
   GRegisterUserData_insertIntousersCollection_recordsBuilder() {
     GRegisterUserData_insertIntousersCollection_records._initializeBuilder(
-        this);
+      this,
+    );
   }
 
   GRegisterUserData_insertIntousersCollection_recordsBuilder get _$this {
@@ -651,14 +726,14 @@ class GRegisterUserData_insertIntousersCollection_recordsBuilder
 
   @override
   void replace(GRegisterUserData_insertIntousersCollection_records other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GRegisterUserData_insertIntousersCollection_records;
   }
 
   @override
   void update(
-      void Function(GRegisterUserData_insertIntousersCollection_recordsBuilder)?
-          updates) {
+    void Function(GRegisterUserData_insertIntousersCollection_recordsBuilder)?
+    updates,
+  ) {
     if (updates != null) updates(this);
   }
 
@@ -668,17 +743,20 @@ class GRegisterUserData_insertIntousersCollection_recordsBuilder
   _$GRegisterUserData_insertIntousersCollection_records _build() {
     _$GRegisterUserData_insertIntousersCollection_records _$result;
     try {
-      _$result = _$v ??
-          new _$GRegisterUserData_insertIntousersCollection_records._(
+      _$result =
+          _$v ??
+          _$GRegisterUserData_insertIntousersCollection_records._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GRegisterUserData_insertIntousersCollection_records',
-                'G__typename'),
+              G__typename,
+              r'GRegisterUserData_insertIntousersCollection_records',
+              'G__typename',
+            ),
             id: id.build(),
             email: BuiltValueNullFieldError.checkNotNull(
-                email,
-                r'GRegisterUserData_insertIntousersCollection_records',
-                'email'),
+              email,
+              r'GRegisterUserData_insertIntousersCollection_records',
+              'email',
+            ),
             phone: phone,
             auth_uid: auth_uid.build(),
             created_at: created_at.build(),
@@ -694,10 +772,11 @@ class GRegisterUserData_insertIntousersCollection_recordsBuilder
         _$failedField = 'created_at';
         created_at.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GRegisterUserData_insertIntousersCollection_records',
-            _$failedField,
-            e.toString());
+        throw BuiltValueNestedFieldError(
+          r'GRegisterUserData_insertIntousersCollection_records',
+          _$failedField,
+          e.toString(),
+        );
       }
       rethrow;
     }
