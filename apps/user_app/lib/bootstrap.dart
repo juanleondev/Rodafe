@@ -54,9 +54,6 @@ Future<void> bootstrap(
     anonKey: EnvConfig.supabaseAnonKey,
   );
 
-  // Sign in with test credentials
-  await supabase.client.auth.signOut();
-
   // Setup GraphQL client
   final link = HttpAuthLink(() async => _getAuthToken(supabase.client)).concat(
     HttpLink(
@@ -92,6 +89,11 @@ Future<void> bootstrap(
 
   // Create router
   final router = AppRouter.getRouter(authProvider, userRepository);
+
+  // TODO(juan): Remove these functions when guards implementation
+  // is more mature.
+  await authProvider.userChanges.first;
+  await userRepository.getCurrentUser().first;
 
   // Add cross-flavor configuration here
 
