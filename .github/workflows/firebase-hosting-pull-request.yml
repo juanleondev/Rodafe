@@ -25,10 +25,15 @@ jobs:
           cd apps/user_app
           flutter pub get
       
+      - name: Decode production environment file
+        run: |
+          mkdir -p apps/user_app/env
+          echo ${{ secrets.PRODUCTION_ENV_BASE64 }} | base64 --decode > apps/user_app/env/production.env
+      
       - name: Build Flutter web
         run: |
           cd apps/user_app
-          flutter build web --release
+          flutter build web --release --dart-define-from-file=env/production.env --target lib/main_production.dart
       
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
