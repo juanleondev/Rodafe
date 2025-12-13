@@ -1,5 +1,5 @@
 create table "public"."bearings" (
-    "id" uuid not null default uuid_generate_v4(),
+    "id" uuid not null default extensions.uuid_generate_v4(),
     "created_at" timestamp with time zone not null default now(),
     "code" character varying(50) not null,
     "brand" character varying(50) not null,
@@ -15,7 +15,7 @@ create table "public"."bearings" (
 alter table "public"."bearings" enable row level security;
 
 create table "public"."companies" (
-    "id" uuid not null default uuid_generate_v4(),
+    "id" uuid not null default extensions.uuid_generate_v4(),
     "created_at" timestamp with time zone not null default now(),
     "email" character varying(150) unique not null,
     "name" character varying(150) not null,

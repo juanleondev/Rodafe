@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:supabase_auth_ui/supabase_auth_ui.dart' hide AuthState;
 import 'package:user_app/app/router/app_router.dart';
-
 import 'package:user_app/sign_in/sign_in.dart';
 
 class SignInPage extends StatelessWidget {
@@ -30,7 +29,12 @@ class SignInView extends StatelessWidget {
           context.go(AppRouter.homeRoute);
         },
         onError: (error) {
-          // Handle error
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(error.toString()),
+              backgroundColor: Colors.red,
+            ),
+          );
         },
         localization: const SupaEmailAuthLocalization(
           enterEmail: 'Correo electrónico',

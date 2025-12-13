@@ -1,5 +1,5 @@
 create table "public"."users" (
-    "id" uuid default uuid_generate_v4() not null,
+    "id" uuid default extensions.uuid_generate_v4() not null,
     "created_at" timestamp with time zone not null default now(),
     "email" character varying(150) unique not null,
     "phone" character varying(20)
