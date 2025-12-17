@@ -3,6 +3,7 @@ import 'package:car_repository/car_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rodafe_ui/rodafe_ui.dart';
 import 'package:user_app/app/router/app_router.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
 import 'package:user_app/l10n/l10n.dart';
@@ -35,12 +36,9 @@ class App extends StatelessWidget {
       child: BlocProvider.value(
         value: authenticationBloc,
         child: MaterialApp.router(
-          theme: ThemeData(
-            appBarTheme: AppBarTheme(
-              backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            ),
-            useMaterial3: true,
-          ),
+          theme: RodafeTheme.lightTheme,
+          darkTheme: RodafeTheme.darkTheme,
+          themeMode: ThemeMode.light,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           routerConfig: router,

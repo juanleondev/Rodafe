@@ -21,29 +21,32 @@ class SignInView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Iniciar sesión')),
-      body: SupaEmailAuth(
-        onSignInComplete: (response) {
-          context.go(AppRouter.splashRoute);
-        },
-        onSignUpComplete: (response) {
-          context.go(AppRouter.homeRoute);
-        },
-        onError: (error) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(error.toString()),
-              backgroundColor: Colors.red,
-            ),
-          );
-        },
-        localization: const SupaEmailAuthLocalization(
-          enterEmail: 'Correo electrónico',
-          enterPassword: 'Contraseña',
-          signIn: 'Iniciar sesión',
-          signUp: 'Registrarse',
-          forgotPassword: '¿Olvidaste tu contraseña?',
-          dontHaveAccount: '¿No tienes una cuenta? Registrate',
-          haveAccount: '¿Ya tienes una cuenta? Inicia sesión',
+      body: Padding(
+        padding: const EdgeInsets.all(8),
+        child: SupaEmailAuth(
+          onSignInComplete: (response) {
+            context.go(AppRouter.splashRoute);
+          },
+          onSignUpComplete: (response) {
+            context.go(AppRouter.homeRoute);
+          },
+          onError: (error) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(error.toString()),
+                backgroundColor: Colors.red,
+              ),
+            );
+          },
+          localization: const SupaEmailAuthLocalization(
+            enterEmail: 'Correo electrónico',
+            enterPassword: 'Contraseña',
+            signIn: 'Iniciar sesión',
+            signUp: 'Registrarse',
+            forgotPassword: '¿Olvidaste tu contraseña?',
+            dontHaveAccount: '¿No tienes una cuenta? Registrate',
+            haveAccount: '¿Ya tienes una cuenta? Inicia sesión',
+          ),
         ),
       ),
     );

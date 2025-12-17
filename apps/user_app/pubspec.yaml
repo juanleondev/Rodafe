@@ -26,6 +26,8 @@ dependencies:
   graphql_data_source:
   intl: ^0.20.2
   reactive_forms: ^18.1.1
+  rodafe_ui:
+    path: ../../packages/rodafe_ui
   shared_models:
   supabase: ^2.8.0
   supabase_auth_ui: ^0.5.5
