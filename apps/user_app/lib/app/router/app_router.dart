@@ -17,7 +17,7 @@ class AppRouter {
   static const String homeRoute = '/home';
   static const String signInRoute = '/sign-in';
   static const String registerRoute = '/register';
-  static const String carsCreationRoute = '/cars-creation';
+  static const String carsCreationRoute = '/home/cars-creation';
 
   /// Route configuration: maps route paths to their access types
   static const Map<String, RouteType> routeConfig = {
@@ -54,10 +54,15 @@ class AppRouter {
           path: registerRoute,
           builder: (context, state) => const RegisterPage(),
         ),
-        GoRoute(path: homeRoute, builder: (context, state) => const HomePage()),
         GoRoute(
-          path: carsCreationRoute,
-          builder: (context, state) => const CarsCreationPage(),
+          path: homeRoute,
+          builder: (context, state) => const HomePage(),
+          routes: [
+            GoRoute(
+              path: CarsCreationPage.path,
+              builder: (context, state) => const CarsCreationPage(),
+            ),
+          ],
         ),
       ],
     );

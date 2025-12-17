@@ -7,6 +7,9 @@ import 'package:user_app/cars_creation/widgets/cars_creation_form_widget.dart';
 class CarsCreationPage extends StatelessWidget {
   const CarsCreationPage({super.key});
 
+  static const String path = 'cars-creation';
+  static const String route = '/home/cars-creation';
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

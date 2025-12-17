@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:user_app/app/router/app_router.dart';
 import 'package:user_app/authentication/bloc/authentication_bloc.dart';
 import 'package:user_app/home/home.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
+
+  static const String path = '/home';
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ class HomeView extends StatelessWidget {
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
-                context.push(AppRouter.carsCreationRoute);
+                context.go('/home/cars-creation');
               },
               child: const Text('Create Car'),
             ),
