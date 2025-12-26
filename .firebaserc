@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "rodafe-b44c3"
-  }
+  },
+  "targets": {
+    "rodafe-b44c3": {
+      "hosting": {
+        "rodafe": [
+          "rodafe"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
