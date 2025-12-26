@@ -41,7 +41,7 @@ export default function Contact() {
         subject: "",
         message: "",
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);

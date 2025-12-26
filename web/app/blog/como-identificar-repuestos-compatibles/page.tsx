@@ -164,7 +164,7 @@ export default function ComoIdentificarRepuestosCompatibles() {
                     verificar otras especificaciones
                   </li>
                   <li>
-                    Ten cuidado con repuestos que parecen "universales" - la
+                    Ten cuidado con repuestos que parecen &quot;universales&quot; - la
                     mayoría de los repuestos son específicos del modelo
                   </li>
                   <li>
