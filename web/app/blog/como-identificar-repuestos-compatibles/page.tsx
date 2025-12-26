@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { RODAFE_APP_URL } from "../../config/constants";
 
 export default function ComoIdentificarRepuestosCompatibles() {
   return (
@@ -225,7 +226,7 @@ export default function ComoIdentificarRepuestosCompatibles() {
                   automáticamente en múltiples proveedores locales.
                 </p>
                 <Link
-                  href="/search"
+                  href={RODAFE_APP_URL}
                   className="inline-block px-6 py-3 text-white font-semibold rounded-lg transition-colors shadow-md hover:opacity-90"
                   style={{ backgroundColor: "#194fa2" }}
                 >

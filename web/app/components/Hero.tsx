@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RODAFE_APP_URL } from "../config/constants";
 
 export default function Hero() {
   return (
@@ -34,7 +35,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/search"
+              href={RODAFE_APP_URL}
               className="inline-flex items-center justify-center px-8 py-4 text-gray-900 font-semibold rounded-lg transition-colors shadow-lg text-lg hover:opacity-90"
               style={{ backgroundColor: "#eed959" }}
             >
