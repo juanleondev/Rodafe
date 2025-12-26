@@ -3,6 +3,9 @@
     {
       "target": "rodafe",
       "public": "web/out",
+      "predeploy": [
+        "cd web && npm ci && npm run build"
+      ],
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -16,6 +19,7 @@
       ]
     },
     {
+      "target": "rodafe-b44c3",
       "public": "apps/user_app/build/web",
       "ignore": [
         "firebase.json",

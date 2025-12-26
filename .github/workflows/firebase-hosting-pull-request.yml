@@ -2,7 +2,11 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on PR
-on: pull_request
+on:
+  pull_request:
+    paths:
+      - 'apps/user_app/**'
+      - 'packages/**'
 permissions:
   checks: write
   contents: read
@@ -43,3 +47,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_RODAFE_B44C3 }}
           expires: 30d
           projectId: rodafe-b44c3
+          target: rodafe-b44c3
